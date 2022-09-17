@@ -1,4 +1,9 @@
 {
+    "browser_specific_settings": {
+        "gecko": {
+            "update_url": "https://raw.githubusercontent.com/ArakawaHenri/iCloudPasswords_for_Firefox/master/updates.json"
+        }
+    },
     "name": "__MSG_extName__",
     "version": "1.3.43",
     "description": "__MSG_extDescription__",
