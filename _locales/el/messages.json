@@ -1,0 +1,77 @@
+{
+  "_lang": {
+    "message": "el"
+  },
+  "downloadButton": {
+    "message": "Λήψη"
+  },
+  "downloadMessage": {
+    "message": "Πραγματοποιήστε λήψη του iCloud για Windows για χρήση των Συνθηματικών iCloud."
+  },
+  "extDescription": {
+    "message": "Τα Συνθηματικά iCloud σάς επιτρέπουν να χρησιμοποιείτε τα συνθηματικά που έχετε δημιουργήσει στο Safari και σε εφαρμογές στο iPhone, iPad, και Mac με το Chrome στο Windows."
+  },
+  "extName": {
+    "message": "Συνθηματικά iCloud"
+  },
+  "openiCloudForWindowsButtonText": {
+    "message": "Άνοιγμα iCloud για Windows"
+  },
+  "CheckEngineMessage": {
+    "message": "Ενεργοποιήστε τα Συνθηματικά στο iCloud για Windows για να χρησιμοποιείτε τα Συνθηματικά iCloud με το Chrome."
+  },
+  "unsupportedOS": {
+    "message": "Αυτή η επέκταση είναι σχεδιασμένη για να λειτουργεί στο Windows 10. Αν χρησιμοποιείτε Mac, τα συνθηματικά σας θα συγχρονίζονται αυτόματα με το iPhone, iPad, και Mac όταν συνδέεστε στο iCloud."
+  },
+  "divPINTitle": {
+    "message": "Ενεργοποίηση Αυτοσυμπλήρωσης συνθηματικών"
+  },
+  "divPINMessage": {
+    "message": "Το iCloud για Windows σάς έστειλε μια γνωστοποίηση με έναν κωδικό επαλήθευσης. Εισαγάγετε τον κωδικό για να συνεχίσετε."
+  },
+  "divICsMessage": {
+    "message": "Επιλογή αποθηκευμένου συνθηματικού για χρήση:"
+  },
+  "GenericPopupTitle": {
+    "message": "Τα συνθηματικά σας είναι συγχρονισμένα με την Κλειδοθήκη iCloud"
+  },
+  "divNoPasswordsMessage": {
+    "message": "Μπορείτε να προβάλετε και να επεξεργαστείτε τα αποθηκευμένα συνθηματικά στην εφαρμογή «Διαχείριση συνθηματικών iCloud»."
+  },
+  "divDoNotRememberTitle": {
+    "message": "Είχατε υποδείξει στο παρελθόν να μην αποθηκεύονται ποτέ συνθηματικά για αυτόν τον ιστότοπο."
+  },
+  "divDoNotRememberMessage": {
+    "message": "Για να αλλάξετε αυτήν τη ρύθμιση, αφαιρέστε την καταχώριση αυτού του ιστότοπου από την Κλειδοθήκη iCloud και πραγματοποιήστε εκ νέου είσοδο."
+  },
+  "GettingPasswords": {
+    "message": "Φόρτωση συνθηματικών…"
+  },
+  "ErrorReturned": {
+    "message": "Παρουσιάστηκε σφάλμα. Ενεργοποιήστε εκ νέου την επέκταση «Συνθηματικά iCloud» για το Chrome."
+  },
+  "NoUserName": {
+    "message": "κανένα όνομα χρήστη"
+  },
+  "divOpenPasswords": {
+    "message": "Διαχείριση συνθηματικών…"
+  },
+  "divOpenPasswordsSubtitle": {
+    "message": "Αναζητήστε και δημιουργήστε συνθηματικά."
+  },
+  "browserName": {
+    "message": "Chrome"
+  },
+  "totpVerificationCodeNameWithDomain": {
+    "message": "Κωδικός επαλήθευσης για «$1»"
+  },
+  "totpVerificationCodeName": {
+    "message": "Κωδικός επαλήθευσης"
+  },
+  "enableAutoFillPasswordsTitle": {
+    "message": "Ενεργοποίηση Αυτοσυμπλήρωσης συνθηματικών"
+  },
+  "enableAutoFillPasswordsMessage": {
+    "message": "Κάντε κλικ στο κουμπί της γραμμής εργαλείων για να ενεργοποιήσετε την επέκταση «Συνθηματικά iCloud» για το Chrome."
+  }
+}

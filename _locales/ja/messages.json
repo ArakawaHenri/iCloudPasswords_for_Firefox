@@ -1,0 +1,77 @@
+{
+  "_lang": {
+    "message": "ja"
+  },
+  "downloadButton": {
+    "message": "ダウンロード"
+  },
+  "downloadMessage": {
+    "message": "iCloudパスワードを使用するにはiCloud for Windowsをダウンロードしてください。"
+  },
+  "extDescription": {
+    "message": "iCloudパスワードでは、iPhone、iPad、MacのSafariやAppで作成したパスワードを、WindowsのChromeで使用できます。"
+  },
+  "extName": {
+    "message": "iCloudパスワード"
+  },
+  "openiCloudForWindowsButtonText": {
+    "message": "iCloud for Windowsを開く"
+  },
+  "CheckEngineMessage": {
+    "message": "iCloudパスワードをChromeで使用するにはiCloud for Windowsでパスワードを有効にしてください。"
+  },
+  "unsupportedOS": {
+    "message": "この拡張機能はWindows 10上で動作するように設計されています。Macを使用している場合は、iPhone、iPad、MacでiCloudにサインインしているときにパスワードが自動的に同期されます。"
+  },
+  "divPINTitle": {
+    "message": "パスワードの自動入力を有効にする"
+  },
+  "divPINMessage": {
+    "message": "iCloud for Windowsから確認コードを記載した通知が送信されました。続けるには、そのコードをしてください。"
+  },
+  "divICsMessage": {
+    "message": "使用するには保存されているパスワードを選択してください:"
+  },
+  "GenericPopupTitle": {
+    "message": "パスワードはiCloudキーチェーンと同期されます"
+  },
+  "divNoPasswordsMessage": {
+    "message": "保存したパスワードは、iCloudパスワードマネージャAppで表示および編集できます。"
+  },
+  "divDoNotRememberTitle": {
+    "message": "このWebサイトのパスワードを保存しないように以前に指定しました。"
+  },
+  "divDoNotRememberMessage": {
+    "message": "変更するには、iCloudキーチェーンからこのWebサイトのエントリーを削除して、このWebサイトにログインし直してください。"
+  },
+  "GettingPasswords": {
+    "message": "パスワードを読み込み中…"
+  },
+  "ErrorReturned": {
+    "message": "エラーが起きました。Chrome用のiCloudパスワード拡張機能を再度有効にしてください。"
+  },
+  "NoUserName": {
+    "message": "ユーザ名が入力されていません"
+  },
+  "divOpenPasswords": {
+    "message": "パスワードを管理…"
+  },
+  "divOpenPasswordsSubtitle": {
+    "message": "パスワードを調べて作成します。"
+  },
+  "browserName": {
+    "message": "Chrome"
+  },
+  "totpVerificationCodeNameWithDomain": {
+    "message": "“$1”の確認コード"
+  },
+  "totpVerificationCodeName": {
+    "message": "確認コード"
+  },
+  "enableAutoFillPasswordsTitle": {
+    "message": "パスワードの自動入力を有効にする"
+  },
+  "enableAutoFillPasswordsMessage": {
+    "message": "Chrome用のiCloudパスワード拡張機能を有効にするには、ツールバーボタンをクリックしてください。"
+  }
+}

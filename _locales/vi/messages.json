@@ -1,0 +1,77 @@
+{
+  "_lang": {
+    "message": "vi"
+  },
+  "downloadButton": {
+    "message": "Tải về"
+  },
+  "downloadMessage": {
+    "message": "Tải về iCloud cho Windows để sử dụng Mật khẩu iCloud."
+  },
+  "extDescription": {
+    "message": "Mật khẩu iCloud cho phép bạn sử dụng mật khẩu được tạo trong Safari và các ứng dụng trên iPhone, iPad và máy Mac với Chrome trên Windows."
+  },
+  "extName": {
+    "message": "Mật khẩu iCloud"
+  },
+  "openiCloudForWindowsButtonText": {
+    "message": "Mở iCloud cho Windows"
+  },
+  "CheckEngineMessage": {
+    "message": "Bật Mật khẩu trong iCloud cho Windows để sử dụng Mật khẩu iCloud với Chrome."
+  },
+  "unsupportedOS": {
+    "message": "Phần mở rộng này được thiết kế để chạy trên Windows 10. Nếu bạn đang sử dụng máy Mac, các mật khẩu sẽ tự động đồng bộ hóa với iPhone, iPad và máy Mac khi bạn đăng nhập vào iCloud."
+  },
+  "divPINTitle": {
+    "message": "Bật Tự động điền mật khẩu"
+  },
+  "divPINMessage": {
+    "message": "iCloud cho Windows đã gửi cho bạn một thông báo có mã xác minh. Hãy nhập mã đó để tiếp tục."
+  },
+  "divICsMessage": {
+    "message": "Chọn một mật khẩu đã lưu để sử dụng:"
+  },
+  "GenericPopupTitle": {
+    "message": "Các mật khẩu của bạn được đồng bộ hóa với Chuỗi khóa iCloud"
+  },
+  "divNoPasswordsMessage": {
+    "message": "Bạn có thể xem và sửa các mật khẩu đã lưu trong ứng dụng Trình quản lý mật khẩu iCloud."
+  },
+  "divDoNotRememberTitle": {
+    "message": "Trước đây, bạn đã cho biết không bao giờ lưu mật khẩu cho trang web này."
+  },
+  "divDoNotRememberMessage": {
+    "message": "Để thay đổi tùy chọn này, hãy xóa mục nhập cho trang web này khỏi Chuỗi khóa iCloud của bạn và đăng nhập lại vào trang web này."
+  },
+  "GettingPasswords": {
+    "message": "Đang tải mật khẩu…"
+  },
+  "ErrorReturned": {
+    "message": "Đã xảy ra lỗi. Vui lòng bật lại phần mở rộng Mật khẩu iCloud cho Chrome."
+  },
+  "NoUserName": {
+    "message": "không có tên người dùng"
+  },
+  "divOpenPasswords": {
+    "message": "Quản lý mật khẩu…"
+  },
+  "divOpenPasswordsSubtitle": {
+    "message": "Tra cứu và tạo mật khẩu."
+  },
+  "browserName": {
+    "message": "Chrome"
+  },
+  "totpVerificationCodeNameWithDomain": {
+    "message": "Mã xác minh cho “$1”"
+  },
+  "totpVerificationCodeName": {
+    "message": "Mã xác minh"
+  },
+  "enableAutoFillPasswordsTitle": {
+    "message": "Bật Tự động điền mật khẩu"
+  },
+  "enableAutoFillPasswordsMessage": {
+    "message": "Bấm vào nút thanh công cụ để bật phần mở rộng Mật khẩu iCloud cho Chrome."
+  }
+}

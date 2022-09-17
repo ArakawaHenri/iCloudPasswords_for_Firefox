@@ -1,0 +1,77 @@
+{
+  "_lang": {
+    "message": "hu"
+  },
+  "downloadButton": {
+    "message": "Letöltés"
+  },
+  "downloadMessage": {
+    "message": "Töltse le az iCloud Windows-verzióját az iCloud-jelszavak használatához."
+  },
+  "extDescription": {
+    "message": "Az iCloud-jelszavakkal használhatja az iPhone-on, iPaden vagy Macen a Safariban és egyéb appokban létrehozott jelszavakat Windowson, a Chrome-ban."
+  },
+  "extName": {
+    "message": "iCloud-jelszavak"
+  },
+  "openiCloudForWindowsButtonText": {
+    "message": "Az iCloud Windowshoz app megnyitása"
+  },
+  "CheckEngineMessage": {
+    "message": "Engedélyezze a jelszavakat az iCloud Windows-verziójában, ha az iCloud-jelszavakat a Chrome-mal szeretné használni."
+  },
+  "unsupportedOS": {
+    "message": "Ezt a bővítményt Windows 10 rendszerben való futtatásra tervezték. Ha Ön Macet használ, a jelszavai automatikusan szinkronizálva lesznek az iPhone-jával, iPadjével és Macjével, amikor bejelentkezik az iCloudba."
+  },
+  "divPINTitle": {
+    "message": "Jelszó automatikus kitöltésének engedélyezése"
+  },
+  "divPINMessage": {
+    "message": "Az iCloud Windowshoz egy ellenőrzőkódot tartalmazó értesítést küldött Önnek. A folytatáshoz adja meg a kódot."
+  },
+  "divICsMessage": {
+    "message": "Válassza ki a használni kívánt mentett jelszót:"
+  },
+  "GenericPopupTitle": {
+    "message": "A jelszavai szinkronizálva vannak az iCloud-kulcskarikával"
+  },
+  "divNoPasswordsMessage": {
+    "message": "Az iCloud-jelszókezelő appban megtekintheti és szerkesztheti a mentett jelszavakat."
+  },
+  "divDoNotRememberTitle": {
+    "message": "Ön korábban jelezte, hogy a jelszavak soha ne legyenek mentve ehhez a webhelyhez."
+  },
+  "divDoNotRememberMessage": {
+    "message": "A módosításához távolítsa el a webhely bejegyzését az iCloud-kulcskarikájáról, és jelentkezzen be újra erre a webhelyre."
+  },
+  "GettingPasswords": {
+    "message": "Jelszavak betöltése…"
+  },
+  "ErrorReturned": {
+    "message": "Hiba történt. Kérjük, engedélyezze ismét az iCloud-jelszavak bővítményt a Chrome-hoz."
+  },
+  "NoUserName": {
+    "message": "nincs felhasználói név"
+  },
+  "divOpenPasswords": {
+    "message": "Jelszavak kezelése…"
+  },
+  "divOpenPasswordsSubtitle": {
+    "message": "Jelszavak keresése és létrehozása."
+  },
+  "browserName": {
+    "message": "Chrome"
+  },
+  "totpVerificationCodeNameWithDomain": {
+    "message": "Ellenőrőzkód a következőhöz: „$1”"
+  },
+  "totpVerificationCodeName": {
+    "message": "Ellenőrzőkód"
+  },
+  "enableAutoFillPasswordsTitle": {
+    "message": "Jelszó automatikus kitöltésének engedélyezése"
+  },
+  "enableAutoFillPasswordsMessage": {
+    "message": "Kattintson az eszköztárgombra az iCloud-jelszavak bővítmény Chrome-ban történő engedélyezéséhez."
+  }
+}

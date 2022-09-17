@@ -1,0 +1,77 @@
+{
+  "_lang": {
+    "message": "hi"
+  },
+  "downloadButton": {
+    "message": "डाउनलोड करें"
+  },
+  "downloadMessage": {
+    "message": "iCloud पासवर्ड उपयोग करने के लिए Windows के लिए iCloud डाउनलोड करें।"
+  },
+  "extDescription": {
+    "message": "iCloud पासवर्ड की मदद से आप iPhone, iPad और Mac पर Safari और ऐप्स में बनाए गए अपने पासवर्ड का उपयोग Windows पर Chrome के साथ कर सकते हैं।"
+  },
+  "extName": {
+    "message": "iCloud पासवर्ड"
+  },
+  "openiCloudForWindowsButtonText": {
+    "message": "Windows के लिए iCloud खोलें"
+  },
+  "CheckEngineMessage": {
+    "message": "Chrome के साथ iCloud पासवर्ड उपयोग करने के लिए Windows के लिए iCloud में पासवर्ड सक्षम करें।"
+  },
+  "unsupportedOS": {
+    "message": "इस एक्स्टेंशन को Windows 10 पर चलाने के लिए डिज़ाइन किया गया है। यदि आप Mac का उपयोग कर रहे हैं, तो जब आप iCloud में साइन इन करेंगे तब आपके पासवर्ड ऑटोमैटिकली आपके iPhone, iPad और Mac के साथ सिंक हो जाएँगे।"
+  },
+  "divPINTitle": {
+    "message": "पासवर्ड ऑटोफ़िल सक्षम करें"
+  },
+  "divPINMessage": {
+    "message": "Windows के लिए iCloud की ओर से सत्यापन कोड के साथ सूचना भेजी गई है। जारी रखने के लिए कोड दर्ज करें।"
+  },
+  "divICsMessage": {
+    "message": "उपयोग करने के लिए सहेजा गया पासवर्ड चुनें:"
+  },
+  "GenericPopupTitle": {
+    "message": "आपके पासवर्ड iCloud कीचेन के साथ सिंक हैं"
+  },
+  "divNoPasswordsMessage": {
+    "message": "आप iCloud पासवर्ड प्रबंधक ऐप में जाकर सहेजे गए पासवर्ड देख सकते हैं और उन्हें संपादित कर सकते हैं।"
+  },
+  "divDoNotRememberTitle": {
+    "message": "आपने पहले इस वेबसाइट के लिए कभी पासवर्ड न सहेजने का संकेत दिया था।"
+  },
+  "divDoNotRememberMessage": {
+    "message": "इसे बदलने के लिए अपने iCloud कीचेन से इस वेबसाइट की एंट्री हटाएँ और इस वेबसाइट पर फिर से लॉग इन करें।"
+  },
+  "GettingPasswords": {
+    "message": "पासवर्ड लोड किए जा रहे हैं…"
+  },
+  "ErrorReturned": {
+    "message": "एक त्रुटि हुई। कृपया Chrome के लिए iCloud पासवर्ड एक्सटेंशन को फिर से सक्षम करें।"
+  },
+  "NoUserName": {
+    "message": "कोई यूज़र नेम नहीं है"
+  },
+  "divOpenPasswords": {
+    "message": "पासवर्ड प्रबंधित करें…"
+  },
+  "divOpenPasswordsSubtitle": {
+    "message": "तलाशें और पासवर्ड बनाएँ।"
+  },
+  "browserName": {
+    "message": "Chrome"
+  },
+  "totpVerificationCodeNameWithDomain": {
+    "message": "“$1” के लिए सत्यापन कोड"
+  },
+  "totpVerificationCodeName": {
+    "message": "सत्यापन कोड"
+  },
+  "enableAutoFillPasswordsTitle": {
+    "message": "पासवर्ड ऑटोफ़िल सक्षम करें"
+  },
+  "enableAutoFillPasswordsMessage": {
+    "message": "Chrome के लिए इस iCloud पासवर्ड एक्सटेंशन को सक्षम करने के लिए टूलबार बटन पर क्लिक करें।"
+  }
+}

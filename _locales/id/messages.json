@@ -1,0 +1,77 @@
+{
+  "_lang": {
+    "message": "id"
+  },
+  "downloadButton": {
+    "message": "Unduh"
+  },
+  "downloadMessage": {
+    "message": "Unduh iCloud untuk Windows untuk menggunakan Kata Sandi iCloud."
+  },
+  "extDescription": {
+    "message": "Kata Sandi iCloud memungkinkan Anda untuk menggunakan kata sandi yang dibuat di Safari dan app di iPhone, iPad, dan Mac dengan Chrome di Windows."
+  },
+  "extName": {
+    "message": "Kata Sandi iCloud"
+  },
+  "openiCloudForWindowsButtonText": {
+    "message": "Buka iCloud untuk Windows"
+  },
+  "CheckEngineMessage": {
+    "message": "Aktifkan Kata Sandi di iCloud untuk Windows untuk menggunakan Kata Sandi iCloud dengan Chrome."
+  },
+  "unsupportedOS": {
+    "message": "Ekstensi ini dirancang untuk dijalankan di Windows 10. Jika Anda menggunakan Mac, kata sandi Anda akan diselaraskan secara otomatis dengan iPhone, iPad, dan Mac Anda saat masuk ke iCloud."
+  },
+  "divPINTitle": {
+    "message": "Aktifkan Isi-Auto Kata Sandi"
+  },
+  "divPINMessage": {
+    "message": "iCloud untuk Windows mengirimi Anda pemberitahuan dengan kode verifikasi. Masukkan kode untuk melanjutkan."
+  },
+  "divICsMessage": {
+    "message": "Pilih kata sandi yang disimpan untuk digunakan:"
+  },
+  "GenericPopupTitle": {
+    "message": "Kata sandi Anda diselaraskan dengan Rantai Kunci iCloud"
+  },
+  "divNoPasswordsMessage": {
+    "message": "Anda dapat melihat dan mengedit kata sandi yang disimpan di app Pengelola Kata Sandi iCloud."
+  },
+  "divDoNotRememberTitle": {
+    "message": "Sebelumnya Anda meminta agar jangan pernah menyimpan kata sandi untuk situs web ini."
+  },
+  "divDoNotRememberMessage": {
+    "message": "Untuk mengubah ini, hapus entri untuk situs web ini dari Rantai Kunci iCloud Anda dan masuk kembali ke situs web ini."
+  },
+  "GettingPasswords": {
+    "message": "Memuat kata sandi…"
+  },
+  "ErrorReturned": {
+    "message": "Terjadi kesalahan. Aktifkan kembali ekstensi Kata Sandi iCloud untuk Chrome."
+  },
+  "NoUserName": {
+    "message": "tidak ada nama pengguna"
+  },
+  "divOpenPasswords": {
+    "message": "Kelola Kata Sandi…"
+  },
+  "divOpenPasswordsSubtitle": {
+    "message": "Cari tahu dan buat kata sandi."
+  },
+  "browserName": {
+    "message": "Chrome"
+  },
+  "totpVerificationCodeNameWithDomain": {
+    "message": "Kode verifikasi untuk “$1”"
+  },
+  "totpVerificationCodeName": {
+    "message": "Kode Verifikasi"
+  },
+  "enableAutoFillPasswordsTitle": {
+    "message": "Aktifkan Isi-Auto Kata Sandi"
+  },
+  "enableAutoFillPasswordsMessage": {
+    "message": "Klik tombol bar alat untuk mengaktifkan ekstensi Kata Sandi iCloud untuk Chrome."
+  }
+}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Password AutoFill Completion List</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body class="completionList">
+        <div id="divICs" class="box">
+            <div id="needToPairMessageBox">
+                <div class="imageContainer">
+                    <img src="images/PasswordsExtensionIcon_128.png">
+                </div>
+                <div class="textContainer">
+                    <p id="needToPairTitle"></p>
+                    <p id="needToPairMessage"></p>
+                </div>
+            </div>
+            <ul class="credential-list" id="credentialList"></ul>
+        </div>
+    </body>
+    <script src="utils.js"></script>
+    <script src="extensionState.js"></script>
+    <script src="heuristicsRedefinitions.js"></script>
+    <script src="completion_list.js"></script>
+</html>

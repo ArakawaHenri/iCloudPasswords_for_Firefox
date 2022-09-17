@@ -1,0 +1,77 @@
+{
+  "_lang": {
+    "message": "cs"
+  },
+  "downloadButton": {
+    "message": "Stáhnout"
+  },
+  "downloadMessage": {
+    "message": "Pokud chcete používat Hesla na iCloudu, stáhněte si iCloud pro Windows."
+  },
+  "extDescription": {
+    "message": "Rozšíření Hesla na iCloudu umožňuje používat v Chromu na Windows hesla, která jste si vytvořili v Safari a dalších aplikacích na iPhonu, iPadu a Macu."
+  },
+  "extName": {
+    "message": "Hesla na iCloudu"
+  },
+  "openiCloudForWindowsButtonText": {
+    "message": "Otevřít iCloud pro Windows"
+  },
+  "CheckEngineMessage": {
+    "message": "Chcete‑li v Chromu používat rozšíření Hesla na iCloudu, zapněte v aplikaci iCloud pro Windows funkci Hesla."
+  },
+  "unsupportedOS": {
+    "message": "Toto rozšíření je určeno pro systém Windows 10. Pokud používáte Mac, vaše hesla se budou automaticky synchronizovat s vaším iPhonem, iPadem a Macem, kdykoli se přihlásíte k iCloudu."
+  },
+  "divPINTitle": {
+    "message": "Zapnutí automatického vyplňování hesel"
+  },
+  "divPINMessage": {
+    "message": "iCloud pro Windows vám poslal oznámení s ověřovacím kódem. Tento kód zadejte, než budete pokračovat."
+  },
+  "divICsMessage": {
+    "message": "Vyberte uložené heslo, které chcete použít:"
+  },
+  "GenericPopupTitle": {
+    "message": "Vaše hesla se synchronizují s Klíčenkou na iCloudu"
+  },
+  "divNoPasswordsMessage": {
+    "message": "Uložená hesla si můžete zobrazit a upravit v aplikaci Správce hesel na iCloudu."
+  },
+  "divDoNotRememberTitle": {
+    "message": "Pro tuto webovou stránku jste ukládání hesel zakázali."
+  },
+  "divDoNotRememberMessage": {
+    "message": "Pokud chcete toto nastavení změnit, odstraňte záznam této webové stránky z Klíčenky na iCloudu a znovu se ke stránce přihlaste."
+  },
+  "GettingPasswords": {
+    "message": "Načítání hesel…"
+  },
+  "ErrorReturned": {
+    "message": "Došlo k chybě. Aktivujte znovu rozšíření Hesla na iCloudu pro Chrome."
+  },
+  "NoUserName": {
+    "message": "žádné uživatelské jméno"
+  },
+  "divOpenPasswords": {
+    "message": "Spravovat hesla…"
+  },
+  "divOpenPasswordsSubtitle": {
+    "message": "Vyhledejte a vytvořte hesla."
+  },
+  "browserName": {
+    "message": "Chrome"
+  },
+  "totpVerificationCodeNameWithDomain": {
+    "message": "Ověřovací kód pro doménu „$1“"
+  },
+  "totpVerificationCodeName": {
+    "message": "Ověřovací kód"
+  },
+  "enableAutoFillPasswordsTitle": {
+    "message": "Automaticky vyplňovat hesla"
+  },
+  "enableAutoFillPasswordsMessage": {
+    "message": "Kliknutím na tlačítko na panelu nástrojů zapněte rozšíření hesla na iCloudu pro Chrome."
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "_lang": {
+    "message": "ms"
+  },
+  "downloadButton": {
+    "message": "Muat Turun"
+  },
+  "downloadMessage": {
+    "message": "Muat turun iCloud untuk Windows bagi menggunakan Kata Laluan iCloud."
+  },
+  "extDescription": {
+    "message": "Membolehkan anda guna kata laluan dicipta dalam Safari dan app pada iPhone, iPad dan Mac dengan Chrome pada Windows."
+  },
+  "extName": {
+    "message": "Kata Laluan iCloud"
+  },
+  "openiCloudForWindowsButtonText": {
+    "message": "Buka iCloud untuk Windows"
+  },
+  "CheckEngineMessage": {
+    "message": "Dayakan Kata Laluan dalam iCloud untuk Windows bagi menggunakan Kata Laluan iCloud dengan Chrome."
+  },
+  "unsupportedOS": {
+    "message": "Sambungan ini direka bentuk untuk dijalankan pada Windows 10. Jika anda menggunakan Mac, kata laluan anda akan diselaraskan secara automatik dengan iPhone, iPad dan Mac anda apabila anda mendaftar masuk ke iCloud."
+  },
+  "divPINTitle": {
+    "message": "Dayakan Isi Auto Kata Laluan"
+  },
+  "divPINMessage": {
+    "message": "iCloud untuk Windows menghantar pemberitahuan dengan kod pengesahan kepada anda. Masukkan kod untuk meneruskan."
+  },
+  "divICsMessage": {
+    "message": "Pilih kata laluan disimpan untuk digunakan:"
+  },
+  "GenericPopupTitle": {
+    "message": "Kata laluan anda diselaraskan dengan Rantai Kunci iCloud"
+  },
+  "divNoPasswordsMessage": {
+    "message": "Anda boleh melihat dan mengedit kata laluan disimpan dalam app Pengurus Kata Laluan iCloud."
+  },
+  "divDoNotRememberTitle": {
+    "message": "Anda sebelum ini menandakan untuk jangan menyimpan kata laluan bagi tapak web ini."
+  },
+  "divDoNotRememberMessage": {
+    "message": "Untuk menukar ini, keluarkan entri bagi tapak web ini daripada Rantai Kunci iCloud anda dan log masuk semula ke tapak web ini."
+  },
+  "GettingPasswords": {
+    "message": "Memuatkan kata laluan…"
+  },
+  "ErrorReturned": {
+    "message": "Ralat berlaku. Sila dayakan semula sambungan Kata Laluan iCloud untuk Chrome."
+  },
+  "NoUserName": {
+    "message": "tiada nama pengguna"
+  },
+  "divOpenPasswords": {
+    "message": "Urus Kata Laluan…"
+  },
+  "divOpenPasswordsSubtitle": {
+    "message": "Cari dan cipta kata laluan."
+  },
+  "browserName": {
+    "message": "Chrome"
+  },
+  "totpVerificationCodeNameWithDomain": {
+    "message": "Kod pengesahan untuk “$1”"
+  },
+  "totpVerificationCodeName": {
+    "message": "Kod pengesahan"
+  },
+  "enableAutoFillPasswordsTitle": {
+    "message": "Dayakan Isi Auto Kata Laluan"
+  },
+  "enableAutoFillPasswordsMessage": {
+    "message": "Klik butang bar alat untuk mendayakan sambungan Kata Laluan iCloud bagi Chrome."
+  }
+}

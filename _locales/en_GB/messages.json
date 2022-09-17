@@ -1,0 +1,77 @@
+{
+  "_lang": {
+    "message": "en_GB"
+  },
+  "downloadButton": {
+    "message": "Download"
+  },
+  "downloadMessage": {
+    "message": "Download iCloud for Windows to use iCloud Passwords."
+  },
+  "extDescription": {
+    "message": "iCloud Passwords lets you use your passwords created in Safari and apps on iPhone, iPad and Mac with Chrome on Windows."
+  },
+  "extName": {
+    "message": "iCloud Passwords"
+  },
+  "openiCloudForWindowsButtonText": {
+    "message": "Open iCloud for Windows"
+  },
+  "CheckEngineMessage": {
+    "message": "Enable Passwords in iCloud for Windows to use iCloud Passwords with Chrome."
+  },
+  "unsupportedOS": {
+    "message": "This extension is designed to run on Windows 10. If you are using a Mac, your passwords will automatically sync with your iPhone, iPad and Mac when you sign in to iCloud."
+  },
+  "divPINTitle": {
+    "message": "Enable Password AutoFill"
+  },
+  "divPINMessage": {
+    "message": "iCloud for Windows sent you a notification with a verification code. Enter the code to continue."
+  },
+  "divICsMessage": {
+    "message": "Choose a saved password to use:"
+  },
+  "GenericPopupTitle": {
+    "message": "Your passwords are synced with iCloud Keychain"
+  },
+  "divNoPasswordsMessage": {
+    "message": "You can view and edit saved passwords in the iCloud Password Manager app."
+  },
+  "divDoNotRememberTitle": {
+    "message": "You previously indicated to never save passwords for this website."
+  },
+  "divDoNotRememberMessage": {
+    "message": "To change this, remove the entry for this website from your iCloud Keychain and log in to this website again."
+  },
+  "GettingPasswords": {
+    "message": "Loading passwords…"
+  },
+  "ErrorReturned": {
+    "message": "An error occurred. Please re-enable iCloud Passwords extension for Chrome."
+  },
+  "NoUserName": {
+    "message": "no username"
+  },
+  "divOpenPasswords": {
+    "message": "Manage Passwords…"
+  },
+  "divOpenPasswordsSubtitle": {
+    "message": "Look up and create passwords."
+  },
+  "browserName": {
+    "message": "Chrome"
+  },
+  "totpVerificationCodeNameWithDomain": {
+    "message": "Verification code for “$1”"
+  },
+  "totpVerificationCodeName": {
+    "message": "Verification code"
+  },
+  "enableAutoFillPasswordsTitle": {
+    "message": "Enable Password AutoFill"
+  },
+  "enableAutoFillPasswordsMessage": {
+    "message": "Click the toolbar button to enable the iCloud Passwords extension for Chrome."
+  }
+}

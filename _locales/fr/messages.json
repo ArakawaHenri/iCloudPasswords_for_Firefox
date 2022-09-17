@@ -1,0 +1,77 @@
+{
+  "_lang": {
+    "message": "fr"
+  },
+  "downloadButton": {
+    "message": "Télécharger"
+  },
+  "downloadMessage": {
+    "message": "Téléchargez iCloud pour Windows pour utiliser Mots de passe iCloud."
+  },
+  "extDescription": {
+    "message": "Mots de passe iCloud vous permet d’utiliser avec Chrome sous Windows les mêmes mots de passe que vous créez dans Safari et dans les apps sur iPhone, iPad et Mac."
+  },
+  "extName": {
+    "message": "Mots de passe iCloud"
+  },
+  "openiCloudForWindowsButtonText": {
+    "message": "Ouvrir iCloud pour Windows"
+  },
+  "CheckEngineMessage": {
+    "message": "Activez « Mots de passe » dans iCloud pour Windows afin d’utiliser Mots de passe iCloud avec Chrome."
+  },
+  "unsupportedOS": {
+    "message": "Cette extension est conçue pour être exécutée sous Windows 10. Si vous utilisez un Mac, vos mots de passe seront automatiquement synchronisés avec votre iPhone, iPad et Mac lorsque vous vous connectez à iCloud."
+  },
+  "divPINTitle": {
+    "message": "Activer le remplissage automatique des mots de passe"
+  },
+  "divPINMessage": {
+    "message": "iCloud pour Windows vous a envoyé une notification avec un code de validation. Saisissez le code pour continuer."
+  },
+  "divICsMessage": {
+    "message": "Choisissez un mot de passe enregistré à utiliser :"
+  },
+  "GenericPopupTitle": {
+    "message": "Vos mots de passe sont synchronisés avec le trousseau iCloud"
+  },
+  "divNoPasswordsMessage": {
+    "message": "Vous pouvez consulter et modifier les mots de passe enregistrés dans l’app Gestionnaire de mots de passe iCloud."
+  },
+  "divDoNotRememberTitle": {
+    "message": "Vous avez indiqué précédemment que vous ne voulez jamais enregistrer de mot de passe pour ce site web."
+  },
+  "divDoNotRememberMessage": {
+    "message": "Pour modifier ceci, supprimez l’entrée correspondant à ce site web de votre trousseau iCloud et connectez-vous de nouveau à ce site web."
+  },
+  "GettingPasswords": {
+    "message": "Récupération des mots de passe…"
+  },
+  "ErrorReturned": {
+    "message": "Une erreur s’est produite. Veuillez réactiver l’extension Mots de passe iCloud pour Chrome."
+  },
+  "NoUserName": {
+    "message": "aucun nom d’utilisateur"
+  },
+  "divOpenPasswords": {
+    "message": "Gérer les mots de passe…"
+  },
+  "divOpenPasswordsSubtitle": {
+    "message": "Consultez et créez des mots de passe."
+  },
+  "browserName": {
+    "message": "Chrome"
+  },
+  "totpVerificationCodeNameWithDomain": {
+    "message": "Code de validation pour « $1 »"
+  },
+  "totpVerificationCodeName": {
+    "message": "Code de validation"
+  },
+  "enableAutoFillPasswordsTitle": {
+    "message": "Activer le remplissage automatique des mots de passe"
+  },
+  "enableAutoFillPasswordsMessage": {
+    "message": "Cliquez sur le bouton dans la barre d’outils afin d’activer l’extension Mots de passe iCloud pour Chrome."
+  }
+}

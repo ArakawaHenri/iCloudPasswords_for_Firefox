@@ -1,0 +1,77 @@
+{
+  "_lang": {
+    "message": "de"
+  },
+  "downloadButton": {
+    "message": "Laden"
+  },
+  "downloadMessage": {
+    "message": "Lade „iCloud für Windows“, um „iCloud-Passwörter“ zu verwenden."
+  },
+  "extDescription": {
+    "message": "Mit „iCloud-Passwörter“ kannst du die mit Safari und Apps auf dem iPhone, iPad und Mac erstellten Passwörter mit Chrome unter Windows verwenden."
+  },
+  "extName": {
+    "message": "iCloud Passwords"
+  },
+  "openiCloudForWindowsButtonText": {
+    "message": "„iCloud für Windows“ öffnen"
+  },
+  "CheckEngineMessage": {
+    "message": "Aktiviere Passwörter in „iCloud für Windows“, um „iCloud-Passwörter“ mit Chrome zu verwenden."
+  },
+  "unsupportedOS": {
+    "message": "Diese Erweiterung wurde für Windows 10 entwickelt. Wenn du einen Mac verwendest, werden deine Passwörter automatisch mit deinem iPhone, iPad und Mac synchronisiert, sobald du dich bei iCloud anmeldest."
+  },
+  "divPINTitle": {
+    "message": "Automatisches Ausfüllen von Passwörtern aktivieren"
+  },
+  "divPINMessage": {
+    "message": "„iCloud für Windows“ hat dir eine Mitteilung mit einem Bestätigungscode gesendet. Gib den Code ein, um fortzufahren."
+  },
+  "divICsMessage": {
+    "message": "Zu verwendendes gespeichertes Passwort auswählen:"
+  },
+  "GenericPopupTitle": {
+    "message": "Deine Passwörter sind mit „iCloud-Schlüsselbund“ synchronisiert"
+  },
+  "divNoPasswordsMessage": {
+    "message": "Du kannst gespeicherte Passwörter in der App „iCloud-Passwortverwaltung“ ansehen und bearbeiten."
+  },
+  "divDoNotRememberTitle": {
+    "message": "Du hast zuvor angegeben, Passwörter für diese Website nie zu speichern."
+  },
+  "divDoNotRememberMessage": {
+    "message": "Um dies zu ändern, entferne den Eintrag für diese Website aus deinem iCloud-Schlüsselbund und melde dich erneut bei dieser Website an."
+  },
+  "GettingPasswords": {
+    "message": "Passwörter laden …"
+  },
+  "ErrorReturned": {
+    "message": "Ein Fehler ist aufgetreten. Aktiviere die Erweiterung „iCloud-Passwörter“ erneut für Chrome."
+  },
+  "NoUserName": {
+    "message": "kein Benutzername"
+  },
+  "divOpenPasswords": {
+    "message": "Passwörter verwalten …"
+  },
+  "divOpenPasswordsSubtitle": {
+    "message": "Schlage Passwörter nach oder erstelle sie."
+  },
+  "browserName": {
+    "message": "Chrome"
+  },
+  "totpVerificationCodeNameWithDomain": {
+    "message": "Bestätigungscode für „$1“"
+  },
+  "totpVerificationCodeName": {
+    "message": "Bestätigungscode"
+  },
+  "enableAutoFillPasswordsTitle": {
+    "message": "Automatisches Ausfüllen von Passwörtern aktivieren"
+  },
+  "enableAutoFillPasswordsMessage": {
+    "message": "Klicke auf die Symbolleistentaste, um die Erweiterung „iCloud-Passwörter“ für Chrome zu aktivieren."
+  }
+}

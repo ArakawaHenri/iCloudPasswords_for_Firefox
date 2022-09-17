@@ -1,0 +1,77 @@
+{
+  "_lang": {
+    "message": "pl"
+  },
+  "downloadButton": {
+    "message": "Pobierz"
+  },
+  "downloadMessage": {
+    "message": "Aby używać haseł iCloud, pobierz aplikację iCloud dla Windows."
+  },
+  "extDescription": {
+    "message": "Rozszerzenie Hasła iCloud pozwala używać w przeglądarce Chrome w systemie Windows haseł utworzonych w Safari i innych aplikacjach na iPhonie, iPadzie lub Macu."
+  },
+  "extName": {
+    "message": "Hasła iCloud"
+  },
+  "openiCloudForWindowsButtonText": {
+    "message": "Otwórz iCloud dla Windows"
+  },
+  "CheckEngineMessage": {
+    "message": "Aby używać rozszerzenia Hasła iCloud w Chrome, włącz Hasła w iCloud dla Windows."
+  },
+  "unsupportedOS": {
+    "message": "To rozszerzenie zostało zaprojektowane dla systemu Windows 10. Jeżeli używasz Maca, Twoje hasła będą automatycznie synchronizowane z Twoim iPhone’em, iPadem i Makiem, gdy zalogujesz się w iCloud."
+  },
+  "divPINTitle": {
+    "message": "Włącz wypełnianie haseł"
+  },
+  "divPINMessage": {
+    "message": "Aby kontynuować, podaj kod weryfikacyjny z powiadomienia od aplikacji iCloud dla Windows."
+  },
+  "divICsMessage": {
+    "message": "Wybierz zachowane hasło, którego chcesz użyć:"
+  },
+  "GenericPopupTitle": {
+    "message": "Twoje hasła są synchronizowane z pękiem kluczy iCloud."
+  },
+  "divNoPasswordsMessage": {
+    "message": "Zachowane hasła możesz wyświetlać i edytować w aplikacji Menedżer haseł iCloud."
+  },
+  "divDoNotRememberTitle": {
+    "message": "Twój wcześniejszy wybór to nigdy nie zachowywać haseł do tej witryny."
+  },
+  "divDoNotRememberMessage": {
+    "message": "Aby to zmienić, usuń pozycję związaną z tą witryną z pęku kluczy iCloud i zaloguj się ponownie w tej witrynie."
+  },
+  "GettingPasswords": {
+    "message": "Wczytuję hasła…"
+  },
+  "ErrorReturned": {
+    "message": "Wystąpił błąd. Włącz ponownie rozszerzenie Hasła iCloud w Chrome."
+  },
+  "NoUserName": {
+    "message": "brak nazwy użytkownika"
+  },
+  "divOpenPasswords": {
+    "message": "Zarządzaj hasłami…"
+  },
+  "divOpenPasswordsSubtitle": {
+    "message": "Wyszukuj i twórz hasła."
+  },
+  "browserName": {
+    "message": "Chrome"
+  },
+  "totpVerificationCodeNameWithDomain": {
+    "message": "Kod weryfikacyjny "
+  },
+  "totpVerificationCodeName": {
+    "message": "Kod weryfikacyjny"
+  },
+  "enableAutoFillPasswordsTitle": {
+    "message": "Włącz wypełnianie haseł"
+  },
+  "enableAutoFillPasswordsMessage": {
+    "message": "Aby włączyć rozszerzenie Hasła iCloud dla przeglądarki Chrome, kliknij w przycisk na pasku narzędzi."
+  }
+}

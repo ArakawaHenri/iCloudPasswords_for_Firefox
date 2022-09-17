@@ -1,0 +1,77 @@
+{
+  "_lang": {
+    "message": "th"
+  },
+  "downloadButton": {
+    "message": "ดาวน์โหลด"
+  },
+  "downloadMessage": {
+    "message": "ดาวน์โหลด iCloud สำหรับ Windows เพื่อใช้รหัสผ่าน iCloud"
+  },
+  "extDescription": {
+    "message": "รหัสผ่าน iCloud ช่วยให้คุณสามารถใช้รหัสผ่านของคุณที่สร้างใน Safari และแอปบน iPhone, iPad และ Mac กับ Chrome บน Windows ได้"
+  },
+  "extName": {
+    "message": "รหัสผ่าน iCloud"
+  },
+  "openiCloudForWindowsButtonText": {
+    "message": "เปิด iCloud สำหรับ Windows"
+  },
+  "CheckEngineMessage": {
+    "message": "เปิดใช้งานรหัสผ่านบน iCloud สำหรับ Windows เพื่อใช้รหัสผ่าน iCloud กับ Chrome"
+  },
+  "unsupportedOS": {
+    "message": "ส่วนขยายนี้ออกแบบมาเพื่อทำงานบน Windows 10 ถ้าคุณกำลังใช้ Mac อยู่ รหัสผ่านของคุณจะเชื่อมข้อมูลกับ iPhone, iPad และ Mac ของคุณโดยอัตโนมัติเมื่อคุณลงชื่อเข้า iCloud"
+  },
+  "divPINTitle": {
+    "message": "เปิดใช้งานการป้อนรหัสผ่านโดยอัตโนมัติ"
+  },
+  "divPINMessage": {
+    "message": "iCloud สำหรับ Windows ได้ส่งการแจ้งเตือนพร้อมรหัสการตรวจสอบยืนยันให้กับคุณ ป้อนรหัสเพื่อดำเนินการต่อ"
+  },
+  "divICsMessage": {
+    "message": "เลือกรหัสผ่านที่บันทึกไว้เพื่อใช้งาน:"
+  },
+  "GenericPopupTitle": {
+    "message": "รหัสผ่านของคุณเชื่อมข้อมูลกับพวงกุญแจ iCloud แล้ว"
+  },
+  "divNoPasswordsMessage": {
+    "message": "คุณสามารถดูและแก้ไขรหัสผ่านที่บันทึกไว้ได้ในแอปตัวจัดการรหัสผ่าน iCloud"
+  },
+  "divDoNotRememberTitle": {
+    "message": "คุณได้ระบุไว้ก่อนหน้านี้ว่าไม่ต้องบันทึกรหัสผ่านของเว็บไซต์นี้"
+  },
+  "divDoNotRememberMessage": {
+    "message": "ในการเปลี่ยนแปลงสิ่งนี้ ให้เอารายการสำหรับเว็บไซต์นี้ออกจากพวงกุญแจ iCloud ของคุณ แล้วเข้าสู่ระบบเว็บไซต์นี้อีกครั้ง"
+  },
+  "GettingPasswords": {
+    "message": "กำลังดาวน์โหลดรหัสผ่าน…"
+  },
+  "ErrorReturned": {
+    "message": "เกิดข้อผิดพลาดขึ้น โปรดเปิดใช้งานส่วนขยายรหัสผ่าน iCloud สำหรับ Chrome อีกครั้ง"
+  },
+  "NoUserName": {
+    "message": "ไม่มีชื่อผู้ใช้"
+  },
+  "divOpenPasswords": {
+    "message": "จัดการรหัสผ่าน…"
+  },
+  "divOpenPasswordsSubtitle": {
+    "message": "ค้นดูและสร้างรหัสผ่านใหม่"
+  },
+  "browserName": {
+    "message": "Chrome"
+  },
+  "totpVerificationCodeNameWithDomain": {
+    "message": "รหัสการตรวจสอบยืนยันสำหรับ “$1”"
+  },
+  "totpVerificationCodeName": {
+    "message": "รหัสการตรวจสอบยืนยัน"
+  },
+  "enableAutoFillPasswordsTitle": {
+    "message": "เปิดใช้งานการป้อนรหัสผ่านโดยอัตโนมัติ"
+  },
+  "enableAutoFillPasswordsMessage": {
+    "message": "คลิกปุ่มแถบเครื่องมือเพื่อเปิดใช้งานส่วนขยายของรหัสผ่าน iCloud สำหรับ Chrome"
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "_lang": {
+    "message": "uk"
+  },
+  "downloadButton": {
+    "message": "Завантажити"
+  },
+  "downloadMessage": {
+    "message": "Завантажте iCloud для Windows, щоб використовувати паролі iCloud."
+  },
+  "extDescription": {
+    "message": "Розширення «Паролі iCloud» дає змогу використовувати паролі, створені в Safari та програмах на iPhone, iPad та Mac із Chrome у Windows."
+  },
+  "extName": {
+    "message": "Паролі iCloud"
+  },
+  "openiCloudForWindowsButtonText": {
+    "message": "Відкрити iCloud для Windows"
+  },
+  "CheckEngineMessage": {
+    "message": "Увімкніть паролі в iCloud для Windows, щоб використовувати «Паролі iCloud» у Chrome."
+  },
+  "unsupportedOS": {
+    "message": "Розширення розроблене для запуску в системі Windows 10. На Mac ваші паролі автоматично синхронізуються з вашими iPhone, iPad і Mac, коли ви входите в iCloud."
+  },
+  "divPINTitle": {
+    "message": "Увімкнення автозаповнення паролів"
+  },
+  "divPINMessage": {
+    "message": "Програма iCloud для Windows надіслала вам повідомлення з кодом підтвердження. Введіть код для продовження."
+  },
+  "divICsMessage": {
+    "message": "Виберіть збережений пароль для використання:"
+  },
+  "GenericPopupTitle": {
+    "message": "Ваші паролі синхронізуються з В’язкою iCloud"
+  },
+  "divNoPasswordsMessage": {
+    "message": "Ви можете переглядати й редагувати збережені паролі в програмі iCloud Password Manager."
+  },
+  "divDoNotRememberTitle": {
+    "message": "Раніше ви вказали, що не хочете зберігати паролі для цього вебсайту."
+  },
+  "divDoNotRememberMessage": {
+    "message": "Щоб змінити це, вилучіть запис про цей вебсайт зі своєї В’язки iCloud і авторизуйтеся на цьому сайті повторно."
+  },
+  "GettingPasswords": {
+    "message": "Паролі завантажуються..."
+  },
+  "ErrorReturned": {
+    "message": "Сталася помилка. Увімкніть ще раз розширення «Паролі iCloud» для Chrome."
+  },
+  "NoUserName": {
+    "message": "немає імені користувача"
+  },
+  "divOpenPasswords": {
+    "message": "Керувати паролями..."
+  },
+  "divOpenPasswordsSubtitle": {
+    "message": "Знайти та створити паролі."
+  },
+  "browserName": {
+    "message": "Chrome"
+  },
+  "totpVerificationCodeNameWithDomain": {
+    "message": "Код перевірки для «$1»"
+  },
+  "totpVerificationCodeName": {
+    "message": "Код перевірки"
+  },
+  "enableAutoFillPasswordsTitle": {
+    "message": "Увімкнути автозаповнення паролів"
+  },
+  "enableAutoFillPasswordsMessage": {
+    "message": "Натисніть кнопку на панелі інструментів, щоб увімкнути розширення «Паролі iCloud» для Chrome."
+  }
+}

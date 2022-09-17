@@ -1,0 +1,77 @@
+{
+  "_lang": {
+    "message": "zh_TW"
+  },
+  "downloadButton": {
+    "message": "下載"
+  },
+  "downloadMessage": {
+    "message": "下載「Windows 版 iCloud」來使用「iCloud 密碼」。"
+  },
+  "extDescription": {
+    "message": "「iCloud 密碼」能讓您在 Safari 和 iPhone、iPad 和 Mac App 上建立的密碼與 Windows 上的 Chrome 一起使用。"
+  },
+  "extName": {
+    "message": "iCloud 密碼"
+  },
+  "openiCloudForWindowsButtonText": {
+    "message": "打開「Windows 版 iCloud」"
+  },
+  "CheckEngineMessage": {
+    "message": "啟用「Windows 版 iCloud」中的「密碼」來在 Chrome 中使用「iCloud 密碼」。"
+  },
+  "unsupportedOS": {
+    "message": "此延伸功能是設計在 Windows 10 上使用。若您使用 Mac，您的密碼將在您登入 iCloud 時自動與您的 iPhone、iPad 和 Mac 同步。"
+  },
+  "divPINTitle": {
+    "message": "啟用密碼自動填寫"
+  },
+  "divPINMessage": {
+    "message": "「Windows 版 iCloud」會傳送包含驗證碼的通知給您。請輸入驗證碼來繼續。"
+  },
+  "divICsMessage": {
+    "message": "選擇已儲存的密碼來使用："
+  },
+  "GenericPopupTitle": {
+    "message": "您的密碼已和「iCloud 鑰匙圈」同步"
+  },
+  "divNoPasswordsMessage": {
+    "message": "您可以在「iCloud 密碼管理程式」App 中檢視和編輯已儲存的密碼。"
+  },
+  "divDoNotRememberTitle": {
+    "message": "您先前指示永不儲存此網站的密碼。"
+  },
+  "divDoNotRememberMessage": {
+    "message": "若要更改此設定，請在您的「iCloud 鑰匙圈」中移除此網站的項目，並且重新登入此網站。"
+  },
+  "GettingPasswords": {
+    "message": "正在載入密碼..."
+  },
+  "ErrorReturned": {
+    "message": "發生錯誤。請重新啟用 Chrome 的「iCloud 密碼」延伸功能。"
+  },
+  "NoUserName": {
+    "message": "沒有使用者名稱"
+  },
+  "divOpenPasswords": {
+    "message": "管理密碼..."
+  },
+  "divOpenPasswordsSubtitle": {
+    "message": "查詢和建立密碼。"
+  },
+  "browserName": {
+    "message": "Chrome"
+  },
+  "totpVerificationCodeNameWithDomain": {
+    "message": "「$1」的驗證碼"
+  },
+  "totpVerificationCodeName": {
+    "message": "驗證碼"
+  },
+  "enableAutoFillPasswordsTitle": {
+    "message": "啟用密碼自動填寫"
+  },
+  "enableAutoFillPasswordsMessage": {
+    "message": "按一下工具列按鈕來啟用 Chrome 的「iCloud 密碼」延伸功能。"
+  }
+}

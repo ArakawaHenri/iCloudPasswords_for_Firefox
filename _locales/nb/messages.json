@@ -1,0 +1,77 @@
+{
+  "_lang": {
+    "message": "nb"
+  },
+  "downloadButton": {
+    "message": "Last ned"
+  },
+  "downloadMessage": {
+    "message": "Last ned iCloud for Windows for å bruke iCloud-passord."
+  },
+  "extDescription": {
+    "message": "iCloud-passord gjør det mulig å bruke passord opprettet i Safari og apper på iPhone, iPad og Mac, med Chrome i Windows."
+  },
+  "extName": {
+    "message": "iCloud-passord"
+  },
+  "openiCloudForWindowsButtonText": {
+    "message": "Åpne iCloud for Windows"
+  },
+  "CheckEngineMessage": {
+    "message": "Aktiver Passord i iCloud for Windows for å bruke iCloud-passord med Chrome."
+  },
+  "unsupportedOS": {
+    "message": "Dette tillegget er laget for bruk med Windows 10. Hvis du bruker en Mac, vil passordene dine automatisk synkroniseres med iPhone, iPad og Mac når du logger på iCloud."
+  },
+  "divPINTitle": {
+    "message": "Aktiver autoutfylling av passord"
+  },
+  "divPINMessage": {
+    "message": "iCloud for Windows har sendt deg en varsling med en verifiseringskode. Oppgi koden for å fortsette."
+  },
+  "divICsMessage": {
+    "message": "Velg et lagret passord:"
+  },
+  "GenericPopupTitle": {
+    "message": "Passordene dine synkroniseres med iCloud-nøkkelring"
+  },
+  "divNoPasswordsMessage": {
+    "message": "Du kan vise og redigere lagrede passord i iCloud-passordhåndterer-appen."
+  },
+  "divDoNotRememberTitle": {
+    "message": "Du har tidligere angitt at passord aldri skal lagres for dette nettstedet."
+  },
+  "divDoNotRememberMessage": {
+    "message": "Hvis du vil endre dette, fjerner du oppføringen for dette nettstedet fra iCloud-nøkkelringen og logger på nettstedet på nytt."
+  },
+  "GettingPasswords": {
+    "message": "Laster inn passord…"
+  },
+  "ErrorReturned": {
+    "message": "Det oppsto en feil. Aktiver Chrome-tillegget iCloud-passord på nytt."
+  },
+  "NoUserName": {
+    "message": "uten brukernavn"
+  },
+  "divOpenPasswords": {
+    "message": "Administrer passord…"
+  },
+  "divOpenPasswordsSubtitle": {
+    "message": "Slå opp og opprett passord."
+  },
+  "browserName": {
+    "message": "Chrome"
+  },
+  "totpVerificationCodeNameWithDomain": {
+    "message": "Verifiseringskode for «$1»"
+  },
+  "totpVerificationCodeName": {
+    "message": "Verifiseringskode"
+  },
+  "enableAutoFillPasswordsTitle": {
+    "message": "Aktiver autoutfylling av passord"
+  },
+  "enableAutoFillPasswordsMessage": {
+    "message": "Klikk på knappen i verktøylinjen for å aktivere iCloud-passord-tillegget for Chrome."
+  }
+}

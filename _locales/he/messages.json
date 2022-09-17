@@ -1,0 +1,77 @@
+{
+  "_lang": {
+    "message": "he"
+  },
+  "downloadButton": {
+    "message": "הורדה"
+  },
+  "downloadMessage": {
+    "message": "יש להוריד את iCloud עבור Windows כדי להשתמש ב״סיסמאות iCloud״."
+  },
+  "extDescription": {
+    "message": "ההרחבה ״סיסמאות iCloud״ מאפשרת לך להשתמש בסיסמאות שנוצרו ב-Safari וביישומים ב-iPhone, ב-iPad וב-Mac בדפדפן Chrome ב‫-‬Windows."
+  },
+  "extName": {
+    "message": "סיסמאות iCloud"
+  },
+  "openiCloudForWindowsButtonText": {
+    "message": "פתיחת iCloud עבור Windows"
+  },
+  "CheckEngineMessage": {
+    "message": "אפשר את ״סיסמאות״ ב-iCloud עבור Windows כדי לאפשר שימוש ב״סיסמאות iCloud״ עם Chrome."
+  },
+  "unsupportedOS": {
+    "message": "הרחבה זו נועדה לשימוש ב-Windows 10 בעת השימוש ב-Mac הסיסמאות שלך  יסתנכרנו אוטומטית עם ה-iPhone, ה-iPad, וה-Mac בעת ההתחברות ל-iCloud."
+  },
+  "divPINTitle": {
+    "message": "הפעלת ״מילוי אוטומטי של סיסמאות״"
+  },
+  "divPINMessage": {
+    "message": "קיבלת מ-iCloud ל-Windows עדכון עם קוד אימות. יש להזין את הקוד כדי להמשיך."
+  },
+  "divICsMessage": {
+    "message": "יש לבחור בסיסמה שנשמרה לשימוש:"
+  },
+  "GenericPopupTitle": {
+    "message": "הסיסמאות שלך מסונכרנות עם ״צרור המפתחות של iCloud״"
+  },
+  "divNoPasswordsMessage": {
+    "message": "ניתן להציג ולערוך סיסמאות שנשמרו ביישום ״מנהל הסיסמאות של iCloud״."
+  },
+  "divDoNotRememberTitle": {
+    "message": "בחרת בעבר אף פעם לא לשמור סיסמאות עבור אתר האינטרנט הזה."
+  },
+  "divDoNotRememberMessage": {
+    "message": "כדי לשנות את ההגדרה, יש להסיר את הערך של אתר זה מ״צרור המפתחות של iCloud״ ולהתחבר מחדש לאתר זה."
+  },
+  "GettingPasswords": {
+    "message": "טוען סיסמאות…"
+  },
+  "ErrorReturned": {
+    "message": "אירעה שגיאה. נא לאפשר מחדש את ההרחבה של ״סיסמאות iCloud״ עבור Chrome."
+  },
+  "NoUserName": {
+    "message": "אין שם משתמש"
+  },
+  "divOpenPasswords": {
+    "message": "ניהול סיסמאות…"
+  },
+  "divOpenPasswordsSubtitle": {
+    "message": "חיפוש סיסמאות ויצירתן."
+  },
+  "browserName": {
+    "message": "Chrome"
+  },
+  "totpVerificationCodeNameWithDomain": {
+    "message": "קוד אימות עבור “$1”"
+  },
+  "totpVerificationCodeName": {
+    "message": "קוד אימות"
+  },
+  "enableAutoFillPasswordsTitle": {
+    "message": "הפעלת ״מילוי אוטומטי של סיסמאות״"
+  },
+  "enableAutoFillPasswordsMessage": {
+    "message": "יש ללחוץ על כפתור סרגל הכלים כדי להפעיל את הרחבת ״סיסמאות iCloud״ עבור Chrome."
+  }
+}

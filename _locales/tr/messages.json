@@ -1,0 +1,77 @@
+{
+  "_lang": {
+    "message": "tr"
+  },
+  "downloadButton": {
+    "message": "İndir"
+  },
+  "downloadMessage": {
+    "message": "iCloud Parolaları’nı kullanmak için Windows için iCloud’u indirin."
+  },
+  "extDescription": {
+    "message": "iCloud Parolaları; iPhone, iPad ve Mac üzerindeki Safari’de ve uygulamalarda yarattığınız parolaları Windows’daki Chrome ile kullanmanızı sağlar."
+  },
+  "extName": {
+    "message": "iCloud Parolaları"
+  },
+  "openiCloudForWindowsButtonText": {
+    "message": "Windows için iCloud’u Aç"
+  },
+  "CheckEngineMessage": {
+    "message": "iCloud Parolaları’nı Chrome ile kullanmak istiyorsanız Windows için iCloud’da Parolalar’ı etkinleştirin."
+  },
+  "unsupportedOS": {
+    "message": "Bu genişletme Windows 10’da çalışmak üzere tasarlanmış. Mac kullanıyorsanız iCloud’a giriş yaptığınızda parolalarınız iPhone’unuz, iPad’iniz ve Mac’iniz ile otomatik olarak eşzamanlanır."
+  },
+  "divPINTitle": {
+    "message": "Otomatik Parola Doldurma’yı Etkinleştirin"
+  },
+  "divPINMessage": {
+    "message": "Windows için iCloud size doğrulama kodu içeren bir bildirim gönderdi. Sürdürmek için bu kodu girin."
+  },
+  "divICsMessage": {
+    "message": "Kullanmak istediğiniz kaydedilmiş parolayı seçin:"
+  },
+  "GenericPopupTitle": {
+    "message": "Parolalarınız iCloud Anahtar Zinciri ile eşzamanlanıyor"
+  },
+  "divNoPasswordsMessage": {
+    "message": "Kaydedilen parolaları iCloud Parola Yöneticisi uygulamasında görüntüleyebilir ve düzenleyebilirsiniz."
+  },
+  "divDoNotRememberTitle": {
+    "message": "Daha önce bu web sitesi için asla parola kaydedilmemesini belirttiniz."
+  },
+  "divDoNotRememberMessage": {
+    "message": "Bunu değiştirmek için iCloud Anahtar Zinciri’nizdeki bu web sitesi için olan girişi silin ve bu web sitesine yeniden giriş yapın."
+  },
+  "GettingPasswords": {
+    "message": "Parolalar yükleniyor…"
+  },
+  "ErrorReturned": {
+    "message": "Bir hata oluştu. Lütfen Chrome için iCloud Parolaları genişletmesini yeniden etkinleştirin."
+  },
+  "NoUserName": {
+    "message": "kullanıcı adı yok"
+  },
+  "divOpenPasswords": {
+    "message": "Parolaları Yönet…"
+  },
+  "divOpenPasswordsSubtitle": {
+    "message": "Parolalara bakın ve parola yaratın."
+  },
+  "browserName": {
+    "message": "Chrome"
+  },
+  "totpVerificationCodeNameWithDomain": {
+    "message": "“$1” için doğrulama kodu"
+  },
+  "totpVerificationCodeName": {
+    "message": "Doğrulama kodu"
+  },
+  "enableAutoFillPasswordsTitle": {
+    "message": "Otomatik Parola Doldurma’yı Etkinleştirin"
+  },
+  "enableAutoFillPasswordsMessage": {
+    "message": "Chrome için iCloud Parolaları genişletmesini etkinleştirmek istiyorsanız araç çubuğu düğmesini tıklayın."
+  }
+}

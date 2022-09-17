@@ -1,0 +1,77 @@
+{
+  "_lang": {
+    "message": "da"
+  },
+  "downloadButton": {
+    "message": "Hent"
+  },
+  "downloadMessage": {
+    "message": "Hent iCloud til Windows for at bruge iCloud-adgangskoder."
+  },
+  "extDescription": {
+    "message": "Funktionen iCloud-adgangskoder gør det muligt at bruge adgangskoder, der er oprettet i Safari og andre apps på iPhone, iPad og Mac, i Chrome på Windows."
+  },
+  "extName": {
+    "message": "iCloud-adgangskoder"
+  },
+  "openiCloudForWindowsButtonText": {
+    "message": "Åbn iCloud til Windows"
+  },
+  "CheckEngineMessage": {
+    "message": "Slå adgangskoder til i iCloud til Windows for at bruge iCloud-adgangskoder i Chrome."
+  },
+  "unsupportedOS": {
+    "message": "Denne udvidelse er beregnet til Windows 10. Hvis du bruger en Mac, bliver dine adgangskoder automatisk synkroniseret med din iPhone, iPad og Mac, når du logger ind på iCloud."
+  },
+  "divPINTitle": {
+    "message": "Slå Autoudfyld adgangskode til"
+  },
+  "divPINMessage": {
+    "message": "iCloud til Windows sendte en notifikation med en bekræftelseskode. Indtast koden for at fortsætte."
+  },
+  "divICsMessage": {
+    "message": "Vælg en gemt adgangskode, du vil bruge:"
+  },
+  "GenericPopupTitle": {
+    "message": "Dine adgangskoder synkroniseres med iCloud-nøglering"
+  },
+  "divNoPasswordsMessage": {
+    "message": "Du kan se og redigere gemte adgangskoder i appen iCloud-adgangskodeadministration."
+  },
+  "divDoNotRememberTitle": {
+    "message": "Du har tidligere angivet, at adgangskoder til dette websted aldrig skulle gemmes."
+  },
+  "divDoNotRememberMessage": {
+    "message": "Hvis du vil ændre dette, skal du fjerne oplysningerne om dette websted fra din iCloud-nøglering og logge ind på webstedet igen."
+  },
+  "GettingPasswords": {
+    "message": "Indlæser adgangskoder…"
+  },
+  "ErrorReturned": {
+    "message": "Der opstod en fejl. Slå udvidelsen til iCloud-adgangskoder i Chrome til igen."
+  },
+  "NoUserName": {
+    "message": "intet brugernavn"
+  },
+  "divOpenPasswords": {
+    "message": "Administrer adgangskoder…"
+  },
+  "divOpenPasswordsSubtitle": {
+    "message": "Søg efter og opret adgangskoder."
+  },
+  "browserName": {
+    "message": "Chrome"
+  },
+  "totpVerificationCodeNameWithDomain": {
+    "message": "Bekræftelseskode til “$1”"
+  },
+  "totpVerificationCodeName": {
+    "message": "Bekræftelseskode"
+  },
+  "enableAutoFillPasswordsTitle": {
+    "message": "Slå Autoudfyld adgangskode til"
+  },
+  "enableAutoFillPasswordsMessage": {
+    "message": "Klik på knappen på værktøjslinjen for at slå udvidelsen iCloud-adgangskoder til i Chrome."
+  }
+}

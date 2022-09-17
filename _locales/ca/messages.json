@@ -1,0 +1,77 @@
+{
+  "_lang": {
+    "message": "ca"
+  },
+  "downloadButton": {
+    "message": "Descarregar"
+  },
+  "downloadMessage": {
+    "message": "Descarrega l’iCloud per a Windows per utilitzar l’extensió de contrasenyes a l’iCloud."
+  },
+  "extDescription": {
+    "message": "L‘extensió de contrasenyes a l’iCloud permet utilitzar les contrasenyes que has creat al Safari i altres apps a l’iPhone, l’iPad i al Mac amb el Chrome al Windows."
+  },
+  "extName": {
+    "message": "Extensió de contrasenyes a l’iCloud"
+  },
+  "openiCloudForWindowsButtonText": {
+    "message": "Obre l’iCloud per a Windows"
+  },
+  "CheckEngineMessage": {
+    "message": "Ves a l’iCloud per a Windows i activa l’opció Contrasenyes per utilitzar l’extensió de contrasenyes a l’iCloud amb el Chrome."
+  },
+  "unsupportedOS": {
+    "message": "Aquesta extensió s’ha dissenyat per executar‑se al Windows 10. Si fas servir un Mac, les contrasenyes se sincronitzaran automàticament amb l’iPhone, l’iPad i el Mac quan iniciïs sessió a l’iCloud."
+  },
+  "divPINTitle": {
+    "message": "Activar l‘autocompleció de contrasenyes"
+  },
+  "divPINMessage": {
+    "message": "L‘iCloud per al Windows t’ha enviat una notificació amb un codi de verificació. Introdueix‑lo per continuar."
+  },
+  "divICsMessage": {
+    "message": "Selecciona la contrasenya desada que vols utilitzar:"
+  },
+  "GenericPopupTitle": {
+    "message": "Les contrasenyes estan sincronitzades amb el clauer de l’iCloud"
+  },
+  "divNoPasswordsMessage": {
+    "message": "Pots veure i editar les contrasenyes desades a l’app del gestor de contrasenyes a l’iCloud."
+  },
+  "divDoNotRememberTitle": {
+    "message": "Abans has indicat que no es desin mai les contrasenyes per a aquest lloc web."
+  },
+  "divDoNotRememberMessage": {
+    "message": "Per canviar‑ho, elimina del clauer de l’iCloud l’entrada d’aquest lloc web i torna a iniciar sessió al lloc web."
+  },
+  "GettingPasswords": {
+    "message": "Carregant contrasenyes…"
+  },
+  "ErrorReturned": {
+    "message": "Hi ha hagut un error. Torna a activar l’extensió de contrasenyes a l’iCloud per al Chrome."
+  },
+  "NoUserName": {
+    "message": "no hi ha nom d’usuari"
+  },
+  "divOpenPasswords": {
+    "message": "Gestionar contrasenyes…"
+  },
+  "divOpenPasswordsSubtitle": {
+    "message": "Buscar i crear contrasenyes."
+  },
+  "browserName": {
+    "message": "Chrome"
+  },
+  "totpVerificationCodeNameWithDomain": {
+    "message": "Codi de verificació de “$1”"
+  },
+  "totpVerificationCodeName": {
+    "message": "Codi de verificació"
+  },
+  "enableAutoFillPasswordsTitle": {
+    "message": "Activar l‘autocompleció de contrasenyes"
+  },
+  "enableAutoFillPasswordsMessage": {
+    "message": "Fes clic al botó de la barra d’eines per activar l’extensió de contrasenyes a l’iCloud per al Chrome."
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "_lang": {
+    "message": "ro"
+  },
+  "downloadButton": {
+    "message": "Descărcați"
+  },
+  "downloadMessage": {
+    "message": "Pentru a utiliza Parole iCloud, descărcați iCloud pentru Windows."
+  },
+  "extDescription": {
+    "message": "Funcționalitatea Parole iCloud vă permite să utilizați parolele create în Safari și în aplicațiile de pe iPhone, iPad și Mac cu Chrome pe Windows."
+  },
+  "extName": {
+    "message": "Parole iCloud"
+  },
+  "openiCloudForWindowsButtonText": {
+    "message": "Deschideți iCloud pentru Windows"
+  },
+  "CheckEngineMessage": {
+    "message": "Pentru a utiliza parolele iCloud cu Chrome, activați opțiunea Parole în iCloud."
+  },
+  "unsupportedOS": {
+    "message": "Această extensie este concepută pentru a rula pe Windows 10. Dacă utilizați un Mac, parolele dvs. se vor sincroniza automat cu iPhone-ul, iPad-ul sau Mac-ul dvs. atunci când vă autentificați pe iCloud."
+  },
+  "divPINTitle": {
+    "message": "Activați Auto-completare parole"
+  },
+  "divPINMessage": {
+    "message": "iCloud pentru Windows v‑a trimis o notificare cu un cod de verificare. Introduceți codul pentru a continua."
+  },
+  "divICsMessage": {
+    "message": "Alegeți o parolă salvată de utilizat:"
+  },
+  "GenericPopupTitle": {
+    "message": "Parolele dvs. sunt sincronizate cu portcheiul iCloud"
+  },
+  "divNoPasswordsMessage": {
+    "message": "Puteți vedea și edita parolele salvate în aplicația Gestionar parole iCloud."
+  },
+  "divDoNotRememberTitle": {
+    "message": "Ați optat anterior ca parolele pentru acest site web să nu fie salvate niciodată."
+  },
+  "divDoNotRememberMessage": {
+    "message": "Pentru a schimba această opțiune, eliminați înregistrarea corespunzătoare acestui site web din Portchei iCloud și reconectați-vă la acest site web."
+  },
+  "GettingPasswords": {
+    "message": "Încărcare parole…"
+  },
+  "ErrorReturned": {
+    "message": "A survenit o eroare. Reactivați extensia Parole iCloud pentru Chrome."
+  },
+  "NoUserName": {
+    "message": "niciun nume de utilizator"
+  },
+  "divOpenPasswords": {
+    "message": "Gestionare parole…"
+  },
+  "divOpenPasswordsSubtitle": {
+    "message": "Căutați și creați parole."
+  },
+  "browserName": {
+    "message": "Chrome"
+  },
+  "totpVerificationCodeNameWithDomain": {
+    "message": "Cod de verificare pentru “$1”"
+  },
+  "totpVerificationCodeName": {
+    "message": "Cod de verificare"
+  },
+  "enableAutoFillPasswordsTitle": {
+    "message": "Activați Auto-completare parole"
+  },
+  "enableAutoFillPasswordsMessage": {
+    "message": "Faceți clic pe butonul din bara de instrumente pentru a activa extensia Parole iCloud pentru Chrome."
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "_lang": {
+    "message": "fi"
+  },
+  "downloadButton": {
+    "message": "Lataa"
+  },
+  "downloadMessage": {
+    "message": "Lataa iCloud Windowsille, jotta voit käyttää iCloud-salasanoja."
+  },
+  "extDescription": {
+    "message": "iCloud-salasanoilla voit käyttää Safarissa sekä iPhonen, iPadin ja Macin apeissa luotuja salasanoja Windowsin Chromessa."
+  },
+  "extName": {
+    "message": "iCloud-salasanat"
+  },
+  "openiCloudForWindowsButtonText": {
+    "message": "Avaa iCloud Windowsille"
+  },
+  "CheckEngineMessage": {
+    "message": "Ota Salasanat käyttöön Windowsin iCloudissa, jotta voit käyttää iCloud-salasanoja Chromessa."
+  },
+  "unsupportedOS": {
+    "message": "Tämä laajennus on suunniteltu Windows 10:lle. Jos käytät Macia, salasanasi synkronoidaan automaattisesti iPhonen, iPadin ja Macin välillä, kun kirjaudut iCloudiin."
+  },
+  "divPINTitle": {
+    "message": "Ota salasanojen automaattinen täyttö käyttöön"
+  },
+  "divPINMessage": {
+    "message": "iCloud Windowsille lähetti sinulle ilmoituksen, jossa on vahvistuskoodi. Jatka syöttämällä koodi."
+  },
+  "divICsMessage": {
+    "message": "Valitse tallennettu salasana käytettäväksi:"
+  },
+  "GenericPopupTitle": {
+    "message": "Salasanasi on synkronoitu iCloud-avainnipun kanssa"
+  },
+  "divNoPasswordsMessage": {
+    "message": "Voit katsella ja muokata tallennettuja salasanoja iCloud-salasanat-sovelluksessa."
+  },
+  "divDoNotRememberTitle": {
+    "message": "Olet aikaisemmin valinnut, että salasanoja tälle verkkosivustolle ei tallenneta."
+  },
+  "divDoNotRememberMessage": {
+    "message": "Voit muuttaa tätä poistamalla tämän verkkosivuston tietueen iCloud-avainnipusta ja kirjautumalla tälle sivustolle uudelleen."
+  },
+  "GettingPasswords": {
+    "message": "Ladataan salasanoja…"
+  },
+  "ErrorReturned": {
+    "message": "Tapahtui virhe. Ota iCloud-salasanalaajennus Chromelle käyttöön uudelleen."
+  },
+  "NoUserName": {
+    "message": "ei käyttäjätunnusta"
+  },
+  "divOpenPasswords": {
+    "message": "Hallitse salasanoja…"
+  },
+  "divOpenPasswordsSubtitle": {
+    "message": "Etsi ja luo salasanoja."
+  },
+  "browserName": {
+    "message": "Chrome"
+  },
+  "totpVerificationCodeNameWithDomain": {
+    "message": "Vahvistuskoodi kohteelle ”$1”"
+  },
+  "totpVerificationCodeName": {
+    "message": "Vahvistuskoodi"
+  },
+  "enableAutoFillPasswordsTitle": {
+    "message": "Ota salasanojen automaattinen täyttö käyttöön"
+  },
+  "enableAutoFillPasswordsMessage": {
+    "message": "Ota iCloud-salasanat-laajennus käyttöön Chromessa klikkaamalla työkalupalkin painiketta."
+  }
+}

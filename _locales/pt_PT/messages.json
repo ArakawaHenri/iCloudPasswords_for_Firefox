@@ -1,0 +1,77 @@
+{
+  "_lang": {
+    "message": "pt_PT"
+  },
+  "downloadButton": {
+    "message": "Descarregar"
+  },
+  "downloadMessage": {
+    "message": "Descarregue iCloud para Windows para usar Palavras-passe em iCloud."
+  },
+  "extDescription": {
+    "message": "A extensão Palavras-passe em iCloud permite-lhe usar as palavras-passe criadas com o Safari e aplicações no iPhone, iPad e Mac com o Chrome no Windows."
+  },
+  "extName": {
+    "message": "Palavras-passe em iCloud"
+  },
+  "openiCloudForWindowsButtonText": {
+    "message": "Abrir iCloud para Windows"
+  },
+  "CheckEngineMessage": {
+    "message": "Ative Palavras-passe em iCloud para Windows, para poder usar a extensão Palavras-passe em iCloud no Chrome."
+  },
+  "unsupportedOS": {
+    "message": "Esta extensão foi concebida para execução no Windows 10. Se estiver a usar um Mac, as suas palavras-passe serão automaticamente sincronizadas com o seu iPhone, iPad e Mac, quando iniciar sessão em iCloud."
+  },
+  "divPINTitle": {
+    "message": "Ativar preenchimento automático de palavras-passe"
+  },
+  "divPINMessage": {
+    "message": "iCloud para Windows enviou-lhe uma notificação com um código de verificação. Digite o código para continuar."
+  },
+  "divICsMessage": {
+    "message": "Escolha uma palavra-passe guardada para usar:"
+  },
+  "GenericPopupTitle": {
+    "message": "As suas palavras-passe estão sincronizadas com o Porta-chaves em iCloud"
+  },
+  "divNoPasswordsMessage": {
+    "message": "Pode ver e editar as palavras-passe guardadas na aplicação Gestor de Palavras-passe em iCloud."
+  },
+  "divDoNotRememberTitle": {
+    "message": "Indicou que, para este site, as palavras-passe nunca deviam ser guardadas."
+  },
+  "divDoNotRememberMessage": {
+    "message": "Para alterar, remova do Porta-Chaves em iCloud a entrada relativa a este site e volte a iniciar sessão."
+  },
+  "GettingPasswords": {
+    "message": "A carregar palavras-passe…"
+  },
+  "ErrorReturned": {
+    "message": "Ocorreu um erro. Volte a ativar a extensão Palavras-passe em iCloud para o Chrome."
+  },
+  "NoUserName": {
+    "message": "nenhum nome de utilizador"
+  },
+  "divOpenPasswords": {
+    "message": "Gerir palavras-passe…"
+  },
+  "divOpenPasswordsSubtitle": {
+    "message": "Procure e crie palavras-passe."
+  },
+  "browserName": {
+    "message": "Chrome"
+  },
+  "totpVerificationCodeNameWithDomain": {
+    "message": "Código de confirmação de “$1”"
+  },
+  "totpVerificationCodeName": {
+    "message": "Código de confirmação"
+  },
+  "enableAutoFillPasswordsTitle": {
+    "message": "Ativar preenchimento automático de palavras-passe"
+  },
+  "enableAutoFillPasswordsMessage": {
+    "message": "Clique no botão na barra de ferramentas para ativar a extensão Palavras-passe em iCloud para Chrome."
+  }
+}

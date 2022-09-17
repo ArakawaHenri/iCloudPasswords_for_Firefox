@@ -1,0 +1,77 @@
+{
+  "_lang": {
+    "message": "es_419"
+  },
+  "downloadButton": {
+    "message": "Descargar"
+  },
+  "downloadMessage": {
+    "message": "Descarga iCloud para Windows para usar Contraseñas en iCloud."
+  },
+  "extDescription": {
+    "message": "La extensión Contraseñas en iCloud te permite usar las contraseñas que creas en Safari y en las apps desde tu iPhone, iPad y Mac con Chrome en Windows."
+  },
+  "extName": {
+    "message": "Contraseñas en iCloud"
+  },
+  "openiCloudForWindowsButtonText": {
+    "message": "Abrir iCloud para Windows"
+  },
+  "CheckEngineMessage": {
+    "message": "Activa Contraseñas en la app iCloud para Windows para usar la extensión Contraseñas en iCloud con Chrome."
+  },
+  "unsupportedOS": {
+    "message": "Esta extensión está diseñada para ejecutarse en Windows 10. Si estás usando una Mac, tus contraseñas se sincronizarán automáticamente con tu iPhone, iPad y Mac en donde inicies sesión en iCloud."
+  },
+  "divPINTitle": {
+    "message": "Activar autorrelleno de contraseñas"
+  },
+  "divPINMessage": {
+    "message": "iCloud para Windows te envió una notificación con un código de verificación. Ingrésalo para continuar."
+  },
+  "divICsMessage": {
+    "message": "Elige una contraseña guardada para usarla:"
+  },
+  "GenericPopupTitle": {
+    "message": "Tus contraseñas están sincronizadas con el llavero de iCloud"
+  },
+  "divNoPasswordsMessage": {
+    "message": "Puedes ver y editar las contraseñas guardadas en la app Administrador de Contraseñas de iCloud."
+  },
+  "divDoNotRememberTitle": {
+    "message": "Habías indicado que no querías guardar nunca contraseñas para este sitio web."
+  },
+  "divDoNotRememberMessage": {
+    "message": "Para cambiar esto, elimina la entrada del sitio web de tu llavero de iCloud y luego vuelve a iniciar sesión en el sitio."
+  },
+  "GettingPasswords": {
+    "message": "Cargando contraseñas…"
+  },
+  "ErrorReturned": {
+    "message": "Ocurrió un error. Vuelve a activar la extensión Contraseñas en iCloud para Chrome."
+  },
+  "NoUserName": {
+    "message": "sin nombre de usuario"
+  },
+  "divOpenPasswords": {
+    "message": "Administrar contraseñas…"
+  },
+  "divOpenPasswordsSubtitle": {
+    "message": "Consulta y crea contraseñas."
+  },
+  "browserName": {
+    "message": "Chrome"
+  },
+  "totpVerificationCodeNameWithDomain": {
+    "message": "Código de verificación para “$1”"
+  },
+  "totpVerificationCodeName": {
+    "message": "Código de verificación"
+  },
+  "enableAutoFillPasswordsTitle": {
+    "message": "Activar autorrelleno de contraseñas"
+  },
+  "enableAutoFillPasswordsMessage": {
+    "message": "Haz clic en el botón de la barra de herramientas para activar la extensión Contraseñas en iCloud para Chrome."
+  }
+}

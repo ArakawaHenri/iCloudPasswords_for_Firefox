@@ -1,0 +1,77 @@
+{
+  "_lang": {
+    "message": "nl"
+  },
+  "downloadButton": {
+    "message": "Downloaden"
+  },
+  "downloadMessage": {
+    "message": "Download iCloud voor Windows om iCloud-wachtwoorden te gebruiken."
+  },
+  "extDescription": {
+    "message": "Met iCloud-wachtwoorden kun je wachtwoorden die in Safari en apps op je Apple apparaten zijn aangemaakt, gebruiken met Chrome op Windows."
+  },
+  "extName": {
+    "message": "iCloud-wachtwoorden"
+  },
+  "openiCloudForWindowsButtonText": {
+    "message": "iCloud voor Windows openen"
+  },
+  "CheckEngineMessage": {
+    "message": "Schakel Wachtwoorden in in iCloud voor Windows om iCloud-wachtwoorden te gebruiken in Chrome."
+  },
+  "unsupportedOS": {
+    "message": "Deze extensie is ontworpen voor gebruik met Windows 10. Als je een Mac gebruikt, worden je wachtwoorden automatisch gesynchroniseerd met je iPhone, iPad en Mac wanneer je inlogt bij iCloud."
+  },
+  "divPINTitle": {
+    "message": "Automatisch invullen van wachtwoorden inschakelen"
+  },
+  "divPINMessage": {
+    "message": "iCloud voor Windows heeft je een melding met een verificatiecode verzonden. Voer de code in om verder te gaan."
+  },
+  "divICsMessage": {
+    "message": "Kies een opgeslagen wachtwoord om te gebruiken:"
+  },
+  "GenericPopupTitle": {
+    "message": "Je wachtwoorden zijn met iCloud-sleutelhanger gesynchroniseerd"
+  },
+  "divNoPasswordsMessage": {
+    "message": "Je kunt opgeslagen wachtwoorden bekijken en bewerken in de app iCloud-wachtwoordmanager."
+  },
+  "divDoNotRememberTitle": {
+    "message": "Je hebt eerder aangegeven dat je nooit wachtwoorden voor deze website wilt opslaan."
+  },
+  "divDoNotRememberMessage": {
+    "message": "Als je dit wilt wijzigen, verwijder je de vermelding voor deze website uit je iCloud-sleutelhanger en meld je je opnieuw aan bij deze website."
+  },
+  "GettingPasswords": {
+    "message": "Wachtwoorden laden…"
+  },
+  "ErrorReturned": {
+    "message": "Er is een fout opgetreden. Schakel de iCloud-wachtwoordenextensie opnieuw in voor Chrome."
+  },
+  "NoUserName": {
+    "message": "geen gebruikersnaam"
+  },
+  "divOpenPasswords": {
+    "message": "Wachtwoorden beheren…"
+  },
+  "divOpenPasswordsSubtitle": {
+    "message": "Wachtwoorden opzoeken en aanmaken"
+  },
+  "browserName": {
+    "message": "Chrome"
+  },
+  "totpVerificationCodeNameWithDomain": {
+    "message": "Verificatiecode voor '$1'"
+  },
+  "totpVerificationCodeName": {
+    "message": "Verificatiecode"
+  },
+  "enableAutoFillPasswordsTitle": {
+    "message": "Automatisch invullen van wachtwoorden inschakelen"
+  },
+  "enableAutoFillPasswordsMessage": {
+    "message": "Klik op de knoppenbalkknop om de iCloud-wachtwoordenextensie voor Chrome in te schakelen."
+  }
+}

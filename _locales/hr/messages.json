@@ -1,0 +1,77 @@
+{
+  "_lang": {
+    "message": "hr"
+  },
+  "downloadButton": {
+    "message": "Preuzmi"
+  },
+  "downloadMessage": {
+    "message": "Preuzmite iCloud za Windows za uporabu iCloud lozinki."
+  },
+  "extDescription": {
+    "message": "iCloud lozinkama omogućuje vam se uporaba lozinki izrađenih u aplikaciji Safari i aplikacijama na iPhoneu, iPadu i Macu s preglednikom Chrome na sustavu Windows."
+  },
+  "extName": {
+    "message": "iCloud lozinke"
+  },
+  "openiCloudForWindowsButtonText": {
+    "message": "Otvori iCloud za Windows"
+  },
+  "CheckEngineMessage": {
+    "message": "Omogućite Lozinke u iCloudu za Windows za uporabu iCloud lozinki s preglednikom Chrome."
+  },
+  "unsupportedOS": {
+    "message": "Ova ekstenzija dizajnirana je da radi na sustavu Windows 10. Ako koristite Mac, vaše lozinke automatski će se sinkronizirati s vašim iPhoneom, iPadom i Macom kad se prijavite u iCloud."
+  },
+  "divPINTitle": {
+    "message": "Omogući Auto ispunu lozinke"
+  },
+  "divPINMessage": {
+    "message": "iCloud za Windows poslao vam je obavijest s verifikacijskim kodom. Unesite kôd za nastavak."
+  },
+  "divICsMessage": {
+    "message": "Odaberite spremljenu lozinku koju želite koristiti:"
+  },
+  "GenericPopupTitle": {
+    "message": "Vaše lozinke sinkronizirane su s iCloud privjeskom ključeva"
+  },
+  "divNoPasswordsMessage": {
+    "message": "Možete pregledati i urediti spremljene lozinke u aplikaciji iCloud upravitelj lozinkama."
+  },
+  "divDoNotRememberTitle": {
+    "message": "Prethodno ste odredili da se lozinke za ovu web stranicu nikad neće spremati."
+  },
+  "divDoNotRememberMessage": {
+    "message": "Kako biste to promijenili, uklonite unos za ovu web stranicu iz iCloud privjeska ključeva i ponovno se prijavite na ovu web stranicu."
+  },
+  "GettingPasswords": {
+    "message": "Učitavanje lozinki…"
+  },
+  "ErrorReturned": {
+    "message": "Došlo je do greške. Ponovno omogućite ekstenziju iCloud lozinke za Chrome."
+  },
+  "NoUserName": {
+    "message": "bez korisničkog imena"
+  },
+  "divOpenPasswords": {
+    "message": "Upravljanje lozinkama…"
+  },
+  "divOpenPasswordsSubtitle": {
+    "message": "Potražite i izradite lozinke."
+  },
+  "browserName": {
+    "message": "Chrome"
+  },
+  "totpVerificationCodeNameWithDomain": {
+    "message": "Verifikacijski kôd za “$1”"
+  },
+  "totpVerificationCodeName": {
+    "message": "Verifikacijski kôd"
+  },
+  "enableAutoFillPasswordsTitle": {
+    "message": "Omogući Auto ispunu lozinke"
+  },
+  "enableAutoFillPasswordsMessage": {
+    "message": "Kliknite tipku alatne trake za omogućavanje ekstenzije iCloud lozinke za Chrome."
+  }
+}

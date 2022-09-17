@@ -1,0 +1,77 @@
+{
+  "_lang": {
+    "message": "pt"
+  },
+  "downloadButton": {
+    "message": "Baixar"
+  },
+  "downloadMessage": {
+    "message": "Baixe o iCloud para Windows para usar as Senhas do iCloud."
+  },
+  "extDescription": {
+    "message": "Senhas do iCloud permite que você use as senhas criadas no Safari e em apps no iPhone, iPad e Mac com o Chrome no Windows."
+  },
+  "extName": {
+    "message": "Senhas do iCloud"
+  },
+  "openiCloudForWindowsButtonText": {
+    "message": "Abrir iCloud para Windows"
+  },
+  "CheckEngineMessage": {
+    "message": "Ative Senhas no iCloud para Windows para usar Senhas do iCloud com o Chrome."
+  },
+  "unsupportedOS": {
+    "message": "Esta extensão foi criada para ser executada no Windows 10. Se você estiver usando um Mac, suas senhas serão sincronizadas automaticamente com o iPhone, iPad e Mac quando você iniciar sessão no iCloud."
+  },
+  "divPINTitle": {
+    "message": "Ativar Preenchimento Automático de Senha"
+  },
+  "divPINMessage": {
+    "message": "O iCloud para Windows enviou a você uma notificação com um código de verificação. Digite o código para continuar."
+  },
+  "divICsMessage": {
+    "message": "Escolha uma senha salva para usar:"
+  },
+  "GenericPopupTitle": {
+    "message": "Suas senhas serão sincronizadas com as Chaves do iCloud"
+  },
+  "divNoPasswordsMessage": {
+    "message": "Você pode visualizar e editar as senhas salvas no app Gerenciador de Senhas do iCloud."
+  },
+  "divDoNotRememberTitle": {
+    "message": "Você indicou anteriormente para nunca salvar senhas para este site."
+  },
+  "divDoNotRememberMessage": {
+    "message": "Para mudar isso, remova a entrada deste site das Chaves do iCloud e inicie sessão nele novamente."
+  },
+  "GettingPasswords": {
+    "message": "Carregando senhas…"
+  },
+  "ErrorReturned": {
+    "message": "Ocorreu um erro. Ative novamente a extensão Senhas do iCloud para Chrome."
+  },
+  "NoUserName": {
+    "message": "nenhum nome de usuário"
+  },
+  "divOpenPasswords": {
+    "message": "Gerenciar Senhas…"
+  },
+  "divOpenPasswordsSubtitle": {
+    "message": "Procure e crie senhas."
+  },
+  "browserName": {
+    "message": "Chrome"
+  },
+  "totpVerificationCodeNameWithDomain": {
+    "message": "Código de verificação para “$1”"
+  },
+  "totpVerificationCodeName": {
+    "message": "Código de verificação"
+  },
+  "enableAutoFillPasswordsTitle": {
+    "message": "Ativar Preenchimento Automático de Senha"
+  },
+  "enableAutoFillPasswordsMessage": {
+    "message": "Clique no botão da barra de ferramentas para ativar a extensão Senhas do iCloud para Chrome."
+  }
+}

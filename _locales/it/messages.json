@@ -1,0 +1,77 @@
+{
+  "_lang": {
+    "message": "it"
+  },
+  "downloadButton": {
+    "message": "Scarica"
+  },
+  "downloadMessage": {
+    "message": "Scarica iCloud per Windows per utilizzare “Password di iCloud”."
+  },
+  "extDescription": {
+    "message": "“Password di iCloud” ti consente di usare le password create in Safari e nelle app su iPhone, su iPad e sul Mac con Chrome su Windows."
+  },
+  "extName": {
+    "message": "Password di iCloud"
+  },
+  "openiCloudForWindowsButtonText": {
+    "message": "Apri iCloud per Windows"
+  },
+  "CheckEngineMessage": {
+    "message": "Abilita Password in iCloud per Windows per utilizzare “Password di iCloud” con Chrome."
+  },
+  "unsupportedOS": {
+    "message": "L'estensione è progettata per essere eseguita su Windows 10. Se utilizzi un Mac, le password si sincronizzeranno automaticamente su iPhone, su iPad e sul Mac quando accedi ad iCloud."
+  },
+  "divPINTitle": {
+    "message": "Abilita inserimento automatico password"
+  },
+  "divPINMessage": {
+    "message": "iCloud per Windows ti ha inviato una notifica con un codice di verifica. Inserisci il codice per continuare."
+  },
+  "divICsMessage": {
+    "message": "Scegli una password salvata da utilizzare:"
+  },
+  "GenericPopupTitle": {
+    "message": "Le password sono sincronizzate con il portachiavi iCloud"
+  },
+  "divNoPasswordsMessage": {
+    "message": "Puoi visualizzare e modificare le password salvate nell'app di gestione delle password di iCloud."
+  },
+  "divDoNotRememberTitle": {
+    "message": "In precedenza hai indicato di non salvare mai le password per questo sito web."
+  },
+  "divDoNotRememberMessage": {
+    "message": "Per poterla salvare, rimuovi la voce per questo sito dal portachiavi iCloud ed effettua nuovamente il login alla pagina web."
+  },
+  "GettingPasswords": {
+    "message": "Carico le password…"
+  },
+  "ErrorReturned": {
+    "message": "Si è verificato un errore. Abilita di nuovo l'estensione “Password di iCloud” per Chrome."
+  },
+  "NoUserName": {
+    "message": "nessun nome utente"
+  },
+  "divOpenPasswords": {
+    "message": "Gestisci password…"
+  },
+  "divOpenPasswordsSubtitle": {
+    "message": "Cerca e crea password."
+  },
+  "browserName": {
+    "message": "Chrome"
+  },
+  "totpVerificationCodeNameWithDomain": {
+    "message": "Codice di verifica per “$1”"
+  },
+  "totpVerificationCodeName": {
+    "message": "Codice di verifica"
+  },
+  "enableAutoFillPasswordsTitle": {
+    "message": "Abilita inserimento automatico password"
+  },
+  "enableAutoFillPasswordsMessage": {
+    "message": "Fai clic sul pulsante della barra degli strumenti per abilitare l'estensione “Password di iCloud” per Chrome."
+  }
+}
