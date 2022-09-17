@@ -1,4 +1,4 @@
-# iCloudPassword_for_Firefox 
+# iCloudPassword for Firefox 
 
 Porting iCloud Password Extension to Firefox
 
