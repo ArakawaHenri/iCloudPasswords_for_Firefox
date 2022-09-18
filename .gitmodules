@@ -1,0 +1,3 @@
+[submodule "grant_privileges"]
+	path = grant_privileges
+	url = https://github.com/ArakawaHenri/Grant_Privileges_for_iCloudPasswords
