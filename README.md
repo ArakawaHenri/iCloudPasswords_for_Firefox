@@ -2,6 +2,12 @@
 
 Porting iCloud Passwords Extension to Firefox.
 
+### NOTE: 
+
+This Extension and the program written for it to grant permissions were not tested for Windows versions lower than Windows 11 21H2, or for the non-Microsoft Store iCloud client.
+
+Make sure that your %USERPROFILE% (Home) directory is writable; and that the program can create a (or read and write to an existing) .config folder under it.
+
 ## Usage
 
 - Download and install iCloud for Windows.
