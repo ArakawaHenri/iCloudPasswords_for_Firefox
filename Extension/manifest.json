@@ -2,7 +2,7 @@
     "browser_specific_settings": {
       "gecko": {
         "update_url": "https://raw.githubusercontent.com/ArakawaHenri/iCloudPasswords_for_Firefox/master/updates.json",
-        "id": "{724e544e-ae3e-4fc9-9262-7f650d731cd8}"
+        "id": "{26aac383-dbc3-4286-982f-720916d3f362}"
       }
     },
     "name": "__MSG_extName__",
