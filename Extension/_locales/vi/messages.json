@@ -9,7 +9,7 @@
     "message": "Tải về iCloud cho Windows để sử dụng Mật khẩu iCloud."
   },
   "extDescription": {
-    "message": "Mật khẩu iCloud cho phép bạn sử dụng mật khẩu được tạo trong Safari và các ứng dụng trên iPhone, iPad và máy Mac với Chrome trên Windows."
+    "message": "Mật khẩu iCloud cho phép điền mật khẩu, mã xác minh được tạo trong Safari, ứng dụng trên iPhone, iPad và máy Mac vào trang web trong Chrome."
   },
   "extName": {
     "message": "Mật khẩu iCloud"
@@ -47,9 +47,6 @@
   "GettingPasswords": {
     "message": "Đang tải mật khẩu…"
   },
-  "ErrorReturned": {
-    "message": "Đã xảy ra lỗi. Vui lòng bật lại phần mở rộng Mật khẩu iCloud cho Chrome."
-  },
   "NoUserName": {
     "message": "không có tên người dùng"
   },
@@ -73,5 +70,20 @@
   },
   "enableAutoFillPasswordsMessage": {
     "message": "Bấm vào nút thanh công cụ để bật phần mở rộng Mật khẩu iCloud cho Chrome."
+  },
+  "optionsTitle": {
+    "message": "Tùy chọn Mật khẩu iCloud"
+  },
+  "enableInPageAutoFillCheckboxLabel": {
+    "message": "Tự động điền trong trang"
+  },
+  "enableInPageAutoFillCheckboxDetail": {
+    "message": "Cho phép Mật khẩu iCloud cung cấp thông tin đăng nhập từ một danh sách trong trang. Bạn luôn có thể điền mật khẩu từ nút thanh công cụ Mật khẩu iCloud, ngay cả khi tùy chọn này bị tắt."
+  },
+  "allowExtensionToControlAutoFillLabel": {
+    "message": "Tắt Tự động điền Chrome"
+  },
+  "allowExtensionToControlAutoFillDetail": {
+    "message": "Để ngăn không cho tính năng Tự động điền trong trang của Chrome can thiệp vào Mật khẩu iCloud, Mật khẩu iCloud có thể cố gắng tắt cài đặt Tự động điền của trình duyệt thay mặt bạn."
   }
 }

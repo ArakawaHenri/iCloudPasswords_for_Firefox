@@ -3,13 +3,13 @@
     "message": "uk"
   },
   "downloadButton": {
-    "message": "Завантажити"
+    "message": "Викачати"
   },
   "downloadMessage": {
-    "message": "Завантажте iCloud для Windows, щоб використовувати паролі iCloud."
+    "message": "Викачайте iCloud для Windows, щоб використовувати паролі iCloud."
   },
   "extDescription": {
-    "message": "Розширення «Паролі iCloud» дає змогу використовувати паролі, створені в Safari та програмах на iPhone, iPad та Mac із Chrome у Windows."
+    "message": "Паролі iCloud дають змогу вводити паролі й коди перевірки, створені в Safari та програмах на iPhone, iPad і Mac, на вебсайтах у Chrome."
   },
   "extName": {
     "message": "Паролі iCloud"
@@ -36,7 +36,7 @@
     "message": "Ваші паролі синхронізуються з В’язкою iCloud"
   },
   "divNoPasswordsMessage": {
-    "message": "Ви можете переглядати й редагувати збережені паролі в програмі iCloud Password Manager."
+    "message": "Ви можете переглядати й редагувати збережені паролі в програмі «Менеджер паролів iCloud»."
   },
   "divDoNotRememberTitle": {
     "message": "Раніше ви вказали, що не хочете зберігати паролі для цього вебсайту."
@@ -46,9 +46,6 @@
   },
   "GettingPasswords": {
     "message": "Паролі завантажуються..."
-  },
-  "ErrorReturned": {
-    "message": "Сталася помилка. Увімкніть ще раз розширення «Паролі iCloud» для Chrome."
   },
   "NoUserName": {
     "message": "немає імені користувача"
@@ -69,9 +66,24 @@
     "message": "Код перевірки"
   },
   "enableAutoFillPasswordsTitle": {
-    "message": "Увімкнути автозаповнення паролів"
+    "message": "Увімкнення автозаповнення паролів"
   },
   "enableAutoFillPasswordsMessage": {
     "message": "Натисніть кнопку на панелі інструментів, щоб увімкнути розширення «Паролі iCloud» для Chrome."
+  },
+  "optionsTitle": {
+    "message": "Параметри Паролів iCloud"
+  },
+  "enableInPageAutoFillCheckboxLabel": {
+    "message": "Автозаповнення на сторінці"
+  },
+  "enableInPageAutoFillCheckboxDetail": {
+    "message": "Дозвольте Паролям iCloud пропонувати облікові дані зі списку на сторінці. Ви завжди можете вводити паролі за допомогою кнопки на панелі інструментів Паролів iCloud, навіть якщо цей параметр вимкнуто."
+  },
+  "allowExtensionToControlAutoFillLabel": {
+    "message": "Вимкнути автозаповнення в Chrome"
+  },
+  "allowExtensionToControlAutoFillDetail": {
+    "message": "Щоб функція автозаповнення на сторінці Chrome не заважала програмі «Паролі iCloud», програма «Паролі iCloud» може спробувати вимкнути для вас автозаповнення в параметрах браузера."
   }
 }

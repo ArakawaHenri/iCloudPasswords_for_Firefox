@@ -9,7 +9,7 @@
     "message": "Download iCloud voor Windows om iCloud-wachtwoorden te gebruiken."
   },
   "extDescription": {
-    "message": "Met iCloud-wachtwoorden kun je wachtwoorden die in Safari en apps op je Apple apparaten zijn aangemaakt, gebruiken met Chrome op Windows."
+    "message": "Met iCloud-wachtwoorden kun je wachtwoorden en verificatiecodes die in Safari en apps op de iPhone, de iPad en de Mac zijn aangemaakt, in Chrome-websites invoeren."
   },
   "extName": {
     "message": "iCloud-wachtwoorden"
@@ -47,9 +47,6 @@
   "GettingPasswords": {
     "message": "Wachtwoorden laden…"
   },
-  "ErrorReturned": {
-    "message": "Er is een fout opgetreden. Schakel de iCloud-wachtwoordenextensie opnieuw in voor Chrome."
-  },
   "NoUserName": {
     "message": "geen gebruikersnaam"
   },
@@ -73,5 +70,20 @@
   },
   "enableAutoFillPasswordsMessage": {
     "message": "Klik op de knoppenbalkknop om de iCloud-wachtwoordenextensie voor Chrome in te schakelen."
+  },
+  "optionsTitle": {
+    "message": "iCloud-wachtwoordenopties"
+  },
+  "enableInPageAutoFillCheckboxLabel": {
+    "message": "Automatisch invullen op pagina"
+  },
+  "enableInPageAutoFillCheckboxDetail": {
+    "message": "Sta iCloud-wachtwoorden toe om inloggegevens van een lijst in een pagina aan te bieden. Je kunt altijd wachtwoorden invullen via de knoppenbalkknop voor iCloud-wachtwoorden, zelfs als deze optie is uitgeschakeld."
+  },
+  "allowExtensionToControlAutoFillLabel": {
+    "message": "Automatisch invullen in Chrome uitschakelen"
+  },
+  "allowExtensionToControlAutoFillDetail": {
+    "message": "Om te voorkomen dat de automatische invulfunctie van Chrome botst met iCloud-wachtwoorden, kan iCloud-wachtwoorden proberen om namens jou de automatische invulfunctie van de browser uit te schakelen."
   }
 }

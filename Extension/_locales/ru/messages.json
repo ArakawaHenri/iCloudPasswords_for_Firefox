@@ -9,7 +9,7 @@
     "message": "Загрузите iCloud для Windows, чтобы использовать Пароли iCloud."
   },
   "extDescription": {
-    "message": "Расширение «Пароли iCloud» позволяет использовать в Chrome на Windows пароли, созданные Вами в Safari и в приложениях на iPhone, iPad и Mac."
+    "message": "С помощью расширения «Пароли iCloud» можно заполнять пароли и коды проверки, созданные в Safari и приложениях на iPhone, iPad и Mac, на веб-сайтах в Chrome."
   },
   "extName": {
     "message": "Пароли iCloud"
@@ -47,9 +47,6 @@
   "GettingPasswords": {
     "message": "Загрузка паролей…"
   },
-  "ErrorReturned": {
-    "message": "Произошла ошибка. Повторно включите расширение «Пароли iCloud» для Chrome."
-  },
   "NoUserName": {
     "message": "отсутствует имя пользователя"
   },
@@ -73,5 +70,20 @@
   },
   "enableAutoFillPasswordsMessage": {
     "message": "Нажмите кнопку в панели инструментов, чтобы включить расширение «Пароли iCloud» для Chrome."
+  },
+  "optionsTitle": {
+    "message": "Параметры расширения «Пароли iCloud»"
+  },
+  "enableInPageAutoFillCheckboxLabel": {
+    "message": "Встроенное в страницу автозаполнение"
+  },
+  "enableInPageAutoFillCheckboxDetail": {
+    "message": "Разрешите расширению «Пароли iCloud» предлагать учетные данные из встроенного в страницу списка. Заполнять пароли с помощью кнопки «Пароли iCloud» в панели инструментов можно всегда, даже если этот параметр выключен."
+  },
+  "allowExtensionToControlAutoFillLabel": {
+    "message": "Выключить автозаполнение в Chrome"
+  },
+  "allowExtensionToControlAutoFillDetail": {
+    "message": "Чтобы функция встроенного в страницу автозаполнения в Chrome не мешала работе расширения «Пароли iCloud», это расширение может попробовать выключить настройки автозаполнения в браузере от Вашего имени."
   }
 }

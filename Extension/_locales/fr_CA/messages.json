@@ -9,7 +9,7 @@
     "message": "Téléchargez iCloud pour Windows pour utiliser Mots de passe iCloud."
   },
   "extDescription": {
-    "message": "Mots de passe iCloud vous permet d’utiliser vos mots de passe créés dans Safari et les apps sur l’iPhone, l’iPad et le Mac avec Chrome sur Windows."
+    "message": "L’extension Mots de passe iCloud vous permet de remplir les mots de passe et les codes de vérification créés dans Safari et les apps sur l’iPhone, l’iPad et le Mac dans les sites Web dans Chrome."
   },
   "extName": {
     "message": "Mots de passe iCloud"
@@ -47,9 +47,6 @@
   "GettingPasswords": {
     "message": "Récupération des mots de passe…"
   },
-  "ErrorReturned": {
-    "message": "Une erreur est survenue. Veuillez réactiver l’extension Mots de passe iCloud pour Chrome."
-  },
   "NoUserName": {
     "message": "aucun nom d’utilisateur"
   },
@@ -73,5 +70,20 @@
   },
   "enableAutoFillPasswordsMessage": {
     "message": "Cliquez sur le bouton de la barre d’outils pour activer l’extension Mots de passe iCloud pour Chrome."
+  },
+  "optionsTitle": {
+    "message": "Options de Mots de passe iCloud"
+  },
+  "enableInPageAutoFillCheckboxLabel": {
+    "message": "Remplissage automatique intégré à la page"
+  },
+  "enableInPageAutoFillCheckboxDetail": {
+    "message": "Autorisez Mots de passe iCloud à proposer des informations d’identification à partir d’une liste intégrée à la page. Vous pouvez toujours remplir les mots de passe à partir du bouton de la barre d’outils Mots de passe iCloud, même si cette option est désactivée."
+  },
+  "allowExtensionToControlAutoFillLabel": {
+    "message": "Désactiver le remplissage automatique de Chrome"
+  },
+  "allowExtensionToControlAutoFillDetail": {
+    "message": "Pour éviter que le remplissage automatique de Chrome interfère avec l’extension Mots de passe iCloud, cette dernière peut essayer de désactiver les réglages de remplissage automatique du navigateur."
   }
 }

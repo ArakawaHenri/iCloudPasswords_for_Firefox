@@ -9,7 +9,7 @@
     "message": "iCloud Parolaları’nı kullanmak için Windows için iCloud’u indirin."
   },
   "extDescription": {
-    "message": "iCloud Parolaları; iPhone, iPad ve Mac üzerindeki Safari’de ve uygulamalarda yarattığınız parolaları Windows’daki Chrome ile kullanmanızı sağlar."
+    "message": "iCloud Parolaları, Safari’de ve iPhone, iPad ve Mac üzerindeki uygulamalarda yaratılan parolaları ve doğrulama kodlarını Chrome’daki web sitelerinde doldurmanızı sağlar."
   },
   "extName": {
     "message": "iCloud Parolaları"
@@ -47,9 +47,6 @@
   "GettingPasswords": {
     "message": "Parolalar yükleniyor…"
   },
-  "ErrorReturned": {
-    "message": "Bir hata oluştu. Lütfen Chrome için iCloud Parolaları genişletmesini yeniden etkinleştirin."
-  },
   "NoUserName": {
     "message": "kullanıcı adı yok"
   },
@@ -73,5 +70,20 @@
   },
   "enableAutoFillPasswordsMessage": {
     "message": "Chrome için iCloud Parolaları genişletmesini etkinleştirmek istiyorsanız araç çubuğu düğmesini tıklayın."
+  },
+  "optionsTitle": {
+    "message": "iCloud Parolaları Seçenekleri"
+  },
+  "enableInPageAutoFillCheckboxLabel": {
+    "message": "Sayfa İçi Otomatik Doldurma"
+  },
+  "enableInPageAutoFillCheckboxDetail": {
+    "message": "iCloud Parolaları’nın bir sayfa içi listeden kimlik bilgilerini sunmasına izin verin. Bu seçenek kapalı olsa bile parolaları her zaman iCloud Parolaları araç çubuğu düğmesinden doldurabilirsiniz."
+  },
+  "allowExtensionToControlAutoFillLabel": {
+    "message": "Chrome’un Otomatik Doldurmasını Kapat"
+  },
+  "allowExtensionToControlAutoFillDetail": {
+    "message": "Chrome’un sayfa içi Otomatik Doldurma özelliğinin iCloud Parolaları’nı engellememesi için iCloud Parolaları, web tarayıcının Otomatik Doldurma ayarlarını sizin adınıza kapatmayı deneyebilir."
   }
 }

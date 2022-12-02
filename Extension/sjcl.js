@@ -7,33 +7,33 @@ var sjcl = {
     misc: {},
     codec: {},
     exception: {
-        corrupt: function(a) {
-            this.toString = function() {
+        corrupt: function (a) {
+            this.toString = function () {
                 return "CORRUPT: " + this.message
             };
             this.message = a
         },
-        invalid: function(a) {
-            this.toString = function() {
+        invalid: function (a) {
+            this.toString = function () {
                 return "INVALID: " + this.message
             };
             this.message = a
         },
-        bug: function(a) {
-            this.toString = function() {
+        bug: function (a) {
+            this.toString = function () {
                 return "BUG: " + this.message
             };
             this.message = a
         },
-        notReady: function(a) {
-            this.toString = function() {
+        notReady: function (a) {
+            this.toString = function () {
                 return "NOT READY: " + this.message
             };
             this.message = a
         }
     }
 };
-sjcl.cipher.aes = function(a) {
+sjcl.cipher.aes = function (a) {
     this.w[0][0][0] || this.L();
     var b, c, d, e, f = this.w[0][4],
         g = this.w[1];
@@ -50,10 +50,10 @@ sjcl.cipher.aes = function(a) {
         255]]
 };
 sjcl.cipher.aes.prototype = {
-    encrypt: function(a) {
+    encrypt: function (a) {
         return t(this, a, 0)
     },
-    decrypt: function(a) {
+    decrypt: function (a) {
         return t(this, a, 1)
     },
     w: [
@@ -72,7 +72,7 @@ sjcl.cipher.aes.prototype = {
             []
         ]
     ],
-    L: function() {
+    L: function () {
         var a = this.w[0],
             b = this.w[1],
             c = a[4],
@@ -110,26 +110,26 @@ function t(a, b, c) {
     return r
 }
 sjcl.bitArray = {
-    bitSlice: function(a, b, c) {
+    bitSlice: function (a, b, c) {
         a = sjcl.bitArray.X(a.slice(b / 32), 32 - (b & 31)).slice(1);
         return void 0 === c ? a : sjcl.bitArray.clamp(a, c - b)
     },
-    extract: function(a, b, c) {
+    extract: function (a, b, c) {
         var d = Math.floor(-b - c & 31);
         return ((b + c - 1 ^ b) & -32 ? a[b / 32 | 0] << 32 - d ^ a[b / 32 + 1 | 0] >>> d : a[b / 32 | 0] >>> d) & (1 << c) - 1
     },
-    concat: function(a, b) {
+    concat: function (a, b) {
         if (0 === a.length || 0 === b.length) return a.concat(b);
         var c = a[a.length - 1],
             d = sjcl.bitArray.getPartial(c);
         return 32 === d ? a.concat(b) : sjcl.bitArray.X(b, d, c | 0, a.slice(0, a.length - 1))
     },
-    bitLength: function(a) {
+    bitLength: function (a) {
         var b = a.length;
         return 0 ===
             b ? 0 : 32 * (b - 1) + sjcl.bitArray.getPartial(a[b - 1])
     },
-    clamp: function(a, b) {
+    clamp: function (a, b) {
         if (32 * a.length < b) return a;
         a = a.slice(0, Math.ceil(b / 32));
         var c = a.length;
@@ -137,13 +137,13 @@ sjcl.bitArray = {
         0 < c && b && (a[c - 1] = sjcl.bitArray.partial(b, a[c - 1] & 2147483648 >> b - 1, 1));
         return a
     },
-    partial: function(a, b, c) {
+    partial: function (a, b, c) {
         return 32 === a ? b : (c ? b | 0 : b << 32 - a) + 0x10000000000 * a
     },
-    getPartial: function(a) {
+    getPartial: function (a) {
         return Math.round(a / 0x10000000000) || 32
     },
-    equal: function(a, b) {
+    equal: function (a, b) {
         if (sjcl.bitArray.bitLength(a) !== sjcl.bitArray.bitLength(b)) return !1;
         var c = 0,
             d;
@@ -151,7 +151,7 @@ sjcl.bitArray = {
         return 0 ===
             c
     },
-    X: function(a, b, c, d) {
+    X: function (a, b, c, d) {
         var e;
         e = 0;
         for (void 0 === d && (d = []); 32 <= b; b -= 32) d.push(c), c = 0;
@@ -162,24 +162,24 @@ sjcl.bitArray = {
         d.push(sjcl.bitArray.partial(b + a & 31, 32 < b + a ? c : d.pop(), 1));
         return d
     },
-    ka: function(a, b) {
+    ka: function (a, b) {
         return [a[0] ^ b[0], a[1] ^ b[1], a[2] ^ b[2], a[3] ^ b[3]]
     },
-    byteswapM: function(a) {
+    byteswapM: function (a) {
         var b, c;
         for (b = 0; b < a.length; ++b) c = a[b], a[b] = c >>> 24 | c >>> 8 & 0xff00 | (c & 0xff00) << 8 | c << 24;
         return a
     }
 };
 sjcl.codec.utf8String = {
-    fromBits: function(a) {
+    fromBits: function (a) {
         var b = "",
             c = sjcl.bitArray.bitLength(a),
             d, e;
         for (d = 0; d < c / 8; d++) 0 === (d & 3) && (e = a[d / 4]), b += String.fromCharCode(e >>> 8 >>> 8 >>> 8), e <<= 8;
         return decodeURIComponent(escape(b))
     },
-    toBits: function(a) {
+    toBits: function (a) {
         a = unescape(encodeURIComponent(a));
         var b = [],
             c, d = 0;
@@ -189,13 +189,13 @@ sjcl.codec.utf8String = {
     }
 };
 sjcl.codec.hex = {
-    fromBits: function(a) {
+    fromBits: function (a) {
         var b = "",
             c;
         for (c = 0; c < a.length; c++) b += ((a[c] | 0) + 0xf00000000000).toString(16).substr(4);
         return b.substr(0, sjcl.bitArray.bitLength(a) / 4)
     },
-    toBits: function(a) {
+    toBits: function (a) {
         var b, c = [],
             d;
         a = a.replace(/\s|0x/g, "");
@@ -207,7 +207,7 @@ sjcl.codec.hex = {
 };
 sjcl.codec.base64 = {
     P: "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/",
-    fromBits: function(a, b, c) {
+    fromBits: function (a, b, c) {
         var d = "",
             e = 0,
             f = sjcl.codec.base64.P,
@@ -218,7 +218,7 @@ sjcl.codec.base64 = {
         for (; d.length & 3 && !b;) d += "=";
         return d
     },
-    toBits: function(a, b) {
+    toBits: function (a, b) {
         a = a.replace(/\s|=/g, "");
         var c = [],
             d, e = 0,
@@ -236,22 +236,22 @@ sjcl.codec.base64 = {
     }
 };
 sjcl.codec.base64url = {
-    fromBits: function(a) {
+    fromBits: function (a) {
         return sjcl.codec.base64.fromBits(a, 1, 1)
     },
-    toBits: function(a) {
+    toBits: function (a) {
         return sjcl.codec.base64.toBits(a, 1)
     }
 };
 sjcl.codec.bytes = {
-    fromBits: function(a) {
+    fromBits: function (a) {
         var b = [],
             c = sjcl.bitArray.bitLength(a),
             d, e;
         for (d = 0; d < c / 8; d++) 0 === (d & 3) && (e = a[d / 4]), b.push(e >>> 24), e <<= 8;
         return b
     },
-    toBits: function(a) {
+    toBits: function (a) {
         var b = [],
             c, d = 0;
         for (c = 0; c < a.length; c++) d = d << 8 | a[c], 3 === (c & 3) && (b.push(d), d = 0);
@@ -259,22 +259,22 @@ sjcl.codec.bytes = {
         return b
     }
 };
-sjcl.hash.sha256 = function(a) {
+sjcl.hash.sha256 = function (a) {
     this.b[0] || this.L();
     a ? (this.i = a.i.slice(0), this.f = a.f.slice(0), this.c = a.c) : this.reset()
 };
-sjcl.hash.sha256.hash = function(a) {
+sjcl.hash.sha256.hash = function (a) {
     return (new sjcl.hash.sha256).update(a).finalize()
 };
 sjcl.hash.sha256.prototype = {
     blockSize: 512,
-    reset: function() {
+    reset: function () {
         this.i = this.C.slice(0);
         this.f = [];
         this.c = 0;
         return this
     },
-    update: function(a) {
+    update: function (a) {
         "string" === typeof a && (a = sjcl.codec.utf8String.toBits(a));
         var b, c = this.f = sjcl.bitArray.concat(this.f, a);
         b = this.c;
@@ -290,7 +290,7 @@ sjcl.hash.sha256.prototype = {
             for (b = 512 + b - (512 + b & 0x1ff); b <= a; b += 512) this.m(c.splice(0, 16));
         return this
     },
-    finalize: function() {
+    finalize: function () {
         var a, b = this.f,
             c = this.i,
             b = sjcl.bitArray.concat(b, [sjcl.bitArray.partial(1, 1)]);
@@ -302,7 +302,7 @@ sjcl.hash.sha256.prototype = {
     },
     C: [],
     b: [],
-    L: function() {
+    L: function () {
         function a(a) {
             return 0x100000000 * (a - Math.floor(a)) | 0
         }
@@ -316,7 +316,7 @@ sjcl.hash.sha256.prototype = {
             e && (8 > b && (this.C[b] = a(Math.pow(c, .5))), this.b[b] = a(Math.pow(c, 1 / 3)), b++)
         }
     },
-    m: function(a) {
+    m: function (a) {
         var b, c, d, e = this.i,
             f = this.b,
             g = e[0],
@@ -339,21 +339,21 @@ sjcl.hash.sha256.prototype = {
         e[7] = e[7] + r | 0
     }
 };
-sjcl.hash.sha1 = function(a) {
+sjcl.hash.sha1 = function (a) {
     a ? (this.i = a.i.slice(0), this.f = a.f.slice(0), this.c = a.c) : this.reset()
 };
-sjcl.hash.sha1.hash = function(a) {
+sjcl.hash.sha1.hash = function (a) {
     return (new sjcl.hash.sha1).update(a).finalize()
 };
 sjcl.hash.sha1.prototype = {
     blockSize: 512,
-    reset: function() {
+    reset: function () {
         this.i = this.C.slice(0);
         this.f = [];
         this.c = 0;
         return this
     },
-    update: function(a) {
+    update: function (a) {
         "string" === typeof a && (a = sjcl.codec.utf8String.toBits(a));
         var b, c = this.f = sjcl.bitArray.concat(this.f, a);
         b = this.c;
@@ -369,7 +369,7 @@ sjcl.hash.sha1.prototype = {
             for (b = this.blockSize + b - (this.blockSize + b & this.blockSize - 1); b <= a; b += this.blockSize) this.m(c.splice(0, 16));
         return this
     },
-    finalize: function() {
+    finalize: function () {
         var a, b = this.f,
             c = this.i,
             b = sjcl.bitArray.concat(b, [sjcl.bitArray.partial(1, 1)]);
@@ -381,7 +381,7 @@ sjcl.hash.sha1.prototype = {
     },
     C: [1732584193, 4023233417, 2562383102, 271733878, 3285377520],
     b: [1518500249, 1859775393, 2400959708, 3395469782],
-    m: function(a) {
+    m: function (a) {
         var b, c, d, e, f, g, h = this.i,
             k;
         if ("undefined" !== typeof Uint32Array)
@@ -402,14 +402,14 @@ sjcl.hash.sha1.prototype = {
 };
 sjcl.mode.gcm = {
     name: "gcm",
-    encrypt: function(a, b, c, d, e) {
+    encrypt: function (a, b, c, d, e) {
         var f = b.slice(0);
         b = sjcl.bitArray;
         d = d || [];
         a = sjcl.mode.gcm.S(!0, a, f, d, c, e || 128);
         return b.concat(a.data, a.tag)
     },
-    decrypt: function(a, b, c, d, e) {
+    decrypt: function (a, b, c, d, e) {
         var f = b.slice(0),
             g = sjcl.bitArray,
             h = g.bitLength(f);
@@ -420,7 +420,7 @@ sjcl.mode.gcm = {
         if (!g.equal(a.tag, b)) throw new sjcl.exception.corrupt("gcm: tag doesn't match");
         return a.data
     },
-    ea: function(a, b) {
+    ea: function (a, b) {
         var c, d, e, f, g, h = sjcl.bitArray.ka;
         e = [0, 0,
             0, 0
@@ -435,13 +435,13 @@ sjcl.mode.gcm = {
         }
         return e
     },
-    s: function(a, b, c) {
+    s: function (a, b, c) {
         var d, e = c.length;
         b = b.slice(0);
         for (d = 0; d < e; d += 4) b[0] ^= 0xffffffff & c[d], b[1] ^= 0xffffffff & c[d + 1], b[2] ^= 0xffffffff & c[d + 2], b[3] ^= 0xffffffff & c[d + 3], b = sjcl.mode.gcm.ea(b, a);
         return b
     },
-    S: function(a, b, c, d, e, f) {
+    S: function (a, b, c, d, e, f) {
         var g, h, k, m, p, l, n, r, q = sjcl.bitArray;
         l = c.length;
         n = q.bitLength(c);
@@ -469,7 +469,7 @@ sjcl.mode.gcm = {
         }
     }
 };
-sjcl.prng = function(a) {
+sjcl.prng = function (a) {
     this.j = [new sjcl.hash.sha256];
     this.u = [0];
     this.M = 0;
@@ -495,7 +495,7 @@ sjcl.prng = function(a) {
     this.Z = 80
 };
 sjcl.prng.prototype = {
-    randomWords: function(a, b) {
+    randomWords: function (a, b) {
         var c = [],
             d;
         d = this.isReady(b);
@@ -522,11 +522,11 @@ sjcl.prng.prototype = {
         v(this);
         return c.slice(0, a)
     },
-    setDefaultParanoia: function(a, b) {
+    setDefaultParanoia: function (a, b) {
         if (0 === a && "Setting paranoia=0 will ruin your security; use it only for testing" !== b) throw new sjcl.exception.invalid("Setting paranoia=0 will ruin your security; use it only for testing");
         this.J = a
     },
-    addEntropy: function(a,
+    addEntropy: function (a,
         b, c) {
         c = c || "user";
         var d, e, f = (new Date).valueOf(),
@@ -551,11 +551,11 @@ sjcl.prng.prototype = {
                 } else
                     for ("[object Array]" !== c && (k = 1), c = 0; c < a.length && !k; c++) "number" !== typeof a[c] &&
                         (k = 1); if (!k) {
-                    if (void 0 === b)
-                        for (c = b = 0; c < a.length; c++)
-                            for (e = a[c]; 0 < e;) b++, e = e >>> 1;
-                    this.j[g].update([d, this.K++, 2, b, f, a.length].concat(a))
-                }
+                            if (void 0 === b)
+                                for (c = b = 0; c < a.length; c++)
+                                    for (e = a[c]; 0 < e;) b++, e = e >>> 1;
+                            this.j[g].update([d, this.K++, 2, b, f, a.length].concat(a))
+                        }
                 break;
             case "string":
                 void 0 === b && (b = a.length);
@@ -570,15 +570,15 @@ sjcl.prng.prototype = {
         this.l += b;
         h === this.A && (this.isReady() !== this.A && z("seeded", Math.max(this.v, this.l)), z("progress", this.getProgress()))
     },
-    isReady: function(a) {
+    isReady: function (a) {
         a = this.O[void 0 !== a ? a : this.J];
         return this.v && this.v >= a ? this.u[0] > this.Z && (new Date).valueOf() > this.W ? this.G | this.F : this.F : this.l >= a ? this.G | this.A : this.A
     },
-    getProgress: function(a) {
+    getProgress: function (a) {
         a = this.O[a ? a : this.J];
         return this.v >= a ? 1 : this.l > a ? 1 : this.l / a
     },
-    startCollectors: function() {
+    startCollectors: function () {
         if (!this.B) {
             this.a = {
                 loadTimeCollector: A(this, this.ha),
@@ -594,23 +594,23 @@ sjcl.prng.prototype = {
             this.B = !0
         }
     },
-    stopCollectors: function() {
+    stopCollectors: function () {
         this.B && (window.removeEventListener ? (window.removeEventListener("load", this.a.loadTimeCollector, !1), window.removeEventListener("mousemove", this.a.mouseCollector, !1), window.removeEventListener("keypress", this.a.keyboardCollector, !1), window.removeEventListener("devicemotion", this.a.accelerometerCollector, !1), window.removeEventListener("touchmove", this.a.touchCollector, !1)) : document.detachEvent && (document.detachEvent("onload", this.a.loadTimeCollector), document.detachEvent("onmousemove",
             this.a.mouseCollector), document.detachEvent("keypress", this.a.keyboardCollector)), this.B = !1)
     },
-    addEventListener: function(a, b) {
+    addEventListener: function (a, b) {
         this.H[a][this.ca++] = b
     },
-    removeEventListener: function(a, b) {
+    removeEventListener: function (a, b) {
         var c, d, e = this.H[a],
             f = [];
         for (d in e) e.hasOwnProperty(d) && e[d] === b && f.push(d);
         for (c = 0; c < f.length; c++) d = f[c], delete e[d]
     },
-    ga: function() {
+    ga: function () {
         B(this, 1)
     },
-    ia: function(a) {
+    ia: function (a) {
         var b, c;
         try {
             b = a.x || a.clientX || a.offsetX || 0, c = a.y || a.clientY || a.offsetY || 0
@@ -620,16 +620,16 @@ sjcl.prng.prototype = {
         0 != b && 0 != c && this.addEntropy([b, c], 2, "mouse");
         B(this, 0)
     },
-    ja: function(a) {
+    ja: function (a) {
         a =
             a.touches[0] || a.changedTouches[0];
         this.addEntropy([a.pageX || a.clientX, a.pageY || a.clientY], 1, "touch");
         B(this, 0)
     },
-    ha: function() {
+    ha: function () {
         B(this, 2)
     },
-    ba: function(a) {
+    ba: function (a) {
         a = a.accelerationIncludingGravity.x || a.accelerationIncludingGravity.y || a.accelerationIncludingGravity.z;
         if (window.orientation) {
             var b = window.orientation;
@@ -662,7 +662,7 @@ function w(a) {
 }
 
 function A(a, b) {
-    return function() {
+    return function () {
         b.apply(a, arguments)
     }
 }
@@ -689,17 +689,17 @@ a: try {
 } catch (a) {
     "undefined" !== typeof window && window.console && (console.log("There was an error collecting entropy from the browser:"), console.log(a))
 }
-sjcl.bn = function(a) {
+sjcl.bn = function (a) {
     this.initWith(a)
 };
 sjcl.bn.prototype = {
     radix: 24,
     maxMul: 8,
     h: sjcl.bn,
-    copy: function() {
+    copy: function () {
         return new this.h(this)
     },
-    initWith: function(a) {
+    initWith: function (a) {
         var b = 0,
             c;
         switch (typeof a) {
@@ -721,7 +721,7 @@ sjcl.bn.prototype = {
         }
         return this
     },
-    equals: function(a) {
+    equals: function (a) {
         "number" === typeof a && (a = new this.h(a));
         var b = 0,
             c;
@@ -730,10 +730,10 @@ sjcl.bn.prototype = {
         for (c = 0; c < this.limbs.length || c < a.limbs.length; c++) b |= this.getLimb(c) ^ a.getLimb(c);
         return 0 === b
     },
-    getLimb: function(a) {
+    getLimb: function (a) {
         return a >= this.limbs.length ? 0 : this.limbs[a]
     },
-    greaterEquals: function(a) {
+    greaterEquals: function (a) {
         "number" === typeof a && (a = new this.h(a));
         var b = 0,
             c = 0,
@@ -741,7 +741,7 @@ sjcl.bn.prototype = {
         for (d = Math.max(this.limbs.length, a.limbs.length) - 1; 0 <= d; d--) e = this.getLimb(d), f = a.getLimb(d), c |= f - e & ~b, b |= e - f & ~c;
         return (c | ~b) >>> 31
     },
-    toString: function() {
+    toString: function () {
         this.fullReduce();
         var a = "",
             b, c, d = this.limbs;
@@ -752,7 +752,7 @@ sjcl.bn.prototype = {
         }
         return "0x" + a
     },
-    addM: function(a) {
+    addM: function (a) {
         "object" !== typeof a && (a = new this.h(a));
         var b = this.limbs,
             c = a.limbs;
@@ -760,7 +760,7 @@ sjcl.bn.prototype = {
         for (a = 0; a < c.length; a++) b[a] += c[a];
         return this
     },
-    doubleM: function() {
+    doubleM: function () {
         var a, b = 0,
             c, d = this.radix,
             e = this.radixMask,
@@ -769,7 +769,7 @@ sjcl.bn.prototype = {
         b && f.push(b);
         return this
     },
-    halveM: function() {
+    halveM: function () {
         var a, b = 0,
             c, d = this.radix,
             e = this.limbs;
@@ -778,7 +778,7 @@ sjcl.bn.prototype = {
         e[e.length - 1] || e.pop();
         return this
     },
-    subM: function(a) {
+    subM: function (a) {
         "object" !== typeof a && (a = new this.h(a));
         var b = this.limbs,
             c = a.limbs;
@@ -786,7 +786,7 @@ sjcl.bn.prototype = {
         for (a = 0; a < c.length; a++) b[a] -= c[a];
         return this
     },
-    mod: function(a) {
+    mod: function (a) {
         var b = !this.greaterEquals(new sjcl.bn(0));
         a = (new sjcl.bn(a)).normalize();
         var c = (new sjcl.bn(this)).normalize(),
@@ -796,7 +796,7 @@ sjcl.bn.prototype = {
             c.subM(a).normalize();
         return c.trim()
     },
-    inverseMod: function(a) {
+    inverseMod: function (a) {
         var b = new sjcl.bn(1),
             c = new sjcl.bn(0),
             d = new sjcl.bn(this),
@@ -808,13 +808,13 @@ sjcl.bn.prototype = {
         if (!e.equals(1)) throw new sjcl.exception.invalid("inverseMod: p and x must be relatively prime");
         return c
     },
-    add: function(a) {
+    add: function (a) {
         return this.copy().addM(a)
     },
-    sub: function(a) {
+    sub: function (a) {
         return this.copy().subM(a)
     },
-    mul: function(a) {
+    mul: function (a) {
         "number" === typeof a ? a = new this.h(a) : a.normalize();
         this.normalize();
         var b, c = this.limbs,
@@ -832,10 +832,10 @@ sjcl.bn.prototype = {
         }
         return g.cnormalize().reduce()
     },
-    square: function() {
+    square: function () {
         return this.mul(this)
     },
-    power: function(a) {
+    power: function (a) {
         a =
             (new sjcl.bn(a)).normalize().trim().limbs;
         var b, c, d = new this.h(1),
@@ -848,10 +848,10 @@ sjcl.bn.prototype = {
             }
         return d
     },
-    mulmod: function(a, b) {
+    mulmod: function (a, b) {
         return this.mod(b).mul(a.mod(b)).mod(b)
     },
-    powermod: function(a, b) {
+    powermod: function (a, b) {
         a = new sjcl.bn(a);
         b = new sjcl.bn(b);
         if (1 == (b.limbs[0] & 1)) {
@@ -867,7 +867,7 @@ sjcl.bn.prototype = {
             }
         return f
     },
-    montpowermod: function(a, b) {
+    montpowermod: function (a, b) {
         function c(a, b) {
             var c = b % a.radix;
             return (a.limbs[Math.floor(b / a.radix)] & 1 << c) >> c
@@ -895,7 +895,7 @@ sjcl.bn.prototype = {
         var k, m, p;
         p = a.bitLength();
         k = new sjcl.bn({
-            limbs: b.copy().normalize().trim().limbs.map(function() {
+            limbs: b.copy().normalize().trim().limbs.map(function () {
                 return 0
             })
         });
@@ -934,20 +934,20 @@ sjcl.bn.prototype = {
             }
         return d(h, 1)
     },
-    trim: function() {
+    trim: function () {
         var a = this.limbs,
             b;
         do b = a.pop(); while (a.length && 0 === b);
         a.push(b);
         return this
     },
-    reduce: function() {
+    reduce: function () {
         return this
     },
-    fullReduce: function() {
+    fullReduce: function () {
         return this.normalize()
     },
-    normalize: function() {
+    normalize: function () {
         var a = 0,
             b, c = this.placeVal,
             d = this.ipv,
@@ -958,7 +958,7 @@ sjcl.bn.prototype = {
         this.trim();
         return this
     },
-    cnormalize: function() {
+    cnormalize: function () {
         var a = 0,
             b, c = this.ipv,
             d, e = this.limbs,
@@ -969,7 +969,7 @@ sjcl.bn.prototype = {
         e[b] += a;
         return this
     },
-    toBits: function(a) {
+    toBits: function (a) {
         this.fullReduce();
         a = a || this.exponent || this.bitLength();
         var b = Math.floor((a - 1) / 24),
@@ -978,13 +978,13 @@ sjcl.bn.prototype = {
         for (b--; 0 <= b; b--) d = c.concat(d, [c.partial(Math.min(this.radix, a), this.getLimb(b))]), a -= this.radix;
         return d
     },
-    bitLength: function() {
+    bitLength: function () {
         this.fullReduce();
         for (var a = this.radix * (this.limbs.length - 1), b = this.limbs[this.limbs.length - 1]; b; b >>>= 1) a++;
         return a + 7 & -8
     }
 };
-sjcl.bn.fromBits = function(a) {
+sjcl.bn.fromBits = function (a) {
     var b = new this,
         c = [],
         d = sjcl.bitArray,
@@ -997,7 +997,7 @@ sjcl.bn.fromBits = function(a) {
 };
 sjcl.bn.prototype.ipv = 1 / (sjcl.bn.prototype.placeVal = Math.pow(2, sjcl.bn.prototype.radix));
 sjcl.bn.prototype.radixMask = (1 << sjcl.bn.prototype.radix) - 1;
-sjcl.bn.pseudoMersennePrime = function(a, b) {
+sjcl.bn.pseudoMersennePrime = function (a, b) {
     function c(a) {
         this.initWith(a)
     }
@@ -1017,7 +1017,7 @@ sjcl.bn.pseudoMersennePrime = function(a, b) {
         d.fullFactor[e] = b[e][1] * Math.pow(.5, a - b[e][0] + d.fullOffset[e] * d.radix), d.modulus.addM(new sjcl.bn(Math.pow(2, b[e][0]) * b[e][1])), d.minOffset = Math.min(d.minOffset, -d.offset[e]);
     d.h = c;
     d.modulus.cnormalize();
-    d.reduce = function() {
+    d.reduce = function () {
         var a, b, c, d = this.modOffset,
             e = this.limbs,
             f = this.offset,
@@ -1035,7 +1035,7 @@ sjcl.bn.pseudoMersennePrime = function(a, b) {
         return this
     };
     d.Y = -1 === d.fullMask ?
-        d.reduce : function() {
+        d.reduce : function () {
             var a = this.limbs,
                 b = a.length - 1,
                 c, d;
@@ -1047,7 +1047,7 @@ sjcl.bn.pseudoMersennePrime = function(a, b) {
                 this.normalize()
             }
         };
-    d.fullReduce = function() {
+    d.fullReduce = function () {
         var a, b;
         this.Y();
         this.addM(this.modulus);
@@ -1061,7 +1061,7 @@ sjcl.bn.pseudoMersennePrime = function(a, b) {
         this.cnormalize();
         return this
     };
-    d.inverse = function() {
+    d.inverse = function () {
         return this.power(this.modulus.sub(2))
     };
     c.fromBits = sjcl.bn.fromBits;
@@ -1127,9 +1127,9 @@ sjcl.bn.prime = {
         [0, -1]
     ])
 };
-sjcl.bn.random = function(a, b) {
+sjcl.bn.random = function (a, b) {
     "object" !== typeof a && (a = new sjcl.bn(a));
-    for (var c, d, e = a.limbs.length, f = a.limbs[e - 1] + 1, g = new sjcl.bn;;) {
+    for (var c, d, e = a.limbs.length, f = a.limbs[e - 1] + 1, g = new sjcl.bn; ;) {
         do c = sjcl.random.randomWords(e, b), 0 > c[e - 1] && (c[e - 1] += 0x100000000); while (Math.floor(c[e - 1] / f) === Math.floor(0x100000000 / f));
         c[e - 1] %= f;
         for (d = 0; d < e - 1; d++) c[d] &= a.radixMask;
@@ -1138,22 +1138,22 @@ sjcl.bn.random = function(a, b) {
     }
 };
 sjcl.keyexchange.srp = {
-    makeVerifier: function(a, b, c, d) {
+    makeVerifier: function (a, b, c, d) {
         a = sjcl.keyexchange.srp.makeX(a, b, c);
         a = sjcl.bn.fromBits(a);
         return d.g.powermod(a, d.N)
     },
-    makeX: function(a, b, c) {
+    makeX: function (a, b, c) {
         a = sjcl.hash.sha1.hash(a + ":" + b);
         return sjcl.hash.sha1.hash(sjcl.bitArray.concat(c, a))
     },
-    knownGroup: function(a) {
+    knownGroup: function (a) {
         "string" !== typeof a && (a = a.toString());
         sjcl.keyexchange.srp.T || sjcl.keyexchange.srp.fa();
         return sjcl.keyexchange.srp.V[a]
     },
     T: !1,
-    fa: function() {
+    fa: function () {
         var a, b;
         for (a = 0; a < sjcl.keyexchange.srp.U.length; a++) b = sjcl.keyexchange.srp.U[a].toString(),
             b = sjcl.keyexchange.srp.V[b], b.N = new sjcl.bn(b.N), b.g = new sjcl.bn(b.g);
@@ -1192,6 +1192,6 @@ sjcl.keyexchange.srp = {
     }
 };
 "undefined" !== typeof module && module.exports && (module.exports = sjcl);
-"function" === typeof define && define([], function() {
+"function" === typeof define && define([], function () {
     return sjcl
 });

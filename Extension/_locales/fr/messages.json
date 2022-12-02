@@ -47,9 +47,6 @@
   "GettingPasswords": {
     "message": "Récupération des mots de passe…"
   },
-  "ErrorReturned": {
-    "message": "Une erreur s’est produite. Veuillez réactiver l’extension Mots de passe iCloud pour Chrome."
-  },
   "NoUserName": {
     "message": "aucun nom d’utilisateur"
   },
@@ -73,5 +70,20 @@
   },
   "enableAutoFillPasswordsMessage": {
     "message": "Cliquez sur le bouton dans la barre d’outils afin d’activer l’extension Mots de passe iCloud pour Chrome."
+  },
+  "optionsTitle": {
+    "message": "Options de Mots de passe iCloud"
+  },
+  "enableInPageAutoFillCheckboxLabel": {
+    "message": "Remplissage automatique dans la page"
+  },
+  "enableInPageAutoFillCheckboxDetail": {
+    "message": "Autorisez Mots de passe iCloud à fournir des identifiants à partir d’une liste dans la page. Vous pouvez toujours remplir les mots de passe depuis le bouton de la barre d’outils Mots de passe iCloud, même si cette option est désactivée."
+  },
+  "allowExtensionToControlAutoFillLabel": {
+    "message": "Désactiver le remplissage automatique par Chrome"
+  },
+  "allowExtensionToControlAutoFillDetail": {
+    "message": "Pour empêcher le remplissage automatique dans la page par Chrome d’interférer avec Mots de passe iCloud, Mots de passe iCloud peut tenter de désactiver pour vous les réglages de remplissage automatique du navigateur."
   }
 }

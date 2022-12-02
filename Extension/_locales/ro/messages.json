@@ -9,7 +9,7 @@
     "message": "Pentru a utiliza Parole iCloud, descărcați iCloud pentru Windows."
   },
   "extDescription": {
-    "message": "Funcționalitatea Parole iCloud vă permite să utilizați parolele create în Safari și în aplicațiile de pe iPhone, iPad și Mac cu Chrome pe Windows."
+    "message": "Parole iCloud vă permite să completați parolele și codurile de verificare create în Safari și în aplicațiile de pe iPhone, iPad și Mac pe site-urile web din Chrome."
   },
   "extName": {
     "message": "Parole iCloud"
@@ -47,9 +47,6 @@
   "GettingPasswords": {
     "message": "Încărcare parole…"
   },
-  "ErrorReturned": {
-    "message": "A survenit o eroare. Reactivați extensia Parole iCloud pentru Chrome."
-  },
   "NoUserName": {
     "message": "niciun nume de utilizator"
   },
@@ -73,5 +70,20 @@
   },
   "enableAutoFillPasswordsMessage": {
     "message": "Faceți clic pe butonul din bara de instrumente pentru a activa extensia Parole iCloud pentru Chrome."
+  },
+  "optionsTitle": {
+    "message": "Opțiuni Parole iCloud"
+  },
+  "enableInPageAutoFillCheckboxLabel": {
+    "message": "Completare automată în interiorul paginii"
+  },
+  "enableInPageAutoFillCheckboxDetail": {
+    "message": "Permiteți ca Parole iCloud să ofere informații de autentificare dintr-o listă aflată în interiorul paginii. Puteți completa oricând parolele folosind butonul Parole iCloud din bara de instrumente, chiar dacă această opțiune este dezactivată."
+  },
+  "allowExtensionToControlAutoFillLabel": {
+    "message": "Dezactivați completarea automată Chrome"
+  },
+  "allowExtensionToControlAutoFillDetail": {
+    "message": "Pentru a preveni interferențele dintre funcționalitatea de completare automată în interiorul paginii din Chrome și Parole iCloud, Parole iCloud poate încerca să dezactiveze configurările de completare automată ale browserului în numele dvs."
   }
 }

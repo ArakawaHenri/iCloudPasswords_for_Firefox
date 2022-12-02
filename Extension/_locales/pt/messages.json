@@ -6,10 +6,10 @@
     "message": "Baixar"
   },
   "downloadMessage": {
-    "message": "Baixe o iCloud para Windows para usar as Senhas do iCloud."
+    "message": "Baixe o iCloud para Windows para usar Senhas do iCloud."
   },
   "extDescription": {
-    "message": "Senhas do iCloud permite que você use as senhas criadas no Safari e em apps no iPhone, iPad e Mac com o Chrome no Windows."
+    "message": "As Senhas do iCloud permitem que você preencha senhas e códigos de verificação criados no Safari e em apps no iPhone, iPad e Mac em sites no Chrome."
   },
   "extName": {
     "message": "Senhas do iCloud"
@@ -47,9 +47,6 @@
   "GettingPasswords": {
     "message": "Carregando senhas…"
   },
-  "ErrorReturned": {
-    "message": "Ocorreu um erro. Ative novamente a extensão Senhas do iCloud para Chrome."
-  },
   "NoUserName": {
     "message": "nenhum nome de usuário"
   },
@@ -73,5 +70,20 @@
   },
   "enableAutoFillPasswordsMessage": {
     "message": "Clique no botão da barra de ferramentas para ativar a extensão Senhas do iCloud para Chrome."
+  },
+  "optionsTitle": {
+    "message": "Opções das Senhas do iCloud"
+  },
+  "enableInPageAutoFillCheckboxLabel": {
+    "message": "Preenchimento Automático na Página"
+  },
+  "enableInPageAutoFillCheckboxDetail": {
+    "message": "Permite que as senhas do iCloud ofereçam credenciais em uma lista na página. Você sempre pode preencher as senhas pelo botão das Senhas do iCloud na barra de ferramentas, mesmo que esta opção esteja desativada."
+  },
+  "allowExtensionToControlAutoFillLabel": {
+    "message": "Desativar Preenchimento Automático do Chrome"
+  },
+  "allowExtensionToControlAutoFillDetail": {
+    "message": "Para impedir que o Preenchimento Automático na página do Chrome interfira com as Senhas do iCloud, as Senhas do iCloud podem tentar desativar os ajustes de Preenchimento Automático do navegador por você."
   }
 }

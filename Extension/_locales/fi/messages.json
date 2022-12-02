@@ -9,7 +9,7 @@
     "message": "Lataa iCloud Windowsille, jotta voit käyttää iCloud-salasanoja."
   },
   "extDescription": {
-    "message": "iCloud-salasanoilla voit käyttää Safarissa sekä iPhonen, iPadin ja Macin apeissa luotuja salasanoja Windowsin Chromessa."
+    "message": "iCloud-salasanoilla voit käyttää Safarissa sekä iPhonen, iPadin ja Macin apeissa luotuja salasanoja ja vahvistuskoodeja Chromessa."
   },
   "extName": {
     "message": "iCloud-salasanat"
@@ -47,9 +47,6 @@
   "GettingPasswords": {
     "message": "Ladataan salasanoja…"
   },
-  "ErrorReturned": {
-    "message": "Tapahtui virhe. Ota iCloud-salasanalaajennus Chromelle käyttöön uudelleen."
-  },
   "NoUserName": {
     "message": "ei käyttäjätunnusta"
   },
@@ -73,5 +70,20 @@
   },
   "enableAutoFillPasswordsMessage": {
     "message": "Ota iCloud-salasanat-laajennus käyttöön Chromessa klikkaamalla työkalupalkin painiketta."
+  },
+  "optionsTitle": {
+    "message": "iCloud-salasanojen valinnat"
+  },
+  "enableInPageAutoFillCheckboxLabel": {
+    "message": "Sivun sisäinen automaattinen täyttö"
+  },
+  "enableInPageAutoFillCheckboxDetail": {
+    "message": "Salli iCloud-salasanojen tarjota tunnistetietoja sivulla näkyvästä luettelosta. Voit aina täyttää salasanoja iCloud-salasanojen työkalupalkin painikkeella, vaikka tämä valinta olisikin pois päältä."
+  },
+  "allowExtensionToControlAutoFillLabel": {
+    "message": "Laita Chromen automaattinen täyttö pois päältä"
+  },
+  "allowExtensionToControlAutoFillDetail": {
+    "message": "Jotta Chromen sivujen sisäinen automaattinen täyttö ja iCloud-salasanat eivät vaikuttaisi toisiinsa, iCloud-salasanat voi yrittää laittaa selaimen automaattisen täytön asetukset pois päältä puolestasi."
   }
 }

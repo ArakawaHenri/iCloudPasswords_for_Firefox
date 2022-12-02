@@ -25,17 +25,145 @@ function humanReadableFormType(e) {
 
 function domainsForDisplayFromUsernamesAndDomains(e, t) {
     const s = e.length;
-    let a = t.map((function (e) {
+    let o = t.map((function (e) {
         return e.replace(/^(www|m)\./, "")
     })),
-        o = [];
-    for (var r = 0; r < s; r++) o.push([e[r], a[r]]);
+        n = [];
+    for (var r = 0; r < s; r++) n.push([e[r], o[r]]);
     for (r = 0; r < s; r++) {
         let e = [];
-        for (var n = r + 1; n < s; n++) o[r].join("\n") === o[n].join("\n") && (e.length || e.push(r), e.push(n));
-        for (identicalIndex of e) a[identicalIndex] = t[identicalIndex]
+        for (var a = r + 1; a < s; a++) n[r].join("\n") === n[a].join("\n") && (e.length || e.push(r), e.push(a));
+        for (identicalIndex of e) o[identicalIndex] = t[identicalIndex]
     }
-    return a
+    return o
+}
+class Localizer {
+    static configureDocumentElementForLanguage(e, t) {
+        switch (t) {
+            case "he":
+            case "ar":
+            case "fa":
+                e.setAttribute("dir", "rtl"), e.setAttribute("lang", t)
+        }
+    }
+    constructor(e) { }
+    getMessage(e, t, s) {
+        const o = this.messageNamesToTry(e);
+        for (let e of o) {
+            let o;
+            try {
+                o = chrome.i18n.getMessage(e, t, s)
+            } catch {
+                o = chrome.i18n.getMessage(e, t)
+            }
+            if (o) return o
+        }
+        return ""
+    }
+    messageNamesToTry(e) {
+        let t = [];
+        return t.push(e), t
+    }
+}
+class ExtensionSettings {
+    #e = !1;
+    #t = !0;
+    #s = !0;
+    eventTarget = new EventTarget;
+    constructor(e = !1) {
+        this.#e = e, this.#o(), this.#n()
+    }
+    get enableInPageAutoFill() {
+        return this.#t
+    }
+    set enableInPageAutoFill(e) {
+        this.#t = e, this.#r()
+    }
+    get allowExtensionToControlAutoFillSettings() {
+        return this.#s
+    }
+    set allowExtensionToControlAutoFillSettings(e) {
+        this.#s = e, this.#a().then(this.#r.bind(this))
+    }
+    #a() {
+        return this.#s ? this.attemptToControlBrowserAutoFillSettings() : this.clearControlOfBrowserAutoFillSettings()
+    }
+    attemptToControlBrowserAutoFillSettings() {
+        return this.#e ? Promise.reject(new Error("This Settings instance does not allow writing browser settings")) : Promise.allSettled([this.#i(chrome.privacy.services.passwordSavingEnabled, !1), this.#i(chrome.privacy.services.autofillCreditCardEnabled, !1), this.#i(chrome.privacy.services.autofillAddressEnabled, !1)]).then((e => (this.#c(), e)))
+    }
+    clearControlOfBrowserAutoFillSettings() {
+        return this.#e ? Promise.reject(new Error("This Settings instance does not allow writing browser settings")) : Promise.allSettled([this.#l(chrome.privacy.services.passwordSavingEnabled), this.#l(chrome.privacy.services.autofillCreditCardEnabled), this.#l(chrome.privacy.services.autofillAddressEnabled)]).then((e => (this.#c(), e)))
+    }
+    #o() {
+        let e = new Promise((e => {
+            chrome.storage.sync.get({
+                enableInPageAutoFill: !0,
+                allowExtensionToControlAutoFillSettings: !0
+            }, (t => {
+                this.#t = t.enableInPageAutoFill, this.#s = t.allowExtensionToControlAutoFillSettings, e()
+            }))
+        }));
+        return this.#e || (e = e.then(this.#a.bind(this))), e.then(this.#c.bind(this))
+    }
+    #r() {
+        return new Promise((e => {
+            chrome.storage.sync.set({
+                enableInPageAutoFill: this.#t,
+                allowExtensionToControlAutoFillSettings: this.#s
+            }, (() => {
+                e()
+            }))
+        })).then(this.#c.bind(this))
+    }
+    #n() {
+        this.#e || (chrome.privacy.services.passwordSavingEnabled && chrome.privacy.services.passwordSavingEnabled.onChange.addListener((e => {
+            this.#c()
+        })), chrome.privacy.services.autofillCreditCardEnabled && chrome.privacy.services.autofillCreditCardEnabled.onChange.addListener((e => {
+            this.#c()
+        })), chrome.privacy.services.autofillAddressEnabled && chrome.privacy.services.autofillAddressEnabled.onChange.addListener((e => {
+            this.#c()
+        })))
+    }
+    #c() {
+        const e = new CustomEvent("settingsChanged", {
+            detail: {
+                enableInPageAutoFill: this.#t
+            }
+        });
+        this.eventTarget.dispatchEvent(e)
+    }
+    #i(e, t) {
+        return this.#d(e).then((s => s ? s.value === t ? {
+            details: s,
+            newValue: t
+        } : new Promise(((o, n) => {
+            e.set({
+                value: t
+            }, (() => {
+                chrome.runtime.lastError && (chrome.runtime.lastError, chrome.runtime.lastError, n(chrome.runtime.lastError)), o({
+                    details: s,
+                    newValue: t
+                })
+            }))
+        })) : {
+            details: {},
+            newValue: void 0
+        }))
+    }
+    #d(e) {
+        return new Promise((t => {
+            e || t({}), e.get({}, (e => {
+                "not_controllable" === e.levelOfControl && reject(new Error("Cannot control this setting")), t(e)
+            }))
+        }))
+    }
+    #l(e) {
+        return new Promise((t => {
+            e || t(), e.clear({}, (() => {
+                t()
+            }))
+        }))
+    }
 }
 const ErrCodes = {
     ErrSuccess: "Success",
@@ -75,16 +203,16 @@ SecretSession = function (e) {
         const t = sjcl.codec.utf8String.toBits(e),
             s = this.encrypt(t);
         if ("string" == typeof s) return s;
-        let a = null;
+        let o = null;
         try {
-            a = JSON.stringify({
+            o = JSON.stringify({
                 TID: this.bitsToString(this.I.toBits()),
                 SDATA: this.bitsToString(s, !1)
             })
         } catch (e) {
             return ErrCodes.InvalidMessage
         }
-        return a
+        return o
     },
     parseSMSG: function (e) {
         let t = e;
@@ -149,82 +277,82 @@ SecretSession = function (e) {
             throw new SecretSessionError(ErrCodes.InvalidMessage, `Unable to parse JSON message: ${e}`)
         }
         if ("string" != typeof s.TID) throw new SecretSessionError(ErrCodes.InvalidMessage, "Missing or invalid 'TID' field in PAKE message.");
-        let a = sjcl.bn.fromBits(this.stringToBits(s.TID));
-        if (!this.I.equals(a)) throw new SecretSessionError(ErrCodes.UnexpectedMessage, "Unexpected message");
+        let o = sjcl.bn.fromBits(this.stringToBits(s.TID));
+        if (!this.I.equals(o)) throw new SecretSessionError(ErrCodes.UnexpectedMessage, "Unexpected message");
         if (!s.MSG) throw new SecretSessionError(ErrCodes.InvalidMessage, "Missing 'MSG' field in PAKE message.");
-        const o = parseInt(s.MSG, 10);
-        if (this.expectedMessage !== o) throw new SecretSessionError(ErrCodes.UnexpectedMessage, `Received Message ${message.MSG}, but expected Message ${this.expectedMessage} `);
+        const n = parseInt(s.MSG, 10);
+        if (this.expectedMessage !== n) throw new SecretSessionError(ErrCodes.UnexpectedMessage, `Received Message ${message.MSG}, but expected Message ${this.expectedMessage} `);
         let r = null;
-        if (o === MSGTypes.MSG1) {
-            var n = SecretSessionVersion.SRPWithOldVerification;
-            "number" == typeof s.PROTO && (n = s.PROTO, Object.values(SecretSessionVersion).includes(n) || (n = SecretSessionVersion.SRPWithOldVerification)), this.protocolVersion = n, r = this.processMessage1(s)
-        } else o === MSGTypes.MSG3 && (r = this.processMessage3(s));
+        if (n === MSGTypes.MSG1) {
+            var a = SecretSessionVersion.SRPWithOldVerification;
+            "number" == typeof s.PROTO && (a = s.PROTO, Object.values(SecretSessionVersion).includes(a) || (a = SecretSessionVersion.SRPWithOldVerification)), this.protocolVersion = a, r = this.processMessage1(s)
+        } else n === MSGTypes.MSG3 && (r = this.processMessage3(s));
         return r
     },
     createSessionKey: function (e, t) {
         const s = sjcl.hash.sha256.hash,
-            a = this._calculateX(e, this.bitsToString(this.I.toBits()), this.P, s);
-        this.v = this._calculateVerifier(this.grp.g, a, this.grp.N);
-        const o = this.A.toString(),
+            o = this._calculateX(e, this.bitsToString(this.I.toBits()), this.P, s);
+        this.v = this._calculateVerifier(this.grp.g, o, this.grp.N);
+        const n = this.A.toString(),
             r = t.toString(),
-            n = this._padToModulusLength(o).concat(this._padToModulusLength(r)),
-            i = sjcl.bn.fromBits(s(sjcl.codec.hex.toBits(n))),
-            c = this.a.add(i.mul(a)),
-            d = this.grp.N.toString() + this._padToModulusLength(this.grp.g.toString()),
-            l = sjcl.bn.fromBits(s(sjcl.codec.hex.toBits(d))).mulmod(this.v, this.grp.N);
-        return s(t.sub(l).powermod(c, this.grp.N).toBits())
+            a = this._padToModulusLength(n).concat(this._padToModulusLength(r)),
+            i = sjcl.bn.fromBits(s(sjcl.codec.hex.toBits(a))),
+            c = this.a.add(i.mul(o)),
+            l = this.grp.N.toString() + this._padToModulusLength(this.grp.g.toString()),
+            d = sjcl.bn.fromBits(s(sjcl.codec.hex.toBits(l))).mulmod(this.v, this.grp.N);
+        return s(t.sub(d).powermod(c, this.grp.N).toBits())
     },
-    _calculateX: function (e, t, s, a) {
-        const o = a(t + ":" + s);
-        return sjcl.bn.fromBits(a(e.concat(o)))
+    _calculateX: function (e, t, s, o) {
+        const n = o(t + ":" + s);
+        return sjcl.bn.fromBits(o(e.concat(n)))
     },
     _calculateVerifier: function (e, t, s) {
         return e.powermod(t, s)
     },
     _calculateM: function (e, t, s) {
-        const a = sjcl.hash.sha256.hash;
-        let o = a(this.grp.N.toBits()),
-            r = a(sjcl.codec.hex.toBits(this._padToModulusLength(this.grp.g.toString())));
-        const n = sjcl.bitArray.bitLength(o) / 32;
-        for (let e = 0; e < n; ++e) o[e] = o[e] ^ r[e];
-        let i = a(this.bitsToString(this.I.toBits())),
+        const o = sjcl.hash.sha256.hash;
+        let n = o(this.grp.N.toBits()),
+            r = o(sjcl.codec.hex.toBits(this._padToModulusLength(this.grp.g.toString())));
+        const a = sjcl.bitArray.bitLength(n) / 32;
+        for (let e = 0; e < a; ++e) n[e] = n[e] ^ r[e];
+        let i = o(this.bitsToString(this.I.toBits())),
             c = new sjcl.hash.sha256;
-        c.update(o), c.update(i), c.update(e), c.update(this.A.toBits()), c.update(t.toBits()), c.update(s);
-        let d = c.finalize();
-        return c = new sjcl.hash.sha256, c.update(this.A.toBits()), c.update(d), c.update(s), this.hamk = c.finalize(), d
+        c.update(n), c.update(i), c.update(e), c.update(this.A.toBits()), c.update(t.toBits()), c.update(s);
+        let l = c.finalize();
+        return c = new sjcl.hash.sha256, c.update(this.A.toBits()), c.update(l), c.update(s), this.hamk = c.finalize(), l
     },
     processMessage1: function (e) {
         if ("string" != typeof e.s || "string" != typeof e.B) throw new SecretSessionError(ErrCodes.InvalidMessage, "Message 1 is missing some required keys.");
         e.VER && (this.appVer = e.VER);
         const t = this.stringToBits(e.s),
             s = sjcl.bn.fromBits(this.stringToBits(e.B));
-        let a = new sjcl.bn(1);
-        if (0 == s.mulmod(a, this.grp.N)) throw new SecretSessionError(ErrCodes.CryptoError, "B.mulmod error");
-        const o = this.createSessionKey(t, s);
-        this.encKey = sjcl.bitArray.bitSlice(o, 0, this.keyLen), this.expectedMessage = MSGTypes.MSG3;
+        let o = new sjcl.bn(1);
+        if (0 == s.mulmod(o, this.grp.N)) throw new SecretSessionError(ErrCodes.CryptoError, "B.mulmod error");
+        const n = this.createSessionKey(t, s);
+        this.encKey = sjcl.bitArray.bitSlice(n, 0, this.keyLen), this.expectedMessage = MSGTypes.MSG3;
         let r = {
             TID: this.bitsToString(this.I.toBits()),
             MSG: 2
         };
         switch (this.protocolVersion) {
             case SecretSessionVersion.SRPWithRFCVerification:
-                r.M = this.bitsToString(this._calculateM(t, s, o), !1);
+                r.M = this.bitsToString(this._calculateM(t, s, n), !1);
                 break;
             case SecretSessionVersion.SRPWithOldVerification:
                 const e = this.shouldUseBase64 ? this.v.toBits() : sjcl.codec.utf8String.toBits(this.v.toString()),
-                    a = this.encrypt(e);
-                r.v = this.bitsToString(a, !1);
+                    o = this.encrypt(e);
+                r.v = this.bitsToString(o, !1);
                 break;
             default:
                 throw new SecretSessionError(ErrCodes.UnexpectedMessage, `Unknown protocol version ${this.protocolVersion}`)
         }
-        let n = null;
+        let a = null;
         try {
-            n = JSON.stringify(r)
+            a = JSON.stringify(r)
         } catch (e) {
             throw new SecretSessionError(ErrCodes.InvalidMessage, `Error encoding Message 2 to string:${e}`)
         }
-        return this.stringToBase64(n)
+        return this.stringToBase64(a)
     },
     processMessage3: function (e) {
         let t = ErrCodes.ErrSuccess,
@@ -233,8 +361,8 @@ SecretSession = function (e) {
         else switch (this.protocolVersion) {
             case SecretSessionVersion.SRPWithRFCVerification:
                 if (e.HAMK) {
-                    const a = this.stringToBits(e.HAMK);
-                    sjcl.bitArray.equal(a, this.hamk) || (s = "Failed to verify server data.", this.msgExp = MSGTypes.MSG1, t = ErrCodes.InvalidSessionKey)
+                    const o = this.stringToBits(e.HAMK);
+                    sjcl.bitArray.equal(o, this.hamk) || (s = "Failed to verify server data.", this.msgExp = MSGTypes.MSG1, t = ErrCodes.InvalidSessionKey)
                 } else s = `Message 3 does not contain necessary data:${e.ErrCode}`, t = ErrCodes.InvalidMessage;
                 break;
             case SecretSessionVersion.SRPWithOldVerification:
@@ -249,26 +377,26 @@ SecretSession = function (e) {
         if (!this.encKey) throw new SecretSessionError(ErrCodes.InvalidSessionKey, "Called encrypt() without a session key");
         const t = new sjcl.cipher.aes(this.encKey),
             s = this._randomWords(4);
-        let a = null;
+        let o = null;
         try {
-            a = sjcl.mode.gcm.encrypt(t, e, s)
+            o = sjcl.mode.gcm.encrypt(t, e, s)
         } catch (e) {
             throw new SecretSessionError(ErrCodes.CryptoError, e.message)
         }
-        return sjcl.bitArray.concat(a, s)
+        return sjcl.bitArray.concat(o, s)
     },
     decrypt: function (e) {
         if (!this.encKey) throw new SecretSessionError(ErrCodes.InvalidSessionKey, "Called decrypt() without a session key!");
         const t = new sjcl.cipher.aes(this.encKey),
             s = sjcl.bitArray.bitSlice(e, 0, this.keyLen),
-            a = sjcl.bitArray.bitSlice(e, this.keyLen);
-        let o = null;
+            o = sjcl.bitArray.bitSlice(e, this.keyLen);
+        let n = null;
         try {
-            o = sjcl.mode.gcm.decrypt(t, a, s)
+            n = sjcl.mode.gcm.decrypt(t, o, s)
         } catch (e) {
             throw new SecretSessionError(ErrCodes.CryptoError, `Exception while decrypting message. ${e}`)
         }
-        return o
+        return n
     },
     _randomWords: function (e) {
         return sjcl.random.randomWords(e, 10)
@@ -373,10 +501,11 @@ var actUnknown = -1,
 const DefaultCapabilities = {
     shouldUseBase64: !1,
     secretSessionVersion: SecretSessionVersion.SRPWithOldVerification,
-    canFillOneTimeCodes: !1
+    canFillOneTimeCodes: !1,
+    supportsSubURLs: !1
 },
     AmountOfTimeToBlockRefreshForNativeAppDisconnection = 5e3;
-var g_lastToolbarIconImageName, g_nativeAppPort = null,
+var g_portToCompletionList, g_portToPopup, g_lastToolbarIconImageName, g_timeStartedFetchingCredentials, g_nativeAppPort = null,
     thePAKE = null,
     g_theState = ContextState.NotInSession,
     g_tabIdToURL = new Map,
@@ -385,7 +514,9 @@ var g_lastToolbarIconImageName, g_nativeAppPort = null,
     g_ErrorReturned = !1,
     g_secretSession = null,
     g_nativeAppCapabilities = null,
-    g_appStoreURL = "https://support.apple.com/kb/DL1455";
+    g_appStoreURL = "https://support.apple.com/kb/DL1455",
+    g_localizer = new Localizer,
+    g_extensionSettings = new ExtensionSettings;
 
 function imageDataForName(e) {
     if (!e) return;
@@ -515,157 +646,146 @@ function sendMessageToPopupAndCompletionList(e) {
 }
 
 function connectToBackgroundNativeAppAndSetUpListeners() {
-    setToolbarIcon("PasswordsToolbarUnpaired"), g_nativeAppCapabilities || (g_nativeAppCapabilities = DefaultCapabilities), g_secretSession = new SecretSession(g_nativeAppCapabilities);
+    setToolbarIcon("PasswordsToolbarUnpaired"), g_nativeAppCapabilities || (g_nativeAppCapabilities = DefaultCapabilities), g_localizer = new Localizer(g_nativeAppCapabilities), g_secretSession = new SecretSession(g_nativeAppCapabilities);
     try {
         (g_nativeAppPort = chrome.runtime.connectNative("com.apple.passwordmanager")).onDisconnect.addListener((function (e) {
             const t = chrome.runtime.lastError;
             t.message, setTimeout((function () {
-                switch (t.message) {
-                    case "Native host has exited.":
-                        chrome.storage.local.get(["lastRetryTimestamp"], (e => {
-                            const t = e.lastRetryTimestamp;
-                            let s = !1;
-                            if (t) {
-                                s = Date.now() - t > 5e3
-                            } else s = !0;
-                            s ? (chrome.storage.local.set({
-                                lastRetryTimestamp: Date.now()
-                            }), connectToBackgroundNativeAppAndSetUpListeners()) : (chrome.storage.local.remove(["lastRetryTimestamp"]), resetTheSession(ContextState.NativeSupportNotInstalled))
-                        }));
-                        break;
-                    default:
-                        t.message, resetTheSession(ContextState.NativeSupportNotInstalled)
-                }
+                if ("Native host has exited." === t.message) chrome.storage.local.get(["lastRetryTimestamp"], (e => {
+                    const t = e.lastRetryTimestamp;
+                    let s = !1;
+                    if (t) {
+                        s = Date.now() - t > 5e3
+                    } else s = !0;
+                    s ? (chrome.storage.local.set({
+                        lastRetryTimestamp: Date.now()
+                    }), connectToBackgroundNativeAppAndSetUpListeners()) : (chrome.storage.local.remove(["lastRetryTimestamp"]), resetTheSession(ContextState.NativeSupportNotInstalled))
+                }));
+                else t.message, resetTheSession(ContextState.NativeSupportNotInstalled)
             }), 1e3)
         })), chrome.runtime.onMessage.addListener(((e, t, s) => {
-            const a = new URL(t.url);
-            switch (a.hostname, t.tab.id, t.frameId, e.from, e.from) {
-                case "content":
-                    switch (e.subject, e.subject) {
-                        case "CmdDidFocusIntoPage":
-                            runPageMetadataHeuristicsOnActiveTab();
-                            break;
-                        case "CmdCheckEstablishSession":
-                            CheckEstablishSession();
-                            break;
-                        case "SaveStage1LoginName":
-                            a.hostname, t.tab.id, e.theLogin, g_tabIdToURL.set(t.tab.id, a.hostname), g_Stage1Logins.set(a.hostname, e.theLogin);
-                            break;
-                        case "CmdGetPassword4LoginName":
-                            let s = JSON.stringify({
-                                ACT: actSearch,
-                                URL: a.hostname,
-                                USR: e.theLogin
+            const o = new URL(t.url);
+            if (o.hostname, t.tab.id, t.frameId, e.from, "content" === e.from) switch (e.subject, e.subject) {
+                case "CmdDidFocusIntoPage":
+                    runPageMetadataHeuristicsOnActiveTab();
+                    break;
+                case "CmdCheckEstablishSession":
+                    CheckEstablishSession();
+                    break;
+                case "SaveStage1LoginName":
+                    o.hostname, t.tab.id, e.theLogin, g_tabIdToURL.set(t.tab.id, o.hostname), g_Stage1Logins.set(o.hostname, e.theLogin);
+                    break;
+                case "CmdGetPassword4LoginName":
+                    let s = JSON.stringify({
+                        ACT: actSearch,
+                        URL: o.hostname,
+                        USR: e.theLogin
+                    });
+                    var n = g_secretSession.createSMSG(s),
+                        r = {
+                            cmd: 5,
+                            tabId: t.tab.id,
+                            frameId: t.frameId,
+                            url: e.theURL,
+                            payload: JSON.stringify({
+                                QID: e.subject,
+                                SMSG: n
+                            })
+                        };
+                    e.subject, e.subject, g_nativeAppPort.postMessage(r);
+                    break;
+                case "CmdSetPassword4LoginName_URL":
+                case "CmdNewAccount4URL":
+                    if (g_theState === ContextState.SessionKeySet) {
+                        e.theNLogin, o.hostname;
+                        let s = consultStage1Logins(e.theNLogin, o.hostname);
+                        if (!isStringEmpty(s)) {
+                            let o = JSON.stringify({
+                                ACT: actMaybeAdd,
+                                URL: e.theURL,
+                                USR: e.theLogin,
+                                PWD: e.thePassword,
+                                NURL: e.theNURL,
+                                NUSR: s,
+                                NPWD: e.theNPassword
                             });
-                            var o = g_secretSession.createSMSG(s),
+                            n = g_secretSession.createSMSG(o), r = {
+                                cmd: 6,
+                                tabId: t.tab.id,
+                                frameId: t.frameId,
+                                payload: JSON.stringify({
+                                    QID: e.subject,
+                                    SMSG: n
+                                })
+                            };
+                            e.subject, g_nativeAppPort.postMessage(r)
+                        }
+                    }
+                    break;
+                case "CmdSetIconNTitle":
+                    {
+                        let s = !1;
+                        switch (e.hostPageType) {
+                            case WBSAutoFillFormTypeUndetermined:
+                            case WBSAutoFillFormTypeAutoFillableStandard:
+                            case WBSAutoFillFormTypeNonAutoFillable:
+                                s = !1;
+                                break;
+                            case WBSAutoFillFormTypeAutoFillableLogin:
+                            case WBSAutoFillFormTypeNewAccount:
+                            case WBSAutoFillFormTypeChangePassword:
+                                s = !0
+                        }
+                        switch (g_TabsToStateMap.has(t.tab.id) && g_TabsToStateMap.get(t.tab.id) || g_TabsToStateMap.set(t.tab.id, s), o.hostname, t.tab.id, t.frameId, humanReadableFormType(e.hostPageType), e.hostPageType, e.hostPageType) {
+                            case WBSAutoFillFormTypeUndetermined:
+                            case WBSAutoFillFormTypeAutoFillableStandard:
+                            case WBSAutoFillFormTypeNonAutoFillable:
+                                break;
+                            case WBSAutoFillFormTypeAutoFillableLogin:
+                            case WBSAutoFillFormTypeNewAccount:
+                            case WBSAutoFillFormTypeChangePassword:
                                 r = {
-                                    cmd: 5,
+                                    cmd: 3,
                                     tabId: t.tab.id,
                                     frameId: t.frameId,
-                                    url: e.theURL,
                                     payload: JSON.stringify({
-                                        QID: e.subject,
-                                        SMSG: o
+                                        TID: "CmdSetIconNTitle",
+                                        URL: o.hostname
                                     })
                                 };
-                            e.subject, e.subject, g_nativeAppPort.postMessage(r);
-                            break;
-                        case "CmdSetPassword4LoginName_URL":
-                        case "CmdNewAccount4URL":
-                            switch (g_theState) {
-                                case ContextState.SessionKeySet:
-                                    {
-                                        e.theNLogin, a.hostname;
-                                        let s = consultStage1Logins(e.theNLogin, a.hostname);
-                                        if (!isStringEmpty(s)) {
-                                            let a = JSON.stringify({
-                                                ACT: actMaybeAdd,
-                                                URL: e.theURL,
-                                                USR: e.theLogin,
-                                                PWD: e.thePassword,
-                                                NURL: e.theNURL,
-                                                NUSR: s,
-                                                NPWD: e.theNPassword
-                                            });
-                                            o = g_secretSession.createSMSG(a), r = {
-                                                cmd: 6,
-                                                tabId: t.tab.id,
-                                                frameId: t.frameId,
-                                                payload: JSON.stringify({
-                                                    QID: e.subject,
-                                                    SMSG: o
-                                                })
-                                            };
-                                            e.subject, g_nativeAppPort.postMessage(r)
-                                        }
-                                    }
-                            }
-                            break;
-                        case "CmdSetIconNTitle":
-                            {
-                                let s = !1;
-                                switch (e.hostPageType) {
-                                    case WBSAutoFillFormTypeUndetermined:
-                                    case WBSAutoFillFormTypeAutoFillableStandard:
-                                    case WBSAutoFillFormTypeNonAutoFillable:
-                                        s = !1;
-                                        break;
-                                    case WBSAutoFillFormTypeAutoFillableLogin:
-                                    case WBSAutoFillFormTypeNewAccount:
-                                    case WBSAutoFillFormTypeChangePassword:
-                                        s = !0
-                                }
-                                switch (g_TabsToStateMap.has(t.tab.id) && g_TabsToStateMap.get(t.tab.id) || g_TabsToStateMap.set(t.tab.id, s), a.hostname, t.tab.id, t.frameId, humanReadableFormType(e.hostPageType), e.hostPageType, e.hostPageType) {
-                                    case WBSAutoFillFormTypeUndetermined:
-                                    case WBSAutoFillFormTypeAutoFillableStandard:
-                                    case WBSAutoFillFormTypeNonAutoFillable:
-                                        break;
-                                    case WBSAutoFillFormTypeAutoFillableLogin:
-                                    case WBSAutoFillFormTypeNewAccount:
-                                    case WBSAutoFillFormTypeChangePassword:
-                                        r = {
-                                            cmd: 3,
-                                            tabId: t.tab.id,
-                                            frameId: t.frameId,
-                                            payload: JSON.stringify({
-                                                TID: "CmdSetIconNTitle",
-                                                URL: a.hostname
-                                            })
-                                        };
-                                        JSON.stringify(r), g_nativeAppPort.postMessage(r)
-                                }
-                            }
-                            break;
-                        case "CmdClearCache":
-                            g_tabIdToURL.has(t.tab.id) && (strURL = g_tabIdToURL.get(t.tab.id), a.hostname !== strURL && g_Stage1Logins.delete(strURL), g_tabIdToURL.delete(t.tab.id));
-                            break;
-                        case "ThemeChanged":
-                            chrome.pageAction && chrome.pageAction.setIcon({
-                                path: imageDataForName(g_lastToolbarIconImageName),
-                                tabId: t.tab.id
-                            });
-                            break;
-                        case "fillOneTimeCodeIntoForm":
-                            chrome.webNavigation.getFrame({
-                                tabId: t.tab.id,
-                                frameId: t.frameId
-                            }, (s => {
-                                s.frameId = t.frameId, didFillOneTimeCode(e.oneTimeCode, {
-                                    id: t.tab.id
-                                }, s)
-                            }));
-                            break;
-                        case "typedUserNameChanged":
-                        case "keydown":
-                            g_portToCompletionList.postMessage(e)
+                                JSON.stringify(r), g_nativeAppPort.postMessage(r)
+                        }
                     }
+                    break;
+                case "CmdClearCache":
+                    g_tabIdToURL.has(t.tab.id) && (strURL = g_tabIdToURL.get(t.tab.id), o.hostname !== strURL && g_Stage1Logins.delete(strURL), g_tabIdToURL.delete(t.tab.id));
+                    break;
+                case "ThemeChanged":
+                    chrome.pageAction && chrome.pageAction.setIcon({
+                        path: imageDataForName(g_lastToolbarIconImageName),
+                        tabId: t.tab.id
+                    });
+                    break;
+                case "fillOneTimeCodeIntoForm":
+                    chrome.webNavigation.getFrame({
+                        tabId: t.tab.id,
+                        frameId: t.frameId
+                    }, (s => {
+                        s.frameId = t.frameId, didFillOneTimeCode(e.oneTimeCode, {
+                            id: t.tab.id
+                        }, s)
+                    }));
+                    break;
+                case "typedUserNameChanged":
+                case "keydown":
+                    g_portToCompletionList.postMessage(e)
             }
             return Promise.resolve("Dummy response to keep the console quiet")
         })), g_nativeAppPort.onMessage.addListener((function (e) {
-            switch (JSON.stringify(e), setChromePasswordSavingEnabled(!1), chrome.storage.local.remove(["lastRetryTimestamp"]), cmd2string(e.cmd), e.cmd, e.cmd) {
+            switch (JSON.stringify(e), chrome.storage.local.remove(["lastRetryTimestamp"]), cmd2string(e.cmd), e.cmd, e.cmd) {
                 case 9:
                 case 10:
-                    resetTheSession(ContextState.CheckEngine), setChromePasswordSavingEnabled(!0), chrome.tabs.query({
+                    resetTheSession(ContextState.CheckEngine), chrome.tabs.query({
                         active: !0,
                         currentWindow: !0
                     }, (function (e) {
@@ -707,7 +827,8 @@ function connectToBackgroundNativeAppAndSetUpListeners() {
                             subject: "RememberICSelection",
                             tabId: e.tabId,
                             frameId: e.frameId,
-                            theRememberICSelection: t
+                            theRememberICSelection: t,
+                            capabilities: g_nativeAppCapabilities
                         }, {
                             frameId: e.frameId
                         })
@@ -718,31 +839,31 @@ function connectToBackgroundNativeAppAndSetUpListeners() {
                 case 4:
                     t = RememberIC.UnknownPage;
                     var s = [],
-                        a = [],
                         o = [],
+                        n = [],
                         r = e.payload,
-                        n = e.tabId,
+                        a = e.tabId,
                         i = e.frameId,
                         c = g_secretSession.parseSMSG(r.SMSG),
-                        d = JSON.parse(c);
-                    switch (JSON.stringify(d), d.STATUS) {
+                        l = JSON.parse(c);
+                    switch (JSON.stringify(l), l.STATUS) {
                         case QueryStatus.Success:
-                            entriesFromLoginNames4URLData(d).forEach((e => {
+                            performance.now();
+                            var d = entriesFromLoginNames4URLData(l);
+                            d.sort(((e, t) => e.USR.localeCompare(t.USR, void 0, {
+                                numeric: !0,
+                                sensitivity: "base"
+                            }))), d.forEach((e => {
                                 if ("Passwords not saved" === e.USR) t = RememberIC.DoNotRemember;
-                                else switch (s.push(e.USR), a.push(e.CDate || e.ModDate), o.push(e.sites[0]), e.PWD) {
-                                    case "Not Included":
-                                        t = RememberIC.RememberLoginAndPassword;
-                                        break;
-                                    default:
-                                        t = RememberIC.UnknownPage
-                                }
+                                else if (s.push(e.USR), o.push(e.CDate || e.ModDate), n.push(e.sites[0]), "Not Included" === e.PWD) t = RememberIC.RememberLoginAndPassword;
+                                else t = RememberIC.UnknownPage
                             })), sendMessageToPopupAndCompletionList({
                                 from: "background",
                                 subject: "users",
                                 arrLoginNames: s,
-                                arrDates: a,
-                                arrHLDs: o,
-                                tabId: n,
+                                arrDates: o,
+                                arrHLDs: n,
+                                tabId: a,
                                 frameId: i,
                                 theRememberICSelection: t
                             });
@@ -752,7 +873,7 @@ function connectToBackgroundNativeAppAndSetUpListeners() {
                                 from: "background",
                                 subject: "users",
                                 arrDates: [],
-                                tabId: n,
+                                tabId: a,
                                 frameId: i,
                                 arrLoginNames: [],
                                 arrHLDs: [],
@@ -760,19 +881,19 @@ function connectToBackgroundNativeAppAndSetUpListeners() {
                             });
                             break;
                         default:
-                            STATUSErrorReturned(d.STATUS)
+                            STATUSErrorReturned(l.STATUS)
                     }
                     break;
                 case 5:
                     r = e.payload, c = g_secretSession.parseSMSG(r.SMSG);
-                    switch ((d = JSON.parse(c)).STATUS) {
+                    switch ((l = JSON.parse(c)).STATUS) {
                         case 0:
                             chrome.tabs.query({
                                 active: !0,
                                 currentWindow: !0
                             }, (function (t) {
                                 try {
-                                    entriesFromLoginNames4URLData(d).forEach((s => {
+                                    entriesFromLoginNames4URLData(l).forEach((s => {
                                         for (site of s.sites)
                                             if (site === e.url) return void chrome.tabs.sendMessage(t[0].id, {
                                                 from: "background",
@@ -794,7 +915,7 @@ function connectToBackgroundNativeAppAndSetUpListeners() {
                         case 3:
                             break;
                         default:
-                            STATUSErrorReturned(d.STATUS)
+                            STATUSErrorReturned(l.STATUS)
                     }
                     break;
                 case 16:
@@ -805,7 +926,10 @@ function connectToBackgroundNativeAppAndSetUpListeners() {
                 case 6:
                     break;
                 case 14:
-                    g_nativeAppCapabilities = e.hasOwnProperty("capabilities") ? e.capabilities : DefaultCapabilities, resetTheSession(ContextState.NotInSession);
+                    g_nativeAppCapabilities = e.capabilities ? e.capabilities : DefaultCapabilities, g_localizer = new Localizer(g_nativeAppCapabilities), sendMessageToPopupAndCompletionList({
+                        subject: "hello",
+                        capabilities: g_nativeAppCapabilities
+                    }), resetTheSession(ContextState.NotInSession);
                     break;
                 case 15:
                     handleOneTimeCodeAvailableCommand(e);
@@ -842,12 +966,16 @@ function handleGetOneTimeCodesCommand(e) {
         return
     }
     let s = t.STATUS;
-    if (s !== QueryStatus.Success) return void (s !== QueryStatus.NoResults && STATUSErrorReturned(s));
-    let a = t.Entries;
-    a && sendMessageToPopupAndCompletionList({
+    if (s !== QueryStatus.Success) return s !== QueryStatus.NoResults && STATUSErrorReturned(s), void sendMessageToPopupAndCompletionList({
         from: "background",
         subject: "oneTimeCodes",
-        oneTimeCodes: a
+        oneTimeCodes: []
+    });
+    let o = t.Entries;
+    o && sendMessageToPopupAndCompletionList({
+        from: "background",
+        subject: "oneTimeCodes",
+        oneTimeCodes: o
     })
 }
 
@@ -860,20 +988,17 @@ function handleDidFillOneTimeCodeCommand(e) {
     }
     let s = t.STATUS;
     if (s !== QueryStatus.Success) return void (s !== QueryStatus.NoResults && STATUSErrorReturned(s));
-    let a = t.Entries;
-    a && a.length && chrome.tabs.sendMessage(e.tabId, {
+    let o = t.Entries;
+    o && o.length && chrome.tabs.sendMessage(e.tabId, {
         subject: "fillCurrentTOTPCodeIntoForm",
-        oneTimeCodes: a
+        oneTimeCodes: o
     }, {
         frameId: e.frameId
     })
 }
 
 function CheckEstablishSession() {
-    switch (g_theState) {
-        case ContextState.NotInSession:
-            ChallengePIN()
-    }
+    if (g_theState === ContextState.NotInSession) ChallengePIN()
 }
 
 function RunHeuristics(e, t, s) {
@@ -908,11 +1033,11 @@ function startPasswordsApp() {
 }
 
 function GetLoginNames4URL(e, t, s) {
-    let a = JSON.stringify({
+    let o = JSON.stringify({
         ACT: actGhostSearch,
         URL: e
     }),
-        o = g_secretSession.createSMSG(a),
+        n = g_secretSession.createSMSG(o),
         r = {
             cmd: 4,
             url: e,
@@ -920,22 +1045,22 @@ function GetLoginNames4URL(e, t, s) {
             frameId: s,
             payload: JSON.stringify({
                 QID: "CmdGetLoginNames4URL",
-                SMSG: o
+                SMSG: n
             })
         };
-    g_nativeAppPort.postMessage(r)
+    g_timeStartedFetchingCredentials = performance.now(), g_nativeAppPort.postMessage(r)
 }
 
 function getOneTimeCodes(e, t, s) {
-    getAllParentFrameURLsOfFrame(e, t).then((a => {
-        let o = {
+    getAllParentFrameURLsOfFrame(e, t).then((o => {
+        let n = {
             ACT: actGhostSearch,
             TYPE: "oneTimeCodes",
-            frameURLs: a
+            frameURLs: o
         };
-        s && (o.username = s);
-        let r = g_secretSession.createSMSG(o),
-            n = {
+        s && (n.username = s);
+        let r = g_secretSession.createSMSG(n),
+            a = {
                 cmd: 16,
                 tabId: e.id,
                 frameId: t.frameId,
@@ -944,59 +1069,56 @@ function getOneTimeCodes(e, t, s) {
                     SMSG: r
                 })
             };
-        g_nativeAppPort.postMessage(n)
+        g_nativeAppPort.postMessage(a)
     }))
 }
 
 function didFillOneTimeCode(e, t, s) {
-    switch (e.source) {
-        case "totp":
-            getAllParentFrameURLsOfFrame(t, s).then((a => {
-                let o = {
-                    ACT: actSearch,
-                    TYPE: "oneTimeCodes",
-                    frameURLs: a
-                },
-                    r = e.username;
-                r && (o.username = r);
-                let n = g_secretSession.createSMSG(o),
-                    i = {
-                        cmd: 17,
-                        tabId: t.id,
-                        frameId: s.frameId,
-                        payload: JSON.stringify({
-                            QID: "CmdDidFillOneTimeCode",
-                            SMSG: n
-                        })
-                    };
-                g_nativeAppPort.postMessage(i)
-            }))
-    }
+    if ("totp" === e.source) getAllParentFrameURLsOfFrame(t, s).then((o => {
+        let n = {
+            ACT: actSearch,
+            TYPE: "oneTimeCodes",
+            frameURLs: o
+        },
+            r = e.username;
+        r && (n.username = r);
+        let a = g_secretSession.createSMSG(n),
+            i = {
+                cmd: 17,
+                tabId: t.id,
+                frameId: s.frameId,
+                payload: JSON.stringify({
+                    QID: "CmdDidFillOneTimeCode",
+                    SMSG: a
+                })
+            };
+        g_nativeAppPort.postMessage(i)
+    }))
 }
 
 function getAllParentFrameURLsOfFrame(e, t) {
     let s = e.id;
-    return new Promise((a => {
+    return new Promise((o => {
         -1 !== t.parentFrameId ? chrome.webNavigation.getFrame({
             tabId: s,
             frameId: t.parentFrameId
         }, (s => {
             getAllParentFrameURLsOfFrame(e, s).then((e => {
-                a([t.url].concat(e))
+                o([t.url].concat(e))
             }))
-        })) : a([t.url])
+        })) : o([t.url])
     }))
 }
 
 function ChallengePIN() {
-    var e = g_secretSession.initialMessage(),
+    var e = {
+        QID: "m0",
+        PAKE: g_secretSession.initialMessage(),
+        HSTBRSR: g_localizer.getMessage("browserName")
+    },
         t = {
             cmd: 2,
-            msg: JSON.stringify({
-                QID: "m0",
-                PAKE: e,
-                HSTBRSR: chrome.i18n.getMessage("browserName")
-            })
+            msg: JSON.stringify(e)
         };
     setGlobalState(ContextState.ChallengeSent);
     try {
@@ -1009,28 +1131,18 @@ function ChallengePIN() {
 function PINSet(e) {
     g_secretSession.setPin(e);
     try {
-        let e = g_secretSession.processMessage(thePAKE),
+        let e = {
+            QID: "m2",
+            PAKE: g_secretSession.processMessage(thePAKE)
+        },
             t = {
                 cmd: 2,
-                msg: JSON.stringify({
-                    QID: "m2",
-                    PAKE: e
-                })
+                msg: JSON.stringify(e)
             };
         g_nativeAppPort.postMessage(t)
     } catch (e) {
         e.code, e.message, resetTheSession(ContextState.NotInSession)
     }
-}
-
-function setChromePasswordSavingEnabled(e) {
-    chrome.privacy.services.passwordSavingEnabled.get({}, (function (t) {
-        t.value !== e && chrome.privacy.services.passwordSavingEnabled.set({
-            value: e
-        }, (function () {
-            chrome.runtime.lastError && chrome.runtime.lastError
-        }))
-    }))
 }
 
 function runPageMetadataHeuristicsOnActiveTab() {
@@ -1041,10 +1153,10 @@ function runPageMetadataHeuristicsOnActiveTab() {
         g_TabsToStateMap.delete(e[0].id), chrome.webNavigation.getAllFrames({
             tabId: e[0].id
         }, (t => {
-            e[0].id, t.forEach(((t, s, a) => {
-                const o = new URL(t.url),
-                    r = o.protocol;
-                "http:" === r || "https:" === r ? (e[0].id, t.frameId, RunHeuristics(o.hostname, e[0].id, t.frameId)) : t.url
+            e[0].id, t.forEach(((t, s, o) => {
+                const n = new URL(t.url),
+                    r = n.protocol;
+                "http:" === r || "https:" === r ? (e[0].id, t.frameId, RunHeuristics(n.hostname, e[0].id, t.frameId)) : t.url
             }))
         }))
     }))
@@ -1086,7 +1198,7 @@ function canFillOneTimeCodes() {
 setUpEventListners(), checkForValidOS() ? connectToBackgroundNativeAppAndSetUpListeners() : (chrome.storage.local.get("hideUnsupportedOSPrompt", (function (e) {
     e.hideUnsupportedOSPrompt || (chrome.storage.local.set({
         hideUnsupportedOSPrompt: 1
-    }), window.alert(chrome.i18n.getMessage("unsupportedOS")))
+    }), window.alert(g_localizer.getMessage("unsupportedOS")))
 })), setGlobalState(ContextState.IncompatibleOS)), chrome.windows.onFocusChanged.addListener((e => {
     g_nativeAppPort && e !== chrome.windows.WINDOW_ID_NONE && chrome.tabs.query({
         active: !0,
@@ -1100,7 +1212,7 @@ setUpEventListners(), checkForValidOS() ? connectToBackgroundNativeAppAndSetUpLi
         JSON.stringify(t), g_nativeAppPort.postMessage(t)
     }))
 }));
-var g_portToCompletionList, g_portToPopup, g_IsDirty = !1;
+var g_IsDirty = !1;
 
 function setUpPortToCompetionList(e) {
     g_portToCompletionList = e, e.onMessage.addListener((function (t) {
@@ -1108,23 +1220,23 @@ function setUpPortToCompetionList(e) {
             case "getContextAndMetadataFromContent":
                 getCurrentActiveTabAndItsFrames().then((function (t) {
                     const s = t[0].id;
-                    for (const a of t[1]) {
-                        const t = a.frameId;
+                    for (const o of t[1]) {
+                        const t = o.frameId;
                         chrome.tabs.sendMessage(s, {
                             from: "background",
                             subject: "getTextFieldAndFormMetadataOfActiveTextFieldAndPresetUserNameAndHostname"
                         }, {
                             frameId: t
-                        }, (function (a) {
-                            e.postMessage({
+                        }, (function (o) {
+                            o && e.postMessage({
                                 subject: "replyForGetContextAndMetadataFromContent",
                                 state: g_theState,
                                 tabId: s,
                                 frameId: t,
-                                textFieldMetadata: a.textFieldMetadata,
-                                formMetadata: a.formMetadata,
-                                presetUserName: a.presetUserName,
-                                hostname: a.hostname,
+                                textFieldMetadata: o.textFieldMetadata,
+                                formMetadata: o.formMetadata,
+                                presetUserName: o.presetUserName,
+                                hostname: o.hostname,
                                 canFillOneTimeCodes: canFillOneTimeCodes()
                             })
                         }))
@@ -1136,12 +1248,12 @@ function setUpPortToCompetionList(e) {
                 break;
             case "getOneTimeCodes":
                 const s = t.tabId,
-                    a = t.frameId;
+                    o = t.frameId;
                 chrome.webNavigation.getFrame({
                     tabId: s,
-                    frameId: a
+                    frameId: o
                 }, (e => {
-                    e.frameId = a, getOneTimeCodes({
+                    e.frameId = o, getOneTimeCodes({
                         id: t.tabId
                     }, e, t.username)
                 }));
@@ -1161,11 +1273,14 @@ function setUpPortToCompetionList(e) {
                     frameId: t.frameId
                 })
         }
-    }))
+    })), e.postMessage({
+        subject: "hello",
+        capabilities: g_nativeAppCapabilities
+    })
 }
 
 function setUpPortToPopup(e) {
-    g_portToPopup = e, e.onMessage.addListener((function (t, s, a) {
+    g_portToPopup = e, e.onMessage.addListener((function (t, s, o) {
         switch (t.subject) {
             case "getNativeConnectionState":
                 e.postMessage({
@@ -1196,7 +1311,10 @@ function setUpPortToPopup(e) {
         }
     })), e.onDisconnect.addListener((function () {
         g_theState === ContextState.MSG1Set && PINSet("")
-    }))
+    })), e.postMessage({
+        subject: "hello",
+        capabilities: g_nativeAppCapabilities
+    })
 }
 chrome.tabs.onUpdated.addListener(((e, t, s) => {
     switch (s.status) {
@@ -1232,12 +1350,14 @@ chrome.tabs.onUpdated.addListener(((e, t, s) => {
         chrome.webNavigation.getAllFrames({
             tabId: s
         }, (e => {
-            e.forEach(((e, a, o) => {
+            e.forEach(((e, o, n) => {
                 JSON.stringify(e), chrome.tabs.sendMessage(s, {
                     from: "background",
                     subject: "historyStateDidUpdateInTab",
                     url: t.hostname,
                     tabId: s,
+                    frameId: e.frameId
+                }, {
                     frameId: e.frameId
                 })
             }))
@@ -1250,7 +1370,7 @@ chrome.tabs.onUpdated.addListener(((e, t, s) => {
     }), 500)
 })), chrome.runtime.onConnect.addListener((function (e) {
     "completionList" === e.name ? setUpPortToCompetionList(e) : "popup" === e.name && setUpPortToPopup(e)
-})), chrome.app && (chrome.manifest = chrome.app.getDetails());
+})), chrome.app && (chrome.manifest = chrome.runtime.getManifest());
 var injectScriptIntoTab = function (e) {
     if (chrome.manifest) {
         chrome.tabs.executeScript(e.id, {
@@ -1261,9 +1381,9 @@ var injectScriptIntoTab = function (e) {
 chrome.windows.getAll({
     populate: !0
 }, (function (e) {
-    for (let a of e)
-        for (var t = 0, s = a.tabs.length; t < s; t++) {
-            const e = a.tabs[t];
+    for (let o of e)
+        for (var t = 0, s = o.tabs.length; t < s; t++) {
+            const e = o.tabs[t];
             let s;
             try {
                 s = new URL(e.url).protocol

@@ -9,7 +9,7 @@
     "message": "قم بتنزيل iCloud لـ Windows لاستخدام كلمات سر iCloud."
   },
   "extDescription": {
-    "message": "يسمح لك ملحق كلمات سر iCloud باستخدام كلمات السر التي أنشأتها في سفاري والتطبيقات الموجودة على iPhone و iPad و Mac مع Chrome على Windows."
+    "message": "يسمح لك ملحق كلمات سر iCloud بالتعبئة التلقائية لكلمات السر ورموز التحقق التي أنشأتها في سفاري والتطبيقات الموجودة على iPhone و iPad و Mac، في المواقع الإلكترونية في Chrome."
   },
   "extName": {
     "message": "كلمات سر iCloud"
@@ -18,7 +18,7 @@
     "message": "فتح iCloud لـ Windows"
   },
   "CheckEngineMessage": {
-    "message": "⁨قم بتمكين كلمات السر في iCloud لـ Windows لاستخدام كلمات سر iCloud مع Chrome.⁩"
+    "message": "⁨ يرجى تمكين كلمات السر في iCloud لـ Windows لاستخدام كلمات سر iCloud مع Chrome.⁩"
   },
   "unsupportedOS": {
     "message": "هذا الملحق مصمم للتشغيل على Windows 10. إذا كنت تستخدم Mac، فستتم مزامنة كلمات السر تلقائيًا مع iPhone و iPad و Mac عند تسجيل الدخول إلى iCloud."
@@ -47,9 +47,6 @@
   "GettingPasswords": {
     "message": "جاري تحميل كلمات السر…"
   },
-  "ErrorReturned": {
-    "message": "حدث خطأ. الرجاء إعادة تمكين ملحق كلمات سر iCloud لـ Chrome."
-  },
   "NoUserName": {
     "message": "لا يوجد اسم مستخدم"
   },
@@ -63,7 +60,7 @@
     "message": "Chrome"
   },
   "totpVerificationCodeNameWithDomain": {
-    "message": "رمز التحقق لـ "
+    "message": "رمز التحقق لـ \"$1\""
   },
   "totpVerificationCodeName": {
     "message": "رمز التحقق"
@@ -73,5 +70,20 @@
   },
   "enableAutoFillPasswordsMessage": {
     "message": "انقر على زر شريط الأدوات لتمكين ملحق كلمات سر iCloud لـ Chrome."
+  },
+  "optionsTitle": {
+    "message": "خيارات كلمات سر iCloud"
+  },
+  "enableInPageAutoFillCheckboxLabel": {
+    "message": "التعبئة التلقائية داخل الصفحة"
+  },
+  "enableInPageAutoFillCheckboxDetail": {
+    "message": "السماح لكلمات سر iCloud بعرض بيانات الاعتماد من قائمة داخل الصفحة. يمكنك دائمًا تعبئة كلمات السر من زر كلمات سر iCloud في شريط الأدوات، حتى في حالة إيقاف هذا الخيار."
+  },
+  "allowExtensionToControlAutoFillLabel": {
+    "message": "إيقاف التعبئة التلقائية في Chrome"
+  },
+  "allowExtensionToControlAutoFillDetail": {
+    "message": "لمنع تداخل التعبئة التلقائية داخل الصفحة في Chrome مع كلمات سر iCloud، يمكن أن يحاول ملحق كلمات سر iCloud إيقاف إعدادات التعبئة التلقائية في المتصفح بالنيابة عنك."
   }
 }

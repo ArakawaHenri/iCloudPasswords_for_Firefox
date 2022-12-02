@@ -1,53 +1,54 @@
 {
     "browser_specific_settings": {
-        "gecko": {
-            "update_url": "https://raw.githubusercontent.com/ArakawaHenri/iCloudPasswords_for_Firefox/master/updates.json"
-        }
+      "gecko": {
+        "update_url": "https://raw.githubusercontent.com/ArakawaHenri/iCloudPasswords_for_Firefox/master/updates.json",
+        "id": "{724e544e-ae3e-4fc9-9262-7f650d731cd8}"
+      }
     },
     "name": "__MSG_extName__",
-    "version": "1.3.43",
+    "version": "1.3.77",
     "description": "__MSG_extDescription__",
     "default_locale": "en",
     "browser_action": {
-        "default_icon": {
-            "16": "images/PasswordsToolbar_icon16.png",
-            "32": "images/PasswordsToolbar_icon32.png"
-        },
-        "default_popup": "page_popup.html"
+      "default_icon": {
+        "16": "images/PasswordsToolbar_icon16.png",
+        "32": "images/PasswordsToolbar_icon32.png"
+      },
+      "default_popup": "page_popup.html"
     },
     "icons": {
-        "16": "images/PasswordsExtensionIcon_16.png",
-        "32": "images/PasswordsExtensionIcon_32.png",
-        "128": "images/PasswordsExtensionIcon_128.png"
+      "16": "images/PasswordsExtensionIcon_16.png",
+      "32": "images/PasswordsExtensionIcon_32.png",
+      "128": "images/PasswordsExtensionIcon_128.png"
     },
     "permissions": [
-        "<all_urls>",
-        "privacy",
-        "nativeMessaging",
-        "webNavigation",
-        "storage"
+      "<all_urls>",
+      "privacy",
+      "nativeMessaging",
+      "webNavigation",
+      "storage"
     ],
     "background": {
-        "scripts": [
-            "sjcl.js",
-            "background.js"
-        ],
-        "persistent": false
+      "scripts": [
+        "sjcl.js",
+        "background.js"
+      ],
+      "persistent": false
     },
     "manifest_version": 2,
     "content_scripts": [
-        {
-            "js": [
-                "content_script.js"
-            ],
-            "matches": [
-                "*://*/*"
-            ],
-            "run_at": "document_idle",
-            "all_frames": true
-        }
+      {
+        "js": [
+          "content_script.js"
+        ],
+        "matches": [
+          "*://*/*"
+        ],
+        "run_at": "document_idle",
+        "all_frames": true
+      }
     ],
     "web_accessible_resources": [
-        "completion_list.html"
+      "completion_list.html"
     ]
-}
+  }

@@ -9,7 +9,7 @@
     "message": "Descarga iCloud para Windows para utilizar la extensión de contraseñas en iCloud."
   },
   "extDescription": {
-    "message": "“Contraseñas en iCloud” permite usar las contraseñas creadas en Safari y en las apps en el iPhone, el iPad y el Mac con Chrome en Windows."
+    "message": "Contraseñas en iCloud te permite rellenar en sitios web en Chrome contraseñas y códigos de verificación que se hayan creado en Safari y en apps de iPhone, iPad y Mac."
   },
   "extName": {
     "message": "Contraseñas en iCloud"
@@ -21,7 +21,7 @@
     "message": "Activa la opción Contraseñas en iCloud para Windows para usar la extensión de contraseñas en iCloud con Chrome."
   },
   "unsupportedOS": {
-    "message": "Esta extensión que está pensada para usarla en Windows 10. Si utilizas un Mac, tus contraseñas se sincronizará automáticamente con el iPhone, el iPad y el Mac al iniciar sesión en iCloud."
+    "message": "Esta extensión está pensada para usarla en Windows 10. Si utilizas un Mac, tus contraseñas se sincronizarán automáticamente con el iPhone, el iPad y el Mac al iniciar sesión en iCloud."
   },
   "divPINTitle": {
     "message": "Activa el autorrelleno de contraseñas"
@@ -47,9 +47,6 @@
   "GettingPasswords": {
     "message": "Cargando contraseñas…"
   },
-  "ErrorReturned": {
-    "message": "Se ha producido un error. Vuelve a activar la extensión Contraseñas en iCloud para Chrome."
-  },
   "NoUserName": {
     "message": "sin nombre de usuario"
   },
@@ -73,5 +70,20 @@
   },
   "enableAutoFillPasswordsMessage": {
     "message": "Haz clic en el botón de la barra de herramientas para activar la extensión “Contraseñas en iCloud” para Chrome."
+  },
+  "optionsTitle": {
+    "message": "Opciones de Contraseñas en iCloud"
+  },
+  "enableInPageAutoFillCheckboxLabel": {
+    "message": "Autorrelleno en páginas"
+  },
+  "enableInPageAutoFillCheckboxDetail": {
+    "message": "Permite que Contraseñas en iCloud proporcione credenciales contenidas en una lista para páginas. Siempre puedes rellenar las contraseñas con el botón de la barra de herramientas de Contraseñas en iCloud, aunque esta opción esté desactivada."
+  },
+  "allowExtensionToControlAutoFillLabel": {
+    "message": "Desactivar el autorrelleno en Chrome"
+  },
+  "allowExtensionToControlAutoFillDetail": {
+    "message": "Para evitar que la función de autorrelleno de Chrome interfiera con Contraseñas en iCloud, la extensión puede intentar desactivar por ti los ajustes de autorrelleno del navegador."
   }
 }

@@ -9,7 +9,7 @@
     "message": "iCloudパスワードを使用するにはiCloud for Windowsをダウンロードしてください。"
   },
   "extDescription": {
-    "message": "iCloudパスワードでは、iPhone、iPad、MacのSafariやAppで作成したパスワードを、WindowsのChromeで使用できます。"
+    "message": "iCloudパスワードを使用すると、iPhone、iPad、MacのSafariやAppで作成したパスワードと確認コードをChromeで閲覧するWebサイトにも入力できます。"
   },
   "extName": {
     "message": "iCloudパスワード"
@@ -47,9 +47,6 @@
   "GettingPasswords": {
     "message": "パスワードを読み込み中…"
   },
-  "ErrorReturned": {
-    "message": "エラーが起きました。Chrome用のiCloudパスワード拡張機能を再度有効にしてください。"
-  },
   "NoUserName": {
     "message": "ユーザ名が入力されていません"
   },
@@ -73,5 +70,20 @@
   },
   "enableAutoFillPasswordsMessage": {
     "message": "Chrome用のiCloudパスワード拡張機能を有効にするには、ツールバーボタンをクリックしてください。"
+  },
+  "optionsTitle": {
+    "message": "iCloudパスワードのオプション"
+  },
+  "enableInPageAutoFillCheckboxLabel": {
+    "message": "ページ内自動入力"
+  },
+  "enableInPageAutoFillCheckboxDetail": {
+    "message": "iCloudパスワードを使用してページ内リストから資格情報を入力できるようにします。このオプションをオフにしても、“iCloudパスワード”ツールバーボタンからいつでもパスワードを入力できます。"
+  },
+  "allowExtensionToControlAutoFillLabel": {
+    "message": "Chromeの自動入力をオフにする"
+  },
+  "allowExtensionToControlAutoFillDetail": {
+    "message": "Chromeのページ内自動入力がiCloudパスワードに干渉するのを防ぐため、iCloudパスワードではユーザの代わりにブラウザの自動入力設定のオフへの切り替えが試行される場合があります。"
   }
 }

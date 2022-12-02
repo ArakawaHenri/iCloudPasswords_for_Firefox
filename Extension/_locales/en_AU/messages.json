@@ -9,7 +9,7 @@
     "message": "Download iCloud for Windows to use iCloud Passwords."
   },
   "extDescription": {
-    "message": "iCloud Passwords lets you use your passwords created in Safari and apps on iPhone, iPad and Mac with Chrome on Windows."
+    "message": "iCloud Passwords lets you fill passwords and verification codes created in Safari and apps on iPhone, iPad and Mac into websites in Chrome."
   },
   "extName": {
     "message": "iCloud Passwords"
@@ -47,9 +47,6 @@
   "GettingPasswords": {
     "message": "Loading passwords…"
   },
-  "ErrorReturned": {
-    "message": "An error occurred. Please re-enable iCloud Passwords extension for Chrome."
-  },
   "NoUserName": {
     "message": "no username"
   },
@@ -73,5 +70,20 @@
   },
   "enableAutoFillPasswordsMessage": {
     "message": "Click the toolbar button to enable the iCloud Passwords extension for Chrome."
+  },
+  "optionsTitle": {
+    "message": "iCloud Passwords Options"
+  },
+  "enableInPageAutoFillCheckboxLabel": {
+    "message": "In-Page AutoFill"
+  },
+  "enableInPageAutoFillCheckboxDetail": {
+    "message": "Allow iCloud Passwords to offer credentials from an in-page list. You can always fill passwords from the iCloud Passwords toolbar button, even if this option is turned off."
+  },
+  "allowExtensionToControlAutoFillLabel": {
+    "message": "Turn Off Chrome AutoFill"
+  },
+  "allowExtensionToControlAutoFillDetail": {
+    "message": "To prevent Chrome’s in-page AutoFill from interfering with iCloud Passwords, iCloud Passwords can attempt to turn off the browser’s AutoFill settings on your behalf."
   }
 }

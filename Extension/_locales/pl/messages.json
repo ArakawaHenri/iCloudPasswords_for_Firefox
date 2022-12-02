@@ -9,7 +9,7 @@
     "message": "Aby używać haseł iCloud, pobierz aplikację iCloud dla Windows."
   },
   "extDescription": {
-    "message": "Rozszerzenie Hasła iCloud pozwala używać w przeglądarce Chrome w systemie Windows haseł utworzonych w Safari i innych aplikacjach na iPhonie, iPadzie lub Macu."
+    "message": "Aplikacja Hasła iCloud pozwala wypełniać pola w witrynach w Chrome hasłami i kodami weryfikacyjnymi utworzonymi w Safari oraz aplikacjach na iPhonie, iPadzie i Macu."
   },
   "extName": {
     "message": "Hasła iCloud"
@@ -47,9 +47,6 @@
   "GettingPasswords": {
     "message": "Wczytuję hasła…"
   },
-  "ErrorReturned": {
-    "message": "Wystąpił błąd. Włącz ponownie rozszerzenie Hasła iCloud w Chrome."
-  },
   "NoUserName": {
     "message": "brak nazwy użytkownika"
   },
@@ -63,7 +60,7 @@
     "message": "Chrome"
   },
   "totpVerificationCodeNameWithDomain": {
-    "message": "Kod weryfikacyjny "
+    "message": "Kod weryfikacyjny „$1”"
   },
   "totpVerificationCodeName": {
     "message": "Kod weryfikacyjny"
@@ -73,5 +70,20 @@
   },
   "enableAutoFillPasswordsMessage": {
     "message": "Aby włączyć rozszerzenie Hasła iCloud dla przeglądarki Chrome, kliknij w przycisk na pasku narzędzi."
+  },
+  "optionsTitle": {
+    "message": "Opcje Haseł iCloud"
+  },
+  "enableInPageAutoFillCheckboxLabel": {
+    "message": "Wypełnianie na stronie"
+  },
+  "enableInPageAutoFillCheckboxDetail": {
+    "message": "Pozwól funkcji Hasła iCloud oferować dane logowania w formie listy wyświetlanej na stronie. Wypełnianie haseł przy użyciu przycisku na pasku narzędzi Hasła iCloud jest możliwe zawsze, nawet gdy ta opcja jest wyłączona."
+  },
+  "allowExtensionToControlAutoFillLabel": {
+    "message": "Wyłącz wypełnianie w Chrome"
+  },
+  "allowExtensionToControlAutoFillDetail": {
+    "message": "Aby unikać konfliktów między funkcją wypełniania na stronie Chrome oraz aplikacją Hasła iCloud, aplikacja ta może spróbować wyłączyć funkcję wypełniania przeglądarki w Twoim imieniu."
   }
 }

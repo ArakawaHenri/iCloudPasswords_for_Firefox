@@ -9,7 +9,7 @@
     "message": "Unduh iCloud untuk Windows untuk menggunakan Kata Sandi iCloud."
   },
   "extDescription": {
-    "message": "Kata Sandi iCloud memungkinkan Anda untuk menggunakan kata sandi yang dibuat di Safari dan app di iPhone, iPad, dan Mac dengan Chrome di Windows."
+    "message": "Kata Sandi iCloud memungkinkan Anda untuk mengisikan kata sandi dan kode verifikasi yang dibuat di Safari dan app di iPhone, iPad, dan Mac ke situs web di Chrome."
   },
   "extName": {
     "message": "Kata Sandi iCloud"
@@ -27,7 +27,7 @@
     "message": "Aktifkan Isi-Auto Kata Sandi"
   },
   "divPINMessage": {
-    "message": "iCloud untuk Windows mengirimi Anda pemberitahuan dengan kode verifikasi. Masukkan kode untuk melanjutkan."
+    "message": "iCloud untuk Windows mengirimi Anda pemberitahuan yang berisi kode verifikasi. Masukkan kode untuk melanjutkan."
   },
   "divICsMessage": {
     "message": "Pilih kata sandi yang disimpan untuk digunakan:"
@@ -46,9 +46,6 @@
   },
   "GettingPasswords": {
     "message": "Memuat kata sandi…"
-  },
-  "ErrorReturned": {
-    "message": "Terjadi kesalahan. Aktifkan kembali ekstensi Kata Sandi iCloud untuk Chrome."
   },
   "NoUserName": {
     "message": "tidak ada nama pengguna"
@@ -73,5 +70,20 @@
   },
   "enableAutoFillPasswordsMessage": {
     "message": "Klik tombol bar alat untuk mengaktifkan ekstensi Kata Sandi iCloud untuk Chrome."
+  },
+  "optionsTitle": {
+    "message": "Pilihan Kata Sandi iCloud"
+  },
+  "enableInPageAutoFillCheckboxLabel": {
+    "message": "Isi-Auto Di Halaman"
+  },
+  "enableInPageAutoFillCheckboxDetail": {
+    "message": "Izinkan Kata Sandi iCloud untuk menawarkan info pengesahan dari daftar di halaman. Anda selalu dapat mengisikan kata sandi dari tombol bar alat Kata Sandi iCloud, bahkan jika pilihan ini dimatikan."
+  },
+  "allowExtensionToControlAutoFillLabel": {
+    "message": "Matikan Isi-Auto Chrome"
+  },
+  "allowExtensionToControlAutoFillDetail": {
+    "message": "Untuk mencegah Isi-Auto di halaman Chrome agar tidak mengganggu Kata Sandi iCloud, Kata Sandi iCloud dapat mencoba mematikan pengaturan Isi-Auto browser atas nama Anda."
   }
 }

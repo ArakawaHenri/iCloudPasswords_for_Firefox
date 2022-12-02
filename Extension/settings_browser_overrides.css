@@ -1,0 +1,7 @@
+/* Copyright (c) 2022 Apple Inc. All rights reserved. */
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background-color: rgb(41, 42, 45);
+    }
+}

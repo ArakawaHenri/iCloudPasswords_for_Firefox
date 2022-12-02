@@ -9,7 +9,7 @@
     "message": "Descarregue iCloud para Windows para usar Palavras-passe em iCloud."
   },
   "extDescription": {
-    "message": "A extensão Palavras-passe em iCloud permite-lhe usar as palavras-passe criadas com o Safari e aplicações no iPhone, iPad e Mac com o Chrome no Windows."
+    "message": "Palavras-passe em iCloud permite preencher em sites no Chrome as palavras-passe e códigos de confirmação criados no Safari e em aplicações no iPhone, iPad e Mac."
   },
   "extName": {
     "message": "Palavras-passe em iCloud"
@@ -47,9 +47,6 @@
   "GettingPasswords": {
     "message": "A carregar palavras-passe…"
   },
-  "ErrorReturned": {
-    "message": "Ocorreu um erro. Volte a ativar a extensão Palavras-passe em iCloud para o Chrome."
-  },
   "NoUserName": {
     "message": "nenhum nome de utilizador"
   },
@@ -73,5 +70,20 @@
   },
   "enableAutoFillPasswordsMessage": {
     "message": "Clique no botão na barra de ferramentas para ativar a extensão Palavras-passe em iCloud para Chrome."
+  },
+  "optionsTitle": {
+    "message": "Opções de Palavras-passe em iCloud"
+  },
+  "enableInPageAutoFillCheckboxLabel": {
+    "message": "Preenchimento automático na página"
+  },
+  "enableInPageAutoFillCheckboxDetail": {
+    "message": "Permite que Palavras-passe em iCloud forneça credenciais de uma lista na página. Poderá ainda assim preencher palavras-passe através do botão da barra de ferramentas de Palavras-passe em iCloud, mesmo que esta opção esteja desativada."
+  },
+  "allowExtensionToControlAutoFillLabel": {
+    "message": "Desativar preenchimento automático do Chrome"
+  },
+  "allowExtensionToControlAutoFillDetail": {
+    "message": "Para impedir que o preenchimento automático na página do Chrome interfira com Palavras-passe em iCloud, Palavras-passe em iCloud pode tentar desativar por si as definições de preenchimento automático do navegador."
   }
 }

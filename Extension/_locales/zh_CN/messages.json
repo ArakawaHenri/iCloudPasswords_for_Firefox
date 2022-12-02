@@ -9,7 +9,7 @@
     "message": "下载 Windows 版 iCloud 以使用 iCloud 密码。"
   },
   "extDescription": {
-    "message": "iCloud 密码可让您配合 Windows 上的 Chrome 使用在 iPhone、iPad 和 Mac 上的 Safari 浏览器和 App 中创建的密码。"
+    "message": "iCloud 密码可让你在 Chrome 中，将 iPhone、iPad 和 Mac 上的 Safari 浏览器和 App 中创建的密码和验证码填充到网站中。"
   },
   "extName": {
     "message": "iCloud 密码"
@@ -21,34 +21,31 @@
     "message": "在 Windows 版 iCloud 中启用“密码”以配合 Chrome 使用 iCloud 密码。"
   },
   "unsupportedOS": {
-    "message": "此扩展设计用于在 Windows 10 上运行。如果使用的是 Mac，当您登录 iCloud 时，您的密码将自动与 iPhone、iPad 和 Mac 同步。"
+    "message": "此扩展设计用于在 Windows 10 上运行。如果使用的是 Mac，当你登录 iCloud 时，你的密码将自动与 iPhone、iPad 和 Mac 同步。"
   },
   "divPINTitle": {
     "message": "启用密码自动填充"
   },
   "divPINMessage": {
-    "message": "Windows 版 iCloud 向您发送了带有验证码的通知。输入验证码以继续。"
+    "message": "Windows 版 iCloud 向你发送了带有验证码的通知。输入验证码以继续。"
   },
   "divICsMessage": {
     "message": "选取并使用已保存的密码："
   },
   "GenericPopupTitle": {
-    "message": "您的密码已与 iCloud 钥匙串同步"
+    "message": "你的密码已与 iCloud 钥匙串同步"
   },
   "divNoPasswordsMessage": {
-    "message": "您可以在 iCloud 密码管理器 App 中查看和编辑保存的密码。"
+    "message": "你可以在 iCloud 密码管理器 App 中查看和编辑保存的密码。"
   },
   "divDoNotRememberTitle": {
-    "message": "您之前已选择永不保存此网站的密码。"
+    "message": "你之前已选择永不保存此网站的密码。"
   },
   "divDoNotRememberMessage": {
     "message": "若要更改此设置，请从 iCloud 钥匙串中移除此网站的条目并重新登录此网站。"
   },
   "GettingPasswords": {
     "message": "正在载入密码…"
-  },
-  "ErrorReturned": {
-    "message": "发生错误。请重新启用 Chrome 版 iCloud 密码扩展。"
   },
   "NoUserName": {
     "message": "无用户名称"
@@ -73,5 +70,20 @@
   },
   "enableAutoFillPasswordsMessage": {
     "message": "单击工具栏按钮以启用 Chrome 版 iCloud 密码扩展。"
+  },
+  "optionsTitle": {
+    "message": "iCloud 密码选项"
+  },
+  "enableInPageAutoFillCheckboxLabel": {
+    "message": "页内自动填充"
+  },
+  "enableInPageAutoFillCheckboxDetail": {
+    "message": "允许 iCloud 密码提供页内列表的凭证。你始终可以从 iCloud 密码工具栏按钮填充密码，即使此选项已关闭。"
+  },
+  "allowExtensionToControlAutoFillLabel": {
+    "message": "关闭 Chrome 自动填充"
+  },
+  "allowExtensionToControlAutoFillDetail": {
+    "message": "为了防止 Chrome 的页内“自动填充”干扰 iCloud 密码，iCloud 密码可尝试代表你关闭浏览器的“自动填充”设置。"
   }
 }

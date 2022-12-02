@@ -9,7 +9,7 @@
     "message": "Preuzmite iCloud za Windows za uporabu iCloud lozinki."
   },
   "extDescription": {
-    "message": "iCloud lozinkama omogućuje vam se uporaba lozinki izrađenih u aplikaciji Safari i aplikacijama na iPhoneu, iPadu i Macu s preglednikom Chrome na sustavu Windows."
+    "message": "iCloud lozinke omogućavaju vam ispunjavanje lozinki i verifikacijskih kodova izrađenih u Safariju i aplikacijama na iPhoneu, iPadu i Macu na web stranicama u pregledniku Chrome."
   },
   "extName": {
     "message": "iCloud lozinke"
@@ -47,9 +47,6 @@
   "GettingPasswords": {
     "message": "Učitavanje lozinki…"
   },
-  "ErrorReturned": {
-    "message": "Došlo je do greške. Ponovno omogućite ekstenziju iCloud lozinke za Chrome."
-  },
   "NoUserName": {
     "message": "bez korisničkog imena"
   },
@@ -73,5 +70,20 @@
   },
   "enableAutoFillPasswordsMessage": {
     "message": "Kliknite tipku alatne trake za omogućavanje ekstenzije iCloud lozinke za Chrome."
+  },
+  "optionsTitle": {
+    "message": "Opcije za iCloud lozinke"
+  },
+  "enableInPageAutoFillCheckboxLabel": {
+    "message": "Automatska ispuna sa stranice"
+  },
+  "enableInPageAutoFillCheckboxDetail": {
+    "message": "Dozvolite iCloud lozinkama pružanje vjerodajnica iz popisa stranice. U bilo kojem trenutku možete ispuniti lozinke pomoću tipke iCloud lozinke u alatnoj traci, čak i ako je ova opcija isključena."
+  },
+  "allowExtensionToControlAutoFillLabel": {
+    "message": "Isključi automatsku ispunu za Chrome"
+  },
+  "allowExtensionToControlAutoFillDetail": {
+    "message": "Kako bi se spriječilo da automatska ispuna sa stranice Chromea ometa rad iCloud lozinki, iCloud lozinke mogu pokušati isključiti postavke automatske ispune ovog preglednika."
   }
 }

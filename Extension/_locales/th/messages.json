@@ -9,7 +9,7 @@
     "message": "ดาวน์โหลด iCloud สำหรับ Windows เพื่อใช้รหัสผ่าน iCloud"
   },
   "extDescription": {
-    "message": "รหัสผ่าน iCloud ช่วยให้คุณสามารถใช้รหัสผ่านของคุณที่สร้างใน Safari และแอปบน iPhone, iPad และ Mac กับ Chrome บน Windows ได้"
+    "message": "รหัสผ่าน iCloud ช่วยให้คุณสามารถป้อนรหัสผ่านและรหัสการตรวจสอบยืนยันที่สร้างขึ้นใน Safari และแอปบน iPhone, iPad และ Mac ลงในเว็บไซต์ใน Chrome ได้"
   },
   "extName": {
     "message": "รหัสผ่าน iCloud"
@@ -47,9 +47,6 @@
   "GettingPasswords": {
     "message": "กำลังดาวน์โหลดรหัสผ่าน…"
   },
-  "ErrorReturned": {
-    "message": "เกิดข้อผิดพลาดขึ้น โปรดเปิดใช้งานส่วนขยายรหัสผ่าน iCloud สำหรับ Chrome อีกครั้ง"
-  },
   "NoUserName": {
     "message": "ไม่มีชื่อผู้ใช้"
   },
@@ -73,5 +70,20 @@
   },
   "enableAutoFillPasswordsMessage": {
     "message": "คลิกปุ่มแถบเครื่องมือเพื่อเปิดใช้งานส่วนขยายของรหัสผ่าน iCloud สำหรับ Chrome"
+  },
+  "optionsTitle": {
+    "message": "ตัวเลือกรหัสผ่าน iCloud"
+  },
+  "enableInPageAutoFillCheckboxLabel": {
+    "message": "การป้อนอัตโนมัติในหน้า"
+  },
+  "enableInPageAutoFillCheckboxDetail": {
+    "message": "อนุญาตให้รหัสผ่าน iCloud เสนอข้อมูลประจำตัวจากรายการในหน้า คุณสามารถป้อนรหัสผ่านจากปุ่มแถบเครื่องมือรหัสผ่าน iCloud ได้เสมอแม้ว่าตัวเลือกนี้จะปิดใช้อยู่ก็ตาม"
+  },
+  "allowExtensionToControlAutoFillLabel": {
+    "message": "ปิดใช้การป้อนอัตโนมัติใน Chrome"
+  },
+  "allowExtensionToControlAutoFillDetail": {
+    "message": "ในการป้องกันไม่ให้การป้อนอัตโนมัติในหน้าของ Chrome รบกวนรหัสผ่าน iCloud นั้น รหัสผ่าน iCloud สามารถพยายามปิดใช้การตั้งค่าการป้อนอัตโนมัติของเบราว์เซอร์แทนคุณได้"
   }
 }

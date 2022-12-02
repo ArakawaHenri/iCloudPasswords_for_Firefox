@@ -9,10 +9,10 @@
     "message": "Lade „iCloud für Windows“, um „iCloud-Passwörter“ zu verwenden."
   },
   "extDescription": {
-    "message": "Mit „iCloud-Passwörter“ kannst du die mit Safari und Apps auf dem iPhone, iPad und Mac erstellten Passwörter mit Chrome unter Windows verwenden."
+    "message": "Mit „iCloud-Passwörter“ kannst du Passwörter und Verifizierungscodes, die in Safari und in Apps auf dem iPhone, iPad oder Mac erstellt wurden, für Websites in Chrome verwenden."
   },
   "extName": {
-    "message": "iCloud Passwords"
+    "message": "iCloud-Passwörter"
   },
   "openiCloudForWindowsButtonText": {
     "message": "„iCloud für Windows“ öffnen"
@@ -47,9 +47,6 @@
   "GettingPasswords": {
     "message": "Passwörter laden …"
   },
-  "ErrorReturned": {
-    "message": "Ein Fehler ist aufgetreten. Aktiviere die Erweiterung „iCloud-Passwörter“ erneut für Chrome."
-  },
   "NoUserName": {
     "message": "kein Benutzername"
   },
@@ -73,5 +70,20 @@
   },
   "enableAutoFillPasswordsMessage": {
     "message": "Klicke auf die Symbolleistentaste, um die Erweiterung „iCloud-Passwörter“ für Chrome zu aktivieren."
+  },
+  "optionsTitle": {
+    "message": "Optionen für „iCloud-Passwörter“"
+  },
+  "enableInPageAutoFillCheckboxLabel": {
+    "message": "Seitengestütztes automatisches Ausfüllen"
+  },
+  "enableInPageAutoFillCheckboxDetail": {
+    "message": "Erlaube „iCloud-Passwörter“, Zugangsdaten von einer seitengestützten Liste vorzuschlagen. Du kannst Passwörter immer mithilfe der Taste in der Symbolleiste von „iCloud-Passwörter“ ausfüllen, selbst wenn diese Option deaktiviert ist."
+  },
+  "allowExtensionToControlAutoFillLabel": {
+    "message": "Automatisches Ausfüllen durch Chrome deaktivieren"
+  },
+  "allowExtensionToControlAutoFillDetail": {
+    "message": "Damit das seitengestützte automatische Ausfüllen durch Chrome „iCloud-Passwörter“ nicht behindert, kann die App für dich versuchen, die Browser-Funktion zum automatischen Ausfüllen zu deaktivieren."
   }
 }

@@ -1,0 +1,80 @@
+/* Copyright (c) 2022 Apple Inc. All rights reserved. */
+
+:root {
+    --background-color: #fff;
+    --text-color: #000;
+    --detail-text-color: #888;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --text-color: #fff;
+    }
+}
+
+body {
+    font-size: 1rem;
+    margin: 0;
+    padding: 20px;
+    padding-block-start: 0;
+}
+
+html {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 13px;
+}
+
+li.setting {
+    list-style-type: none;
+}
+
+ul {
+    margin: 0;
+}
+
+.setting {
+    align-items: first baseline;
+    column-gap: 6px;
+    display: grid;
+    grid:
+        [header-start] "input label" auto [header-end]
+        [footer-start] ". detail" auto [footer-end]
+        / auto auto;
+    justify-content: start;
+    margin-block-end: 16px;
+    row-gap: 2px;
+}
+
+.setting:last-of-type {
+    margin-block-end: 0;
+}
+
+.setting input {
+    grid-area: input;
+    margin: 0;
+    position: relative;
+    top: 2px;
+}
+
+.setting label {
+    grid-area: label;
+    color: var(--text-color);
+}
+
+.setting footer {
+    grid-area: detail;
+}
+
+.settings ul,
+.settings ul + footer {
+    padding-inline-start: 10px;
+}
+
+.settings footer {
+    color: var(--detail-text-color);
+    margin: 0;
+    font-size: 0.9rem;
+    padding: 0;
+}

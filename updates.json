@@ -4,7 +4,16 @@
             "updates": [
                 {
                     "version": "1.3.43",
-                    "update_link": "https://github.com/ArakawaHenri/iCloudPasswords_for_Firefox/releases/download/1.3.43/iCloudPasswords_for_Firefox_1.3.43.xpi",
+                    "update_link": "https://github.com/ArakawaHenri/iCloudPasswords_for_Firefox/releases/download/1.3.43/iCloudPasswords_for_Firefox.xpi",
+                    "applications": {
+                        "gecko": {
+                            "strict_min_version": "48"
+                        }
+                    }
+                },
+                {
+                    "version": "1.3.77",
+                    "update_link": "https://github.com/ArakawaHenri/iCloudPasswords_for_Firefox/releases/download/1.3.77/iCloudPasswords_for_Firefox.xpi",
                     "applications": {
                         "gecko": {
                             "strict_min_version": "48"

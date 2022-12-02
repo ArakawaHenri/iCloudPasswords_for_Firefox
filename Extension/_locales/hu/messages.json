@@ -9,7 +9,7 @@
     "message": "Töltse le az iCloud Windows-verzióját az iCloud-jelszavak használatához."
   },
   "extDescription": {
-    "message": "Az iCloud-jelszavakkal használhatja az iPhone-on, iPaden vagy Macen a Safariban és egyéb appokban létrehozott jelszavakat Windowson, a Chrome-ban."
+    "message": "Az iCloud-jelszavakkal kitöltheti a webhelyeken az iPhone-on, iPaden vagy Macen a Safariban és egyéb appokban létrehozott jelszavakat és ellenőrzőkódokat a Chrome-ban."
   },
   "extName": {
     "message": "iCloud-jelszavak"
@@ -47,9 +47,6 @@
   "GettingPasswords": {
     "message": "Jelszavak betöltése…"
   },
-  "ErrorReturned": {
-    "message": "Hiba történt. Kérjük, engedélyezze ismét az iCloud-jelszavak bővítményt a Chrome-hoz."
-  },
   "NoUserName": {
     "message": "nincs felhasználói név"
   },
@@ -73,5 +70,20 @@
   },
   "enableAutoFillPasswordsMessage": {
     "message": "Kattintson az eszköztárgombra az iCloud-jelszavak bővítmény Chrome-ban történő engedélyezéséhez."
+  },
+  "optionsTitle": {
+    "message": "Az iCloud-jelszavak beállításai"
+  },
+  "enableInPageAutoFillCheckboxLabel": {
+    "message": "Oldalon belüli automatikus kitöltés"
+  },
+  "enableInPageAutoFillCheckboxDetail": {
+    "message": "Annak engedélyezése, hogy az iCloud-jelszavak egy oldalon belüli listából bejelentkezési adatokat ajánljon fel. Ön akkor is kitöltheti a jelszavakat az iCloud-jelszavak eszközsávgombbal, ha ez a beállítás ki van kapcsolva."
+  },
+  "allowExtensionToControlAutoFillLabel": {
+    "message": "A Chrome automatikus kitöltési funkciójának kikapcsolása."
+  },
+  "allowExtensionToControlAutoFillDetail": {
+    "message": "Ha meg szeretné akadályozni, hogy a Chrome oldalon belüli automatikus kitöltési funkciója összeütközzön az iCloud-jelszavakkal, az iCloud-jelszavak képes az Ön nevében megkísérelni a böngésző automatikus kitöltési funkciójának kikapcsolását."
   }
 }

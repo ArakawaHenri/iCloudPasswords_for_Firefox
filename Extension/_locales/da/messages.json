@@ -9,7 +9,7 @@
     "message": "Hent iCloud til Windows for at bruge iCloud-adgangskoder."
   },
   "extDescription": {
-    "message": "Funktionen iCloud-adgangskoder gør det muligt at bruge adgangskoder, der er oprettet i Safari og andre apps på iPhone, iPad og Mac, i Chrome på Windows."
+    "message": "Funktionen iCloud-adgangskoder gør det muligt at udfylde adgangskoder og bekræftelseskoder, der er oprettet i Safari og andre apps på iPhone, iPad og Mac, på websteder i Chrome."
   },
   "extName": {
     "message": "iCloud-adgangskoder"
@@ -47,9 +47,6 @@
   "GettingPasswords": {
     "message": "Indlæser adgangskoder…"
   },
-  "ErrorReturned": {
-    "message": "Der opstod en fejl. Slå udvidelsen til iCloud-adgangskoder i Chrome til igen."
-  },
   "NoUserName": {
     "message": "intet brugernavn"
   },
@@ -73,5 +70,20 @@
   },
   "enableAutoFillPasswordsMessage": {
     "message": "Klik på knappen på værktøjslinjen for at slå udvidelsen iCloud-adgangskoder til i Chrome."
+  },
+  "optionsTitle": {
+    "message": "Indstillinger til iCloud-adgangskode"
+  },
+  "enableInPageAutoFillCheckboxLabel": {
+    "message": "Autoudfyld på siden"
+  },
+  "enableInPageAutoFillCheckboxDetail": {
+    "message": "Tillad, at iCloud-adgangskoder angiver godkendelsesoplysninger fra en liste på siden. Du kan altid udfylde adgangskoder fra knappen iCloud-adgangskoder på værktøjslinjen, selvom denne funktion er sået fra."
+  },
+  "allowExtensionToControlAutoFillLabel": {
+    "message": "Slå Autoudfyld fra i Chrome"
+  },
+  "allowExtensionToControlAutoFillDetail": {
+    "message": "Funktionen iCloud-adgangskoder kan forsøge at slå indstillingerne til Autoudfyld fra i browseren for at forhindre, at Chrome-funktionen Autoudfyld på siden forstyrrer iCloud-adgangskoder."
   }
 }

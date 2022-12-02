@@ -9,7 +9,7 @@
     "message": "下載 Windows 版 iCloud 以使用「iCloud 密碼」。"
   },
   "extDescription": {
-    "message": "「iCloud 密碼」可讓你配合 Windows 上的 Chrome，使用你在 iPhone、iPad 和 Mac 上的 Safari 和 App 中建立的密碼。"
+    "message": "「iCloud 密碼」可讓你將在 iPhone、iPad 和 Mac 上的 Safari 等 App 中製作的密碼和驗證碼填寫到 Chrome 的網站中。"
   },
   "extName": {
     "message": "iCloud 密碼"
@@ -47,9 +47,6 @@
   "GettingPasswords": {
     "message": "正在載入密碼⋯"
   },
-  "ErrorReturned": {
-    "message": "發生問題。請重新啟用 Chrome 的「iCloud 密碼」延伸功能。"
-  },
   "NoUserName": {
     "message": "沒有用户名稱"
   },
@@ -73,5 +70,20 @@
   },
   "enableAutoFillPasswordsMessage": {
     "message": "按一下工具列按鈕來啟用 Chrome 的「iCloud 密碼」延伸功能。"
+  },
+  "optionsTitle": {
+    "message": "「iCloud 密碼」選項"
+  },
+  "enableInPageAutoFillCheckboxLabel": {
+    "message": "頁內「自動填寫」"
+  },
+  "enableInPageAutoFillCheckboxDetail": {
+    "message": "允許「iCloud 密碼」從頁內列表中提供憑證。你總是可以從「iCloud 密碼」工具列按鈕填寫密碼（即使此選項已關閉）。"
+  },
+  "allowExtensionToControlAutoFillLabel": {
+    "message": "關閉「Chrome 自動填寫」"
+  },
+  "allowExtensionToControlAutoFillDetail": {
+    "message": "為防止 Chrome 的頁內「自動填寫」干擾「iCloud 密碼」，「iCloud 密碼」可嘗試代表你關閉瀏覽器的「自動填寫」設定。"
   }
 }

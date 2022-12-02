@@ -9,7 +9,7 @@
     "message": "Muat turun iCloud untuk Windows bagi menggunakan Kata Laluan iCloud."
   },
   "extDescription": {
-    "message": "Membolehkan anda guna kata laluan dicipta dalam Safari dan app pada iPhone, iPad dan Mac dengan Chrome pada Windows."
+    "message": "Kata Laluan iCloud isi kata laluan dan kod pengesahan dicipta dalam Safari dan app pada iPhone, iPad dan Mac ke dalam tapak web Chrome."
   },
   "extName": {
     "message": "Kata Laluan iCloud"
@@ -47,9 +47,6 @@
   "GettingPasswords": {
     "message": "Memuatkan kata laluan…"
   },
-  "ErrorReturned": {
-    "message": "Ralat berlaku. Sila dayakan semula sambungan Kata Laluan iCloud untuk Chrome."
-  },
   "NoUserName": {
     "message": "tiada nama pengguna"
   },
@@ -73,5 +70,20 @@
   },
   "enableAutoFillPasswordsMessage": {
     "message": "Klik butang bar alat untuk mendayakan sambungan Kata Laluan iCloud bagi Chrome."
+  },
+  "optionsTitle": {
+    "message": "Pilihan Kata Laluan iCloud"
+  },
+  "enableInPageAutoFillCheckboxLabel": {
+    "message": "Isi Auto Dalam Halaman"
+  },
+  "enableInPageAutoFillCheckboxDetail": {
+    "message": "Benarkan Kata Laluan iCloud untuk menawarkan kelayakan daripada senarai dalam halaman. Anda sentiasa boleh mengisi kata laluan daripada butang bar alat Kata Laluan iCloud, walaupun jika pilihan ini dinyahaktifkan."
+  },
+  "allowExtensionToControlAutoFillLabel": {
+    "message": "Nyahaktifkan Isi Auto Chrome"
+  },
+  "allowExtensionToControlAutoFillDetail": {
+    "message": "Untuk menghalang Isi Auto dalam halaman Chrome daripada mengganggu Kata Laluan iCloud, Kata Laluan iCloud boleh mencuba untuk menyahaktifkan seting Isi Auto pelayar bagi pihak anda."
   }
 }

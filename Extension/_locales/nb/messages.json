@@ -9,7 +9,7 @@
     "message": "Last ned iCloud for Windows for å bruke iCloud-passord."
   },
   "extDescription": {
-    "message": "iCloud-passord gjør det mulig å bruke passord opprettet i Safari og apper på iPhone, iPad og Mac, med Chrome i Windows."
+    "message": "Med iCloud-passord kan du fylle ut passord og verifiseringskoder som er opprettet i Safari og apper på iPhone, iPad og Mac, på nettsteder i Chrome."
   },
   "extName": {
     "message": "iCloud-passord"
@@ -47,9 +47,6 @@
   "GettingPasswords": {
     "message": "Laster inn passord…"
   },
-  "ErrorReturned": {
-    "message": "Det oppsto en feil. Aktiver Chrome-tillegget iCloud-passord på nytt."
-  },
   "NoUserName": {
     "message": "uten brukernavn"
   },
@@ -73,5 +70,20 @@
   },
   "enableAutoFillPasswordsMessage": {
     "message": "Klikk på knappen i verktøylinjen for å aktivere iCloud-passord-tillegget for Chrome."
+  },
+  "optionsTitle": {
+    "message": "Valg for iCloud-passord"
+  },
+  "enableInPageAutoFillCheckboxLabel": {
+    "message": "Autoutfylling på siden"
+  },
+  "enableInPageAutoFillCheckboxDetail": {
+    "message": "Tillat at iCloud-passord tilbyr passord fra en liste på siden. Du vil alltid kunne fylle ut passord med verktøylinjeknappen for iCloud-passord, selv om dette valget er slått av."
+  },
+  "allowExtensionToControlAutoFillLabel": {
+    "message": "Slå av autoutfylling av passord i Chrome"
+  },
+  "allowExtensionToControlAutoFillDetail": {
+    "message": "iCloud-passord kan prøve å slå av Chrome sine autoutfyllingsinnstillinger for å hindre konflikt med iCloud-passord."
   }
 }

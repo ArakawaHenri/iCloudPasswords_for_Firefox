@@ -9,7 +9,7 @@
     "message": "Hämta iCloud för Windows om du vill använda iCloud-lösenord."
   },
   "extDescription": {
-    "message": "Med iCloud-lösenord kan du använda lösenord som du har skapat i Safari och appar på iPhone, iPad och Mac med Chrome i Windows."
+    "message": "Med iCloud-lösenord kan du fylla i lösenord och verifieringskoder som skapas i Safari och appar på en iPhone, iPad och Mac på webbplatser i Chrome."
   },
   "extName": {
     "message": "iCloud-lösenord"
@@ -47,9 +47,6 @@
   "GettingPasswords": {
     "message": "Läser in lösenord…"
   },
-  "ErrorReturned": {
-    "message": "Ett fel inträffade. Återaktivera iCloud-lösenordstillägget för Chrome."
-  },
   "NoUserName": {
     "message": "inget användarnamn"
   },
@@ -73,5 +70,20 @@
   },
   "enableAutoFillPasswordsMessage": {
     "message": "Aktivera iCloud-lösenordstillägget för Chrome genom att klicka på knappen i verktygsfältet."
+  },
+  "optionsTitle": {
+    "message": "iCloud-lösenordsalternativ"
+  },
+  "enableInPageAutoFillCheckboxLabel": {
+    "message": "Autofyll på sida"
+  },
+  "enableInPageAutoFillCheckboxDetail": {
+    "message": "Tillåt att iCloud-lösenord erbjuder inloggningsuppgifter från en lista på sidan. Du kan alltid fylla i lösenord från verktygsfältsknappen för iCloud-lösenord, även om det här alternativet är avstängt."
+  },
+  "allowExtensionToControlAutoFillLabel": {
+    "message": "Stäng av Chromes Autofyll"
+  },
+  "allowExtensionToControlAutoFillDetail": {
+    "message": "iCloud-lösenord kan försöka att stänga av webbläsarens Autofyll-inställningar åt dig för att förhindra att Chromes Autofyll stör iCloud-lösenord."
   }
 }

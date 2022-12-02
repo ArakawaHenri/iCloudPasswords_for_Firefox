@@ -9,7 +9,7 @@
     "message": "下載「Windows 版 iCloud」來使用「iCloud 密碼」。"
   },
   "extDescription": {
-    "message": "「iCloud 密碼」能讓您在 Safari 和 iPhone、iPad 和 Mac App 上建立的密碼與 Windows 上的 Chrome 一起使用。"
+    "message": "「iCloud 密碼」可讓你將在 iPhone、iPad 和 Mac 上的 Safari 和 App 中建立的密碼和驗證碼填寫到 Chrome 的網站。"
   },
   "extName": {
     "message": "iCloud 密碼"
@@ -21,34 +21,31 @@
     "message": "啟用「Windows 版 iCloud」中的「密碼」來在 Chrome 中使用「iCloud 密碼」。"
   },
   "unsupportedOS": {
-    "message": "此延伸功能是設計在 Windows 10 上使用。若您使用 Mac，您的密碼將在您登入 iCloud 時自動與您的 iPhone、iPad 和 Mac 同步。"
+    "message": "此延伸功能是設計在 Windows 10 上使用。若你使用 Mac，你的密碼將在你登入 iCloud 時自動與你的 iPhone、iPad 和 Mac 同步。"
   },
   "divPINTitle": {
     "message": "啟用密碼自動填寫"
   },
   "divPINMessage": {
-    "message": "「Windows 版 iCloud」會傳送包含驗證碼的通知給您。請輸入驗證碼來繼續。"
+    "message": "「Windows 版 iCloud」會傳送包含驗證碼的通知給你。請輸入驗證碼來繼續。"
   },
   "divICsMessage": {
     "message": "選擇已儲存的密碼來使用："
   },
   "GenericPopupTitle": {
-    "message": "您的密碼已和「iCloud 鑰匙圈」同步"
+    "message": "你的密碼已和「iCloud 鑰匙圈」同步"
   },
   "divNoPasswordsMessage": {
-    "message": "您可以在「iCloud 密碼管理程式」App 中檢視和編輯已儲存的密碼。"
+    "message": "你可以在「iCloud 密碼管理程式」App 中檢視和編輯已儲存的密碼。"
   },
   "divDoNotRememberTitle": {
-    "message": "您先前指示永不儲存此網站的密碼。"
+    "message": "你先前指示永不儲存此網站的密碼。"
   },
   "divDoNotRememberMessage": {
-    "message": "若要更改此設定，請在您的「iCloud 鑰匙圈」中移除此網站的項目，並且重新登入此網站。"
+    "message": "若要更改此設定，請在你的「iCloud 鑰匙圈」中移除此網站的項目，並且重新登入此網站。"
   },
   "GettingPasswords": {
     "message": "正在載入密碼..."
-  },
-  "ErrorReturned": {
-    "message": "發生錯誤。請重新啟用 Chrome 的「iCloud 密碼」延伸功能。"
   },
   "NoUserName": {
     "message": "沒有使用者名稱"
@@ -73,5 +70,20 @@
   },
   "enableAutoFillPasswordsMessage": {
     "message": "按一下工具列按鈕來啟用 Chrome 的「iCloud 密碼」延伸功能。"
+  },
+  "optionsTitle": {
+    "message": "iCloud 密碼選項"
+  },
+  "enableInPageAutoFillCheckboxLabel": {
+    "message": "頁內自動填寫"
+  },
+  "enableInPageAutoFillCheckboxDetail": {
+    "message": "允許「iCloud 密碼」從頁內清單中提供憑證。即使此選項已關閉，你仍隨時可以從「iCloud 密碼」工具列按鈕填寫密碼。"
+  },
+  "allowExtensionToControlAutoFillLabel": {
+    "message": "關閉 Chrome 自動填寫"
+  },
+  "allowExtensionToControlAutoFillDetail": {
+    "message": "為避免 Chrome 的頁內「自動填寫」干擾「iCloud 密碼」，「iCloud 密碼」會嘗試代替你關閉瀏覽器的「自動填寫」設定。"
   }
 }

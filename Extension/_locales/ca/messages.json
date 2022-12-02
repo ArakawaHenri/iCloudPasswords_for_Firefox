@@ -9,7 +9,7 @@
     "message": "Descarrega l’iCloud per a Windows per utilitzar l’extensió de contrasenyes a l’iCloud."
   },
   "extDescription": {
-    "message": "L‘extensió de contrasenyes a l’iCloud permet utilitzar les contrasenyes que has creat al Safari i altres apps a l’iPhone, l’iPad i al Mac amb el Chrome al Windows."
+    "message": "Les contrasenyes a l’iCloud et permeten emplenar les contrasenyes i els codis de verificació creats al Safari i en altres apps de l’iPhone, l’iPad i el Mac als lloc web del Chrome."
   },
   "extName": {
     "message": "Extensió de contrasenyes a l’iCloud"
@@ -47,11 +47,8 @@
   "GettingPasswords": {
     "message": "Carregant contrasenyes…"
   },
-  "ErrorReturned": {
-    "message": "Hi ha hagut un error. Torna a activar l’extensió de contrasenyes a l’iCloud per al Chrome."
-  },
   "NoUserName": {
-    "message": "no hi ha nom d’usuari"
+    "message": "cap nom d’usuari"
   },
   "divOpenPasswords": {
     "message": "Gestionar contrasenyes…"
@@ -73,5 +70,20 @@
   },
   "enableAutoFillPasswordsMessage": {
     "message": "Fes clic al botó de la barra d’eines per activar l’extensió de contrasenyes a l’iCloud per al Chrome."
+  },
+  "optionsTitle": {
+    "message": "Opcions de les contrasenyes a l’iCloud"
+  },
+  "enableInPageAutoFillCheckboxLabel": {
+    "message": "Autocompleció integrada"
+  },
+  "enableInPageAutoFillCheckboxDetail": {
+    "message": "Permet que l’extensió de contrasenyes a l’iCloud et suggereixi les credencials d’una llista integrada. Encara que l’opció estigui desactivada, podràs continuar emplenant les contrasenyes tocant el botó de contrasenyes a l’iCloud de la barra d’eines."
+  },
+  "allowExtensionToControlAutoFillLabel": {
+    "message": "Desactivar l’autocompleció al Chrome"
+  },
+  "allowExtensionToControlAutoFillDetail": {
+    "message": "Perquè l’autocompleció integrada del Chrome no interfereixi amb les contrasenyes a l’iCloud, l’extensió de contrasenyes a l’iCloud pot intentar desactivar la configuració d’autocompleció del navegador en lloc teu."
   }
 }

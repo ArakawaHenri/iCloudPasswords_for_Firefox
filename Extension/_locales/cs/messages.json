@@ -9,7 +9,7 @@
     "message": "Pokud chcete používat Hesla na iCloudu, stáhněte si iCloud pro Windows."
   },
   "extDescription": {
-    "message": "Rozšíření Hesla na iCloudu umožňuje používat v Chromu na Windows hesla, která jste si vytvořili v Safari a dalších aplikacích na iPhonu, iPadu a Macu."
+    "message": "Rozšíření Hesla na iCloudu umožňuje vyplnit hesla a ověřovací kódy vytvořené v Safari a aplikacích na iPhonu, iPadu a Macu do webových stránek v Chromu."
   },
   "extName": {
     "message": "Hesla na iCloudu"
@@ -47,9 +47,6 @@
   "GettingPasswords": {
     "message": "Načítání hesel…"
   },
-  "ErrorReturned": {
-    "message": "Došlo k chybě. Aktivujte znovu rozšíření Hesla na iCloudu pro Chrome."
-  },
   "NoUserName": {
     "message": "žádné uživatelské jméno"
   },
@@ -73,5 +70,20 @@
   },
   "enableAutoFillPasswordsMessage": {
     "message": "Kliknutím na tlačítko na panelu nástrojů zapněte rozšíření hesla na iCloudu pro Chrome."
+  },
+  "optionsTitle": {
+    "message": "Volby hesel na iCloudu"
+  },
+  "enableInPageAutoFillCheckboxLabel": {
+    "message": "Automatické vyplňování na stránkách"
+  },
+  "enableInPageAutoFillCheckboxDetail": {
+    "message": "Rozšíření Hesla na iCloudu vám může nabízet přihlašovací údaje přímo na stránkách. Pomocí tlačítka Hesla na iCloudu na panelu nástrojů můžete vyplňovat hesla, i když je tato možnost vypnutá."
+  },
+  "allowExtensionToControlAutoFillLabel": {
+    "message": "Vypnout vyplňování v Chromu"
+  },
+  "allowExtensionToControlAutoFillDetail": {
+    "message": "Rozšíření Hesla na iCloudu se může pokusit vypnout nastavení automatického vyplňování formulářů na stránkách v Chromu, aby tato funkce prohlížeče nezasahovala do činnosti rozšíření."
   }
 }

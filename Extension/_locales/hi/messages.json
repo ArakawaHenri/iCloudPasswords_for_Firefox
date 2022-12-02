@@ -9,7 +9,7 @@
     "message": "iCloud पासवर्ड उपयोग करने के लिए Windows के लिए iCloud डाउनलोड करें।"
   },
   "extDescription": {
-    "message": "iCloud पासवर्ड की मदद से आप iPhone, iPad और Mac पर Safari और ऐप्स में बनाए गए अपने पासवर्ड का उपयोग Windows पर Chrome के साथ कर सकते हैं।"
+    "message": "iCloud पासवर्ड की मदद से आप Safari और iPhone, iPad और Mac पर ऐप्स में बनाए गए पासवर्ड और सत्यापन कोड को Chrome पर वेबसाइट में भर सकते हैं।"
   },
   "extName": {
     "message": "iCloud पासवर्ड"
@@ -47,9 +47,6 @@
   "GettingPasswords": {
     "message": "पासवर्ड लोड किए जा रहे हैं…"
   },
-  "ErrorReturned": {
-    "message": "एक त्रुटि हुई। कृपया Chrome के लिए iCloud पासवर्ड एक्सटेंशन को फिर से सक्षम करें।"
-  },
   "NoUserName": {
     "message": "कोई यूज़र नेम नहीं है"
   },
@@ -73,5 +70,20 @@
   },
   "enableAutoFillPasswordsMessage": {
     "message": "Chrome के लिए इस iCloud पासवर्ड एक्सटेंशन को सक्षम करने के लिए टूलबार बटन पर क्लिक करें।"
+  },
+  "optionsTitle": {
+    "message": "iCloud पासवर्ड विकल्प"
+  },
+  "enableInPageAutoFillCheckboxLabel": {
+    "message": "पृष्ठ में ऑटोफ़िल"
+  },
+  "enableInPageAutoFillCheckboxDetail": {
+    "message": "iCloud पासवर्ड को पृष्ठ में मौजूद सूची से क्रेडेंशियल दिखाने की अनुमति दें। आप iCloud पासवर्ड टूलबार बटन से कभी भी पासवर्ड भर सकते हैं, भले ही यह विकल्प बंद ही क्यों न किया गया हो।"
+  },
+  "allowExtensionToControlAutoFillLabel": {
+    "message": "Chrome ऑटोफ़िल बंद करें"
+  },
+  "allowExtensionToControlAutoFillDetail": {
+    "message": "Chrome की पृष्ठ में ऑटोफ़िल क्रिया को iCloud पासवर्ड के साथ विरोधाभास रोकने के लिए iCloud पासवर्ड आपकी ओर से ब्राउज़र की ऑटोफ़िल सेटिंग्ज़ को बंद करने की कोशिश कर सकता है।"
   }
 }
