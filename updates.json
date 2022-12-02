@@ -1,6 +1,6 @@
 {
     "addons": {
-        "{724e544e-ae3e-4fc9-9262-7f650d731cd8}": {
+        "{26aac383-dbc3-4286-982f-720916d3f362}": {
             "updates": [
                 {
                     "version": "1.3.43",
@@ -14,6 +14,15 @@
                 {
                     "version": "1.3.77",
                     "update_link": "https://github.com/ArakawaHenri/iCloudPasswords_for_Firefox/releases/download/1.3.77/iCloudPasswords_for_Firefox.xpi",
+                    "applications": {
+                        "gecko": {
+                            "strict_min_version": "48"
+                        }
+                    }
+                },
+                {
+                    "version": "1.3.77.1",
+                    "update_link": "https://github.com/ArakawaHenri/iCloudPasswords_for_Firefox/releases/download/1.3.77.1/iCloudPasswords_for_Firefox.xpi",
                     "applications": {
                         "gecko": {
                             "strict_min_version": "48"
