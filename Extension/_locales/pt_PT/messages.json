@@ -9,7 +9,7 @@
     "message": "Descarregue iCloud para Windows para usar Palavras-passe em iCloud."
   },
   "extDescription": {
-    "message": "Palavras-passe em iCloud permite preencher em sites no Chrome as palavras-passe e códigos de confirmação criados no Safari e em aplicações no iPhone, iPad e Mac."
+    "message": "Palavras-passe em iCloud permite preencher em sites no Chrome as palavras-passe criadas no Safari e em aplicações no iPhone, iPad e Mac."
   },
   "extName": {
     "message": "Palavras-passe em iCloud"
@@ -21,7 +21,7 @@
     "message": "Ative Palavras-passe em iCloud para Windows, para poder usar a extensão Palavras-passe em iCloud no Chrome."
   },
   "unsupportedOS": {
-    "message": "Esta extensão foi concebida para execução no Windows 10. Se estiver a usar um Mac, as suas palavras-passe serão automaticamente sincronizadas com o seu iPhone, iPad e Mac, quando iniciar sessão em iCloud."
+    "message": "Esta extensão foi concebida para execução no Windows 10 ou posterior. Se estiver a usar um Mac, as suas palavras-passe serão automaticamente sincronizadas com o seu iPhone, iPad e Mac, quando iniciar sessão em iCloud."
   },
   "divPINTitle": {
     "message": "Ativar preenchimento automático de palavras-passe"
@@ -36,7 +36,7 @@
     "message": "As suas palavras-passe estão sincronizadas com o Porta-chaves em iCloud"
   },
   "divNoPasswordsMessage": {
-    "message": "Pode ver e editar as palavras-passe guardadas na aplicação Gestor de Palavras-passe em iCloud."
+    "message": "Pode ver e editar as palavras-passe guardadas na aplicação Palavras-passe em iCloud."
   },
   "divDoNotRememberTitle": {
     "message": "Indicou que, para este site, as palavras-passe nunca deviam ser guardadas."
@@ -62,6 +62,9 @@
   "totpVerificationCodeNameWithDomain": {
     "message": "Código de confirmação de “$1”"
   },
+  "setupTOTPVerificationCodeNameWithDomain": {
+    "message": "Configurar código de confirmação de “$1”"
+  },
   "totpVerificationCodeName": {
     "message": "Código de confirmação"
   },
@@ -85,5 +88,11 @@
   },
   "allowExtensionToControlAutoFillDetail": {
     "message": "Para impedir que o preenchimento automático na página do Chrome interfira com Palavras-passe em iCloud, Palavras-passe em iCloud pode tentar desativar por si as definições de preenchimento automático do navegador."
+  },
+  "divTOTPTitle": {
+    "message": "Configurar código de confirmação de:"
+  },
+  "divTOTPMenu": {
+    "message": "Configurar código de confirmação"
   }
 }

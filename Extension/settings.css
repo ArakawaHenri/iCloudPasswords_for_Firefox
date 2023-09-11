@@ -39,9 +39,7 @@ ul {
     column-gap: 6px;
     display: grid;
     grid:
-        [header-start] "input label" auto [header-end]
-        [footer-start] ". detail" auto [footer-end]
-        / auto auto;
+        [header-start] "input label" auto [header-end] [footer-start] ". detail" auto [footer-end] / auto auto;
     justify-content: start;
     margin-block-end: 16px;
     row-gap: 2px;
@@ -68,7 +66,7 @@ ul {
 }
 
 .settings ul,
-.settings ul + footer {
+.settings ul+footer {
     padding-inline-start: 10px;
 }
 

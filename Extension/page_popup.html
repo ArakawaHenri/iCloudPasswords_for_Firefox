@@ -1,45 +1,49 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Password Manager</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body class="popup">
-        <img id="iCloudIconId" class="iCloudIcon" src="images/PasswordsExtensionIcon_128.png" height="46" width="46" />
-        <div id="divDownloadPage" class="box">
-            <p id="downloadMessage" class="titleline"></p>
-            <button id="downloadButton" class="button"></button>
+
+<head>
+    <title>Password Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="popup">
+    <div id="fromiCloudPasswords"></div>
+    <img id="iCloudIconId" class="iCloudIcon" src="images/PasswordsExtensionIcon_128.png" height="46" width="46" />
+    <div id="divDownloadPage" class="box">
+        <p id="downloadMessage" class="titleline"></p>
+        <button id="downloadButton" class="button"></button>
+    </div>
+    <div id="divOpeniC4WPage" class="box">
+        <p id="idOpeniC4WTitle" class="titleline"></p>
+        <button id="idOpeniC4WButton" class="button" href="#"></button>
+    </div>
+    <div id="divPIN" class="box">
+        <p class="titleline" id="divPINTitle">
+        <div class="pinbox">
+            <input class="PIN" id="PIN0" maxlength="1" size="1" pattern="[0-9]?" />
+            <input class="PIN" id="PIN1" maxlength="1" size="1" pattern="[0-9]?" />
+            <input class="PIN" id="PIN2" maxlength="1" size="1" pattern="[0-9]?" />
+            <input class="PIN" id="PIN3" maxlength="1" size="1" pattern="[0-9]?" />
+            <input class="PIN" id="PIN4" maxlength="1" size="1" pattern="[0-9]?" />
+            <input class="PIN" id="PIN5" maxlength="1" size="1" pattern="[0-9]?" />
         </div>
-        <div id="divOpeniC4WPage" class="box">
-            <p id="idOpeniC4WTitle" class="titleline"></p>
-            <button id="idOpeniC4WButton" class="button" href="#"></button>
-        </div>
-        <div id="divPIN" class="box">
-            <p class="titleline" id="divPINTitle">
-                <div class="pinbox">
-                    <input class="PIN" id="PIN0" maxlength="1" size="1" pattern="[0-9]?" />
-                    <input class="PIN" id="PIN1" maxlength="1" size="1" pattern="[0-9]?" />
-                    <input class="PIN" id="PIN2" maxlength="1" size="1" pattern="[0-9]?" />
-                    <input class="PIN" id="PIN3" maxlength="1" size="1" pattern="[0-9]?" />
-                    <input class="PIN" id="PIN4" maxlength="1" size="1" pattern="[0-9]?" />
-                    <input class="PIN" id="PIN5" maxlength="1" size="1" pattern="[0-9]?" />
-                </div>
-            <p id="divPINMessage" class="messageline">
-        </div>
-        <div id="divMessageBoard" class="box">
-            <p id="divMessageBoardTitle" class="titleline">
-            <p id="divMessageBoardMessage" class="messageline">
-            <ul class="credential-list" id="openPasswordManagerList"></ul>
-        </div>
-        <div id="divICs" class="box">
-            <p id="divICsMessage" class="titleline"><!--Choose an account to fill:--></p>
-            <ul class="credential-list" id="credentialList"></ul>
-        </div>
-        <a id="dismiss" class="dismiss" href="#"><img src="images/close.svg"></a>
-        <!--p id="DebugOutput"></p-->
-    </body>
-    <!-- <script src="utils.js"></script> -->
-    <!-- <script src="extensionState.js"></script> -->
-    <!-- <script src="heuristicsRedefinitions.js"></script> -->
-    <script src="page_popup.js"></script>
+        <p id="divPINMessage" class="messageline">
+    </div>
+    <div id="divMessageBoard" class="box">
+        <p id="divMessageBoardTitle" class="titleline">
+        <p id="divMessageBoardMessage" class="messageline">
+        <ul class="credential-list" id="openPasswordManagerList"></ul>
+    </div>
+    <div id="divICs" class="box">
+        <p id="divICsMessage" class="titleline"><!--Choose an account to fill:--></p>
+        <ul class="credential-list" id="credentialList"></ul>
+    </div>
+    <a id="dismiss" class="dismiss" href="#"><img src="images/close.svg"></a>
+    <!--p id="DebugOutput"></p-->
+</body>
+<!-- <script src="utils.js"></script> -->
+<!-- <script src="extensionState.js"></script> -->
+<!-- <script src="heuristicsRedefinitions.js"></script> -->
+<script src="page_popup.js"></script>
+
 </html>

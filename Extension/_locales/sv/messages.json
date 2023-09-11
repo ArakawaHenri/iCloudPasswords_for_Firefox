@@ -9,7 +9,7 @@
     "message": "Hämta iCloud för Windows om du vill använda iCloud-lösenord."
   },
   "extDescription": {
-    "message": "Med iCloud-lösenord kan du fylla i lösenord och verifieringskoder som skapas i Safari och appar på en iPhone, iPad och Mac på webbplatser i Chrome."
+    "message": "Med iCloud-lösenord kan du fylla i lösenord som du har skapat i Safari och appar på en iPhone, iPad och Mac på webbplatser i Chrome."
   },
   "extName": {
     "message": "iCloud-lösenord"
@@ -21,7 +21,7 @@
     "message": "Aktivera Lösenord i iCloud för Windows om du vill använda iCloud-lösenord med Chrome."
   },
   "unsupportedOS": {
-    "message": "Det här tillägget är utformat för användning med Windows 10. Om du använder en Mac blir dina lösenord automatiskt synkroniserade med din iPhone, iPad och Mac när du loggar in på iCloud."
+    "message": "Det här tillägget är utformat för användning med Windows 10 eller senare. Om du använder en Mac blir dina lösenord automatiskt synkroniserade med din iPhone, iPad och Mac när du loggar in på iCloud."
   },
   "divPINTitle": {
     "message": "Aktivera Autofyll lösenord"
@@ -36,7 +36,7 @@
     "message": "Dina lösenord synkroniseras med iCloud-nyckelring"
   },
   "divNoPasswordsMessage": {
-    "message": "Du kan visa och redigera sparade lösenord i iCloud-appen Lösenordshanterare."
+    "message": "Du kan visa och redigera sparade lösenord i appen iCloud-lösenord."
   },
   "divDoNotRememberTitle": {
     "message": "Du har tidigare valt att aldrig spara lösenord för den här webbplatsen."
@@ -62,6 +62,9 @@
   "totpVerificationCodeNameWithDomain": {
     "message": "Verifieringskod för ”$1”"
   },
+  "setupTOTPVerificationCodeNameWithDomain": {
+    "message": "Ställ in verifieringskod för ”$1”"
+  },
   "totpVerificationCodeName": {
     "message": "Verifieringskod"
   },
@@ -78,12 +81,18 @@
     "message": "Autofyll på sida"
   },
   "enableInPageAutoFillCheckboxDetail": {
-    "message": "Tillåt att iCloud-lösenord erbjuder inloggningsuppgifter från en lista på sidan. Du kan alltid fylla i lösenord från verktygsfältsknappen för iCloud-lösenord, även om det här alternativet är avstängt."
+    "message": "Tillåt att iCloud-lösenord erbjuder inloggningsuppgifter från en lista på sidan. Du kan alltid fylla i lösenord från knappen i verktygsfältet för iCloud-lösenord, även om det här alternativet är avstängt."
   },
   "allowExtensionToControlAutoFillLabel": {
     "message": "Stäng av Chromes Autofyll"
   },
   "allowExtensionToControlAutoFillDetail": {
     "message": "iCloud-lösenord kan försöka att stänga av webbläsarens Autofyll-inställningar åt dig för att förhindra att Chromes Autofyll stör iCloud-lösenord."
+  },
+  "divTOTPTitle": {
+    "message": "Ställ in verifieringskod för:"
+  },
+  "divTOTPMenu": {
+    "message": "Ställ in verifieringskod"
   }
 }

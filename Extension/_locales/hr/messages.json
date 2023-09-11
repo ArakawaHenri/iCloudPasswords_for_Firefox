@@ -9,7 +9,7 @@
     "message": "Preuzmite iCloud za Windows za uporabu iCloud lozinki."
   },
   "extDescription": {
-    "message": "iCloud lozinke omogućavaju vam ispunjavanje lozinki i verifikacijskih kodova izrađenih u Safariju i aplikacijama na iPhoneu, iPadu i Macu na web stranicama u pregledniku Chrome."
+    "message": "iCloud lozinke omogućavaju vam ispunjavanje lozinki koje su izrađene u Safariju i aplikacijama na iPhoneu, iPadu i Macu na web stranicama u Chromeu."
   },
   "extName": {
     "message": "iCloud lozinke"
@@ -21,7 +21,7 @@
     "message": "Omogućite Lozinke u iCloudu za Windows za uporabu iCloud lozinki s preglednikom Chrome."
   },
   "unsupportedOS": {
-    "message": "Ova ekstenzija dizajnirana je da radi na sustavu Windows 10. Ako koristite Mac, vaše lozinke automatski će se sinkronizirati s vašim iPhoneom, iPadom i Macom kad se prijavite u iCloud."
+    "message": "Ova ekstenzija dizajnirana je za rad u sustavu Windows 10 ili novijem. Ako koristite Mac, vaše lozinke automatski će se sinkronizirati s iPhoneom, iPadom i Macom kad se prijavite na iCloud."
   },
   "divPINTitle": {
     "message": "Omogući Auto ispunu lozinke"
@@ -36,7 +36,7 @@
     "message": "Vaše lozinke sinkronizirane su s iCloud privjeskom ključeva"
   },
   "divNoPasswordsMessage": {
-    "message": "Možete pregledati i urediti spremljene lozinke u aplikaciji iCloud upravitelj lozinkama."
+    "message": "Spremljene lozinke možete pogledati i urediti u aplikaciji iCloud lozinke."
   },
   "divDoNotRememberTitle": {
     "message": "Prethodno ste odredili da se lozinke za ovu web stranicu nikad neće spremati."
@@ -62,6 +62,9 @@
   "totpVerificationCodeNameWithDomain": {
     "message": "Verifikacijski kôd za “$1”"
   },
+  "setupTOTPVerificationCodeNameWithDomain": {
+    "message": "Podesi verifikacijski kôd za \"\"$1\"\""
+  },
   "totpVerificationCodeName": {
     "message": "Verifikacijski kôd"
   },
@@ -85,5 +88,11 @@
   },
   "allowExtensionToControlAutoFillDetail": {
     "message": "Kako bi se spriječilo da automatska ispuna sa stranice Chromea ometa rad iCloud lozinki, iCloud lozinke mogu pokušati isključiti postavke automatske ispune ovog preglednika."
+  },
+  "divTOTPTitle": {
+    "message": "Podesi verifikacijski kôd za:"
+  },
+  "divTOTPMenu": {
+    "message": "Podesi verifikacijski kôd"
   }
 }

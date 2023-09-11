@@ -9,7 +9,7 @@
     "message": "Pentru a utiliza Parole iCloud, descărcați iCloud pentru Windows."
   },
   "extDescription": {
-    "message": "Parole iCloud vă permite să completați parolele și codurile de verificare create în Safari și în aplicațiile de pe iPhone, iPad și Mac pe site-urile web din Chrome."
+    "message": "Parole iCloud vă permite să completați parolele create în Safari și în aplicațiile de pe iPhone, iPad și Mac pe site‑urile web din Chrome."
   },
   "extName": {
     "message": "Parole iCloud"
@@ -21,7 +21,7 @@
     "message": "Pentru a utiliza parolele iCloud cu Chrome, activați opțiunea Parole în iCloud."
   },
   "unsupportedOS": {
-    "message": "Această extensie este concepută pentru a rula pe Windows 10. Dacă utilizați un Mac, parolele dvs. se vor sincroniza automat cu iPhone-ul, iPad-ul sau Mac-ul dvs. atunci când vă autentificați pe iCloud."
+    "message": "Această extensie este concepută pentru rularea pe Windows 10 sau versiuni ulterioare. Dacă utilizați un Mac, parolele se vor sincroniza automat pe iPhone‑ul, iPad‑ul și Mac‑ul dvs. când vă autentificați pe iCloud."
   },
   "divPINTitle": {
     "message": "Activați Auto-completare parole"
@@ -36,7 +36,7 @@
     "message": "Parolele dvs. sunt sincronizate cu portcheiul iCloud"
   },
   "divNoPasswordsMessage": {
-    "message": "Puteți vedea și edita parolele salvate în aplicația Gestionar parole iCloud."
+    "message": "Puteți vedea și edita parolele salvate în aplicația Parole iCloud."
   },
   "divDoNotRememberTitle": {
     "message": "Ați optat anterior ca parolele pentru acest site web să nu fie salvate niciodată."
@@ -62,6 +62,9 @@
   "totpVerificationCodeNameWithDomain": {
     "message": "Cod de verificare pentru “$1”"
   },
+  "setupTOTPVerificationCodeNameWithDomain": {
+    "message": "Configurați codul de verificare pentru “$1”"
+  },
   "totpVerificationCodeName": {
     "message": "Cod de verificare"
   },
@@ -85,5 +88,11 @@
   },
   "allowExtensionToControlAutoFillDetail": {
     "message": "Pentru a preveni interferențele dintre funcționalitatea de completare automată în interiorul paginii din Chrome și Parole iCloud, Parole iCloud poate încerca să dezactiveze configurările de completare automată ale browserului în numele dvs."
+  },
+  "divTOTPTitle": {
+    "message": "Configurați codul de verificare pentru:"
+  },
+  "divTOTPMenu": {
+    "message": "Configurați un cod de verificare"
   }
 }

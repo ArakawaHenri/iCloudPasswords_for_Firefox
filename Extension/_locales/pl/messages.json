@@ -9,7 +9,7 @@
     "message": "Aby używać haseł iCloud, pobierz aplikację iCloud dla Windows."
   },
   "extDescription": {
-    "message": "Aplikacja Hasła iCloud pozwala wypełniać pola w witrynach w Chrome hasłami i kodami weryfikacyjnymi utworzonymi w Safari oraz aplikacjach na iPhonie, iPadzie i Macu."
+    "message": "Rozszerzenie Hasła iCloud pozwala używać haseł utworzonych w Safari i innych aplikacjach na iPhonie, iPadzie i Macu do wypełniania pól haseł w witrynach w przeglądarce Chrome."
   },
   "extName": {
     "message": "Hasła iCloud"
@@ -21,7 +21,7 @@
     "message": "Aby używać rozszerzenia Hasła iCloud w Chrome, włącz Hasła w iCloud dla Windows."
   },
   "unsupportedOS": {
-    "message": "To rozszerzenie zostało zaprojektowane dla systemu Windows 10. Jeżeli używasz Maca, Twoje hasła będą automatycznie synchronizowane z Twoim iPhone’em, iPadem i Makiem, gdy zalogujesz się w iCloud."
+    "message": "To rozszerzenie zostało zaprojektowane dla systemu Windows 10 lub nowszego. Jeżeli używasz Maca, Twoje hasła będą automatycznie synchronizowane z Twoim iPhone’em, iPadem i Makiem, gdy zalogujesz się w iCloud."
   },
   "divPINTitle": {
     "message": "Włącz wypełnianie haseł"
@@ -36,7 +36,7 @@
     "message": "Twoje hasła są synchronizowane z pękiem kluczy iCloud."
   },
   "divNoPasswordsMessage": {
-    "message": "Zachowane hasła możesz wyświetlać i edytować w aplikacji Menedżer haseł iCloud."
+    "message": "Zachowane hasła możesz wyświetlać i edytować w aplikacji Hasła iCloud."
   },
   "divDoNotRememberTitle": {
     "message": "Twój wcześniejszy wybór to nigdy nie zachowywać haseł do tej witryny."
@@ -62,6 +62,9 @@
   "totpVerificationCodeNameWithDomain": {
     "message": "Kod weryfikacyjny „$1”"
   },
+  "setupTOTPVerificationCodeNameWithDomain": {
+    "message": "Skonfiguruj kod weryfikacyjny dla „$1”"
+  },
   "totpVerificationCodeName": {
     "message": "Kod weryfikacyjny"
   },
@@ -85,5 +88,11 @@
   },
   "allowExtensionToControlAutoFillDetail": {
     "message": "Aby unikać konfliktów między funkcją wypełniania na stronie Chrome oraz aplikacją Hasła iCloud, aplikacja ta może spróbować wyłączyć funkcję wypełniania przeglądarki w Twoim imieniu."
+  },
+  "divTOTPTitle": {
+    "message": "Skonfiguruj kod weryfikacyjny dla:"
+  },
+  "divTOTPMenu": {
+    "message": "Skonfiguruj kod weryfikacyjny"
   }
 }

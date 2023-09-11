@@ -9,7 +9,7 @@
     "message": "下载 Windows 版 iCloud 以使用 iCloud 密码。"
   },
   "extDescription": {
-    "message": "iCloud 密码可让你在 Chrome 中，将 iPhone、iPad 和 Mac 上的 Safari 浏览器和 App 中创建的密码和验证码填充到网站中。"
+    "message": "iCloud 密码可让你将 Safari 浏览器以及 iPhone、iPad 和 Mac 上的 App 中创建的密码填充到 Chrome 中的网站上。"
   },
   "extName": {
     "message": "iCloud 密码"
@@ -21,7 +21,7 @@
     "message": "在 Windows 版 iCloud 中启用“密码”以配合 Chrome 使用 iCloud 密码。"
   },
   "unsupportedOS": {
-    "message": "此扩展设计用于在 Windows 10 上运行。如果使用的是 Mac，当你登录 iCloud 时，你的密码将自动与 iPhone、iPad 和 Mac 同步。"
+    "message": "此扩展设计运行于 Windows 10 或更高版本。如果使用的是 Mac，你的密码将在登录 iCloud 时自动与你的 iPhone、iPad 和 Mac 同步。"
   },
   "divPINTitle": {
     "message": "启用密码自动填充"
@@ -36,7 +36,7 @@
     "message": "你的密码已与 iCloud 钥匙串同步"
   },
   "divNoPasswordsMessage": {
-    "message": "你可以在 iCloud 密码管理器 App 中查看和编辑保存的密码。"
+    "message": "你可以在 iCloud 密码 App 中查看和编辑已保存的密码。"
   },
   "divDoNotRememberTitle": {
     "message": "你之前已选择永不保存此网站的密码。"
@@ -62,6 +62,9 @@
   "totpVerificationCodeNameWithDomain": {
     "message": "“$1”的验证码"
   },
+  "setupTOTPVerificationCodeNameWithDomain": {
+    "message": "设置“$1”的验证码"
+  },
   "totpVerificationCodeName": {
     "message": "验证码"
   },
@@ -85,5 +88,11 @@
   },
   "allowExtensionToControlAutoFillDetail": {
     "message": "为了防止 Chrome 的页内“自动填充”干扰 iCloud 密码，iCloud 密码可尝试代表你关闭浏览器的“自动填充”设置。"
+  },
+  "divTOTPTitle": {
+    "message": "设置验证码用于："
+  },
+  "divTOTPMenu": {
+    "message": "设置验证码"
   }
 }

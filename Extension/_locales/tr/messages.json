@@ -9,7 +9,7 @@
     "message": "iCloud Parolaları’nı kullanmak için Windows için iCloud’u indirin."
   },
   "extDescription": {
-    "message": "iCloud Parolaları, Safari’de ve iPhone, iPad ve Mac üzerindeki uygulamalarda yaratılan parolaları ve doğrulama kodlarını Chrome’daki web sitelerinde doldurmanızı sağlar."
+    "message": "iCloud Parolaları, Safari'de ve iPhone, iPad ve Mac'teki uygulamalarda yaratılan parolaları Chrome'daki web sitelerinde doldurmanızı sağlar."
   },
   "extName": {
     "message": "iCloud Parolaları"
@@ -21,7 +21,7 @@
     "message": "iCloud Parolaları’nı Chrome ile kullanmak istiyorsanız Windows için iCloud’da Parolalar’ı etkinleştirin."
   },
   "unsupportedOS": {
-    "message": "Bu genişletme Windows 10’da çalışmak üzere tasarlanmış. Mac kullanıyorsanız iCloud’a giriş yaptığınızda parolalarınız iPhone’unuz, iPad’iniz ve Mac’iniz ile otomatik olarak eşzamanlanır."
+    "message": "Bu genişletme Windows 10 veya daha yenisinde çalışacak şekilde tasarlandı. Mac kullanıyorsanız iCloud'a giriş yaptığınızda parolalarınız iPhone, iPad ve Mac aygıtlarınızla otomatik olarak eşzamanlanır."
   },
   "divPINTitle": {
     "message": "Otomatik Parola Doldurma’yı Etkinleştirin"
@@ -36,7 +36,7 @@
     "message": "Parolalarınız iCloud Anahtar Zinciri ile eşzamanlanıyor"
   },
   "divNoPasswordsMessage": {
-    "message": "Kaydedilen parolaları iCloud Parola Yöneticisi uygulamasında görüntüleyebilir ve düzenleyebilirsiniz."
+    "message": "iCloud Parolaları uygulamasında kayıtlı parolaları görüntüleyebilir ve düzenleyebilirsiniz."
   },
   "divDoNotRememberTitle": {
     "message": "Daha önce bu web sitesi için asla parola kaydedilmemesini belirttiniz."
@@ -62,6 +62,9 @@
   "totpVerificationCodeNameWithDomain": {
     "message": "“$1” için doğrulama kodu"
   },
+  "setupTOTPVerificationCodeNameWithDomain": {
+    "message": "“$1” için doğrulama kodu ayarla"
+  },
   "totpVerificationCodeName": {
     "message": "Doğrulama kodu"
   },
@@ -85,5 +88,11 @@
   },
   "allowExtensionToControlAutoFillDetail": {
     "message": "Chrome’un sayfa içi Otomatik Doldurma özelliğinin iCloud Parolaları’nı engellememesi için iCloud Parolaları, web tarayıcının Otomatik Doldurma ayarlarını sizin adınıza kapatmayı deneyebilir."
+  },
+  "divTOTPTitle": {
+    "message": "Şunun için doğrulama kodu ayarla:"
+  },
+  "divTOTPMenu": {
+    "message": "Doğrulama Kodunu Ayarla"
   }
 }

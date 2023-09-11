@@ -9,7 +9,7 @@
     "message": "Tải về iCloud cho Windows để sử dụng Mật khẩu iCloud."
   },
   "extDescription": {
-    "message": "Mật khẩu iCloud cho phép điền mật khẩu, mã xác minh được tạo trong Safari, ứng dụng trên iPhone, iPad và máy Mac vào trang web trong Chrome."
+    "message": "Mật khẩu iCloud cho phép bạn điền các mật khẩu được tạo trong Safari và các ứng dụng trên iPhone, iPad và máy Mac vào các trang web trong Chrome."
   },
   "extName": {
     "message": "Mật khẩu iCloud"
@@ -21,7 +21,7 @@
     "message": "Bật Mật khẩu trong iCloud cho Windows để sử dụng Mật khẩu iCloud với Chrome."
   },
   "unsupportedOS": {
-    "message": "Phần mở rộng này được thiết kế để chạy trên Windows 10. Nếu bạn đang sử dụng máy Mac, các mật khẩu sẽ tự động đồng bộ hóa với iPhone, iPad và máy Mac khi bạn đăng nhập vào iCloud."
+    "message": "Phần mở rộng này được thiết kế để chạy trên Windows 10 trở lên. Nếu bạn đang sử dụng máy Mac thì các mật khẩu sẽ tự động đồng bộ hóa với iPhone, iPad và máy Mac khi bạn đăng nhập vào iCloud."
   },
   "divPINTitle": {
     "message": "Bật Tự động điền mật khẩu"
@@ -36,7 +36,7 @@
     "message": "Các mật khẩu của bạn được đồng bộ hóa với Chuỗi khóa iCloud"
   },
   "divNoPasswordsMessage": {
-    "message": "Bạn có thể xem và sửa các mật khẩu đã lưu trong ứng dụng Trình quản lý mật khẩu iCloud."
+    "message": "Bạn có thể xem và sửa các mật khẩu đã lưu trong ứng dụng Mật khẩu iCloud."
   },
   "divDoNotRememberTitle": {
     "message": "Trước đây, bạn đã cho biết không bao giờ lưu mật khẩu cho trang web này."
@@ -62,6 +62,9 @@
   "totpVerificationCodeNameWithDomain": {
     "message": "Mã xác minh cho “$1”"
   },
+  "setupTOTPVerificationCodeNameWithDomain": {
+    "message": "Thiết lập mã xác minh cho “$1”"
+  },
   "totpVerificationCodeName": {
     "message": "Mã xác minh"
   },
@@ -85,5 +88,11 @@
   },
   "allowExtensionToControlAutoFillDetail": {
     "message": "Để ngăn không cho tính năng Tự động điền trong trang của Chrome can thiệp vào Mật khẩu iCloud, Mật khẩu iCloud có thể cố gắng tắt cài đặt Tự động điền của trình duyệt thay mặt bạn."
+  },
+  "divTOTPTitle": {
+    "message": "Thiết lập mã xác minh cho:"
+  },
+  "divTOTPMenu": {
+    "message": "Thiết lập mã xác minh"
   }
 }

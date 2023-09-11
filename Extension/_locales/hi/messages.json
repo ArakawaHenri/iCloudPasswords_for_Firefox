@@ -9,7 +9,7 @@
     "message": "iCloud पासवर्ड उपयोग करने के लिए Windows के लिए iCloud डाउनलोड करें।"
   },
   "extDescription": {
-    "message": "iCloud पासवर्ड की मदद से आप Safari और iPhone, iPad और Mac पर ऐप्स में बनाए गए पासवर्ड और सत्यापन कोड को Chrome पर वेबसाइट में भर सकते हैं।"
+    "message": "iCloud पासवर्ड आपको Safari में और iPhone, iPad और Mac पर ऐप्स में बनाए गए पासवर्ड Chrome पर वेबसाइट में भरने की सुविधा देता है।"
   },
   "extName": {
     "message": "iCloud पासवर्ड"
@@ -21,7 +21,7 @@
     "message": "Chrome के साथ iCloud पासवर्ड उपयोग करने के लिए Windows के लिए iCloud में पासवर्ड सक्षम करें।"
   },
   "unsupportedOS": {
-    "message": "इस एक्स्टेंशन को Windows 10 पर चलाने के लिए डिज़ाइन किया गया है। यदि आप Mac का उपयोग कर रहे हैं, तो जब आप iCloud में साइन इन करेंगे तब आपके पासवर्ड ऑटोमैटिकली आपके iPhone, iPad और Mac के साथ सिंक हो जाएँगे।"
+    "message": "इस एक्सटेंशन को Windows 10 या बाद के संस्करण पर रन करने के लिए डिज़ाइन किया गया है। यदि आप Mac का उपयोग कर रहे हैं, तो iCloud में साइन इन करने पर आपके पासवर्ड ऑटोमैटिकली आपके iPhone, iPad और Mac के साथ सिंक हो जाएँगे।"
   },
   "divPINTitle": {
     "message": "पासवर्ड ऑटोफ़िल सक्षम करें"
@@ -36,7 +36,7 @@
     "message": "आपके पासवर्ड iCloud कीचेन के साथ सिंक हैं"
   },
   "divNoPasswordsMessage": {
-    "message": "आप iCloud पासवर्ड प्रबंधक ऐप में जाकर सहेजे गए पासवर्ड देख सकते हैं और उन्हें संपादित कर सकते हैं।"
+    "message": "आप iCloud पासवर्ड ऐप में सहेजे गए पासवर्ड देख और संपादित कर सकते हैं।"
   },
   "divDoNotRememberTitle": {
     "message": "आपने पहले इस वेबसाइट के लिए कभी पासवर्ड न सहेजने का संकेत दिया था।"
@@ -62,6 +62,9 @@
   "totpVerificationCodeNameWithDomain": {
     "message": "“$1” के लिए सत्यापन कोड"
   },
+  "setupTOTPVerificationCodeNameWithDomain": {
+    "message": "“$1” के लिए सत्यापन कोड सेटअप करें"
+  },
   "totpVerificationCodeName": {
     "message": "सत्यापन कोड"
   },
@@ -85,5 +88,11 @@
   },
   "allowExtensionToControlAutoFillDetail": {
     "message": "Chrome की पृष्ठ में ऑटोफ़िल क्रिया को iCloud पासवर्ड के साथ विरोधाभास रोकने के लिए iCloud पासवर्ड आपकी ओर से ब्राउज़र की ऑटोफ़िल सेटिंग्ज़ को बंद करने की कोशिश कर सकता है।"
+  },
+  "divTOTPTitle": {
+    "message": "इसके लिए सत्यापन कोड सेटअप करें :"
+  },
+  "divTOTPMenu": {
+    "message": "सत्यापन कोड सेटअप करें"
   }
 }

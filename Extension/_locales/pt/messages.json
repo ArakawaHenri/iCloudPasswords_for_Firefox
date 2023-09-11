@@ -9,7 +9,7 @@
     "message": "Baixe o iCloud para Windows para usar Senhas do iCloud."
   },
   "extDescription": {
-    "message": "As Senhas do iCloud permitem que você preencha senhas e códigos de verificação criados no Safari e em apps no iPhone, iPad e Mac em sites no Chrome."
+    "message": "As Senhas do iCloud permitem que você preencha as senhas criadas no Safari e em apps no iPhone, iPad e Mac em sites no Chrome."
   },
   "extName": {
     "message": "Senhas do iCloud"
@@ -21,7 +21,7 @@
     "message": "Ative Senhas no iCloud para Windows para usar Senhas do iCloud com o Chrome."
   },
   "unsupportedOS": {
-    "message": "Esta extensão foi criada para ser executada no Windows 10. Se você estiver usando um Mac, suas senhas serão sincronizadas automaticamente com o iPhone, iPad e Mac quando você iniciar sessão no iCloud."
+    "message": "Esta extensão é projetada para funcionar no Windows 10 ou posterior. Se você estiver usando um Mac, as senhas serão sincronizadas automaticamente com o seu iPhone, iPad e Mac quando você iniciar uma sessão no iCloud."
   },
   "divPINTitle": {
     "message": "Ativar Preenchimento Automático de Senha"
@@ -36,7 +36,7 @@
     "message": "Suas senhas serão sincronizadas com as Chaves do iCloud"
   },
   "divNoPasswordsMessage": {
-    "message": "Você pode visualizar e editar as senhas salvas no app Gerenciador de Senhas do iCloud."
+    "message": "Você pode visualizar e editar as senhas salvas no app Senhas do iCloud."
   },
   "divDoNotRememberTitle": {
     "message": "Você indicou anteriormente para nunca salvar senhas para este site."
@@ -62,6 +62,9 @@
   "totpVerificationCodeNameWithDomain": {
     "message": "Código de verificação para “$1”"
   },
+  "setupTOTPVerificationCodeNameWithDomain": {
+    "message": "Configurar código de verificação para “$1”"
+  },
   "totpVerificationCodeName": {
     "message": "Código de verificação"
   },
@@ -85,5 +88,11 @@
   },
   "allowExtensionToControlAutoFillDetail": {
     "message": "Para impedir que o Preenchimento Automático na página do Chrome interfira com as Senhas do iCloud, as Senhas do iCloud podem tentar desativar os ajustes de Preenchimento Automático do navegador por você."
+  },
+  "divTOTPTitle": {
+    "message": "Configurar código de verificação para:"
+  },
+  "divTOTPMenu": {
+    "message": "Configurar Código de Verificação"
   }
 }

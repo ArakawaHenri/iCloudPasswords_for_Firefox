@@ -9,7 +9,7 @@
     "message": "Descarrega l’iCloud per a Windows per utilitzar l’extensió de contrasenyes a l’iCloud."
   },
   "extDescription": {
-    "message": "Les contrasenyes a l’iCloud et permeten emplenar les contrasenyes i els codis de verificació creats al Safari i en altres apps de l’iPhone, l’iPad i el Mac als lloc web del Chrome."
+    "message": "L’extensió de contrasenyes a l’iCloud serveix per emplenar les contrasenyes que has creat al Safari i a les apps de l’iPhone, l’iPad o el Mac als llocs web del Chrome."
   },
   "extName": {
     "message": "Extensió de contrasenyes a l’iCloud"
@@ -21,7 +21,7 @@
     "message": "Ves a l’iCloud per a Windows i activa l’opció Contrasenyes per utilitzar l’extensió de contrasenyes a l’iCloud amb el Chrome."
   },
   "unsupportedOS": {
-    "message": "Aquesta extensió s’ha dissenyat per executar‑se al Windows 10. Si fas servir un Mac, les contrasenyes se sincronitzaran automàticament amb l’iPhone, l’iPad i el Mac quan iniciïs sessió a l’iCloud."
+    "message": "L’extensió s’ha dissenyat per funcionar a partir del Windows 10. Si tens un Mac, les contrasenyes se sincronitzaran automàticament amb l’iPhone, l’iPad i el Mac quan iniciïs sessió a l’iCloud."
   },
   "divPINTitle": {
     "message": "Activar l‘autocompleció de contrasenyes"
@@ -36,7 +36,7 @@
     "message": "Les contrasenyes estan sincronitzades amb el clauer de l’iCloud"
   },
   "divNoPasswordsMessage": {
-    "message": "Pots veure i editar les contrasenyes desades a l’app del gestor de contrasenyes a l’iCloud."
+    "message": "Pots veure i editar les contrasenyes desades a l’app Contrasenyes a l’iCloud."
   },
   "divDoNotRememberTitle": {
     "message": "Abans has indicat que no es desin mai les contrasenyes per a aquest lloc web."
@@ -62,6 +62,9 @@
   "totpVerificationCodeNameWithDomain": {
     "message": "Codi de verificació de “$1”"
   },
+  "setupTOTPVerificationCodeNameWithDomain": {
+    "message": "Configura un codi de verificació per a “$1”"
+  },
   "totpVerificationCodeName": {
     "message": "Codi de verificació"
   },
@@ -85,5 +88,11 @@
   },
   "allowExtensionToControlAutoFillDetail": {
     "message": "Perquè l’autocompleció integrada del Chrome no interfereixi amb les contrasenyes a l’iCloud, l’extensió de contrasenyes a l’iCloud pot intentar desactivar la configuració d’autocompleció del navegador en lloc teu."
+  },
+  "divTOTPTitle": {
+    "message": "Configura un codi de verificació per a:"
+  },
+  "divTOTPMenu": {
+    "message": "Configurar un codi de verificació"
   }
 }

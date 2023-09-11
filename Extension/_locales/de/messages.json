@@ -9,7 +9,7 @@
     "message": "Lade „iCloud für Windows“, um „iCloud-Passwörter“ zu verwenden."
   },
   "extDescription": {
-    "message": "Mit „iCloud-Passwörter“ kannst du Passwörter und Verifizierungscodes, die in Safari und in Apps auf dem iPhone, iPad oder Mac erstellt wurden, für Websites in Chrome verwenden."
+    "message": "Mit „iCloud-Passwörter“ können in Safari und in Apps auf dem iPhone, iPad und Mac erstellte Passwörter automatisch in Websites mit Chrome ausgefüllt werden."
   },
   "extName": {
     "message": "iCloud-Passwörter"
@@ -21,7 +21,7 @@
     "message": "Aktiviere Passwörter in „iCloud für Windows“, um „iCloud-Passwörter“ mit Chrome zu verwenden."
   },
   "unsupportedOS": {
-    "message": "Diese Erweiterung wurde für Windows 10 entwickelt. Wenn du einen Mac verwendest, werden deine Passwörter automatisch mit deinem iPhone, iPad und Mac synchronisiert, sobald du dich bei iCloud anmeldest."
+    "message": "Diese Erweiterung wurde für Windows 10 oder neuer entwickelt. Wenn du einen Mac verwendest, werden deine Passwörter automatisch mit deinem iPhone, iPad und Mac synchronisiert, sobald du dich bei iCloud anmeldest."
   },
   "divPINTitle": {
     "message": "Automatisches Ausfüllen von Passwörtern aktivieren"
@@ -36,7 +36,7 @@
     "message": "Deine Passwörter sind mit „iCloud-Schlüsselbund“ synchronisiert"
   },
   "divNoPasswordsMessage": {
-    "message": "Du kannst gespeicherte Passwörter in der App „iCloud-Passwortverwaltung“ ansehen und bearbeiten."
+    "message": "Du kannst gespeicherte Passwörter in der App „iCloud-Passwörter“ sehen und bearbeiten."
   },
   "divDoNotRememberTitle": {
     "message": "Du hast zuvor angegeben, Passwörter für diese Website nie zu speichern."
@@ -62,6 +62,9 @@
   "totpVerificationCodeNameWithDomain": {
     "message": "Bestätigungscode für „$1“"
   },
+  "setupTOTPVerificationCodeNameWithDomain": {
+    "message": "Bestätigungscode für „$1“ konfigurieren”"
+  },
   "totpVerificationCodeName": {
     "message": "Bestätigungscode"
   },
@@ -85,5 +88,11 @@
   },
   "allowExtensionToControlAutoFillDetail": {
     "message": "Damit das seitengestützte automatische Ausfüllen durch Chrome „iCloud-Passwörter“ nicht behindert, kann die App für dich versuchen, die Browser-Funktion zum automatischen Ausfüllen zu deaktivieren."
+  },
+  "divTOTPTitle": {
+    "message": "Bestätigungscode konfigurieren für:"
+  },
+  "divTOTPMenu": {
+    "message": "Bestätigungscode konfigurieren"
   }
 }

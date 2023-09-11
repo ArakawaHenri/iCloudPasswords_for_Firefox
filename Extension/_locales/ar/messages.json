@@ -9,7 +9,7 @@
     "message": "قم بتنزيل iCloud لـ Windows لاستخدام كلمات سر iCloud."
   },
   "extDescription": {
-    "message": "يسمح لك ملحق كلمات سر iCloud بالتعبئة التلقائية لكلمات السر ورموز التحقق التي أنشأتها في سفاري والتطبيقات الموجودة على iPhone و iPad و Mac، في المواقع الإلكترونية في Chrome."
+    "message": "يسمح لك ملحق كلمات سر iCloud بالتعبئة التلقائية لكلمات السر التي أنشأتها في سفاري والتطبيقات على iPhone و iPad و Mac، في المواقع الإلكترونية في Chrome."
   },
   "extName": {
     "message": "كلمات سر iCloud"
@@ -21,7 +21,7 @@
     "message": "⁨ يرجى تمكين كلمات السر في iCloud لـ Windows لاستخدام كلمات سر iCloud مع Chrome.⁩"
   },
   "unsupportedOS": {
-    "message": "هذا الملحق مصمم للتشغيل على Windows 10. إذا كنت تستخدم Mac، فستتم مزامنة كلمات السر تلقائيًا مع iPhone و iPad و Mac عند تسجيل الدخول إلى iCloud."
+    "message": "هذا الملحق مصمم للتشغيل على Windows 10 أو أحدث. إذا كنت تستخدم Mac، فستتم مزامنة كلمات السر تلقائيًا مع iPhone و iPad و Mac عند تسجيل الدخول إلى iCloud."
   },
   "divPINTitle": {
     "message": "تمكين التعبئة التلقائية لكلمات السر"
@@ -36,7 +36,7 @@
     "message": "تتم مزامنة كلمات السر مع سلسلة مفاتيح iCloud"
   },
   "divNoPasswordsMessage": {
-    "message": "يمكنك عرض وتحرير كلمات السر المحفوظة في تطبيق مدير كلمات سر iCloud."
+    "message": "يمكنك عرض وتعديل كلمات السر المحفوظة في تطبيق كلمات سر iCloud."
   },
   "divDoNotRememberTitle": {
     "message": "لقد أشرت سابقًا إلى عدم حفظ كلمات السر إطلاقًا لهذا الموقع الإلكتروني."
@@ -45,7 +45,7 @@
     "message": "⁨لتغيير ذلك، يمكنك إزالة هذا الموقع الإلكتروني من سلسلة مفاتيح iCloud وإعادة تسجيل الدخول إلى هذا الموقع الإلكتروني.⁩"
   },
   "GettingPasswords": {
-    "message": "جاري تحميل كلمات السر…"
+    "message": "يجري تحميل كلمات السر…"
   },
   "NoUserName": {
     "message": "لا يوجد اسم مستخدم"
@@ -61,6 +61,9 @@
   },
   "totpVerificationCodeNameWithDomain": {
     "message": "رمز التحقق لـ \"$1\""
+  },
+  "setupTOTPVerificationCodeNameWithDomain": {
+    "message": "إعداد رمز التحقق لـ \"$1\""
   },
   "totpVerificationCodeName": {
     "message": "رمز التحقق"
@@ -85,5 +88,11 @@
   },
   "allowExtensionToControlAutoFillDetail": {
     "message": "لمنع تداخل التعبئة التلقائية داخل الصفحة في Chrome مع كلمات سر iCloud، يمكن أن يحاول ملحق كلمات سر iCloud إيقاف إعدادات التعبئة التلقائية في المتصفح بالنيابة عنك."
+  },
+  "divTOTPTitle": {
+    "message": "إعداد رمز التحقق لـ:"
+  },
+  "divTOTPMenu": {
+    "message": "إعداد رمز التحقق"
   }
 }

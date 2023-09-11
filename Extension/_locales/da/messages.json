@@ -9,7 +9,7 @@
     "message": "Hent iCloud til Windows for at bruge iCloud-adgangskoder."
   },
   "extDescription": {
-    "message": "Funktionen iCloud-adgangskoder gør det muligt at udfylde adgangskoder og bekræftelseskoder, der er oprettet i Safari og andre apps på iPhone, iPad og Mac, på websteder i Chrome."
+    "message": "iCloud-adgangskoder gør det muligt at udfylde adgangskoder, der er oprettet i Safari og andre apps på iPhone, iPad og Mac, på websteder i Chrome."
   },
   "extName": {
     "message": "iCloud-adgangskoder"
@@ -21,7 +21,7 @@
     "message": "Slå adgangskoder til i iCloud til Windows for at bruge iCloud-adgangskoder i Chrome."
   },
   "unsupportedOS": {
-    "message": "Denne udvidelse er beregnet til Windows 10. Hvis du bruger en Mac, bliver dine adgangskoder automatisk synkroniseret med din iPhone, iPad og Mac, når du logger ind på iCloud."
+    "message": "Denne udvidelse er beregnet til Windows 10 og nyere versioner. Hvis du bruger en Mac, bliver dine adgangskoder automatisk synkroniseret med din iPhone, iPad og Mac, når du logger ind på iCloud."
   },
   "divPINTitle": {
     "message": "Slå Autoudfyld adgangskode til"
@@ -36,7 +36,7 @@
     "message": "Dine adgangskoder synkroniseres med iCloud-nøglering"
   },
   "divNoPasswordsMessage": {
-    "message": "Du kan se og redigere gemte adgangskoder i appen iCloud-adgangskodeadministration."
+    "message": "Du kan se og redigere gemte adgangskoder i appen iCloud-adgangskoder."
   },
   "divDoNotRememberTitle": {
     "message": "Du har tidligere angivet, at adgangskoder til dette websted aldrig skulle gemmes."
@@ -62,6 +62,9 @@
   "totpVerificationCodeNameWithDomain": {
     "message": "Bekræftelseskode til “$1”"
   },
+  "setupTOTPVerificationCodeNameWithDomain": {
+    "message": "Indstil bekræftelseskode til “$1”"
+  },
   "totpVerificationCodeName": {
     "message": "Bekræftelseskode"
   },
@@ -78,12 +81,18 @@
     "message": "Autoudfyld på siden"
   },
   "enableInPageAutoFillCheckboxDetail": {
-    "message": "Tillad, at iCloud-adgangskoder angiver godkendelsesoplysninger fra en liste på siden. Du kan altid udfylde adgangskoder fra knappen iCloud-adgangskoder på værktøjslinjen, selvom denne funktion er sået fra."
+    "message": "Tillad, at iCloud-adgangskoder angiver godkendelsesoplysninger fra en liste på siden. Du kan altid udfylde adgangskoder fra knappen iCloud-adgangskoder på værktøjslinjen, selvom denne funktion er slået fra."
   },
   "allowExtensionToControlAutoFillLabel": {
     "message": "Slå Autoudfyld fra i Chrome"
   },
   "allowExtensionToControlAutoFillDetail": {
-    "message": "Funktionen iCloud-adgangskoder kan forsøge at slå indstillingerne til Autoudfyld fra i browseren for at forhindre, at Chrome-funktionen Autoudfyld på siden forstyrrer iCloud-adgangskoder."
+    "message": "iCloud-adgangskoder kan forsøge at slå indstillingerne til Autoudfyld fra i browseren for at forhindre, at Chrome-funktionen Autoudfyld på siden forstyrrer iCloud-adgangskoder."
+  },
+  "divTOTPTitle": {
+    "message": "Indstil bekræftelseskode til:"
+  },
+  "divTOTPMenu": {
+    "message": "Indstil bekræftelseskode"
   }
 }

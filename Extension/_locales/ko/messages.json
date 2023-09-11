@@ -9,7 +9,7 @@
     "message": "iCloud 암호를 사용하려면 Windows용 iCloud를 다운로드하십시오."
   },
   "extDescription": {
-    "message": "iCloud 암호를 사용하면 Safari와 iPhone, iPad 및 Mac의 앱에서 생성한 암호 및 확인 코드를 Chrome 웹 사이트에 채울 수 있습니다."
+    "message": "iCloud 암호를 사용하면 Safari 및 iPhone, iPad, Mac의 앱에서 생성된 암호를 Chrome의 웹 사이트에 입력할 수 있습니다."
   },
   "extName": {
     "message": "iCloud 암호"
@@ -21,7 +21,7 @@
     "message": "Chrome에서 iCloud 암호를 사용하려면 Windows용 iCloud의 암호를 활성화하십시오."
   },
   "unsupportedOS": {
-    "message": "이 확장 프로그램은 Windows 10에서 실행되도록 설계되었습니다. Mac을 사용하는 경우 iCloud에 로그인하면 암호가 자동으로 사용자의 iPhone, iPad 및 Mac과 동기화됩니다."
+    "message": "이 확장 프로그램은 Windows 10 이상에서 실행되도록 설계되었습니다. Mac을 사용 중인 경우 iCloud에 로그인하면 암호가 iPhone, iPad 및 Mac과 자동으로 동기화됩니다."
   },
   "divPINTitle": {
     "message": "암호 자동 완성 활성화"
@@ -36,7 +36,7 @@
     "message": "암호가 iCloud 키체인과 동기화되어 있음"
   },
   "divNoPasswordsMessage": {
-    "message": "iCloud 암호 관리자 앱에서 저장된 암호를 보고 편집할 수 있습니다."
+    "message": "iCloud 암호 앱에서 저장된 암호를 보고 편집할 수 있습니다."
   },
   "divDoNotRememberTitle": {
     "message": "이전에 이 웹 사이트에 대해 암호를 저장하지 않도록 지정했습니다."
@@ -62,6 +62,9 @@
   "totpVerificationCodeNameWithDomain": {
     "message": "‘$1’의 확인 코드"
   },
+  "setupTOTPVerificationCodeNameWithDomain": {
+    "message": "‘$1’의 확인 코드 설정"
+  },
   "totpVerificationCodeName": {
     "message": "확인 코드"
   },
@@ -85,5 +88,11 @@
   },
   "allowExtensionToControlAutoFillDetail": {
     "message": "Chrome의 페이지 내부 자동 완성 기능이 iCloud 암호에 간섭하는 것을 방지하기 위해, iCloud 암호는 사용자를 대신하여 브라우저의 자동 완성 설정을 끌 수 있습니다."
+  },
+  "divTOTPTitle": {
+    "message": "다음에 대한 확인 코드 설정"
+  },
+  "divTOTPMenu": {
+    "message": "확인 코드 설정"
   }
 }

@@ -9,7 +9,7 @@
     "message": "Download iCloud voor Windows om iCloud-wachtwoorden te gebruiken."
   },
   "extDescription": {
-    "message": "Met iCloud-wachtwoorden kun je wachtwoorden en verificatiecodes die in Safari en apps op de iPhone, de iPad en de Mac zijn aangemaakt, in Chrome-websites invoeren."
+    "message": "Met iCloud-wachtwoorden kun je wachtwoorden die zijn aangemaakt in Safari en apps op je iPhone, iPad en Mac invullen in websites in Chrome."
   },
   "extName": {
     "message": "iCloud-wachtwoorden"
@@ -21,7 +21,7 @@
     "message": "Schakel Wachtwoorden in in iCloud voor Windows om iCloud-wachtwoorden te gebruiken in Chrome."
   },
   "unsupportedOS": {
-    "message": "Deze extensie is ontworpen voor gebruik met Windows 10. Als je een Mac gebruikt, worden je wachtwoorden automatisch gesynchroniseerd met je iPhone, iPad en Mac wanneer je inlogt bij iCloud."
+    "message": "Deze extensie is ontworpen voor Windows 10 en nieuwer. Als je een Mac gebruikt, worden je wachtwoorden automatisch gesynchroniseerd met je iPhone, iPad en Mac wanneer je inlogt bij iCloud."
   },
   "divPINTitle": {
     "message": "Automatisch invullen van wachtwoorden inschakelen"
@@ -36,7 +36,7 @@
     "message": "Je wachtwoorden zijn met iCloud-sleutelhanger gesynchroniseerd"
   },
   "divNoPasswordsMessage": {
-    "message": "Je kunt opgeslagen wachtwoorden bekijken en bewerken in de app iCloud-wachtwoordmanager."
+    "message": "Je kunt opgeslagen wachtwoorden bekijken en bewerken in de app iCloud-wachtwoorden."
   },
   "divDoNotRememberTitle": {
     "message": "Je hebt eerder aangegeven dat je nooit wachtwoorden voor deze website wilt opslaan."
@@ -62,6 +62,9 @@
   "totpVerificationCodeNameWithDomain": {
     "message": "Verificatiecode voor '$1'"
   },
+  "setupTOTPVerificationCodeNameWithDomain": {
+    "message": "Verificatiecode configureren voor '$1'"
+  },
   "totpVerificationCodeName": {
     "message": "Verificatiecode"
   },
@@ -85,5 +88,11 @@
   },
   "allowExtensionToControlAutoFillDetail": {
     "message": "Om te voorkomen dat de automatische invulfunctie van Chrome botst met iCloud-wachtwoorden, kan iCloud-wachtwoorden proberen om namens jou de automatische invulfunctie van de browser uit te schakelen."
+  },
+  "divTOTPTitle": {
+    "message": "Verificatiecode configureren voor:"
+  },
+  "divTOTPMenu": {
+    "message": "Verificatiecode configureren"
   }
 }

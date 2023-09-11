@@ -9,7 +9,7 @@
     "message": "Last ned iCloud for Windows for å bruke iCloud-passord."
   },
   "extDescription": {
-    "message": "Med iCloud-passord kan du fylle ut passord og verifiseringskoder som er opprettet i Safari og apper på iPhone, iPad og Mac, på nettsteder i Chrome."
+    "message": "Bruk iCloud-passord til å fylle ut passord opprettet i Safari og apper på iPhone, iPad og Mac, på nettsteder i Chrome."
   },
   "extName": {
     "message": "iCloud-passord"
@@ -21,7 +21,7 @@
     "message": "Aktiver Passord i iCloud for Windows for å bruke iCloud-passord med Chrome."
   },
   "unsupportedOS": {
-    "message": "Dette tillegget er laget for bruk med Windows 10. Hvis du bruker en Mac, vil passordene dine automatisk synkroniseres med iPhone, iPad og Mac når du logger på iCloud."
+    "message": "Dette tillegget er laget for bruk med Windows 10 og nyere. Hvis du bruker en Mac, vil passordene dine automatisk synkroniseres med din iPhone, iPad og Mac når du logger på iCloud."
   },
   "divPINTitle": {
     "message": "Aktiver autoutfylling av passord"
@@ -36,7 +36,7 @@
     "message": "Passordene dine synkroniseres med iCloud-nøkkelring"
   },
   "divNoPasswordsMessage": {
-    "message": "Du kan vise og redigere lagrede passord i iCloud-passordhåndterer-appen."
+    "message": "Du kan vise og endre lagrede passord i iCloud-passord-appen."
   },
   "divDoNotRememberTitle": {
     "message": "Du har tidligere angitt at passord aldri skal lagres for dette nettstedet."
@@ -62,6 +62,9 @@
   "totpVerificationCodeNameWithDomain": {
     "message": "Verifiseringskode for «$1»"
   },
+  "setupTOTPVerificationCodeNameWithDomain": {
+    "message": "Konfigurer verifiseringskode for «$1»"
+  },
   "totpVerificationCodeName": {
     "message": "Verifiseringskode"
   },
@@ -85,5 +88,11 @@
   },
   "allowExtensionToControlAutoFillDetail": {
     "message": "iCloud-passord kan prøve å slå av Chrome sine autoutfyllingsinnstillinger for å hindre konflikt med iCloud-passord."
+  },
+  "divTOTPTitle": {
+    "message": "Konfigurer verifiseringskode for:"
+  },
+  "divTOTPMenu": {
+    "message": "Konfigurer verifiseringskode"
   }
 }

@@ -9,7 +9,7 @@
     "message": "Muat turun iCloud untuk Windows bagi menggunakan Kata Laluan iCloud."
   },
   "extDescription": {
-    "message": "Kata Laluan iCloud isi kata laluan dan kod pengesahan dicipta dalam Safari dan app pada iPhone, iPad dan Mac ke dalam tapak web Chrome."
+    "message": "Kata Laluan iCloud membolehkan anda mengisi kata laluan yang dicipta dalam Safari dan app pada iPhone, iPad dan Mac ke dalam tapak web dalam Chrome."
   },
   "extName": {
     "message": "Kata Laluan iCloud"
@@ -21,7 +21,7 @@
     "message": "Dayakan Kata Laluan dalam iCloud untuk Windows bagi menggunakan Kata Laluan iCloud dengan Chrome."
   },
   "unsupportedOS": {
-    "message": "Sambungan ini direka bentuk untuk dijalankan pada Windows 10. Jika anda menggunakan Mac, kata laluan anda akan diselaraskan secara automatik dengan iPhone, iPad dan Mac anda apabila anda mendaftar masuk ke iCloud."
+    "message": "Sambungan ini direka bentuk untuk dijalankan pada Windows 10 atau lebih baharu. Jika anda menggunakan Mac, kata laluan anda akan diselaraskan secara automatik dengan iPhone, iPad dan Mac anda apabila anda mendaftar masuk ke iCloud."
   },
   "divPINTitle": {
     "message": "Dayakan Isi Auto Kata Laluan"
@@ -36,7 +36,7 @@
     "message": "Kata laluan anda diselaraskan dengan Rantai Kunci iCloud"
   },
   "divNoPasswordsMessage": {
-    "message": "Anda boleh melihat dan mengedit kata laluan disimpan dalam app Pengurus Kata Laluan iCloud."
+    "message": "Anda boleh melihat dan mengedit kata laluan yang disimpan dalam app Kata Laluan iCloud."
   },
   "divDoNotRememberTitle": {
     "message": "Anda sebelum ini menandakan untuk jangan menyimpan kata laluan bagi tapak web ini."
@@ -62,6 +62,9 @@
   "totpVerificationCodeNameWithDomain": {
     "message": "Kod pengesahan untuk “$1”"
   },
+  "setupTOTPVerificationCodeNameWithDomain": {
+    "message": "Sediakan kod pengesahan untuk “$1”"
+  },
   "totpVerificationCodeName": {
     "message": "Kod pengesahan"
   },
@@ -85,5 +88,11 @@
   },
   "allowExtensionToControlAutoFillDetail": {
     "message": "Untuk menghalang Isi Auto dalam halaman Chrome daripada mengganggu Kata Laluan iCloud, Kata Laluan iCloud boleh mencuba untuk menyahaktifkan seting Isi Auto pelayar bagi pihak anda."
+  },
+  "divTOTPTitle": {
+    "message": "Sediakan kod pengesahan untuk:"
+  },
+  "divTOTPMenu": {
+    "message": "Sediakan Kod Pengesahan"
   }
 }

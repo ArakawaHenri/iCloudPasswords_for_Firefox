@@ -9,7 +9,7 @@
     "message": "Pokud chcete používat Hesla na iCloudu, stáhněte si iCloud pro Windows."
   },
   "extDescription": {
-    "message": "Rozšíření Hesla na iCloudu umožňuje vyplnit hesla a ověřovací kódy vytvořené v Safari a aplikacích na iPhonu, iPadu a Macu do webových stránek v Chromu."
+    "message": "Hesla na iCloudu umožňují vyplnit hesla vytvořená v Safari a aplikacích na iPhonu, iPadu a Macu do webových stránek v Chromu."
   },
   "extName": {
     "message": "Hesla na iCloudu"
@@ -21,7 +21,7 @@
     "message": "Chcete‑li v Chromu používat rozšíření Hesla na iCloudu, zapněte v aplikaci iCloud pro Windows funkci Hesla."
   },
   "unsupportedOS": {
-    "message": "Toto rozšíření je určeno pro systém Windows 10. Pokud používáte Mac, vaše hesla se budou automaticky synchronizovat s vaším iPhonem, iPadem a Macem, kdykoli se přihlásíte k iCloudu."
+    "message": "Toto rozšíření je určené pro systém Windows 10 nebo novější. Pokud používáte Mac, vaše hesla se budou automaticky synchronizovat s iPhonem, iPadem a Macem, když se přihlásíte na iCloud."
   },
   "divPINTitle": {
     "message": "Zapnutí automatického vyplňování hesel"
@@ -36,7 +36,7 @@
     "message": "Vaše hesla se synchronizují s Klíčenkou na iCloudu"
   },
   "divNoPasswordsMessage": {
-    "message": "Uložená hesla si můžete zobrazit a upravit v aplikaci Správce hesel na iCloudu."
+    "message": "Uložená hesla si můžete prohlížet a upravovat v aplikaci Hesla na iCloudu."
   },
   "divDoNotRememberTitle": {
     "message": "Pro tuto webovou stránku jste ukládání hesel zakázali."
@@ -62,6 +62,9 @@
   "totpVerificationCodeNameWithDomain": {
     "message": "Ověřovací kód pro doménu „$1“"
   },
+  "setupTOTPVerificationCodeNameWithDomain": {
+    "message": "Nastavit ověřovací kód pro „$1“"
+  },
   "totpVerificationCodeName": {
     "message": "Ověřovací kód"
   },
@@ -85,5 +88,11 @@
   },
   "allowExtensionToControlAutoFillDetail": {
     "message": "Rozšíření Hesla na iCloudu se může pokusit vypnout nastavení automatického vyplňování formulářů na stránkách v Chromu, aby tato funkce prohlížeče nezasahovala do činnosti rozšíření."
+  },
+  "divTOTPTitle": {
+    "message": "Nastavit ověřovací kód pro:"
+  },
+  "divTOTPMenu": {
+    "message": "Nastavit ověřovací kód"
   }
 }

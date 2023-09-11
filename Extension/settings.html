@@ -1,36 +1,35 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-        <title>iCloud Passwords Settings</title>
-        <link rel="shortcut icon" type="image/png" href="images/PasswordsExtensionIcon_32.png">
-        <link rel="preload stylesheet" as="style" href="settings.css">
-        <link rel="preload stylesheet" as="style" href="settings_browser_overrides.css">
-    </head>
-    <body>
-        <section class="settings">
-            <ul>
-                <li class="setting">
-                    <input id="enable-inpage-autofill-checkbox" type="checkbox">
-                    <label class="localizedElement"
-                           for="enable-inpage-autofill-checkbox"
-                           data-localized-message="enableInPageAutoFillCheckboxLabel"></label>
-                    <footer class="localizedElement"
-                            data-localized-message="enableInPageAutoFillCheckboxDetail"
-                            id="completion-list-autofill-settings-footer"></footer>
-                </li>
-                <li class="setting">
-                    <input id="allow-extention-to-control-autofill-checkbox" type="checkbox">
-                    <label class="localizedElement"
-                           for="allow-extention-to-control-autofill-checkbox"
-                           data-localized-message="allowExtensionToControlAutoFillLabel"></label>
-                    <footer class="localizedElement"
-                            data-localized-message="allowExtensionToControlAutoFillDetail"
-                            id="allow-extention-to-control-autofill-footer"></footer>
-                </li>
-            </ul>
-        </section>
-        <!-- <script src="utils.js"></script> -->
-        <script src="settings.js"></script>
-    </body>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>iCloud Passwords Settings</title>
+    <link rel="shortcut icon" type="image/png" href="images/PasswordsExtensionIcon_32.png">
+    <link rel="preload stylesheet" as="style" href="settings.css">
+    <link rel="preload stylesheet" as="style" href="settings_browser_overrides.css">
+</head>
+
+<body>
+    <section class="settings">
+        <ul>
+            <li class="setting">
+                <input id="enable-inpage-autofill-checkbox" type="checkbox">
+                <label class="localizedElement" for="enable-inpage-autofill-checkbox"
+                    data-localized-message="enableInPageAutoFillCheckboxLabel"></label>
+                <footer class="localizedElement" data-localized-message="enableInPageAutoFillCheckboxDetail"
+                    id="completion-list-autofill-settings-footer"></footer>
+            </li>
+            <li class="setting">
+                <input id="allow-extention-to-control-autofill-checkbox" type="checkbox">
+                <label class="localizedElement" for="allow-extention-to-control-autofill-checkbox"
+                    data-localized-message="allowExtensionToControlAutoFillLabel"></label>
+                <footer class="localizedElement" data-localized-message="allowExtensionToControlAutoFillDetail"
+                    id="allow-extention-to-control-autofill-footer"></footer>
+            </li>
+        </ul>
+    </section>
+    <!-- <script src="utils.js"></script> -->
+    <script src="settings.js"></script>
+</body>
+
 </html>

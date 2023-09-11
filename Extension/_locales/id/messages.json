@@ -9,7 +9,7 @@
     "message": "Unduh iCloud untuk Windows untuk menggunakan Kata Sandi iCloud."
   },
   "extDescription": {
-    "message": "Kata Sandi iCloud memungkinkan Anda untuk mengisikan kata sandi dan kode verifikasi yang dibuat di Safari dan app di iPhone, iPad, dan Mac ke situs web di Chrome."
+    "message": "Kata Sandi iCloud memungkinkan Anda untuk mengisikan kata sandi yang dibuat di Safari dan app di iPhone, iPad, dan Mac ke situs web di Chrome."
   },
   "extName": {
     "message": "Kata Sandi iCloud"
@@ -18,10 +18,10 @@
     "message": "Buka iCloud untuk Windows"
   },
   "CheckEngineMessage": {
-    "message": "Aktifkan Kata Sandi di iCloud untuk Windows untuk menggunakan Kata Sandi iCloud dengan Chrome."
+    "message": "Aktifkan Kata Sandi di iCloud untuk Windows untuk memakai Kata Sandi iCloud di Chrome."
   },
   "unsupportedOS": {
-    "message": "Ekstensi ini dirancang untuk dijalankan di Windows 10. Jika Anda menggunakan Mac, kata sandi Anda akan diselaraskan secara otomatis dengan iPhone, iPad, dan Mac Anda saat masuk ke iCloud."
+    "message": "Ekstensi ini dirancang untuk dijalankan di Windows 10 atau lebih baru. Jika Anda menggunakan Mac, kata sandi Anda akan diselaraskan secara otomatis dengan iPhone, iPad, dan Mac Anda saat Anda masuk ke iCloud."
   },
   "divPINTitle": {
     "message": "Aktifkan Isi-Auto Kata Sandi"
@@ -36,7 +36,7 @@
     "message": "Kata sandi Anda diselaraskan dengan Rantai Kunci iCloud"
   },
   "divNoPasswordsMessage": {
-    "message": "Anda dapat melihat dan mengedit kata sandi yang disimpan di app Pengelola Kata Sandi iCloud."
+    "message": "Anda dapat melihat dan mengedit kata sandi yang disimpan di app Kata Sandi iCloud."
   },
   "divDoNotRememberTitle": {
     "message": "Sebelumnya Anda meminta agar jangan pernah menyimpan kata sandi untuk situs web ini."
@@ -62,6 +62,9 @@
   "totpVerificationCodeNameWithDomain": {
     "message": "Kode verifikasi untuk “$1”"
   },
+  "setupTOTPVerificationCodeNameWithDomain": {
+    "message": "Atur kode verifikasi untuk “$1”"
+  },
   "totpVerificationCodeName": {
     "message": "Kode Verifikasi"
   },
@@ -85,5 +88,11 @@
   },
   "allowExtensionToControlAutoFillDetail": {
     "message": "Untuk mencegah Isi-Auto di halaman Chrome agar tidak mengganggu Kata Sandi iCloud, Kata Sandi iCloud dapat mencoba mematikan pengaturan Isi-Auto browser atas nama Anda."
+  },
+  "divTOTPTitle": {
+    "message": "Atur kode verifikasi untuk:"
+  },
+  "divTOTPMenu": {
+    "message": "Atur Kode Verifikasi"
   }
 }

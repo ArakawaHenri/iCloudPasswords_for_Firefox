@@ -18,24 +18,39 @@ function humanReadableFormType(e) {
     case WBSAutoFillFormTypeNewAccount:
       return "NewAccount";
     case WBSAutoFillFormTypeChangePassword:
-      return "ChangePassword"
+      return "ChangePassword";
+    case WBSAutoFillFormTypeFoundTOTPURI:
+      return "FoundTOTPUri"
   }
   return "Unrecognized"
 }
 
 function domainsForDisplayFromUsernamesAndDomains(e, t) {
   const n = e.length;
-  let o = t.map((function (e) {
+  let s = t.map((function (e) {
     return e.replace(/^(www|m)\./, "")
   })),
-    s = [];
-  for (var i = 0; i < n; i++) s.push([e[i], o[i]]);
+    o = [];
+  for (var i = 0; i < n; i++) o.push([e[i], s[i]]);
   for (i = 0; i < n; i++) {
     let e = [];
-    for (var a = i + 1; a < n; a++) s[i].join("\n") === s[a].join("\n") && (e.length || e.push(i), e.push(a));
-    for (identicalIndex of e) o[identicalIndex] = t[identicalIndex]
+    for (var a = i + 1; a < n; a++) o[i].join("\n") === o[a].join("\n") && (e.length || e.push(i), e.push(a));
+    for (identicalIndex of e) s[identicalIndex] = t[identicalIndex]
   }
-  return o
+  return s
+}
+
+function urlIsBrowserURL(e) {
+  const t = e.protocol;
+  return "chrome:" === t || "edge:" === t || "about:" == t
+}
+
+function capabilitiesDeclaresMacOS(e) {
+  try {
+    return "macos" === e.operatingSystem.name
+  } catch {
+    return !1
+  }
 }
 class Localizer {
   static configureDocumentElementForLanguage(e, t) {
@@ -48,15 +63,15 @@ class Localizer {
   }
   constructor(e) { }
   getMessage(e, t, n) {
-    const o = this.messageNamesToTry(e);
-    for (let e of o) {
-      let o;
+    const s = this.messageNamesToTry(e);
+    for (let e of s) {
+      let s;
       try {
-        o = chrome.i18n.getMessage(e, t, n)
+        s = chrome.i18n.getMessage(e, t, n)
       } catch {
-        o = chrome.i18n.getMessage(e, t)
+        s = chrome.i18n.getMessage(e, t)
       }
-      if (o) return o
+      if (s) return s
     }
     return ""
   }
@@ -71,7 +86,7 @@ class ExtensionSettings {
   #n = !0;
   eventTarget = new EventTarget;
   constructor(e = !1) {
-    this.#e = e, this.#o(), this.#s()
+    this.#e = e, this.#s(), this.#o()
   }
   get enableInPageAutoFill() {
     return this.#t
@@ -94,7 +109,7 @@ class ExtensionSettings {
   clearControlOfBrowserAutoFillSettings() {
     return this.#e ? Promise.reject(new Error("This Settings instance does not allow writing browser settings")) : Promise.allSettled([this.#d(chrome.privacy.services.passwordSavingEnabled), this.#d(chrome.privacy.services.autofillCreditCardEnabled), this.#d(chrome.privacy.services.autofillAddressEnabled)]).then((e => (this.#l(), e)))
   }
-  #o() {
+  #s() {
     let e = new Promise((e => {
       chrome.storage.sync.get({
         enableInPageAutoFill: !0,
@@ -115,7 +130,7 @@ class ExtensionSettings {
       }))
     })).then(this.#l.bind(this))
   }
-  #s() {
+  #o() {
     this.#e || (chrome.privacy.services.passwordSavingEnabled && chrome.privacy.services.passwordSavingEnabled.onChange.addListener((e => {
       this.#l()
     })), chrome.privacy.services.autofillCreditCardEnabled && chrome.privacy.services.autofillCreditCardEnabled.onChange.addListener((e => {
@@ -136,11 +151,11 @@ class ExtensionSettings {
     return this.#g(e).then((n => n ? n.value === t ? {
       details: n,
       newValue: t
-    } : new Promise(((o, s) => {
+    } : new Promise(((s, o) => {
       e.set({
         value: t
       }, (() => {
-        chrome.runtime.lastError && (chrome.runtime.lastError, chrome.runtime.lastError, s(chrome.runtime.lastError)), o({
+        chrome.runtime.lastError && (chrome.runtime.lastError, chrome.runtime.lastError, o(chrome.runtime.lastError)), s({
           details: n,
           newValue: t
         })
@@ -190,8 +205,9 @@ const ContextState = {
   WBSAutoFillFormTypeNonAutoFillable = 2,
   WBSAutoFillFormTypeAutoFillableLogin = 3,
   WBSAutoFillFormTypeNewAccount = 4,
-  WBSAutoFillFormTypeChangePassword = 5;
-let g_presetUserName, g_theRememberICSelection, g_tabId, g_frameId, g_username, g_LoginNames = [],
+  WBSAutoFillFormTypeChangePassword = 5,
+  WBSAutoFillFormTypeFoundTOTPURI = 6;
+let g_presetUserName, g_theRememberICSelection, g_tabId, g_frameId, g_pageURL, g_username, g_LoginNames = [],
   g_HLDs = [],
   g_arrDates = [],
   g_canFillOneTimeCodes = !1,
@@ -204,6 +220,7 @@ const RequestDataState = {
 };
 let g_requestOneTimeCodesState = RequestDataState.DoNotRequest,
   g_requestLoginsState = RequestDataState.DoNotRequest,
+  g_capabilities = null,
   g_localizer = new Localizer;
 
 function listItemMouseOverHandler(e) {
@@ -229,64 +246,64 @@ function listItemIsInView(e) {
 function keyHandler(e) {
   let t = document.querySelector("li.active"),
     n = e.key,
-    o = t ? t.previousElementSibling : null,
-    s = t ? t.nextElementSibling : null;
+    s = t ? t.previousElementSibling : null,
+    o = t ? t.nextElementSibling : null;
   switch (n) {
     case "ArrowUp":
       if (!t) break;
-      return e.preventDefault && e.preventDefault(), t.classList.remove("active"), o && (o.classList.add("active"), listItemIsInView(o) || o.scrollIntoView(!0)), !1;
+      return e.preventDefault && e.preventDefault(), t.classList.remove("active"), s && (s.classList.add("active"), listItemIsInView(s) || s.scrollIntoView(!0)), !1;
     case "ArrowDown":
       if (e.preventDefault && e.preventDefault(), !t) {
-        let e = document.querySelector("li");
+        let e = document.querySelector("li.selectable");
         return e && (e.classList.add("active"), listItemIsInView(e) || e.scrollIntoView(!0)), !1
       }
-      return s && (t.classList.remove("active"), s.classList.add("active"), listItemIsInView(s) || s.scrollIntoView(!1)), !1;
+      return o && (t.classList.remove("active"), o.classList.add("active"), listItemIsInView(o) || o.scrollIntoView(!1)), !1;
     case "Enter":
       if (t) return e.preventDefault && e.preventDefault(), t.click(), !1
   }
 }
 
-function showChoices(e, t, n, o, s, i, a, r, l) {
-  let d = document.getElementById("credentialList"),
-    g = document.querySelector("li.active");
-  clearCredentialListContents(), addOneTimeCodeItemsToCompletionList(l, d, g);
-  const c = function () {
-    const e = /(.*)@/.exec(r);
+function showChoices(e, t, n, s, o, i, a, r, l, d, g) {
+  let c = document.getElementById("credentialList"),
+    u = document.querySelector("li.active");
+  clearCredentialListContents(), addOneTimeCodeItemsToCompletionList(d, c, u);
+  const m = function () {
+    const e = /(.*)@/.exec(l);
     return e ? e[1] : null
   }(),
-    u = domainsForDisplayFromUsernamesAndDomains(s, i),
-    m = s.length;
-  let h = [],
-    p = [];
-  for (var S = 0; S < m; S++) {
-    let a = i[S],
-      l = s[S],
-      d = u[S];
-    const g = l.toLowerCase().startsWith(r.toLowerCase()),
-      m = g || l.toLowerCase().startsWith(c ? c.toLowerCase() : null);
-    if (!g && !m) continue;
-    let C = newCredentialListItem();
-    e && e === l && C.classList.add("haspresetusername");
-    let f = "";
-    isStringEmpty(l) ? f += `<div style="float: left"><p class="name no-user-name">${g_localizer.getMessage("NoUserName")}</p>` : f += `<div style="float: left"><p class="name">${l}</p>`, f += `<br><p class="website">${d}</p></div>`, C.innerHTML += f, C.addEventListener("click", (function () {
+    h = domainsForDisplayFromUsernamesAndDomains(i, a),
+    p = i.length;
+  let C = [],
+    S = [];
+  for (var f = 0; f < p; f++) {
+    let o = a[f],
+      r = i[f],
+      d = h[f];
+    const g = r.toLowerCase().startsWith(l.toLowerCase()),
+      c = g || r.toLowerCase().startsWith(m ? m.toLowerCase() : null);
+    if (!g && !c) continue;
+    let u = newCredentialListItem();
+    e && e === r && u.classList.add("haspresetusername");
+    let p = "";
+    isStringEmpty(r) ? p += `<div style="float: left"><p class="name no-user-name">${g_localizer.getMessage("NoUserName")}</p>` : p += `<div style="float: left"><p class="name">${r}</p>`, p += `<br><p class="website">${d}</p></div>`, u.innerHTML += p, u.addEventListener("click", (function () {
       g_portToBackgroundPage.postMessage({
         from: "completionList",
         subject: "fillLoginIntoForm",
         theRememberICSelection: t,
         tabId: n,
-        frameId: o,
-        theLogin: l,
-        theURL: a
+        frameId: s,
+        theLogin: r,
+        theURL: o
       })
-    })), g ? h.push(C) : m && p.push(C)
+    })), g ? C.push(u) : c && S.push(u)
   }
-  for (const e of h) d.appendChild(e);
-  for (const e of p) d.appendChild(e);
-  if (d.children.length || !r.length) {
-    const e = !d.children.length;
-    d.appendChild(newPasswordsButtonListItem(e))
+  for (const e of C) c.appendChild(e);
+  for (const e of S) c.appendChild(e);
+  if (c.children.length || !l.length) {
+    const e = !c.children.length;
+    c.appendChild(newOpenPasswordManagerButtonListItem(e))
   }
-  g && d.children.length && d.children[0].classList.add("active"), 1 === d.children.length ? document.body.style.overflowY = "hidden" : document.body.style.overflowY = "initial", platformScrollbarWidth() > 0 && document.body.classList.add("visibleScroller"), resizeCompletionList(calculateFittingSizeOfCompletionList(d))
+  u && c.children.length && !g && c.children[0].classList.add("active"), 1 === c.children.length ? document.body.style.overflowY = "hidden" : document.body.style.overflowY = "initial", platformScrollbarWidth() > 0 && document.body.classList.add("visibleScroller"), c.children.length > 0 && c.insertBefore(iCloudPasswordsListItem(), c.children[0]), resizeCompletionList(calculateFittingSizeOfCompletionList(c))
 }
 
 function addOneTimeCodeItemsToCompletionList(e, t, n) {
@@ -295,9 +312,9 @@ function addOneTimeCodeItemsToCompletionList(e, t, n) {
     if ("totp" === n.source) {
       let t = n.domain ? g_localizer.getMessage("totpVerificationCodeNameWithDomain", [n.domain]) : g_localizer.getMessage("totpVerificationCodeName");
       e.innerHTML += `<p class="name">${t}</p>`;
-      let o = n.username,
-        s = o || n.code;
-      e.innerHTML += `<br><p class="website">${s}</p>`
+      let s = n.username,
+        o = s || n.code;
+      e.innerHTML += `<br><p class="website">${o}</p>`
     }
     e.addEventListener("click", (() => {
       g_portToBackgroundPage.postMessage({
@@ -311,7 +328,7 @@ function addOneTimeCodeItemsToCompletionList(e, t, n) {
 }
 
 function populateCompletionListWithCachedContentIfReady() {
-  g_requestOneTimeCodesState !== RequestDataState.WillOrAreRequesting && g_requestLoginsState !== RequestDataState.WillOrAreRequesting && showChoices(g_presetUserName, g_theRememberICSelection, g_tabId, g_frameId, g_LoginNames, g_HLDs, g_arrDates, g_username, g_oneTimeCodes)
+  g_requestOneTimeCodesState !== RequestDataState.WillOrAreRequesting && g_requestLoginsState !== RequestDataState.WillOrAreRequesting && showChoices(g_presetUserName, g_theRememberICSelection, g_tabId, g_frameId, g_pageURL, g_LoginNames, g_HLDs, g_arrDates, g_username, g_oneTimeCodes, !1)
 }
 
 function gotOneTimeCodeChoices(e) {
@@ -345,12 +362,12 @@ function calculateFittingSizeOfCompletionList(e) {
   }
   e.classList.remove("inline");
   let n = e.offsetHeight,
-    o = 0;
+    s = 0;
   if (e.children.length > 5) {
-    n = 4.5 * parseFloat(e.children[0].getBoundingClientRect().height), o = scrollbarWidth()
+    n = parseFloat(e.children[0].getBoundingClientRect().height) + 4.5 * parseFloat(e.children[1].getBoundingClientRect().height), s = scrollbarWidth()
   }
   return {
-    width: Math.max(t + o, 200),
+    width: Math.max(t + s, 200),
     height: n
   }
 }
@@ -365,15 +382,14 @@ function resizeCompletionList(e) {
   })
 }
 
-function UpdateUserContents(e, t, n, o, s, i) {
+function UpdateUserContents(e, t, n, s, o, i) {
   switch (clearCredentialListContents(), e) {
     case RememberIC.UnknownPage:
-    case RememberIC.RememberLoginAndPassword:
-      {
-        g_theRememberICSelection = e, g_tabId = t, g_frameId = n, g_LoginNames = o, g_HLDs = s, g_arrDates = i;
-        const a = new URLSearchParams(document.location.search).get("username");
-        g_username = a, g_requestLoginsState = RequestDataState.RequestReturnedData, populateCompletionListWithCachedContentIfReady(), divICs.style.display = "block"
-      }
+    case RememberIC.RememberLoginAndPassword: {
+      g_theRememberICSelection = e, g_tabId = t, g_frameId = n, g_LoginNames = s, g_HLDs = o, g_arrDates = i;
+      const a = new URLSearchParams(document.location.search).get("username");
+      g_username = a, g_requestLoginsState = RequestDataState.RequestReturnedData, populateCompletionListWithCachedContentIfReady(), divICs.style.display = "block"
+    }
   }
 }
 
@@ -382,15 +398,25 @@ function newCredentialListItem() {
   return e.classList.add("selectable"), e.classList.add("credential"), e.onmouseover = listItemMouseOverHandler, e.onmouseout = listItemMouseOutHandler, e.innerHTML = '<img src="images/key.svg"/>', e
 }
 
-function newPasswordsButtonListItem(e) {
-  let t = document.createElement("li");
-  return t.classList.add("selectable"), t.classList.add("open-password-manager"), t.onmouseover = listItemMouseOverHandler, t.onmouseout = listItemMouseOutHandler, t.innerHTML = e ? `<span><p class="title">${g_localizer.getMessage("divOpenPasswords")}</p><p class="subtitle">${g_localizer.getMessage("divOpenPasswordsSubtitle")}</p></span>` : `<span>${g_localizer.getMessage("divOpenPasswords")}</span>`, t.addEventListener("click", (function () {
+function selectableAndHoverableListItem() {
+  let e = document.createElement("li");
+  return e.classList.add("selectable"), e.onmouseover = listItemMouseOverHandler, e.onmouseout = listItemMouseOutHandler, e
+}
+
+function newOpenPasswordManagerButtonListItem(e) {
+  let t = selectableAndHoverableListItem();
+  return t.classList.add("open-password-manager"), t.innerHTML = e ? `<span><p class="title">${g_localizer.getMessage("divOpenPasswords")}</p><p class="subtitle">${g_localizer.getMessage("divOpenPasswordsSubtitle")}</p></span>` : `<span>${g_localizer.getMessage("divOpenPasswords")}</span>`, t.addEventListener("click", (function () {
     g_portToBackgroundPage.postMessage({
       tabId: g_tabId,
       frameId: g_frameId,
       subject: "openPasswordManagerAndDismissCompletionList"
     })
   })), t
+}
+
+function iCloudPasswordsListItem() {
+  let e = document.createElement("li");
+  return e.classList.add("iCloudPasswords"), e.innerHTML = `<span><img src="images/PasswordsToolbar_icon32.png" class="fromiCloudPasswordsMenuIcon">${g_localizer.getMessage("extName")}</span>`, e
 }
 
 function clearCredentialListContents() {
@@ -411,8 +437,8 @@ function updateCompletionList(e, t, n) {
     })
   }
   g_requestOneTimeCodesState = RequestDataState.DoNotRequest, g_requestLoginsState = RequestDataState.DoNotRequest;
-  let o = n ? n.AutoFillFormType : WBSAutoFillFormTypeUndetermined;
-  switch (g_canFillOneTimeCodes && t && t.ControlLooksLikeOneTimeCodeField && (g_requestOneTimeCodesState = RequestDataState.WillOrAreRequesting), o) {
+  let s = n ? n.AutoFillFormType : WBSAutoFillFormTypeUndetermined;
+  switch (g_canFillOneTimeCodes && t && t.ControlLooksLikeOneTimeCodeField && (g_requestOneTimeCodesState = RequestDataState.WillOrAreRequesting), s) {
     case WBSAutoFillFormTypeAutoFillableLogin:
       g_requestLoginsState = RequestDataState.WillOrAreRequesting;
       break;
@@ -422,7 +448,7 @@ function updateCompletionList(e, t, n) {
         g_requestLoginsState = RequestDataState.WillOrAreRequesting;
         break
       }
-      if (t.ControlUniqueID === n.PasswordElementUniqueID || t.ControlUniqueID === n.ConfirmPasswordElementUniqueID) return void showChoices(g_presetUserName, g_theRememberICSelection, g_tabId, g_frameId, [], [], [], "", []);
+      if (t.ControlUniqueID === n.PasswordElementUniqueID || t.ControlUniqueID === n.ConfirmPasswordElementUniqueID) return void showChoices(g_presetUserName, g_theRememberICSelection, g_tabId, g_frameId, g_pageURL, [], [], [], "", [], !0);
     default:
       (t.ControlIsSecureTextField || t.ControlClaimsToBeUsernameViaAutocompleteAttribute || t.ControlIsLabeledUsernameField) && (g_hostname, g_requestLoginsState = RequestDataState.WillOrAreRequesting)
   }
@@ -444,10 +470,10 @@ document.documentElement.addEventListener("keydown", keyHandler), window.onload 
   }), g_portToBackgroundPage.onMessage.addListener((function (e) {
     switch (e.subject) {
       case "hello":
-        g_localizer = new Localizer(e.capabilities);
+        g_capabilities = e.capabilities, g_localizer = new Localizer(e.capabilities);
         break;
       case "replyForGetContextAndMetadataFromContent":
-        g_tabId = e.tabId, g_frameId = e.frameId, g_hostname = e.hostname, g_presetUserName = e.presetUserName, g_canFillOneTimeCodes = e.canFillOneTimeCodes;
+        g_tabId = e.tabId, g_frameId = e.frameId, g_pageURL = e.url, g_hostname = e.hostname, g_presetUserName = e.presetUserName, g_canFillOneTimeCodes = e.canFillOneTimeCodes;
         updateCompletionList(e.state, e.textFieldMetadata, e.formMetadata);
         break;
       case "users":
@@ -476,7 +502,7 @@ document.documentElement.addEventListener("keydown", keyHandler), window.onload 
           });
           break
         }
-        showChoices(g_presetUserName, g_theRememberICSelection, g_tabId, g_frameId, g_LoginNames, g_HLDs, g_arrDates, e.username, g_oneTimeCodes)
+        showChoices(g_presetUserName, g_theRememberICSelection, g_tabId, g_frameId, g_pageURL, g_LoginNames, g_HLDs, g_arrDates, e.username, g_oneTimeCodes, !1)
     }
   })), g_portToBackgroundPage.postMessage({
     subject: "getContextAndMetadataFromContent"

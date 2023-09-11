@@ -9,7 +9,7 @@
     "message": "Descarga iCloud para Windows para utilizar la extensión de contraseñas en iCloud."
   },
   "extDescription": {
-    "message": "Contraseñas en iCloud te permite rellenar en sitios web en Chrome contraseñas y códigos de verificación que se hayan creado en Safari y en apps de iPhone, iPad y Mac."
+    "message": "Contraseñas de iCloud te permite rellenar las contraseñas creadas en Safari y en apps del iPhone, iPad y Mac en sitios web en Chrome."
   },
   "extName": {
     "message": "Contraseñas en iCloud"
@@ -21,7 +21,7 @@
     "message": "Activa la opción Contraseñas en iCloud para Windows para usar la extensión de contraseñas en iCloud con Chrome."
   },
   "unsupportedOS": {
-    "message": "Esta extensión está pensada para usarla en Windows 10. Si utilizas un Mac, tus contraseñas se sincronizarán automáticamente con el iPhone, el iPad y el Mac al iniciar sesión en iCloud."
+    "message": "Esta extensión se ha diseñado para ejecutarse en Windows 10 o posterior. Si estás usando un Mac, tus contraseñas se sincronizarán automáticamente con el iPhone, el iPad y el Mac cuando inicias sesión en iCloud."
   },
   "divPINTitle": {
     "message": "Activa el autorrelleno de contraseñas"
@@ -36,7 +36,7 @@
     "message": "Tus contraseñas se han sincronizado con el llavero de iCloud."
   },
   "divNoPasswordsMessage": {
-    "message": "Puedes ver y editar las contraseñas guardadas en la app Gestor de Contraseñas en iCloud."
+    "message": "Puedes ver y editar las contraseñas guardadas en la app Contraseñas de iCloud."
   },
   "divDoNotRememberTitle": {
     "message": "Anteriormente has indicado que nunca se guarden contraseñas para este sitio web."
@@ -62,6 +62,9 @@
   "totpVerificationCodeNameWithDomain": {
     "message": "Código de verificación para “$1”"
   },
+  "setupTOTPVerificationCodeNameWithDomain": {
+    "message": "Configurar código de verificación para “$1”"
+  },
   "totpVerificationCodeName": {
     "message": "Código de verificación"
   },
@@ -85,5 +88,11 @@
   },
   "allowExtensionToControlAutoFillDetail": {
     "message": "Para evitar que la función de autorrelleno de Chrome interfiera con Contraseñas en iCloud, la extensión puede intentar desactivar por ti los ajustes de autorrelleno del navegador."
+  },
+  "divTOTPTitle": {
+    "message": "Configurar código de verificación para:"
+  },
+  "divTOTPMenu": {
+    "message": "Configurar código de verificación"
   }
 }

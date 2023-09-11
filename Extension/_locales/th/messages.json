@@ -9,7 +9,7 @@
     "message": "ดาวน์โหลด iCloud สำหรับ Windows เพื่อใช้รหัสผ่าน iCloud"
   },
   "extDescription": {
-    "message": "รหัสผ่าน iCloud ช่วยให้คุณสามารถป้อนรหัสผ่านและรหัสการตรวจสอบยืนยันที่สร้างขึ้นใน Safari และแอปบน iPhone, iPad และ Mac ลงในเว็บไซต์ใน Chrome ได้"
+    "message": "รหัสผ่าน iCloud ช่วยให้คุณสามารถป้อนรหัสผ่านที่สร้างใน Safari และแอปบน iPhone, iPad และ Mac ลงในเว็บไซต์ใน Chrome ได้"
   },
   "extName": {
     "message": "รหัสผ่าน iCloud"
@@ -21,7 +21,7 @@
     "message": "เปิดใช้งานรหัสผ่านบน iCloud สำหรับ Windows เพื่อใช้รหัสผ่าน iCloud กับ Chrome"
   },
   "unsupportedOS": {
-    "message": "ส่วนขยายนี้ออกแบบมาเพื่อทำงานบน Windows 10 ถ้าคุณกำลังใช้ Mac อยู่ รหัสผ่านของคุณจะเชื่อมข้อมูลกับ iPhone, iPad และ Mac ของคุณโดยอัตโนมัติเมื่อคุณลงชื่อเข้า iCloud"
+    "message": "ส่วนขยายนี้ออกแบบมาเพื่อให้ทำงานบน Windows 10 ขึ้นไป ถ้าคุณกำลังใช้ Mac รหัสผ่านของคุณจะเชื่อมข้อมูลกับ iPhone, iPad และ Mac ของคุณโดยอัตโนมัติเมื่อคุณลงชื่อเข้า iCloud"
   },
   "divPINTitle": {
     "message": "เปิดใช้งานการป้อนรหัสผ่านโดยอัตโนมัติ"
@@ -36,7 +36,7 @@
     "message": "รหัสผ่านของคุณเชื่อมข้อมูลกับพวงกุญแจ iCloud แล้ว"
   },
   "divNoPasswordsMessage": {
-    "message": "คุณสามารถดูและแก้ไขรหัสผ่านที่บันทึกไว้ได้ในแอปตัวจัดการรหัสผ่าน iCloud"
+    "message": "คุณสามารถดูและแก้ไขรหัสผ่านที่บันทึกไว้ในแอปรหัสผ่าน iCloud ได้"
   },
   "divDoNotRememberTitle": {
     "message": "คุณได้ระบุไว้ก่อนหน้านี้ว่าไม่ต้องบันทึกรหัสผ่านของเว็บไซต์นี้"
@@ -62,6 +62,9 @@
   "totpVerificationCodeNameWithDomain": {
     "message": "รหัสการตรวจสอบยืนยันสำหรับ “$1”"
   },
+  "setupTOTPVerificationCodeNameWithDomain": {
+    "message": "ตั้งค่ารหัสการตรวจสอบยืนยันสำหรับ “$1”"
+  },
   "totpVerificationCodeName": {
     "message": "รหัสการตรวจสอบยืนยัน"
   },
@@ -85,5 +88,11 @@
   },
   "allowExtensionToControlAutoFillDetail": {
     "message": "ในการป้องกันไม่ให้การป้อนอัตโนมัติในหน้าของ Chrome รบกวนรหัสผ่าน iCloud นั้น รหัสผ่าน iCloud สามารถพยายามปิดใช้การตั้งค่าการป้อนอัตโนมัติของเบราว์เซอร์แทนคุณได้"
+  },
+  "divTOTPTitle": {
+    "message": "ตั้งค่ารหัสการตรวจสอบยืนยันสำหรับ:"
+  },
+  "divTOTPMenu": {
+    "message": "ตั้งค่ารหัสการตรวจสอบยืนยัน"
   }
 }

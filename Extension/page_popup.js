@@ -18,7 +18,9 @@ function humanReadableFormType(e) {
         case WBSAutoFillFormTypeNewAccount:
             return "NewAccount";
         case WBSAutoFillFormTypeChangePassword:
-            return "ChangePassword"
+            return "ChangePassword";
+        case WBSAutoFillFormTypeFoundTOTPURI:
+            return "FoundTOTPUri"
     }
     return "Unrecognized"
 }
@@ -32,10 +34,23 @@ function domainsForDisplayFromUsernamesAndDomains(e, t) {
     for (var a = 0; a < n; a++) s.push([e[a], o[a]]);
     for (a = 0; a < n; a++) {
         let e = [];
-        for (var i = a + 1; i < n; i++) s[a].join("\n") === s[i].join("\n") && (e.length || e.push(a), e.push(i));
+        for (var r = a + 1; r < n; r++) s[a].join("\n") === s[r].join("\n") && (e.length || e.push(a), e.push(r));
         for (identicalIndex of e) o[identicalIndex] = t[identicalIndex]
     }
     return o
+}
+
+function urlIsBrowserURL(e) {
+    const t = e.protocol;
+    return "chrome:" === t || "edge:" === t || "about:" == t
+}
+
+function capabilitiesDeclaresMacOS(e) {
+    try {
+        return "macos" === e.operatingSystem.name
+    } catch {
+        return !1
+    }
 }
 class Localizer {
     static configureDocumentElementForLanguage(e, t) {
@@ -83,13 +98,13 @@ class ExtensionSettings {
         return this.#n
     }
     set allowExtensionToControlAutoFillSettings(e) {
-        this.#n = e, this.#i().then(this.#a.bind(this))
+        this.#n = e, this.#r().then(this.#a.bind(this))
     }
-    #i() {
+    #r() {
         return this.#n ? this.attemptToControlBrowserAutoFillSettings() : this.clearControlOfBrowserAutoFillSettings()
     }
     attemptToControlBrowserAutoFillSettings() {
-        return this.#e ? Promise.reject(new Error("This Settings instance does not allow writing browser settings")) : Promise.allSettled([this.#r(chrome.privacy.services.passwordSavingEnabled, !1), this.#r(chrome.privacy.services.autofillCreditCardEnabled, !1), this.#r(chrome.privacy.services.autofillAddressEnabled, !1)]).then((e => (this.#l(), e)))
+        return this.#e ? Promise.reject(new Error("This Settings instance does not allow writing browser settings")) : Promise.allSettled([this.#i(chrome.privacy.services.passwordSavingEnabled, !1), this.#i(chrome.privacy.services.autofillCreditCardEnabled, !1), this.#i(chrome.privacy.services.autofillAddressEnabled, !1)]).then((e => (this.#l(), e)))
     }
     clearControlOfBrowserAutoFillSettings() {
         return this.#e ? Promise.reject(new Error("This Settings instance does not allow writing browser settings")) : Promise.allSettled([this.#d(chrome.privacy.services.passwordSavingEnabled), this.#d(chrome.privacy.services.autofillCreditCardEnabled), this.#d(chrome.privacy.services.autofillAddressEnabled)]).then((e => (this.#l(), e)))
@@ -103,7 +118,7 @@ class ExtensionSettings {
                 this.#t = t.enableInPageAutoFill, this.#n = t.allowExtensionToControlAutoFillSettings, e()
             }))
         }));
-        return this.#e || (e = e.then(this.#i.bind(this))), e.then(this.#l.bind(this))
+        return this.#e || (e = e.then(this.#r.bind(this))), e.then(this.#l.bind(this))
     }
     #a() {
         return new Promise((e => {
@@ -132,7 +147,7 @@ class ExtensionSettings {
         });
         this.eventTarget.dispatchEvent(e)
     }
-    #r(e, t) {
+    #i(e, t) {
         return this.#c(e).then((n => n ? n.value === t ? {
             details: n,
             newValue: t
@@ -190,9 +205,11 @@ const ContextState = {
     WBSAutoFillFormTypeNonAutoFillable = 2,
     WBSAutoFillFormTypeAutoFillableLogin = 3,
     WBSAutoFillFormTypeNewAccount = 4,
-    WBSAutoFillFormTypeChangePassword = 5;
+    WBSAutoFillFormTypeChangePassword = 5,
+    WBSAutoFillFormTypeFoundTOTPURI = 6;
 var g_lastUpdatedPopupContentsState, g_portToBackgroundPage = null,
     g_appStoreURL = null,
+    g_capabilities = null,
     g_localizer = new Localizer;
 
 function setControlText(e, t) {
@@ -216,10 +233,10 @@ function showMessage(e, t, n) {
     o.style.display = "block", n ? o.classList.add("logo-is-present") : o.classList.remove("logo-is-present")
 }
 
-function showMessageWithOpenPasswordManagerButton(e, t) {
+function showMessageWithOpenPasswordManagerButton(e, t, n) {
     showMessage(e, t);
-    let n = document.querySelector("#openPasswordManagerList");
-    n.children.length || n.appendChild(listItemForOpenPasswordManager())
+    let o = document.querySelector("#openPasswordManagerList");
+    o.children.length || o.appendChild(listItemForOpenPasswordManager())
 }
 
 function SetOpeniC4WTitleText(e) {
@@ -253,7 +270,7 @@ function UpdatePopupContents(e) {
             o = document.getElementById("divICs"),
             s = document.getElementById("divDownloadPage"),
             a = document.getElementById("divOpeniC4WPage");
-        for (let e of[t, n, o, s, a]) e.style.display = "none";
+        for (let e of [t, n, o, s, a]) e.style.display = "none";
         chrome.tabs.query({
             active: !0,
             currentWindow: !0
@@ -288,7 +305,7 @@ function UpdatePopupContents(e) {
                             JSON.stringify(e);
                             const s = new URL(e.url),
                                 a = s.protocol;
-                            if ("http:" !== a && "https:" !== a) return e.url, void showMessageWithOpenPasswordManagerButton("GenericPopupTitle", "divNoPasswordsMessage");
+                            if (0 === t && "http:" !== a && "https:" !== a) return e.url, void showMessageWithOpenPasswordManagerButton("GenericPopupTitle", "divNoPasswordsMessage", !1);
                             try {
                                 chrome.tabs.sendMessage(n[0].id, {
                                     from: "popup",
@@ -303,7 +320,7 @@ function UpdatePopupContents(e) {
                                         case WBSAutoFillFormTypeUndetermined:
                                         case WBSAutoFillFormTypeAutoFillableStandard:
                                         case WBSAutoFillFormTypeNonAutoFillable:
-                                            showMessageWithOpenPasswordManagerButton("GenericPopupTitle", "divNoPasswordsMessage");
+                                            showMessageWithOpenPasswordManagerButton("GenericPopupTitle", "divNoPasswordsMessage", !0);
                                             break;
                                         case WBSAutoFillFormTypeAutoFillableLogin:
                                         case WBSAutoFillFormTypeChangePassword:
@@ -313,7 +330,20 @@ function UpdatePopupContents(e) {
                                                 hostname: s.hostname,
                                                 tabId: n[0].id,
                                                 frameId: e.frameId
-                                            })
+                                            });
+                                            break;
+                                        case WBSAutoFillFormTypeFoundTOTPURI:
+                                            chrome.tabs.sendMessage(n[0].id, {
+                                                from: "popup",
+                                                subject: "getTOTPSetupInfo",
+                                                URL: s.hostname,
+                                                tabId: n[0].id,
+                                                frameId: e.frameId
+                                            }, {
+                                                frameId: e.frameId
+                                            }, (function(t) {
+                                                updatePopupContentsWithTOTPSetupInfo(t, s.hostname, n[0].id, e.frameId)
+                                            }))
                                     }
                                 }))
                             } catch (t) {
@@ -344,67 +374,99 @@ function listItemMouseOutHandler(e) {
     t && t.classList.remove("active")
 }
 
-function updatePopupContents(e, t, n, o, s, a) {
-    var i = document.getElementById("divPIN"),
-        r = document.getElementById("divMessageBoard"),
+function updatePopupContentsWithTOTPSetupInfo(e, t, n, o) {
+    let s = document.getElementById("divPIN"),
+        a = document.getElementById("divMessageBoard"),
+        r = document.getElementById("divICs"),
+        i = document.getElementById("divDownloadPage"),
+        l = document.getElementById("divOpeniC4WPage");
+    for (let e of [s, a, r, i, l]) e.style.display = "none";
+    let d = document.getElementById("credentialList");
+    try {
+        document.querySelector("#iCloudIconId").style.display = "none", clearCredentialListContents();
+        for (const [n, o] of Object.entries(e)) {
+            let e = document.createElement("li");
+            e.classList.add("selectable"), e.classList.add("credential"), e.onmouseover = listItemMouseOverHandler, e.onmouseout = listItemMouseOutHandler, e.innerHTML = '<img src="images/key.svg"/>', e.innerHTML += `<p class="totpwebsite">${t}</p>`, e.addEventListener("click", (function() {
+                chrome.tabs.query({
+                    active: !0,
+                    currentWindow: !0
+                }, (function(e) {
+                    g_portToBackgroundPage.postMessage({
+                        subject: "SetUpTOTP",
+                        theURL: t,
+                        theTOTPURI: o
+                    }), window.close()
+                }))
+            })), d.appendChild(e)
+        }
+        d.appendChild(listItemForOpenPasswordManager())
+    } catch (e) {
+        e.message
+    }
+    let c = document.querySelector("#divMessageBoard .credential-list");
+    c && c.remove(), setControlText("divICsMessage", "divTOTPTitle"), r.style.display = "block"
+}
+
+function updatePopupContents_ICs(e, t, n, o, s, a) {
+    var r = document.getElementById("divPIN"),
+        i = document.getElementById("divMessageBoard"),
         l = document.getElementById("divICs"),
         d = document.getElementById("divDownloadPage"),
         c = document.getElementById("divOpeniC4WPage");
-    for (let e of[i, r, l, d, c]) e.style.display = "none";
+    for (let e of [r, i, l, d, c]) e.style.display = "none";
     let u = document.getElementById("credentialList");
     switch (e) {
         case RememberIC.UnknownPage:
-            showMessageWithOpenPasswordManagerButton("GenericPopupTitle", "divNoPasswordsMessage");
+            showMessageWithOpenPasswordManagerButton("GenericPopupTitle", "divNoPasswordsMessage", !0);
             break;
         case RememberIC.DoNotRemember:
-            showMessageWithOpenPasswordManagerButton("divDoNotRememberTitle", "divDoNotRememberMessage");
+            showMessageWithOpenPasswordManagerButton("divDoNotRememberTitle", "divDoNotRememberMessage", !0);
             break;
-        case RememberIC.RememberLoginAndPassword:
-            {
-                try {
-                    chrome.tabs.sendMessage(t, {
-                        from: "popup",
-                        subject: "getPresetUserName",
-                        tabId: t,
-                        frameId: n
-                    }, {
-                        frameId: n
-                    }, (function(a) {
-                        JSON.stringify(a), document.querySelector("#iCloudIconId").style.display = "none", clearCredentialListContents();
-                        const i = domainsForDisplayFromUsernamesAndDomains(o, s),
-                            r = o.length;
-                        for (var l = 0; l < r; l++) {
-                            let r = document.createElement("li"),
-                                d = s[l],
-                                c = o[l],
-                                g = i[l];
-                            a.isPresetUserNamePresent && a.thePresetUserName === c && r.classList.add("haspresetusername"), r.classList.add("selectable"), r.classList.add("credential"), r.onmouseover = listItemMouseOverHandler, r.onmouseout = listItemMouseOutHandler, r.innerHTML = '<img src="images/key.svg"/>', isStringEmpty(c) ? r.innerHTML += `<p class="name no-user-name">${g_localizer.getMessage("NoUserName")}</p>` : r.innerHTML += `<p class="name">${c}</p>`, r.innerHTML += `<p class="website">${g}</p>`, r.addEventListener("click", (function() {
-                                chrome.tabs.query({
-                                    active: !0,
-                                    currentWindow: !0
-                                }, (function(o) {
-                                    chrome.tabs.sendMessage(o[0].id, {
-                                        from: "popup",
-                                        subject: "fillLoginIntoForm",
-                                        theRememberICSelection: e,
-                                        tabId: t,
-                                        frameId: n,
-                                        theLogin: c,
-                                        theURL: d
-                                    }, {
-                                        frameId: n
-                                    }), window.close()
-                                }))
-                            })), u.appendChild(r)
-                        }
-                        u.appendChild(listItemForOpenPasswordManager())
-                    }))
-                } catch (e) {
-                    e.message
-                }
-                let a = document.querySelector("#divMessageBoard .credential-list");
-                a && a.remove(), l.style.display = "block"
+        case RememberIC.RememberLoginAndPassword: {
+            try {
+                chrome.tabs.sendMessage(t, {
+                    from: "popup",
+                    subject: "getPresetUserNameAndURL",
+                    tabId: t,
+                    frameId: n
+                }, {
+                    frameId: n
+                }, (a => {
+                    JSON.stringify(a), document.querySelector("#iCloudIconId").style.display = "none", clearCredentialListContents();
+                    const r = domainsForDisplayFromUsernamesAndDomains(o, s),
+                        i = o.length;
+                    for (var l = 0; l < i; l++) {
+                        let i = document.createElement("li"),
+                            d = s[l],
+                            c = o[l],
+                            g = r[l];
+                        a.isPresetUserNamePresent && a.thePresetUserName === c && i.classList.add("haspresetusername"), i.classList.add("selectable"), i.classList.add("credential"), i.onmouseover = listItemMouseOverHandler, i.onmouseout = listItemMouseOutHandler, i.innerHTML = '<img src="images/key.svg"/>', isStringEmpty(c) ? i.innerHTML += `<p class="name no-user-name">${g_localizer.getMessage("NoUserName")}</p>` : i.innerHTML += `<p class="name">${c}</p>`, i.innerHTML += `<p class="website">${g}</p>`, i.addEventListener("click", (function() {
+                            chrome.tabs.query({
+                                active: !0,
+                                currentWindow: !0
+                            }, (function(o) {
+                                chrome.tabs.sendMessage(o[0].id, {
+                                    from: "popup",
+                                    subject: "fillLoginIntoForm",
+                                    theRememberICSelection: e,
+                                    tabId: t,
+                                    frameId: n,
+                                    theLogin: c,
+                                    theURL: d
+                                }, {
+                                    frameId: n
+                                }), window.close()
+                            }))
+                        })), u.appendChild(i)
+                    }
+                    u.appendChild(listItemForOpenPasswordManager())
+                }))
+            } catch (e) {
+                e.message
             }
+            let a = document.querySelector("#divMessageBoard .credential-list");
+            a && a.remove(), l.style.display = "block"
+        }
     }
 }
 
@@ -483,14 +545,27 @@ document.documentElement.addEventListener("keydown", (function(e) {
     })).onMessage.addListener((function(e, t, n) {
         switch (e.subject) {
             case "hello":
-                g_localizer = new Localizer(e.capabilities);
+                g_capabilities = e.capabilities, g_localizer = new Localizer(e.capabilities);
                 break;
             case "nativeConnectionStateChanged":
-                g_appStoreURL = e.appStoreURL, UpdatePopupContents(e.state)
+                g_appStoreURL = e.appStoreURL, UpdatePopupContents(e.state);
+                break;
+            case "users":
+                chrome.tabs.query({
+                    active: !0,
+                    currentWindow: !0
+                }, (function(t) {
+                    t[0].id === e.tabId && updatePopupContents_ICs(e.theRememberICSelection, e.tabId, e.frameId, e.arrLoginNames, e.arrHLDs, e.arrDates)
+                }));
+                break;
+            case "oneTimeCodes":
+                break;
+            default:
+                e.from, e.subject
         }
     })), g_portToBackgroundPage.postMessage({
         subject: "getNativeConnectionState"
-    })
+    }), document.querySelector("#fromiCloudPasswords").innerHTML = `<span><img src="images/PasswordsToolbar_icon32.png" class="fromiCloudPasswordsMenuIcon">${g_localizer.getMessage("extName")}</span>`
 }, document.getElementById("downloadButton").onclick = function(e) {
     chrome.tabs.create({
         url: g_appStoreURL
@@ -501,12 +576,4 @@ document.documentElement.addEventListener("keydown", (function(e) {
     }), window.close()
 }, document.getElementById("dismiss").onclick = function() {
     window.close()
-}, chrome.runtime.onMessage.addListener(((e, t, n) => {
-    if ("users" === e.subject) chrome.tabs.query({
-        active: !0,
-        currentWindow: !0
-    }, (function(t) {
-        t[0].id === e.tabId && updatePopupContents(e.theRememberICSelection, e.tabId, e.frameId, e.arrLoginNames, e.arrHLDs, e.arrDates)
-    }));
-    return Promise.resolve("Dummy response to keep the console quiet")
-}));
+}, chrome.runtime.onMessage.addListener(((e, t, n) => (e.subject, Promise.resolve("Dummy response to keep the console quiet"))));

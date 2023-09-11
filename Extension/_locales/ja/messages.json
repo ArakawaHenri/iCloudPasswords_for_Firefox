@@ -9,7 +9,7 @@
     "message": "iCloudパスワードを使用するにはiCloud for Windowsをダウンロードしてください。"
   },
   "extDescription": {
-    "message": "iCloudパスワードを使用すると、iPhone、iPad、MacのSafariやAppで作成したパスワードと確認コードをChromeで閲覧するWebサイトにも入力できます。"
+    "message": "iCloudパスワードを使用すると、iPhone、iPad、MacのSafariやAppで作成したパスワードをChromeで閲覧するWebサイトに入力できます。"
   },
   "extName": {
     "message": "iCloudパスワード"
@@ -21,7 +21,7 @@
     "message": "iCloudパスワードをChromeで使用するにはiCloud for Windowsでパスワードを有効にしてください。"
   },
   "unsupportedOS": {
-    "message": "この拡張機能はWindows 10上で動作するように設計されています。Macを使用している場合は、iPhone、iPad、MacでiCloudにサインインしているときにパスワードが自動的に同期されます。"
+    "message": "この拡張機能は、Windows 10以降で動作するように設計されています。Macを使用している場合は、iPhone、iPad、MacでiCloudにサインインしているときにパスワードがすべてのデバイスで自動的に同期されます。"
   },
   "divPINTitle": {
     "message": "パスワードの自動入力を有効にする"
@@ -36,7 +36,7 @@
     "message": "パスワードはiCloudキーチェーンと同期されます"
   },
   "divNoPasswordsMessage": {
-    "message": "保存したパスワードは、iCloudパスワードマネージャAppで表示および編集できます。"
+    "message": "iCloudパスワードAppで、保存済みのパスワードを表示/編集できます。"
   },
   "divDoNotRememberTitle": {
     "message": "このWebサイトのパスワードを保存しないように以前に指定しました。"
@@ -62,6 +62,9 @@
   "totpVerificationCodeNameWithDomain": {
     "message": "“$1”の確認コード"
   },
+  "setupTOTPVerificationCodeNameWithDomain": {
+    "message": "“$1”の確認コードを設定"
+  },
   "totpVerificationCodeName": {
     "message": "確認コード"
   },
@@ -85,5 +88,11 @@
   },
   "allowExtensionToControlAutoFillDetail": {
     "message": "Chromeのページ内自動入力がiCloudパスワードに干渉するのを防ぐため、iCloudパスワードではユーザの代わりにブラウザの自動入力設定のオフへの切り替えが試行される場合があります。"
+  },
+  "divTOTPTitle": {
+    "message": "確認コードを設定: "
+  },
+  "divTOTPMenu": {
+    "message": "確認コードを設定"
   }
 }

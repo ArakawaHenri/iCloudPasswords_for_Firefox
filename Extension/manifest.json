@@ -1,58 +1,59 @@
 {
-  "browser_specific_settings": {
-    "gecko": {
-      "update_url": "https://raw.githubusercontent.com/ArakawaHenri/iCloudPasswords_for_Firefox/master/updates.json",
-      "id": "{26aac383-dbc3-4286-982f-720916d3f362}"
-    }
-  },
-  "name": "__MSG_extName__",
-  "version": "1.3.77.1",
-  "description": "__MSG_extDescription__",
-  "default_locale": "en",
-  "browser_action": {
-    "default_icon": {
-      "16": "images/PasswordsToolbar_icon16.png",
-      "32": "images/PasswordsToolbar_icon32.png"
+    "browser_specific_settings": {
+      "gecko": {
+        "update_url": "https://raw.githubusercontent.com/ArakawaHenri/iCloudPasswords_for_Firefox/master/updates.json",
+        "id": "{26aac383-dbc3-4286-982f-720916d3f362}"
+      }
     },
-    "default_popup": "page_popup.html"
-  },
-  "icons": {
-    "16": "images/PasswordsExtensionIcon_16.png",
-    "32": "images/PasswordsExtensionIcon_32.png",
-    "128": "images/PasswordsExtensionIcon_128.png"
-  },
-  "permissions": [
-    "<all_urls>",
-    "privacy",
-    "nativeMessaging",
-    "webNavigation",
-    "storage"
-  ],
-  "background": {
-    "scripts": [
-      "sjcl.js",
-      "background.js"
+    "name": "__MSG_extName__",
+    "version": "1.3.93",
+    "description": "__MSG_extDescription__",
+    "default_locale": "en",
+    "browser_action": {
+      "default_icon": {
+        "16": "images/PasswordsToolbar_icon16.png",
+        "32": "images/PasswordsToolbar_icon32.png"
+      },
+      "default_popup": "page_popup.html"
+    },
+    "icons": {
+      "16": "images/PasswordsExtensionIcon_16.png",
+      "32": "images/PasswordsExtensionIcon_32.png",
+      "128": "images/PasswordsExtensionIcon_128.png"
+    },
+    "permissions": [
+      "<all_urls>",
+      "contextMenus",
+      "privacy",
+      "nativeMessaging",
+      "webNavigation",
+      "storage"
     ],
-    "persistent": false
-  },
-  "manifest_version": 2,
-  "content_scripts": [
-    {
-      "js": [
-        "content_script.js"
+    "background": {
+      "scripts": [
+        "sjcl.js",
+        "background.js"
       ],
-      "matches": [
-        "*://*/*"
-      ],
-      "run_at": "document_idle",
-      "all_frames": true
-    }
-  ],
-  "options_ui": {
-    "page": "settings.html",
-    "open_in_tab": false
-  },
-  "web_accessible_resources": [
-    "completion_list.html"
-  ]
-}
+      "persistent": false
+    },
+    "manifest_version": 2,
+    "content_scripts": [
+      {
+        "js": [
+          "content_script.js"
+        ],
+        "matches": [
+          "*://*/*"
+        ],
+        "run_at": "document_idle",
+        "all_frames": true
+      }
+    ],
+    "options_ui": {
+      "page": "settings.html",
+      "open_in_tab": false
+    },
+    "web_accessible_resources": [
+      "completion_list.html"
+    ]
+  }

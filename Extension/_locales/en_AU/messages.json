@@ -9,7 +9,7 @@
     "message": "Download iCloud for Windows to use iCloud Passwords."
   },
   "extDescription": {
-    "message": "iCloud Passwords lets you fill passwords and verification codes created in Safari and apps on iPhone, iPad and Mac into websites in Chrome."
+    "message": "iCloud Passwords lets you fill passwords created in Safari and apps on iPhone, iPad and Mac into websites in Chrome."
   },
   "extName": {
     "message": "iCloud Passwords"
@@ -21,7 +21,7 @@
     "message": "Enable Passwords in iCloud for Windows to use iCloud Passwords with Chrome."
   },
   "unsupportedOS": {
-    "message": "This extension is designed to run on Windows 10. If you are using a Mac, your passwords will automatically sync with your iPhone, iPad and Mac when you sign in to iCloud."
+    "message": "This extension is designed to run on Windows 10 or later. If you are using a Mac, your passwords will automatically sync with your iPhone, iPad and Mac when you sign in to iCloud."
   },
   "divPINTitle": {
     "message": "Enable Password AutoFill"
@@ -36,7 +36,7 @@
     "message": "Your passwords are synced with iCloud Keychain"
   },
   "divNoPasswordsMessage": {
-    "message": "You can view and edit saved passwords in the iCloud Password Manager app."
+    "message": "You can view and edit saved passwords in the iCloud Passwords app."
   },
   "divDoNotRememberTitle": {
     "message": "You previously indicated to never save passwords for this website."
@@ -62,6 +62,9 @@
   "totpVerificationCodeNameWithDomain": {
     "message": "Verification code for “$1”"
   },
+  "setupTOTPVerificationCodeNameWithDomain": {
+    "message": "Set up verification code for “$1”"
+  },
   "totpVerificationCodeName": {
     "message": "Verification code"
   },
@@ -85,5 +88,11 @@
   },
   "allowExtensionToControlAutoFillDetail": {
     "message": "To prevent Chrome’s in-page AutoFill from interfering with iCloud Passwords, iCloud Passwords can attempt to turn off the browser’s AutoFill settings on your behalf."
+  },
+  "divTOTPTitle": {
+    "message": "Set up verification code for:"
+  },
+  "divTOTPMenu": {
+    "message": "Set Up Verification Code"
   }
 }

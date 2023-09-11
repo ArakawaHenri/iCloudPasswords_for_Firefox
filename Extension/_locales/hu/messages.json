@@ -9,7 +9,7 @@
     "message": "Töltse le az iCloud Windows-verzióját az iCloud-jelszavak használatához."
   },
   "extDescription": {
-    "message": "Az iCloud-jelszavakkal kitöltheti a webhelyeken az iPhone-on, iPaden vagy Macen a Safariban és egyéb appokban létrehozott jelszavakat és ellenőrzőkódokat a Chrome-ban."
+    "message": "Az iCloud-jelszavakkal kitöltheti az iPhone-on, iPaden és Macen a Safarival és egyéb appokkal létrehozott jelszavakat a Chrome-ban megnyitott webhelyeken."
   },
   "extName": {
     "message": "iCloud-jelszavak"
@@ -18,10 +18,10 @@
     "message": "Az iCloud Windowshoz app megnyitása"
   },
   "CheckEngineMessage": {
-    "message": "Engedélyezze a jelszavakat az iCloud Windows-verziójában, ha az iCloud-jelszavakat a Chrome-mal szeretné használni."
+    "message": "Engedélyezze a jelszavakat az iCloud Windowshoz alkalmazásban, ha az iCloud-jelszavakat a Chrome-mal szeretné használni."
   },
   "unsupportedOS": {
-    "message": "Ezt a bővítményt Windows 10 rendszerben való futtatásra tervezték. Ha Ön Macet használ, a jelszavai automatikusan szinkronizálva lesznek az iPhone-jával, iPadjével és Macjével, amikor bejelentkezik az iCloudba."
+    "message": "Ezt a bővítményt Windows 10 vagy újabb rendszeren való futtatáshoz tervezték. Ha Ön Macet használ, a jelszavai automatikusan szinkronizálva lesznek az iPhone-jával, iPadjével és Macjével, amikor bejelentkezik az iCloudba."
   },
   "divPINTitle": {
     "message": "Jelszó automatikus kitöltésének engedélyezése"
@@ -36,7 +36,7 @@
     "message": "A jelszavai szinkronizálva vannak az iCloud-kulcskarikával"
   },
   "divNoPasswordsMessage": {
-    "message": "Az iCloud-jelszókezelő appban megtekintheti és szerkesztheti a mentett jelszavakat."
+    "message": "A mentett jelszavakat megtekintheti és szerkesztheti az iCloud-jelszavak appban."
   },
   "divDoNotRememberTitle": {
     "message": "Ön korábban jelezte, hogy a jelszavak soha ne legyenek mentve ehhez a webhelyhez."
@@ -62,6 +62,9 @@
   "totpVerificationCodeNameWithDomain": {
     "message": "Ellenőrőzkód a következőhöz: „$1”"
   },
+  "setupTOTPVerificationCodeNameWithDomain": {
+    "message": "Ellenőrzőkód beállítása a következőhöz: „$1”"
+  },
   "totpVerificationCodeName": {
     "message": "Ellenőrzőkód"
   },
@@ -85,5 +88,11 @@
   },
   "allowExtensionToControlAutoFillDetail": {
     "message": "Ha meg szeretné akadályozni, hogy a Chrome oldalon belüli automatikus kitöltési funkciója összeütközzön az iCloud-jelszavakkal, az iCloud-jelszavak képes az Ön nevében megkísérelni a böngésző automatikus kitöltési funkciójának kikapcsolását."
+  },
+  "divTOTPTitle": {
+    "message": "Ellenőrzőkód beállítása a következőhöz:"
+  },
+  "divTOTPMenu": {
+    "message": "Ellenőrzőkód beállítása"
   }
 }

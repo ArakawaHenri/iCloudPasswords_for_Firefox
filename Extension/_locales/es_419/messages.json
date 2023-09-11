@@ -9,7 +9,7 @@
     "message": "Descarga iCloud para Windows para usar Contraseñas en iCloud."
   },
   "extDescription": {
-    "message": "Contraseñas de iCloud te permite rellenar contraseñas y códigos de verificación creados en Safari y apps en tu iPhone, iPad y Mac en sitios web en Chrome."
+    "message": "Contraseñas en iCloud te permite rellenar en los sitios web visitados en Chrome las contraseñas creadas desde Safari y las apps de tu iPhone, iPad y Mac."
   },
   "extName": {
     "message": "Contraseñas en iCloud"
@@ -21,7 +21,7 @@
     "message": "Activa Contraseñas en la app iCloud para Windows para usar la extensión Contraseñas en iCloud con Chrome."
   },
   "unsupportedOS": {
-    "message": "Esta extensión está diseñada para ejecutarse en Windows 10. Si estás usando una Mac, tus contraseñas se sincronizarán automáticamente con tu iPhone, iPad y Mac en donde inicies sesión en iCloud."
+    "message": "Esta extensión está diseñada para ejecutarse en Windows 10 o posterior. Si estás usando una Mac, tus contraseñas se sincronizarán automáticamente con tu iPhone, iPad y Mac cuando inicies sesión en iCloud."
   },
   "divPINTitle": {
     "message": "Activar autorrelleno de contraseñas"
@@ -36,7 +36,7 @@
     "message": "Tus contraseñas están sincronizadas con el llavero de iCloud"
   },
   "divNoPasswordsMessage": {
-    "message": "Puedes ver y editar las contraseñas guardadas en la app Administrador de Contraseñas de iCloud."
+    "message": "Puedes ver y editar las contraseñas guardadas en la app Contraseñas en iCloud."
   },
   "divDoNotRememberTitle": {
     "message": "Habías indicado que no querías guardar nunca contraseñas para este sitio web."
@@ -62,6 +62,9 @@
   "totpVerificationCodeNameWithDomain": {
     "message": "Código de verificación para “$1”"
   },
+  "setupTOTPVerificationCodeNameWithDomain": {
+    "message": "Configurar código de verificación para “$1”"
+  },
   "totpVerificationCodeName": {
     "message": "Código de verificación"
   },
@@ -72,18 +75,24 @@
     "message": "Haz clic en el botón de la barra de herramientas para activar la extensión Contraseñas en iCloud para Chrome."
   },
   "optionsTitle": {
-    "message": "Opciones de Contraseñas de iCloud"
+    "message": "Opciones de Contraseñas en iCloud"
   },
   "enableInPageAutoFillCheckboxLabel": {
     "message": "Autorrelleno en la página"
   },
   "enableInPageAutoFillCheckboxDetail": {
-    "message": "Permite que Contraseñas de iCloud ofrezca credenciales de una lista en la página. Siempre puedes rellenar las contraseñas desde el botón de la barra de herramientas de Contraseñas de iCloud, incluso si esta opción está desactivada."
+    "message": "Permite que Contraseñas en iCloud ofrezca credenciales de una lista en la página. Siempre puedes rellenar las contraseñas desde el botón de la barra de herramientas de Contraseñas en iCloud, incluso si esta opción está desactivada."
   },
   "allowExtensionToControlAutoFillLabel": {
     "message": "Desactivar Autorrelleno en Chrome"
   },
   "allowExtensionToControlAutoFillDetail": {
-    "message": "Para impedir que la función Autorrelleno en la página en Chrome interfiera con Contraseñas de iCloud, Contraseñas de iCloud puede intentar desactivar la configuración de Autorrelleno en el navegador por ti."
+    "message": "Para impedir que la función Autorrelleno en la página en Chrome interfiera con Contraseñas en iCloud, Contraseñas en iCloud puede intentar desactivar la configuración de Autorrelleno en el navegador por ti."
+  },
+  "divTOTPTitle": {
+    "message": "Configurar código de verificación para:"
+  },
+  "divTOTPMenu": {
+    "message": "Configurar código de verificación"
   }
 }

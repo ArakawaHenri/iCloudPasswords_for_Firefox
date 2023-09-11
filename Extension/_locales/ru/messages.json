@@ -9,7 +9,7 @@
     "message": "Загрузите iCloud для Windows, чтобы использовать Пароли iCloud."
   },
   "extDescription": {
-    "message": "С помощью расширения «Пароли iCloud» можно заполнять пароли и коды проверки, созданные в Safari и приложениях на iPhone, iPad и Mac, на веб-сайтах в Chrome."
+    "message": "Расширение «Пароли iCloud» позволяет заполнять на сайтах в браузере Chrome пароли, которые были созданы в Safari и других приложениях на iPhone, iPad и Mac."
   },
   "extName": {
     "message": "Пароли iCloud"
@@ -21,7 +21,7 @@
     "message": "Включите параметр «Пароли» в iCloud для Windows, чтобы использовать Пароли iCloud в Chrome."
   },
   "unsupportedOS": {
-    "message": "Это расширение разработано для работы на Windows 10. Если Вы используете Mac, Ваши пароли автоматически синхронизируются на iPhone, iPad и Mac при входе в iCloud."
+    "message": "Это расширение предназначено для Windows 10 и новее. Если Вы используете Mac, при входе в iCloud Ваши пароли будут автоматически синхронизироваться на iPhone, iPad и Mac."
   },
   "divPINTitle": {
     "message": "Включить автозаполнение паролей"
@@ -36,7 +36,7 @@
     "message": "Ваши пароли синхронизированы со связкой ключей iCloud"
   },
   "divNoPasswordsMessage": {
-    "message": "Можно просматривать и изменять сохраненные пароли в приложении «Менеджер паролей iCloud»."
+    "message": "Вы можете просматривать и редактировать сохраненные пароли в приложении «Пароли iCloud»."
   },
   "divDoNotRememberTitle": {
     "message": "Ранее Вы указали, что для этого веб‑сайта не следует сохранять пароли."
@@ -62,6 +62,9 @@
   "totpVerificationCodeNameWithDomain": {
     "message": "Код проверки для «$1»"
   },
+  "setupTOTPVerificationCodeNameWithDomain": {
+    "message": "Настроить код проверки для «$1»"
+  },
   "totpVerificationCodeName": {
     "message": "Код проверки"
   },
@@ -85,5 +88,11 @@
   },
   "allowExtensionToControlAutoFillDetail": {
     "message": "Чтобы функция встроенного в страницу автозаполнения в Chrome не мешала работе расширения «Пароли iCloud», это расширение может попробовать выключить настройки автозаполнения в браузере от Вашего имени."
+  },
+  "divTOTPTitle": {
+    "message": "Настроить код проверки для:"
+  },
+  "divTOTPMenu": {
+    "message": "Настроить код проверки"
   }
 }

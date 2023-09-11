@@ -9,7 +9,7 @@
     "message": "Lataa iCloud Windowsille, jotta voit käyttää iCloud-salasanoja."
   },
   "extDescription": {
-    "message": "iCloud-salasanoilla voit käyttää Safarissa sekä iPhonen, iPadin ja Macin apeissa luotuja salasanoja ja vahvistuskoodeja Chromessa."
+    "message": "iCloud-salasanoilla voit käyttää Safarissa sekä iPhonen, iPadin ja Macin apeissa luotuja salasanoja Chromessa."
   },
   "extName": {
     "message": "iCloud-salasanat"
@@ -21,7 +21,7 @@
     "message": "Ota Salasanat käyttöön Windowsin iCloudissa, jotta voit käyttää iCloud-salasanoja Chromessa."
   },
   "unsupportedOS": {
-    "message": "Tämä laajennus on suunniteltu Windows 10:lle. Jos käytät Macia, salasanasi synkronoidaan automaattisesti iPhonen, iPadin ja Macin välillä, kun kirjaudut iCloudiin."
+    "message": "Tämä laajennus on suunniteltu Windows 10:lle tai uudemmalle. Jos käytät Macia, salasanasi synkronoidaan automaattisesti iPhonen, iPadin ja Macin välillä, kun kirjaudut iCloudiin."
   },
   "divPINTitle": {
     "message": "Ota salasanojen automaattinen täyttö käyttöön"
@@ -62,6 +62,9 @@
   "totpVerificationCodeNameWithDomain": {
     "message": "Vahvistuskoodi kohteelle ”$1”"
   },
+  "setupTOTPVerificationCodeNameWithDomain": {
+    "message": "Ota vahvistuskoodi käyttöön kohteelle $1"
+  },
   "totpVerificationCodeName": {
     "message": "Vahvistuskoodi"
   },
@@ -85,5 +88,11 @@
   },
   "allowExtensionToControlAutoFillDetail": {
     "message": "Jotta Chromen sivujen sisäinen automaattinen täyttö ja iCloud-salasanat eivät vaikuttaisi toisiinsa, iCloud-salasanat voi yrittää laittaa selaimen automaattisen täytön asetukset pois päältä puolestasi."
+  },
+  "divTOTPTitle": {
+    "message": "Ota vahvistuskoodi käyttöön kohteelle:"
+  },
+  "divTOTPMenu": {
+    "message": "Ota vahvistuskoodi käyttöön"
   }
 }

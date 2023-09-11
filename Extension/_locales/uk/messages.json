@@ -9,7 +9,7 @@
     "message": "Викачайте iCloud для Windows, щоб використовувати паролі iCloud."
   },
   "extDescription": {
-    "message": "Паролі iCloud дають змогу вводити паролі й коди перевірки, створені в Safari та програмах на iPhone, iPad і Mac, на вебсайтах у Chrome."
+    "message": "«Паролі iCloud» дозволяє заповнювати паролі, створені в Safari і програмах на iPhone, iPad і Mac, на вебсайтах у Chrome."
   },
   "extName": {
     "message": "Паролі iCloud"
@@ -21,7 +21,7 @@
     "message": "Увімкніть паролі в iCloud для Windows, щоб використовувати «Паролі iCloud» у Chrome."
   },
   "unsupportedOS": {
-    "message": "Розширення розроблене для запуску в системі Windows 10. На Mac ваші паролі автоматично синхронізуються з вашими iPhone, iPad і Mac, коли ви входите в iCloud."
+    "message": "Це розширення розроблене для запуску на Windows 10 або новіших версіях. Якщо ви використовуєте Mac, ваші паролі автоматично синхронізуються з вашим iPhone, iPad і Mac, коли ви входите в iCloud."
   },
   "divPINTitle": {
     "message": "Увімкнення автозаповнення паролів"
@@ -36,7 +36,7 @@
     "message": "Ваші паролі синхронізуються з В’язкою iCloud"
   },
   "divNoPasswordsMessage": {
-    "message": "Ви можете переглядати й редагувати збережені паролі в програмі «Менеджер паролів iCloud»."
+    "message": "Ви можете переглядати і редагувати збережені паролі у програмі «Паролі iCloud»."
   },
   "divDoNotRememberTitle": {
     "message": "Раніше ви вказали, що не хочете зберігати паролі для цього вебсайту."
@@ -62,6 +62,9 @@
   "totpVerificationCodeNameWithDomain": {
     "message": "Код перевірки для «$1»"
   },
+  "setupTOTPVerificationCodeNameWithDomain": {
+    "message": "Налаштувати код перевірки для «$1»"
+  },
   "totpVerificationCodeName": {
     "message": "Код перевірки"
   },
@@ -85,5 +88,11 @@
   },
   "allowExtensionToControlAutoFillDetail": {
     "message": "Щоб функція автозаповнення на сторінці Chrome не заважала програмі «Паролі iCloud», програма «Паролі iCloud» може спробувати вимкнути для вас автозаповнення в параметрах браузера."
+  },
+  "divTOTPTitle": {
+    "message": "Налаштувати код перевірки для:"
+  },
+  "divTOTPMenu": {
+    "message": "Налаштувати код перевірки"
   }
 }

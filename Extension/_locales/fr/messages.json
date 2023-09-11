@@ -9,7 +9,7 @@
     "message": "Téléchargez iCloud pour Windows pour utiliser Mots de passe iCloud."
   },
   "extDescription": {
-    "message": "Mots de passe iCloud vous permet d’utiliser avec Chrome sous Windows les mêmes mots de passe que vous créez dans Safari et dans les apps sur iPhone, iPad et Mac."
+    "message": "Mots de passe iCloud vous permet de remplir les mots de passe créés dans Safari et dans des apps sur iPhone, iPad et Mac sur des sites web dans Chrome."
   },
   "extName": {
     "message": "Mots de passe iCloud"
@@ -21,7 +21,7 @@
     "message": "Activez « Mots de passe » dans iCloud pour Windows afin d’utiliser Mots de passe iCloud avec Chrome."
   },
   "unsupportedOS": {
-    "message": "Cette extension est conçue pour être exécutée sous Windows 10. Si vous utilisez un Mac, vos mots de passe seront automatiquement synchronisés avec votre iPhone, iPad et Mac lorsque vous vous connectez à iCloud."
+    "message": "Cette extension est conçue pour fonctionner sous Windows 10 ou ultérieur. Si vous utilisez un Mac, vos mots de passe seront automatiquement synchronisés avec vos iPhone, iPad et Mac lorsque vous vous connectez à iCloud."
   },
   "divPINTitle": {
     "message": "Activer le remplissage automatique des mots de passe"
@@ -36,7 +36,7 @@
     "message": "Vos mots de passe sont synchronisés avec le trousseau iCloud"
   },
   "divNoPasswordsMessage": {
-    "message": "Vous pouvez consulter et modifier les mots de passe enregistrés dans l’app Gestionnaire de mots de passe iCloud."
+    "message": "Vous pouvez consulter et modifier des mots de passe enregistrés dans l’app Mots de passe iCloud."
   },
   "divDoNotRememberTitle": {
     "message": "Vous avez indiqué précédemment que vous ne voulez jamais enregistrer de mot de passe pour ce site web."
@@ -62,6 +62,9 @@
   "totpVerificationCodeNameWithDomain": {
     "message": "Code de validation pour « $1 »"
   },
+  "setupTOTPVerificationCodeNameWithDomain": {
+    "message": "Configurer un code de validation pour « $1 »"
+  },
   "totpVerificationCodeName": {
     "message": "Code de validation"
   },
@@ -85,5 +88,11 @@
   },
   "allowExtensionToControlAutoFillDetail": {
     "message": "Pour empêcher le remplissage automatique dans la page par Chrome d’interférer avec Mots de passe iCloud, Mots de passe iCloud peut tenter de désactiver pour vous les réglages de remplissage automatique du navigateur."
+  },
+  "divTOTPTitle": {
+    "message": "Configurer un code de validation pour :"
+  },
+  "divTOTPMenu": {
+    "message": "Configurer un code de validation"
   }
 }

@@ -7,20 +7,29 @@
     --pin-input-border-color: rgba(0, 0, 0, 0.4);
     --dismiss-button-color: #c4c4c4;
     --need-to-pair-message-color: rgba(0, 0, 0, 0.9);
+    --from-icloud-passwords-background-color: #E5E5E5;
+    --from-icloud-passwords-text-color: rgb(94, 94, 94);
+}
+
+.completionList {
+    --from-icloud-passwords-background-color: rgba(100, 100, 100, 0.1);
 }
 
 @media (prefers-color-scheme: dark) {
     body.visibleScroller::-webkit-scrollbar {
         width: 16px;
     }
+
     body.visibleScroller::-webkit-scrollbar-track {
         background: var(--scroll-track-background-color);
     }
+
     body.visibleScroller::-webkit-scrollbar-thumb {
         background-color: var(--scroll-thumb-background-color);
         border-radius: 8px;
         border: 4px solid var(--scroll-thumb-border-color);
     }
+
     body.visibleScroller::-webkit-scrollbar-thumb:hover {
         background-color: var(--scroll-thumb-background-color-on-hover);
     }
@@ -30,6 +39,7 @@
     --separator-color: rgba(100, 100, 100, 0.1);
     --table-cell-hover-color: rgba(100, 100, 100, 0.1);
 }
+
 @media (prefers-color-scheme: dark) {
     :root {
         --background-color: rgb(41, 42, 45);
@@ -45,14 +55,19 @@
         --scroll-thumb-background-color: #6B6B6B;
         --scroll-thumb-border-color: #2C2C2C;
         --scroll-thumb-background-color-on-hover: #848383;
+        --from-icloud-passwords-background-color: #38393A;
+        --from-icloud-passwords-text-color: rgb(211, 211, 211);
+        ;
     }
 
     .completionList {
-        --separator-color: rgba(100, 100, 100, 0.4);
+        --separator-color: rgba(105, 105, 105, 0.6);
         --table-cell-hover-color: rgba(100, 100, 100, 0.4);
+        --from-icloud-passwords-background-color: rgba(0, 0, 0, 0.1);
     }
 
-    .dismiss, li.credential img {
+    .dismiss,
+    li.credential img {
         /* Lighten the image. */
         filter: invert(100%) sepia(7%) saturate(79%) hue-rotate(171deg) brightness(117%) contrast(87%);
     }
@@ -60,7 +75,7 @@
 
 body {
     position: relative;
-    padding: 8px 8px 0 8px;
+    padding: 32px 8px 0 8px;
     font-size: 15px;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     background-color: var(--background-color);
@@ -68,9 +83,11 @@ body {
     min-height: 100px;
     margin-bottom: 0;
 }
+
 body.popup {
-    width: 344px;
+    width: 375px;
 }
+
 body.completionList {
     width: auto;
     padding: 0;
@@ -84,10 +101,11 @@ body.completionList {
     padding-bottom: 20px;
 }
 
-#divPIN, #divICs {
+#divPIN,
+#divICs {
     margin: 0 auto;
 }
-​
+
 input {
     margin: 5px;
     outline: none;
@@ -105,9 +123,11 @@ input.PIN {
     font-size: 25px;
     display: inline-block;
 }
+
 input.PIN:focus {
-    border: 2px solid rgba(0,120,215,1);
+    border: 2px solid rgba(0, 120, 215, 1);
 }
+
 #PIN2 {
     text-align: start;
     margin-inline-end: 10px;
@@ -119,6 +139,7 @@ input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
+
 .titleline {
     font-weight: 400;
     font-size: 15px;
@@ -126,9 +147,11 @@ input::-webkit-inner-spin-button {
     margin-bottom: 0;
     padding-inline-end: 10px;
 }
+
 .completionList .titleline {
     display: none;
 }
+
 .messageline {
     opacity: 0.6;
     font-size: 13px;
@@ -136,9 +159,11 @@ input::-webkit-inner-spin-button {
     margin-top: 0.5em;
     margin-bottom: 0.5em;
 }
+
 #divMessageBoardMessage:last-child {
     padding-bottom: 16px;
 }
+
 .buttonline {
     font-size: 14px;
     color: #fff;
@@ -155,13 +180,15 @@ input::-webkit-inner-spin-button {
     justify-content: center;
 }
 
-#divPIN.box, .box.logo-is-present {
+#divPIN.box,
+.box.logo-is-present {
     padding-inline-start: 62px;
 }
 
 .box *:first-child {
     margin-top: 0;
 }
+
 .box *:last-child {
     margin-bottom: 0;
 }
@@ -175,6 +202,7 @@ ul.credential-list {
     margin: 0;
     padding: 0;
 }
+
 .completionList ul.credential-list {
     margin-block-start: 0;
 }
@@ -183,26 +211,39 @@ ul.credential-list {
     border-bottom: none;
 }
 
-ul.credential-list, .credential-list li {
+ul.credential-list,
+.credential-list li {
     list-style-type: none;
     -webkit-padding-start: 0;
     -moz-padding-start: 0;
 }
+
 .credential-list li.credential {
     display: block;
     height: 44px;
     padding: 2px 12px;
 }
+
+.popup .credential-list {
+    margin-top: 10px;
+}
+
 .popup .credential-list li.credential {
     padding: 2px 24px;
+}
+
+.popup .credential-list li:last-child {
+    margin-bottom: 1px;
 }
 
 .credential-list li.selectable.active {
     background-color: var(--table-cell-hover-color);
 }
+
 .completionList .credential-list li.credential {
     border-bottom: 1px solid var(--separator-color);
 }
+
 .credential-list li.credential img {
     margin: 0;
     padding: 0;
@@ -210,12 +251,15 @@ ul.credential-list, .credential-list li {
     width: 15px;
     float: left;
 }
+
 .completionList .credential-list li.credential img {
     margin-inline-end: 10px;
 }
+
 .popup .credential-list li.credential img {
     margin-inline-end: 12px;
 }
+
 .credential-list li.credential.messages img {
     padding-top: 1px;
     height: 28px;
@@ -224,50 +268,112 @@ ul.credential-list, .credential-list li {
     margin-inline-end: 8px;
     margin-block-start: 7px;
 }
+
 [dir="rtl"] .credential-list li.credential img {
     float: right;
 }
+
 .popup .credential-list li.open-password-manager {
     border-top: 1px solid var(--separator-color);
 }
-.credential-list li.credential .name, .credential-list li.credential .website, .credential-list li.open-password-manager {
+
+.credential-list li.credential .name,
+.credential-list li.credential .website,
+.credential-list li.open-password-manager .totpwebsite {
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
     display: inherit;
 }
+
 .credential-list li.credential .name {
     margin-top: 0.24em;
     margin-bottom: 0;
     font-size: 14px;
     line-height: 20px;
 }
+
 .credential-list li.credential .name.no-user-name {
     opacity: 0.36;
 }
+
 .credential-list li.credential .website {
     margin-top: -1px;
     opacity: 0.6;
     font-size: 13px;
 }
+
+.credential-list li.credential .totpwebsite {
+    margin-top: 0.8em;
+    margin-bottom: 0;
+    font-size: 14px;
+}
+
 .credential-list li.open-password-manager {
     font-size: 14px;
     line-height: 26px;
     padding: 5px 12px 5px 12px;
 }
+
+.credential-list li.iCloudPasswords,
+#fromiCloudPasswords {
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 17px;
+    padding: 5px 12px 6px 12px;
+    width: calc(100% - 24px);
+    background: var(--from-icloud-passwords-background-color);
+}
+
+#fromiCloudPasswords,
+.credential-list li.iCloudPasswords {
+    color: var(--from-icloud-passwords-text-color);
+}
+
+.credential-list li.iCloudPasswords img,
+#fromiCloudPasswords img {
+    opacity: 0.8;
+}
+
+.completionList .iCloudPasswords,
+#fromiCloudPasswords {
+    border-bottom: 1px solid var(--separator-color);
+}
+
+.credential-list li.iCloudPasswords {
+    height: 16px;
+}
+
+#fromiCloudPasswords {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 7px;
+    padding-left: 16px;
+    user-select: none;
+    padding: 6px 12px 5px 12px;
+}
+
+.credential-list.inline li.iCloudPasswords {
+    width: 200px;
+}
+
 .credential-list li.open-password-manager p.title {
     margin-top: 0;
     margin-bottom: 0;
 }
+
 .credential-list li.open-password-manager p.subtitle {
     margin-top: -8px;
     margin-bottom: 0;
     opacity: 0.6;
     font-size: 12px;
 }
+
 .popup .credential-list li.open-password-manager {
-    padding: 8px 24px 10px 24px;
+    padding: 7px 24px 7px 24px;
 }
+
 .credential-list li.separator {
     height: 4px;
     border-top: 2px solid #ddd;
@@ -277,20 +383,27 @@ ul.credential-list, .credential-list li {
     margin-left: 0.8em;
     margin-right: 0.8em;
 }
+
 .credential-list li.command {
     padding: 10px 12px;
     height: 18px;
     padding: 10px 12px;
 }
+
 .credential-list br {
     display: none;
 }
-.credential-list.inline li.selectable, .credential-list.inline li.credential .name, .credential-list.inline li.credential .website {
+
+.credential-list.inline li.selectable,
+.credential-list.inline li.credential .name,
+.credential-list.inline li.credential .website {
     display: inline-block;
 }
+
 .credential-list.inline br {
     display: block;
 }
+
 .button {
     display: inline-block;
     padding: 0 13px;
@@ -307,15 +420,18 @@ ul.credential-list, .credential-list li {
     border: 1px solid #315aad;
     border-radius: 3px;
 }
+
 .dismiss img {
     width: 9px;
     height: 9px;
 }
+
 .dismiss {
     display: block;
     width: 20px;
     height: 20px;
     position: absolute;
+    margin-top: -1px;
     inset-block-start: -3px;
     inset-inline-end: -3px;
     color: var(--dismiss-button-color);
@@ -328,6 +444,7 @@ ul.credential-list, .credential-list li {
     user-select: none;
     line-height: 18px;
 }
+
 .dismiss:hover {
     background-color: rgba(0, 0, 0, 0.08);
 }
@@ -335,31 +452,39 @@ ul.credential-list, .credential-list li {
 .completionList .dismiss {
     display: none;
 }
+
 img.iCloudIcon {
     float: left;
 }
+
 .pinbox {
     margin-top: 1em;
     white-space: nowrap;
 }
+
 [dir="rtl"] img.iCloudIcon {
     float: right;
 }
+
 [dir="rtl"] .pinbox {
     direction: ltr;
     white-space: nowrap;
     padding-inline-start: 23px;
 }
-div, #iCloudIconId {
+
+div,
+#iCloudIconId {
     animation: fadein 0.25s;
     -moz-animation: fadein 0.25s;
     -webkit-animation: fadein 0.25s;
 }
+
 .completionList * {
     animation: none;
     -moz-animation: none;
     -webkit-animation: none;
 }
+
 #needToPairMessageBox {
     display: none;
     width: 284px;
@@ -367,30 +492,36 @@ div, #iCloudIconId {
     line-height: 1.4em;
     min-height: 46px;
 }
+
 #needToPairMessageBox .imageContainer {
     display: flex;
     flex-direction: column;
     justify-content: center;
     vertical-align: middle;
 }
+
 #needToPairMessageBox .imageContainer img {
     width: 38px;
     height: 38px;
     margin-top: -2px;
     margin-inline-start: 2px;
 }
+
 #needToPairMessageBox .textContainer {
     margin-left: 12px;
 }
+
 #needToPairMessageBox p {
     margin: 0;
 }
+
 #needToPairMessageBox #needToPairTitle {
     font-size: 14px;
     font-weight: 400;
     margin-top: -1px;
     margin-bottom: 1px;
 }
+
 #needToPairMessageBox #needToPairMessage {
     color: var(--need-to-pair-message-color);
     font-size: 12px;
@@ -398,14 +529,81 @@ div, #iCloudIconId {
 }
 
 @keyframes fadein {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
+
 @-moz-keyframes fadein {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
+
 @-webkit-keyframes fadein {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.popup #fromiCloudPasswords {
+    height: 17px;
+}
+
+.popup .fromiCloudPasswordsMenuIcon {
+    float: left;
+    width: 19px;
+    height: 19px;
+    margin: 0;
+    padding: 0;
+    margin-top: -1px;
+    margin-inline-start: -7px;
+    margin-inline-end: 6px;
+}
+
+[dir="rtl"] .popup .fromiCloudPasswordsMenuIcon {
+    float: right;
+}
+
+.credential-list li .menuIcon {
+    float: left;
+    width: 22px;
+    height: 22px;
+    margin: 0;
+    margin-top: 2px;
+    padding: 0;
+    padding-bottom: 4px;
+    margin-inline-end: 7px;
+}
+
+[dir="rtl"] .credential-list li .menuIcon {
+    float: right;
+}
+
+.credential-list li .fromiCloudPasswordsMenuIcon {
+    float: left;
+    width: 19px;
+    height: 19px;
+    margin: 0;
+    margin-top: -1px;
+    padding: 0;
+    padding-bottom: 4px;
+    margin-inline-start: -7px;
+    margin-inline-end: 6px;
+}
+
+[dir="rtl"] .credential-list li .fromiCloudPasswordsMenuIcon {
+    float: right;
 }

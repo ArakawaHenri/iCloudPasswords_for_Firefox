@@ -9,7 +9,7 @@
     "message": "Stiahnite si iCloud pre Windows, aby ste mohli používať iCloud Heslá."
   },
   "extDescription": {
-    "message": "Rozšírenie iCloud Heslá vám na webstránkach v prehliadači Chrome umožňuje vypĺňať heslá a overovacie kódy vytvorené v Safari a ďalších apkách na iPhone, iPade a Macu."
+    "message": "iCloud Heslá vám umožňujú vypĺňať heslá vytvorené v Safari a v apkách na iPhone, iPade a Macu na webových stránkach v Chrome."
   },
   "extName": {
     "message": "iCloud Heslá"
@@ -21,7 +21,7 @@
     "message": "Ak chcete používať rozšírenie iCloud Heslá v prehliadači Chrome, zapnite Heslá v iCloude pre Windows."
   },
   "unsupportedOS": {
-    "message": "Toto rozšírenie je určené pre Windows 10. Ak používate Mac, vaše heslá sa budú automaticky synchronizovať s vaším iPhonom, iPadom a Macom, keď sa prihlásite do iCloudu."
+    "message": "Toto rozšírenie je určené na spúšťanie v systéme Windows 10 alebo novšom. Ak používate Mac, po prihlásení do iCloudu sa vaše heslá budú automaticky synchronizovať s vaším iPhonom, iPadom a Macom."
   },
   "divPINTitle": {
     "message": "Zapnúť automatické vypĺňanie hesiel"
@@ -33,10 +33,10 @@
     "message": "Vyberte uložené heslo, ktoré sa má použiť:"
   },
   "GenericPopupTitle": {
-    "message": "Vaše heslá sú synchronizované s iCloud Kľúčenkou"
+    "message": "Vaše heslá sa synchronizujú s iCloud Kľúčenkou"
   },
   "divNoPasswordsMessage": {
-    "message": "Uložené heslá môžete zobraziť a upravovať v aplikácii Správca hesiel iCloud."
+    "message": "Uložené heslá môžete zobraziť a upravovať v apke iCloud Heslá."
   },
   "divDoNotRememberTitle": {
     "message": "V minulosti ste sa rozhodli neukladať heslá pre túto webstránku."
@@ -62,6 +62,9 @@
   "totpVerificationCodeNameWithDomain": {
     "message": "Overovací kód pre \"$1\""
   },
+  "setupTOTPVerificationCodeNameWithDomain": {
+    "message": "Nastaviť overovací kód pre „$1“"
+  },
   "totpVerificationCodeName": {
     "message": "Overovací kód"
   },
@@ -85,5 +88,11 @@
   },
   "allowExtensionToControlAutoFillDetail": {
     "message": "Rozšírenie iCloud Heslá sa môže pokúsiť vypnúť nastavenie automatického vypĺňania na stránkach v Chrome, aby táto funkcia prehliadača nezasahovala do činnosti rozšírenia."
+  },
+  "divTOTPTitle": {
+    "message": "Nastaviť overovací kód pre:"
+  },
+  "divTOTPMenu": {
+    "message": "Nastaviť overovací kód"
   }
 }

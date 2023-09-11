@@ -9,7 +9,7 @@
     "message": "יש להוריד את iCloud עבור Windows כדי להשתמש ב״סיסמאות iCloud״."
   },
   "extDescription": {
-    "message": "״סיסמאות iCloud״ מאפשר לך למלא סיסמאות וקודי אימות שנוצרים ב-Safari או ביישומים ב-iPhone, ב-iPad וב-Mac ישירות לתוך העמודים ב-Chrome."
+    "message": "סיסמאות iCloud״ מאפשר לך למלא סיסמאות שנוצרו ב-Safari וביישומים ב-iPhone, ב-iPad וב-Mac לתוך אתרים ב-Chrome."
   },
   "extName": {
     "message": "סיסמאות iCloud"
@@ -21,7 +21,7 @@
     "message": "אפשר את ״סיסמאות״ ב-iCloud עבור Windows כדי לאפשר שימוש ב״סיסמאות iCloud״ עם Chrome."
   },
   "unsupportedOS": {
-    "message": "הרחבה זו נועדה לפעול ב-Windows 10 בעת השימוש ב-Mac הסיסמאות שלך יסתנכרנו אוטומטית עם ה-iPhone, ה-iPad, וה-Mac בעת ההתחברות ל-iCloud."
+    "message": "הרחבה זו נועדה לפעול ב-Windows 10 ואילך. כאשר משתמשים ב-Mac, הסיסמאות מסתנכרנות באופן אוטומטי עם iPhone, iPad, ו-Mac כאשר מתחברים ל-iCloud."
   },
   "divPINTitle": {
     "message": "הפעלת ״מילוי אוטומטי של סיסמאות״"
@@ -36,7 +36,7 @@
     "message": "הסיסמאות שלך מסונכרנות עם ״צרור המפתחות של iCloud״"
   },
   "divNoPasswordsMessage": {
-    "message": "ניתן להציג ולערוך סיסמאות שנשמרו ביישום ״מנהל הסיסמאות של iCloud״."
+    "message": "ניתן להציג ולערוך סיסמאות שנשמרו ביישום ״סיסמאות iCloud״."
   },
   "divDoNotRememberTitle": {
     "message": "בחרת בעבר אף פעם לא לשמור סיסמאות עבור אתר האינטרנט הזה."
@@ -62,6 +62,9 @@
   "totpVerificationCodeNameWithDomain": {
     "message": "קוד אימות עבור “$1”"
   },
+  "setupTOTPVerificationCodeNameWithDomain": {
+    "message": "הגדרת קוד אימות עבור “$1”"
+  },
   "totpVerificationCodeName": {
     "message": "קוד אימות"
   },
@@ -85,5 +88,11 @@
   },
   "allowExtensionToControlAutoFillDetail": {
     "message": "כדי למנוע התנגשויות בין מילוי הסיסמאות האוטומטי בעמודים של Chrome ובין ״סיסמאות iCloud״, ״סיסמאות iCloud״ יכול לנסות לכבות עבורך את המילוי האוטומטי דרך הגדרות הדפדפן."
+  },
+  "divTOTPTitle": {
+    "message": "הגדרת קוד אימות עבור:"
+  },
+  "divTOTPMenu": {
+    "message": "הגדרת קוד אימות"
   }
 }
