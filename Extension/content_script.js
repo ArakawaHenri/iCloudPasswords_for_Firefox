@@ -3327,16 +3327,25 @@ console.autofillDebugLog = function (e, ...r) {
     return !!this._isTextField(e) && e.matches(":-webkit-autofill")
   },
   _isSecureTextField: function (e) {
-    if (!isInputElement(e)) return !1;
-    if (e._wasPreviouslySecureTextField) return !0;
+    if (!isInputElement(e)) return false;
+
+    if (e._wasPreviouslySecureTextField) return true;
     try {
-      if (e.matches(":-webkit-autofill-strong-password")) return e._wasPreviouslySecureTextField = !0, !0
+      if (e.matches(":-webkit-autofill-strong-password"))  {
+          e._wasPreviouslySecureTextField = true;
+          return true;
+        }
     } catch (e) { }
-    const r = getComputedStyle(e, null).getPropertyValue("-webkit-text-security");
-    if ("" === r) return "password" === e.type;
-    if (r && "none" !== r) return e._wasPreviouslySecureTextField = !0, !0;
-    const t = e.type;
-    if (t && "text" !== t) return !1;
+
+    if (e.type === "password") return true;
+
+    const style = getComputedStyle(e, null); 
+    const webkitTextSecurity = style.getPropertyValue("-webkit-text-security");
+
+    if (webkitTextSecurity && "none" !== webkitTextSecurity) return e._wasPreviouslySecureTextField = !0, !0;
+
+    if (e.ytpe && (e.type !== "text")) return false;
+
     const n = e._nextControlInLogicalForm;
     return !(!n || !this._looksLikeShowHidePasswordButton(n)) && (!!this._matchesPasswordFieldLabelPattern(e) && (e._wasPreviouslySecureTextField = !0, !0))
   },
